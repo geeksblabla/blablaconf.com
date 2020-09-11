@@ -1,0 +1,40 @@
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 125px;
+  margin-left: 140px;
+}
+
+.title {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 100%;
+  font-size: 64px;
+  width: 375px;
+  color: #FFFFFF;
+}
+
+.subtitle {
+    width: 346px;
+    height: 60px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 130%;
+    color: #ffffff;
+    margin-top: 24px;
+    margin-bottom: 31px;
+    text-align: center;
+}
+
+
+.githubButton {
+    padding: 20px;
+    width: 256px;
+    height: 64px;
+    background: #FEFEFE;
+    border-radius: 8px;
+}
+
+

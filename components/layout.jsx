@@ -1,33 +1,18 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { createGlobalStyle } from "styled-components";
 import TopLeftIcon from "../svg/top_left_icon";
 import TopRightIcon from "../svg/top_right_icon";
 import BottomLeftIcon from "../svg/bottom_left_icon";
 import BottomRightIcon from "../svg/bottom_right_icon";
 import Logo from "../svg/logo";
-import Home from "../components/home";
 
-const GlobalStyle = createGlobalStyle`
-  html,
-  body,
-  body > div:first-child,
-  div#__next,
-  div#__next > div,
-  div#__next > div > div {
-    height: 100%;
-    background: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%);
-    min-height: 100%;
-  }
-`;
-
-const Layout = ({ children }) => {
+const Layout = ({ children, title="" }) => {
   return (
     <div>
-      <GlobalStyle />
       <Head>
-        <title>Create Next App</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css" />
       </Head>
       <main className={styles.main}>
         <div className={styles.logoContaier}>
@@ -44,7 +29,7 @@ const Layout = ({ children }) => {
             <TopRightIcon />
           </div>
         </div>
-
+        
           {children}
           
         <div className={styles.footer}>

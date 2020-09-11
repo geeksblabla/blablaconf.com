@@ -22,11 +22,9 @@
   margin-right: 84px;
 }
 
-
 .top_icons, .bottom_icons{
   display: flex;
 } 
-
 
 .main{
   height: 100%;
@@ -34,8 +32,6 @@
   display: flex;
   flex-direction: column;
 }
-
-
 
 .container {
   min-height: 100vh;
@@ -46,15 +42,12 @@
   align-items: center;
 }
 
- 
 .footer {
   width: 100%;
   margin-bottom: 50px;
   display: flex;
-
   margin-top: auto;
   flex-direction: column;
-
 }
 
 .footer_text{
@@ -68,7 +61,6 @@
   color: #FFFFFF;
 }
  
-
 .mainDiv{
   display: flex;
   flex-direction: column;

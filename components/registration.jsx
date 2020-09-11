@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 
-const Home = () => {
+const Registration = () => {
   return (
     <div>
       <div className={styles.mainDiv}>
@@ -23,4 +23,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Registration;
