@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100%;
   }
 `;
-
+ 
 const Index = () => {
   return (
      <Layout title="Create Next App">
