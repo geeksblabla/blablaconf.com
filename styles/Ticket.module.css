@@ -1,9 +1,39 @@
 .mainDiv {
   display: flex;
-  flex-direction: column;
   margin-top: 125px;
-  margin-left: 140px;
+  width: 100%;
 }
+
+
+.leftDiv {
+  /* margin-top: 125px; */
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftDivContent {
+  /* margin-top: 125px; */ 
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rightDiv {
+  display: flex;
+  /* margin-top: 125px; */
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightDivContent {
+  /* margin-top: 125px; */ 
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
 
 .title {
   font-family: Raleway;
@@ -25,7 +55,6 @@
     color: #ffffff;
     margin-top: 24px;
     margin-bottom: 31px;
-    text-align: center;
 }
 
 
@@ -36,5 +65,27 @@
     background: #FEFEFE;
     border-radius: 8px;
 }
+
+
+@media (max-width: 850px) {
+  .mainDiv{
+    flex-direction: column;
+  }
+
+  .leftDiv, .rightDiv{
+    width: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightDivContent, .leftDivContent{
+    margin-top: 46px;
+    text-align: center;
+
+  }
+
+  
+}
+
 
 

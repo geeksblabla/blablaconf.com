@@ -78,6 +78,14 @@
   width: 875px; 
 }
 
+.titleComingSoon{
+  font-weight: bold;
+  font-size: 100px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 875px; 
+  margin-top: 20px;
+}
 .subtitle{
   font-weight: normal;
   font-size: 24px;
@@ -170,6 +178,53 @@
   right: 99px;
   top: 76px; 
 }
+
+@media (max-width: 850px) {
+  .top_icons, .bottom_icons, .powredBy{
+    visibility: hidden;
+  }
+
+  .title{
+    width: 316px; 
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 124.2%;
+  }
+
+  .subtitle{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;  
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-top: 24px; 
+    margin-bottom: 48px; 
+  }
+
+  .inputDiv{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input{
+    width: 290px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.14));
+    border-radius: 8px;
+    margin-bottom: 13px; 
+  }
+
+  .button{
+    width: 290px;
+    height: 57px;
+    background: #FEFEFE;
+    border-radius: 8px;
+  }
+}
+
+
 
 @media (max-width: 850px) {
   .title{

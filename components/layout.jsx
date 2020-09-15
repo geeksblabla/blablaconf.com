@@ -6,13 +6,19 @@ import BottomLeftIcon from "../svg/bottom_left_icon";
 import BottomRightIcon from "../svg/bottom_right_icon";
 import Logo from "../svg/logo";
 
-const Layout = ({ children, title="" }) => {
+const Layout = ({ children, title = "" }) => {
   return (
     <div>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="//fonts.googleapis.com/css?family=Raleway"        
+          />
+
+        
       </Head>
       <main className={styles.main}>
         <div className={styles.logoContaier}>
@@ -29,9 +35,9 @@ const Layout = ({ children, title="" }) => {
             <TopRightIcon />
           </div>
         </div>
-        
-          {children}
-          
+
+        {children}
+
         <div className={styles.footer}>
           <div className={styles.bottom_icons}>
             <div className={styles.bottom_left_icon}>
