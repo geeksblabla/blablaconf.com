@@ -5,29 +5,22 @@ import Ticket from "../components/ticket";
 import ComingSoon from "../components/coming_soon";
 
 const GlobalStyle = createGlobalStyle`
-  html,
-  body,
-  body > div:first-child,
-  div#__next,
-  div#__next > div,
-  div#__next > div > div {
-    background: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%);
-    min-height: 100%;
-  }
 
-  @media (max-width: 850px) {
-    html,
-    body,
-    body > div:first-child,
-    div#__next,
-    div#__next > div,
-    div#__next > div > div {
-      display: flex;
-
-    }
-  }
-`;
+html,
+body {
+  background-image: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
  
+ 
+ 
+`;
+  
+//background: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%) no-repeat;
+  
 const Index = () => {
   return (
      <Layout title="Create Next App">
