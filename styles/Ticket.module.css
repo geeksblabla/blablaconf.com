@@ -31,7 +31,6 @@
   /* margin-top: 125px; */ 
   justify-content: flex-start;
   align-items: flex-start;
-
 }
 
 
@@ -58,12 +57,58 @@
 }
 
 
-.githubButton {
+.githubButton{
     padding: 20px;
     width: 256px;
     height: 64px;
     background: #FEFEFE;
     border-radius: 8px;
+}
+
+.ticketBadge{
+  display: flex;
+}
+
+.ticketBadgeInfo{
+  position: absolute;
+  margin-top: 26px;
+  margin-left: 64px;
+}
+
+.usernameInfo{
+  display: flex;
+}
+
+.username{ 
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 100%;  
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #FFFFFF;
+  margin-left: 8px;
+}
+
+.ticketNumber{
+  visibility: hidden;
+}
+
+.githubUsername{
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #B2A6EA;
+  margin-left: 4px;
+  color: #B2A6EA;
+}
+
+.githubIcon{
+  margin-left: 8px; 
+  margin-top: 4px;
+  width: 20px;
+  height: 20px;
 }
 
 
@@ -81,10 +126,49 @@
   .rightDivContent, .leftDivContent{
     margin-top: 46px;
     text-align: center;
-
+  }
+ 
+  .username{ 
+    font-weight: 800;
+    font-size: 16.7619px;
+    line-height: 100%;
+    color: #FFFFFF
   }
 
+  .ticketNumber{
+    font-weight: 800;
+    font-size: 16.7619px;
+    line-height: 100%;
+    color: #FFFFFF;
+    visibility: visible;
+  }
+
+  .githubUsername{
+    font-size: 8.38095px;
+    line-height: 100%;
+    color: #B2A6EA;
+  }
   
+  .ticketBadgeInfo{
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  
+  .githubIcon{
+    margin-left: 8px; 
+    margin-top: 4px;
+    width: 11px;
+    height: 11px;
+  }
+
+  .usenameIcon{
+    width: 45px;
+    height: 45px;
+  }
+
+  .usernameInfo{
+    margin-top: 50px;
+  }
 }
 
 
