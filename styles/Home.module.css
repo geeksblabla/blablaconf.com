@@ -265,4 +265,14 @@
     background: #FEFEFE;
     border-radius: 8px;
   }
+
+  .titleComingSoon{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 875px; 
+    margin-top: 20px;
+  }
+
 }
