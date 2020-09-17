@@ -26,8 +26,8 @@ const Index = () => {
      <Layout title="Create Next App">
         <GlobalStyle />
         {/* <Registration />  */}
-        {/* <Ticket />  */}
-        <ComingSoon />
+        <Ticket /> 
+        {/* <ComingSoon /> */}
      </Layout>
   );
 };

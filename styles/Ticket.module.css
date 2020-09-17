@@ -59,10 +59,31 @@
 
 .githubButton{
     padding: 20px;
-    width: 256px;
+    width: 200px;
     height: 64px;
     background: #FEFEFE;
     border-radius: 8px;
+}
+
+.shareActions{
+  padding: 20px;
+  width: 200px;
+  height: 64px;
+  background: #FEFEFE;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.ticketNumber{
+  position: absolute;
+  transform: rotate(90deg);
+  left: 414px;
+  font-size: 27px;
+  top: 97px;
+  color: white;
+  text-align: center;
+  width: 266px;
 }
 
 .ticketBadge{
@@ -90,7 +111,7 @@
   margin-left: 8px;
 }
 
-.ticketNumber{
+.ticketNumberMobile{
   visibility: hidden;
 }
 
@@ -111,6 +132,21 @@
   height: 20px;
 }
 
+.usenameIcon{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.mainDivAfterAuth{
+  display: flex;
+  margin-top: 125px;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
 
 @media (max-width: 850px) {
   .mainDiv{
@@ -135,7 +171,7 @@
     color: #FFFFFF
   }
 
-  .ticketNumber{
+  .ticketNumberMobile{
     font-weight: 800;
     font-size: 16.7619px;
     line-height: 100%;
@@ -164,6 +200,7 @@
   .usenameIcon{
     width: 45px;
     height: 45px;
+    border-radius: 50%;
   }
 
   .usernameInfo{
