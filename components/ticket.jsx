@@ -28,15 +28,26 @@ const Ticket = () => {
     auth.signInWithPopup(githubAuthProvider).then(function (result) {
       const user = result.user;
       const additionalUserInfo = result.additionalUserInfo;
-      console.log(user);
-      console.log(additionalUserInfo);
-      setUser({
+     
+      const tmpUser = {
         name: user.displayName,
         username: additionalUserInfo.username,
         email: user.email,
         photo: user.photoURL,
         ticketNumber: uniqueNumber
-      })
+      }
+
+      firestore.collection('/registrations')
+      .doc(email)
+      .get()
+      .then(function(doc) {
+        if(!doc.exists){
+          firestore.collection('/registrations').doc(email).set(tmpUser);
+        } 
+      });
+
+
+      setUser(tmpUser)
     }).catch(function (error) {
       // Handle Errors here.
       var errorCode = error.code;
