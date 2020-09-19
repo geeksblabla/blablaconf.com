@@ -12,7 +12,7 @@ const TicketBadge = ({ user }) => {
     <div className={styles.ticketBadge}>
       <img src={width > 850 ? "/svg/ticket.svg" : "/svg/ticket_mobile.svg" } alt="ticket" />
       <div className={styles.ticketBadgeInfo}>
-      <div className={styles.ticketNumberMobile}>№ 45894859</div>
+      <div className={styles.ticketNumberMobile}>{user && "N  "+user.ticketNumber}</div>
         <div className={styles.usernameInfo}>
           <img src={user ? user.photo : "/svg/user_badge.svg"} alt="user badge" className={styles.usenameIcon}  />
           <div>
@@ -21,10 +21,6 @@ const TicketBadge = ({ user }) => {
               <img src={"/svg/github.svg"} alt="github" className={styles.githubIcon} /> <span className={styles.githubUsername}>github</span>
             </div>
           </div>
-
-
-          
-      
           <div className={styles.ticketNumber}>{user && "N  "+user.ticketNumber}</div>
         </div>
       </div>

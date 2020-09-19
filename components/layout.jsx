@@ -5,11 +5,12 @@ import TopRightIcon from "../svg/top_right_icon";
 import BottomLeftIcon from "../svg/bottom_left_icon";
 import BottomRightIcon from "../svg/bottom_right_icon";
 import Logo from "../svg/logo";
- 
+
 const Layout = ({ children, title = "" }) => {
   return (
-    <div style={{ display: "flex" }}>
-
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,40 +20,36 @@ const Layout = ({ children, title = "" }) => {
           href="//fonts.googleapis.com/css?family=Raleway"
         />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.logoContaier}>
-          <div className={styles.logo}>
-            <Logo />
-          </div>
-          <span className={styles.powredBy}>powered by #DevC_Morocco</span>
+      <div className={styles.logoContaier}>
+        <div className={styles.logo}>
+          <Logo />
         </div>
-        <div className={styles.top_icons}>
-          <div className={styles.top_left_icon}>
-            <TopLeftIcon />
-          </div>
-          <div className={styles.top_right_icon}>
-            <TopRightIcon />
-          </div>
+        <span className={styles.powredBy}>powered by #DevC_Morocco</span>
+      </div>
+      <div className={styles.top_icons}>
+        <div className={styles.top_left_icon}>
+          <TopLeftIcon />
         </div>
+        <div className={styles.top_right_icon}>
+          <TopRightIcon />
+        </div>
+      </div>
 
-        {children}
+      {children}
 
-        <div className={styles.footer}>
-          <div className={styles.bottom_icons}>
-            <div className={styles.bottom_left_icon}>
-              <BottomLeftIcon />
-            </div>
-            <div className={styles.bottom_right_icon}>
-              <BottomRightIcon />
-            </div>
+      <div className={styles.footer} style={{ flexDirection: "column" }}>
+        <div className={styles.bottom_icons}>
+          <div className={styles.bottom_left_icon}>
+            <BottomLeftIcon />
           </div>
-
-          <div className={styles.footer_text}>
-            {" "}
-            Copyright © 2020 BlablaConf. All rights reserved.
+          <div className={styles.bottom_right_icon}>
+            <BottomRightIcon />
           </div>
         </div>
-      </main>
+        <div className={styles.footer_text}>
+          Copyright © 2020 BlablaConf. All rights reserved.
+        </div>
+      </div>
     </div>
   );
 };

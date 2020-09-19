@@ -8,8 +8,7 @@ import Logo from "../svg/logo";
 
 const Layout = ({ children, title = "" }) => {
   return (
-    <div style={{ display: "flex" }}>
-
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,23 +18,18 @@ const Layout = ({ children, title = "" }) => {
           href="//fonts.googleapis.com/css?family=Raleway"
         />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.logoContaier}>
-          <div className={styles.logo}>
-            <Logo />
-          </div>
-          <span className={styles.powredBy}>powered by #DevC_Morocco</span>
+      <div className={styles.logoContaier} style={{ justifyContent: "flex-start", paddingLeft: 50 }}>
+        <div className={styles.logo}>
+          <Logo />
         </div>
- 
-
-        {children}
-
-        <div className={styles.footer}>
-          <div className={styles.footer_text}>
-            Copyright © 2020 BlablaConf. All rights reserved.
-          </div>
+        <span className={styles.powredBy}>powered by #DevC_Morocco</span>
+      </div>
+      {children}
+      <div className={styles.footer}>
+        <div className={styles.footer_text}>
+          Copyright © 2020 BlablaConf. All rights reserved.
         </div>
-      </main>
+      </div>
     </div>
   );
 };

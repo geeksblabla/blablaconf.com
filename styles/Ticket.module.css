@@ -13,10 +13,11 @@
   align-items: center;
 }
 
-.leftDivContent {
-  /* margin-top: 125px; */ 
-  justify-content: flex-start;
-  align-items: flex-start;
+.leftDivContent { 
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .rightDiv {
@@ -140,7 +141,7 @@
 
 .mainDivAfterAuth{
   display: flex;
-  margin-top: 125px;
+  margin-top: 156px;
   justify-content: center;
   width: 100%;
   flex-direction: column;
@@ -160,7 +161,6 @@
   }
 
   .rightDivContent, .leftDivContent{
-    margin-top: 46px;
     text-align: center;
   }
  
