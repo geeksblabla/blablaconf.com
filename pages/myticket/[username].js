@@ -13,7 +13,10 @@ const TicketPage = ({ username }) => {
 
   useEffect(() => {
     const params = router.query
-    
+    console.log("params");
+    console.log(params);
+    console.log(user);
+
     if (params && params.username && params.username !== ""){
       console.log(params)
       firestore
@@ -21,6 +24,8 @@ const TicketPage = ({ username }) => {
         .doc(params.username)
         .get()
         .then(function (doc) {
+          console.log("doc.data()");
+          console.log(doc.data());
           setUser(doc.data());
         });
     }
@@ -34,7 +39,6 @@ const TicketPage = ({ username }) => {
           {user.name}'s Ticket
         </div>}
         <div className={styles.subtitle}>Join them on October 19, 2020.</div>
-
         <Registration />
 
         <div style={{ marginTop: 20 }}>
@@ -44,5 +48,11 @@ const TicketPage = ({ username }) => {
     </TicketLayout>
   );
 };
+
+export async function getServerSideProps(TicketPage) {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
 
 export default TicketPage;

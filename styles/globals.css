@@ -1,13 +1,14 @@
 html,
-body {
+body,
+#__next {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%);
-  min-height: 100%; 
   display: flex;
-
+  min-width: 100%;
+  min-height: 100%; 
 }
 
 a {
@@ -17,4 +18,15 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 850px) {
+  html,
+  body {
+    display: flex;
+    min-width: auto;
+    min-height: 100%; 
+
+  }
+  
 }

@@ -8,7 +8,7 @@ import Logo from "../svg/logo";
 
 const Layout = ({ children, title = "" }) => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", minWidth: "100%"  }}>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
