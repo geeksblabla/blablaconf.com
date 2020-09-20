@@ -6,6 +6,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-image: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%);
   min-height: 100%; 
+  display: flex;
+
 }
 
 a {

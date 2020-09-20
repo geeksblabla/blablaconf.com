@@ -5,15 +5,20 @@ import React, { useState, useEffect } from "react";
 import { auth, firebase, firestore } from "../../config/firebase";
 import TicketBadge from "../../components/ticket_badge";
 import Registration from "../../components/registration";
+import { useRouter } from 'next/router'
 
 const TicketPage = ({ username }) => {
   const [user, setUser] = useState(null);
+  const router = useRouter()
 
   useEffect(() => {
-    if (username !== ""){
+    const params = router.query
+    
+    if (params && params.username && params.username !== ""){
+      console.log(params)
       firestore
         .collection("/tickets")
-        .doc(username)
+        .doc(params.username)
         .get()
         .then(function (doc) {
           setUser(doc.data());
