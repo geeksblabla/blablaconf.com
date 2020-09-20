@@ -47,6 +47,8 @@
   display: flex;
   margin-top: auto;
   justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 20px;
 }
 
 .footer_text{
@@ -232,12 +234,7 @@
     margin-top: 20px;
   }
 
-  .footer {
-    
-    margin-top: auto;
-    padding-top: 100px;
-    padding-bottom: 20px;
-  }
+  
   
 
 }
