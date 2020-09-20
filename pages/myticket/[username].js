@@ -9,22 +9,27 @@ import Registration from "../../components/registration";
 const TicketPage = ({ username }) => {
   const [user, setUser] = useState(null);
 
-  // useEffect(() => {
-  //   if (username !== ""){
-  //     firestore
-  //       .collection("/tickets")
-  //       .doc(username)
-  //       .get()
-  //       .then(function (doc) {
-  //         setUser(doc.data());
-  //       });
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (username !== ""){
+      firestore
+        .collection("/tickets")
+        .doc(username)
+        .get()
+        .then(function (doc) {
+          setUser(doc.data());
+        });
+    }
+  }, []);
 
   return (
     <TicketLayout title="BlaBlaConf Ticket">
       {/* <Ticket username={"soufianelf"} /> */}
       <div className={styles.mainDivAfterAuth}>
+        {user && user.name && <div className={styles.title}>
+          {user.name}'s Ticket
+        </div>}
+        <div className={styles.subtitle}>Join them on October 19, 2020.</div>
+
         <Registration />
 
         <div style={{ marginTop: 20 }}>

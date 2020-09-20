@@ -40,11 +40,6 @@ const Registration = () => {
 
   return (
     <div>
-      <div className={styles.mainDiv}>
-        <div className={styles.title}>
-          5 Days and 5 Tracks covering hottest Technology Trends in Darija
-        </div>
-        <div className={styles.subtitle}>19-23 October | Online</div>
         <div className={styles.inputDiv}>
           <input
             type="email"
@@ -58,7 +53,6 @@ const Registration = () => {
           </button>
         </div>
         {error && <div style={{ marginTop: 5, color: "red" }}>{error}</div>}
-      </div>
     </div>
   );
 };
