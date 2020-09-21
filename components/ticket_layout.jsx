@@ -5,8 +5,12 @@ import TopRightIcon from "../svg/top_right_icon";
 import BottomLeftIcon from "../svg/bottom_left_icon";
 import BottomRightIcon from "../svg/bottom_right_icon";
 import Logo from "../svg/logo";
+import Link from 'next/link'
 
 const Layout = ({ children, title = "" }) => {
+  console.log("process.env.NEXT_PUBLIC_HOST");
+  console.log(process.env.NEXT_PUBLIC_HOST);
+
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", minWidth: "100%"  }}>
       <Head>
@@ -21,7 +25,7 @@ const Layout = ({ children, title = "" }) => {
       </Head>
       <div className={styles.logoContaier} style={{ justifyContent: "flex-start", paddingLeft: 50 }}>
         <div className={styles.logo}>
-          <Logo />
+          <Link href="/"><a><Logo /></a></Link>
         </div>
         <span className={styles.powredBy}>powered by #DevC_Morocco</span>
       </div>

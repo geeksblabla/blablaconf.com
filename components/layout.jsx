@@ -5,6 +5,7 @@ import TopRightIcon from "../svg/top_right_icon";
 import BottomLeftIcon from "../svg/bottom_left_icon";
 import BottomRightIcon from "../svg/bottom_right_icon";
 import Logo from "../svg/logo";
+import Link from 'next/link'
 
 const Layout = ({ children, title = "" }) => {
   return (
@@ -23,7 +24,7 @@ const Layout = ({ children, title = "" }) => {
       </Head>
       <div className={styles.logoContaier}>
         <div className={styles.logo}>
-          <Logo />
+         <Link href="/"><a><Logo /></a></Link>
         </div>
         <span className={styles.powredBy}>powered by #DevC_Morocco</span>
       </div>
