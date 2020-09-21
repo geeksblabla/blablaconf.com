@@ -10,7 +10,7 @@ const TicketBadge = ({ user }) => {
 
   return (
     <div className={styles.ticketBadge}>
-      <img src={width > 850 ? "/svg/ticket.svg" : "/svg/ticket_mobile.svg" } alt="ticket" />
+      <img src={"/svg/ticket.svg"} className={styles.ticketBadgeImg} alt="ticket" />
       <div className={styles.ticketBadgeInfo}>
       <div className={styles.ticketNumberMobile}>{user && "N  "+user.ticketNumber}</div>
         <div className={styles.usernameInfo}>
