@@ -12,7 +12,7 @@ const Registration = () => {
   const registration = () => {
     if (email === "") {
       setError("Please Enter the Email");
-    } else if (!validateEmail(email)) {
+    } else if (!validateEmail(email)) { 
       setError("Invalid Email Format");
     } else {
       setError("");
