@@ -17,6 +17,7 @@ const Layout = ({ children, title = "" }) => {
           type="text/css"
           href="//fonts.googleapis.com/css?family=Raleway"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       </Head>
       <div className={styles.logoContaier} style={{ justifyContent: "flex-start", paddingLeft: 50 }}>
         <div className={styles.logo}>
