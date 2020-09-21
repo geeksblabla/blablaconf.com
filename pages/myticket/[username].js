@@ -13,9 +13,7 @@ const TicketPage = ({ username }) => {
 
   useEffect(() => {
     const params = router.query
-    console.log("params");
-    console.log(params);
-    console.log(user);
+     
 
     if (params && params.username && params.username !== ""){
       console.log(params)

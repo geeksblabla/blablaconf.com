@@ -149,6 +149,64 @@
   align-items: center;
 }
 
+
+.input{
+  background: #4538A4;
+  border-radius: 8px 0px 0px 8px;
+  width: 343px;
+  height: 60px;
+  border: none;
+  text-indent: 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-input-placeholder { /* Edge */
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+
+}
+
+.input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.button{
+  width: 160px;
+  height: 60px; 
+  background: #FEFEFE;
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.button_title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #220C79;
+}
+
 @media (max-width: 850px) {
 
   .title {

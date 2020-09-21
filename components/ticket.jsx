@@ -4,7 +4,9 @@ import TicketBadge from "./ticket_badge";
 import { auth, firebase, firestore } from "../config/firebase";
 
 const Ticket = () => {
-  const [user, setUser] = useState(null); 
+  const [user, setUser] = useState(null);
+  const host = process.env.NEXT_PUBLIC_HOST;
+
   const generateTicket = () => {
     const githubAuthProvider = new firebase.auth.GithubAuthProvider();
     const uniqueNumber = new Date().valueOf();
@@ -40,6 +42,16 @@ const Ticket = () => {
       });
   };
 
+  const copyLink = () => { 
+    const el = document.createElement('textarea');
+    el.value = "https://" + host + "/myticket/" + user.username;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+    console.log(el.value)
+  }
+
   return (
     <div className={styles.mainDivAfterAuth}>
       {process.env.customKey}
@@ -57,21 +69,20 @@ const Ticket = () => {
               Generate with GitHub
             </button>
           ) : (
-            <div style={{ display: "flex" }}>
-              <button className={styles.shareActions} onClick={generateTicket}>
-                <i className="fab fa-github"></i>
-                share on Twitter
-              </button>
-              <button className={styles.shareActions} onClick={generateTicket}>
-                <i className="fab fa-github"></i>
-                Share on linkedin
-              </button>
-              <button className={styles.shareActions} onClick={generateTicket}>
-                <i className="fab fa-github"></i>
-                Copy the link
-              </button>
-            </div>
-          )}
+              <div style={{ display: "flex" }}>
+                   <input
+                    type="email"
+                    // value={email}
+                    id="myLink"
+                    placeholder={"https://" + host + "/myticket/" + user.username}
+                    className={styles.input}
+                  // onChange={(e) => changeEmail(e.target.value)}
+                  />
+                  <button className={styles.button} >
+                    <span className={styles.button_title} onClick={copyLink}>Copy The link</span>
+                  </button>
+              </div>
+            )}
         </div>
       </div>
       <div className={styles.rightDiv} style={{ marginTop: 40 }}>
