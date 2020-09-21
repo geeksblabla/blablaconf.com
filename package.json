@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.2.6",
+    "axios": "^0.20.0",
     "firebase": "^7.20.0",
     "next": "9.5.3",
     "react": "16.13.1",

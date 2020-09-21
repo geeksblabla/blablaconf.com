@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import { firestore } from "../config/firebase";
+import axios from "axios";
 
 const Registration = () => {
   const router = useRouter();
@@ -12,7 +13,7 @@ const Registration = () => {
   const registration = () => {
     if (email === "") {
       setError("Please Enter the Email");
-    } else if (!validateEmail(email)) { 
+    } else if (!validateEmail(email)) {
       setError("Invalid Email Format");
     } else {
       setError("");
@@ -22,8 +23,12 @@ const Registration = () => {
         .get()
         .then(function (doc) {
           if (!doc.exists) {
-            firestore.collection("/registrations").add({email});
+            firestore.collection("/registrations").add({ email }).then(function (response) {
+              axios.post('/api/sendEmail', { email });
+            });
           }
+
+
           router.push("/ticket");
         });
     }
@@ -40,19 +45,19 @@ const Registration = () => {
 
   return (
     <div>
-        <div className={styles.inputDiv}>
-          <input
-            type="email"
-            value={email}
-            placeholder="Enter email to register for free"
-            className={styles.input}
-            onChange={(e) => changeEmail(e.target.value)}
-          />
-          <button className={styles.button} onClick={registration}>
-            <span className={styles.button_title}>Register Now</span>
-          </button>
-        </div>
-        {error && <div style={{ marginTop: 5, color: "red" }}>{error}</div>}
+      <div className={styles.inputDiv}>
+        <input
+          type="email"
+          value={email}
+          placeholder="Enter email to register for free"
+          className={styles.input}
+          onChange={(e) => changeEmail(e.target.value)}
+        />
+        <button className={styles.button} onClick={registration}>
+          <span className={styles.button_title}>Register Now</span>
+        </button>
+      </div>
+      {error && <div style={{ marginTop: 5, color: "red" }}>{error}</div>}
     </div>
   );
 };
