@@ -6,13 +6,14 @@ import BottomLeftIcon from "../svg/bottom_left_icon";
 import BottomRightIcon from "../svg/bottom_right_icon";
 import Logo from "../svg/logo";
 import Link from 'next/link'
+// import { NextSeo } from 'next-seo';
 
-const Layout = ({ children, title = "" }) => {
-  console.log("process.env.NEXT_PUBLIC_HOST");
-  console.log(process.env.NEXT_PUBLIC_HOST);
+const Layout = ({ children, title = "", type="", url="", image="" }) => { 
 
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", minWidth: "100%"  }}>
+      {/* <NextSeo config={seoConfig} /> */}
+      
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -22,6 +23,11 @@ const Layout = ({ children, title = "" }) => {
           href="//fonts.googleapis.com/css?family=Raleway"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={url}/>
+        <meta property="og:image" content={image}/>
+
       </Head>
       <div className={styles.logoContaier} style={{ justifyContent: "flex-start", paddingLeft: 50 }}>
         <div className={styles.logo}>
