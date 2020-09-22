@@ -23,6 +23,9 @@ const Layout = ({ children, title = "", type="", url="", image="" }) => {
           href="//fonts.googleapis.com/css?family=Raleway"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@nytimesbits" />
         <meta property="og:title" content={title} />
         <meta property="og:type" content={type} />
         <meta property="og:url" content={url}/>
