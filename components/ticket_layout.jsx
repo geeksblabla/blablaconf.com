@@ -8,7 +8,7 @@ import Logo from "../svg/logo";
 import Link from 'next/link'
 // import { NextSeo } from 'next-seo';
 
-const Layout = ({ children, title = "", type="", url="", image="" }) => { 
+const Layout = ({ children, title = "", type = "", url = "", image = "", description = "" }) => { 
 
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", minWidth: "100%"  }}>
@@ -27,10 +27,11 @@ const Layout = ({ children, title = "", type="", url="", image="" }) => {
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@nytimesbits" />
         <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:type" content={type} />
         <meta property="og:url" content={url}/>
         <meta property="og:image" content={image}/>
-
+        
       </Head>
       <div className={styles.logoContaier} style={{ justifyContent: "flex-start", paddingLeft: 50 }}>
         <div className={styles.logo}>
