@@ -1,18 +1,14 @@
-import Layout from "../components/layout";
-import { createGlobalStyle } from "styled-components";
 import Hero from "../components/hero";
-import ComingSoon from "../components/coming_soon";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import TopLeftIcon from "../svg/top_left_icon";
-import TopRightIcon from "../svg/top_right_icon";
-import BottomLeftIcon from "../svg/bottom_left_icon";
-import BottomRightIcon from "../svg/bottom_right_icon";
 import Logo from "../svg/logo";
 import Link from "next/link";
+import { Speakers, Agenda } from "../components";
+import { getData } from "./api/index";
 //background: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%) no-repeat;
 
-const Index = () => {
+const Index = ({ tracks, speakers }) => {
+  console.log(tracks, speakers);
   return (
     <div
       style={{
@@ -54,26 +50,27 @@ const Index = () => {
         <Hero />
       </div>
 
-     <div className={styles.container}>
-     <div className={styles.about}>
-        <div className={styles.aboutTitle}>About Blablaconf</div>
-        <div className={styles.aboutDescription}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa dui sed
-          eu elementum vulputate viverra sapien eget. Aliquet elementum ultrices
-          dolor facilisi arcu. Molestie tortor, nec suspendisse faucibus sodales
-          nisi, scelerisque mauris. Sit duis dui sed risus, etiam etiam pulvinar
-          mi.
+      <div className={styles.container}>
+        <div className={styles.about}>
+          <div className={styles.aboutTitle}>About Blablaconf</div>
+          <div className={styles.aboutDescription}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa dui
+            sed eu elementum vulputate viverra sapien eget. Aliquet elementum
+            ultrices dolor facilisi arcu. Molestie tortor, nec suspendisse
+            faucibus sodales nisi, scelerisque mauris. Sit duis dui sed risus,
+            etiam etiam pulvinar mi.
+          </div>
         </div>
       </div>
-     </div>
- 
+      <Speakers speakers={speakers} />
+      <Agenda tracks={tracks} />
 
       <div className={styles.footer} style={{ flexDirection: "column" }}>
         <div className={styles.footer_text}>
           Copyright © 2020 BlablaConf. All rights reserved.
         </div>
       </div>
-      {/* 
+      {/*
 
    */}
     </div>
@@ -81,3 +78,13 @@ const Index = () => {
 };
 
 export default Index;
+
+export async function getStaticProps() {
+  const { speakers, tracks } = await getData();
+  return {
+    props: {
+      tracks,
+      speakers,
+    },
+  };
+}

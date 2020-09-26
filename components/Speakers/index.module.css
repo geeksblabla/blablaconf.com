@@ -1,0 +1,94 @@
+.speakers {
+  background-color: #f8f7ff;
+  position: relative;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+.speakers::after {
+  content: "";
+  position: absolute;
+  height: 160px;
+  width: 200px;
+  top: -2.5rem;
+  right: 7rem;
+  background-color: red;
+  background: url("./pattern.svg") no-repeat;
+  background-position-x: 90%;
+  background-position-y: -10px;
+  z-index: 100;
+}
+
+.pattern {
+  background-color: #e2def0;
+  height: 100%;
+  width: 5px;
+  left: 7rem;
+  position: absolute;
+}
+.pattern::before {
+  content: "";
+  position: absolute;
+  height: 160px;
+  width: 200px;
+  top: -150px;
+  background-color: #e2def0;
+  background: url("./pattern2.svg") no-repeat;
+}
+.pattern::after {
+  content: "";
+  position: absolute;
+  height: 54px;
+  width: 45px;
+  bottom: 0px;
+  left: -22px;
+  background-color: #e2def0;
+  background: url("./pattern3.svg") no-repeat;
+}
+
+.title {
+  text-align: center;
+  margin: 5rem 0px;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+.speaker {
+  margin: 1rem 3rem;
+}
+.speaker_name {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2f2d32;
+  margin-bottom: 0.2rem;
+}
+
+.speaker_avatar {
+  height: 130px;
+  width: 130px;
+  border-radius: 156px;
+  border-bottom-left-radius: 0px;
+}
+.speaker_role {
+  font-size: 12px;
+  line-height: 15px;
+  color: #45414d;
+  margin: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 1rem;
+  }
+  .list {
+    justify-content: space-around;
+  }
+}
