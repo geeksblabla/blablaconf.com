@@ -30,13 +30,18 @@ const Index = () => {
           type="text/css"
           href="//fonts.googleapis.com/css?family=Raleway"
         />
+        <link
+          href="https://fonts.googleapis.com/css?family=Inter"
+          rel="stylesheet"
+        />
+
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
       <div className={styles.header}>
-      <div className={styles.logoContaier}>
+        <div className={styles.logoContaier}>
           <div className={styles.logo}>
             <Link href="/">
               <a>
@@ -47,21 +52,33 @@ const Index = () => {
           <span className={styles.powredBy}>powered by #DevC_Morocco</span>
         </div>
         <Hero />
-
       </div>
-      {/* <div className={styles.header}>
 
-     
-
-
-        
+     <div className={styles.container}>
+     <div className={styles.about}>
+        <div className={styles.aboutTitle}>About Blablaconf</div>
+        <div className={styles.aboutDescription}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa dui sed
+          eu elementum vulputate viverra sapien eget. Aliquet elementum ultrices
+          dolor facilisi arcu. Molestie tortor, nec suspendisse faucibus sodales
+          nisi, scelerisque mauris. Sit duis dui sed risus, etiam etiam pulvinar
+          mi.
+        </div>
       </div>
+     </div>
+     <div className={styles.registerBottom}>
+
+     </div>
+
 
       <div className={styles.footer} style={{ flexDirection: "column" }}>
         <div className={styles.footer_text}>
           Copyright © 2020 BlablaConf. All rights reserved.
         </div>
-      </div> */}
+      </div>
+      {/* 
+
+   */}
     </div>
   );
 };
