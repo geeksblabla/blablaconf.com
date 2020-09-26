@@ -66,10 +66,7 @@ const Index = () => {
         </div>
       </div>
      </div>
-     <div className={styles.registerBottom}>
-
-     </div>
-
+ 
 
       <div className={styles.footer} style={{ flexDirection: "column" }}>
         <div className={styles.footer_text}>
