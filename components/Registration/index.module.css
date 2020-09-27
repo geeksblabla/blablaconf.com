@@ -1,0 +1,116 @@
+.registration {
+  font-family: Inter;
+  padding-top: 1rem;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.main {
+  margin-top: -8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  min-height: 400px;
+  /* background-color: red; */
+}
+
+.title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 120%;
+}
+
+.tickets {
+  width: 55%;
+}
+
+.form {
+  /* background: red; */
+  max-width: 530px;
+  padding-bottom: 4rem;
+  /* margin: 10rem 0px; */
+}
+
+/* registration  */
+
+.input {
+  border-radius: 8px 0px 0px 8px;
+  min-width: 300px;
+  height: 60px;
+  padding: 20px 2rem;
+  border: none;
+  font-size: 16px;
+  background: rgba(72, 51, 176, 0.03);
+  border: 1px solid rgba(72, 51, 176, 0.4);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(72, 51, 176, 0.6);
+}
+
+.button {
+  /* width: 160px; */
+  padding: 20px 2rem;
+  height: 60px;
+  background: #4538a4;
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    padding: 5rem 0px;
+    padding-bottom: 1rem;
+    flex-direction: column-reverse;
+  }
+  .tickets {
+    width: 100%;
+  }
+
+  .title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 124.2%;
+    padding: 0px 0.5rem;
+  }
+
+  .inputDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    border-radius: 8px;
+    margin-bottom: 13px;
+  }
+
+  .button {
+    height: 57px;
+    border-radius: 8px;
+  }
+}
