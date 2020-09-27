@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 
 export const About = () => {
   return (
-    <div className={styles.about}>
+    <div className={styles.about} id="about">
       <div className={styles.container}>
         <div className={styles.img_container}>
           <img src="/crea.svg" className={styles.img} />

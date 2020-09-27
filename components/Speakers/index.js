@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 
 export const Speakers = ({ speakers }) => {
   return (
-    <div className={styles.speakers}>
+    <div className={styles.speakers} id="speakers">
       <span className={styles.pattern} />
       <div className={styles.container}>
         <h1 className={styles.title}> Our Speakers 💪 </h1>

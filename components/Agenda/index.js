@@ -5,7 +5,7 @@ export const Agenda = ({ tracks }) => {
   const [selectedTrack, setSelectedTrack] = useState(0);
   const track = tracks[selectedTrack];
   return (
-    <div className={styles.agenda}>
+    <div className={styles.agenda} id="agenda">
       <div className={styles.container}>
         <div>
           <h1 className={styles.title}> Agenda 📅</h1>

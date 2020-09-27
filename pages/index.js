@@ -1,5 +1,12 @@
 import Head from "next/head";
-import { Speakers, Agenda, Hero, About } from "../components";
+import {
+  Speakers,
+  Agenda,
+  Hero,
+  About,
+  Footer,
+  Registration,
+} from "../components";
 import { getData } from "./api/index";
 
 const Index = ({ tracks, speakers }) => {
@@ -13,7 +20,10 @@ const Index = ({ tracks, speakers }) => {
       }}
     >
       <Head>
-        <title>BlablaConf</title>
+        <title>
+          BlablaConf | 5 Days and 5 Tracks covering hottest Technology Trends in
+          Darija
+        </title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -30,35 +40,12 @@ const Index = ({ tracks, speakers }) => {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
-      {/* <div className={styles.header}>
-        <div className={styles.logoContaier}>
-          <div className={styles.logo}>
-            <Link href="/">
-              <a>
-                <Logo />
-              </a>
-            </Link>
-          </div>
-          <span className={styles.powredBy}>powered by #DevC_Morocco</span>
-        </div>
-      </div> */}
-
-      {/* <div className={styles.container}>
-        <div className={styles.about}>
-          <div className={styles.aboutTitle}>About Blablaconf</div>
-          <div className={styles.aboutDescription}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa dui
-            sed eu elementum vulputate viverra sapien eget. Aliquet elementum
-            ultrices dolor facilisi arcu. Molestie tortor, nec suspendisse
-            faucibus sodales nisi, scelerisque mauris. Sit duis dui sed risus,
-            etiam etiam pulvinar mi.
-          </div>
-        </div>
-      </div> */}
       <Hero />
       <About />
       <Speakers speakers={speakers} />
       <Agenda tracks={tracks} />
+      <Registration />
+      <Footer />
     </div>
   );
 };

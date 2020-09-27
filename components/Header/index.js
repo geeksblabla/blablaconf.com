@@ -10,15 +10,34 @@ export const Header = () => (
       </Link>
     </div>
     <div className={styles.links}>
-      <a href="#about" className={styles.link}>
+      <a
+        href="#about"
+        className={styles.link}
+        onClick={(e) => scrollToSection(e, "#about")}
+      >
         About
       </a>
-      <a href="#speakers" className={styles.link}>
+      <a
+        href="#speakers"
+        className={styles.link}
+        onClick={(e) => scrollToSection(e, "#speakers")}
+      >
         Speakers
       </a>
-      <a href="#agenda" className={styles.link}>
+      <a
+        href="#agenda"
+        className={styles.link}
+        onClick={(e) => scrollToSection(e, "#agenda")}
+      >
         Agenda
       </a>
     </div>
   </div>
 );
+
+const scrollToSection = (e, selector) => {
+  e.preventDefault();
+  document.querySelector(selector).scrollIntoView({
+    behavior: "smooth",
+  });
+};
