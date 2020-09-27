@@ -1,14 +1,8 @@
-import Hero from "../components/hero";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Logo from "../svg/logo";
-import Link from "next/link";
-import { Speakers, Agenda } from "../components";
+import { Speakers, Agenda, Hero, About } from "../components";
 import { getData } from "./api/index";
-//background: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%) no-repeat;
 
 const Index = ({ tracks, speakers }) => {
-  console.log(tracks, speakers);
   return (
     <div
       style={{
@@ -36,7 +30,7 @@ const Index = ({ tracks, speakers }) => {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
-      <div className={styles.header}>
+      {/* <div className={styles.header}>
         <div className={styles.logoContaier}>
           <div className={styles.logo}>
             <Link href="/">
@@ -47,10 +41,9 @@ const Index = ({ tracks, speakers }) => {
           </div>
           <span className={styles.powredBy}>powered by #DevC_Morocco</span>
         </div>
-        <Hero />
-      </div>
+      </div> */}
 
-      <div className={styles.container}>
+      {/* <div className={styles.container}>
         <div className={styles.about}>
           <div className={styles.aboutTitle}>About Blablaconf</div>
           <div className={styles.aboutDescription}>
@@ -61,18 +54,11 @@ const Index = ({ tracks, speakers }) => {
             etiam etiam pulvinar mi.
           </div>
         </div>
-      </div>
+      </div> */}
+      <Hero />
+      <About />
       <Speakers speakers={speakers} />
       <Agenda tracks={tracks} />
-
-      <div className={styles.footer} style={{ flexDirection: "column" }}>
-        <div className={styles.footer_text}>
-          Copyright © 2020 BlablaConf. All rights reserved.
-        </div>
-      </div>
-      {/*
-
-   */}
     </div>
   );
 };
