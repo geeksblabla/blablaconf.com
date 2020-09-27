@@ -92,3 +92,12 @@
     justify-content: space-around;
   }
 }
+
+@media (max-width: 1360px) {
+  .pattern {
+    display: none;
+  }
+  .speakers::after {
+    display: none;
+  }
+}

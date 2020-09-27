@@ -54,7 +54,7 @@ const Item = ({ onClick, active, track }) => {
         <h3 className={styles.menu_item_date}>{track.date}</h3>
         <h5 className={styles.menu_item_title}> {track.title} </h5>
       </div>
-      <Arrow />
+      <Arrow className={styles.menu_item_arrow} />
     </li>
   );
 };

@@ -75,6 +75,7 @@
   margin: 10px;
   color: #ffffff;
   max-width: 44%;
+  min-width: 300px;
 }
 .talk_title {
   font-style: normal;
@@ -108,4 +109,42 @@
   line-height: 15px;
   opacity: 0.7;
   margin: 0.5rem 3px;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .talks {
+    justify-content: space-around;
+    padding-left: 0rem;
+  }
+  .talk {
+    max-width: 80%;
+  }
+  .speakers::after {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .main {
+    flex-direction: column;
+  }
+  .talk {
+    max-width: 100%;
+  }
+  .menu_container {
+    display: flex;
+    overflow: scroll;
+    width: calc(100vw - 2rem);
+  }
+  .menu_item {
+    min-width: 200px;
+  }
+  .menu_item_arrow {
+    display: none;
+  }
 }
