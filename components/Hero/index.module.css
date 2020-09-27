@@ -1,0 +1,142 @@
+.hero {
+  background: url(../../public/back.png),
+    linear-gradient(254.4deg, #4732af 0%, #7360d4 98.94%);
+  font-family: Inter;
+  color: #ffffff;
+  padding: 5rem 0rem;
+  padding-top: 3rem;
+  padding-bottom: 10rem;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.main {
+  padding: 5rem 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 49px;
+  line-height: 124.2%;
+  text-align: center;
+  max-width: 900px;
+}
+.ma {
+  position: relative;
+}
+.ma::after {
+  content: "";
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 6;
+  right: 55;
+  /* background-color: red; */
+  background-image: url(./ma.png);
+  background-size: contain;
+}
+
+.date {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+/* registration  */
+
+.input {
+  background: #4538a4;
+  border-radius: 8px 0px 0px 8px;
+  width: 343px;
+  height: 60px;
+  border: none;
+  text-indent: 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button {
+  width: 160px;
+  height: 60px;
+  background: #fefefe;
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #4833b0;
+}
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    padding: 2rem 0px;
+    padding-bottom: 1rem;
+  }
+  .ma::after {
+    content: "";
+    height: 35px;
+    width: 35px;
+    bottom: 6px;
+  }
+  .title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 124.2%;
+    padding: 0px 0.5rem;
+  }
+
+  .inputDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 290px;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.14)
+    );
+    border-radius: 8px;
+    margin-bottom: 13px;
+  }
+
+  .button {
+    width: 290px;
+    height: 57px;
+    background: #fefefe;
+    border-radius: 8px;
+  }
+}
