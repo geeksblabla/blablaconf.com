@@ -4,7 +4,7 @@ import TicketLayout from "../../components/ticket_layout";
 import React, { useState, useEffect } from "react";
 import { auth, firebase, firestore } from "../../config/firebase";
 import TicketBadge from "../../components/ticket_badge";
-import Registration from "../../components/registration";
+import Registration from "../../components/Hero/registration";
 import { useRouter } from "next/router";
 
 console.log("11");

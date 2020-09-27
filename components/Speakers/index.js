@@ -7,8 +7,8 @@ export const Speakers = ({ speakers }) => {
       <div className={styles.container}>
         <h1 className={styles.title}> Our Speakers 💪 </h1>
         <div className={styles.list}>
-          {speakers?.map((speaker) => (
-            <Speaker {...speaker} />
+          {speakers?.map((speaker, i) => (
+            <Speaker key={`speaker-${i}`} {...speaker} />
           ))}
         </div>
       </div>

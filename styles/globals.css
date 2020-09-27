@@ -7,7 +7,7 @@ body,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   display: flex;
   min-width: 100%;
-  min-height: 100%; 
+  min-height: 100%;
 }
 
 a {
@@ -23,9 +23,7 @@ a {
   html,
   body {
     display: flex;
-    min-width: auto;
-    min-height: 100%; 
-
+    min-width: 100%;
+    min-height: 100%;
   }
-  
 }

@@ -29,6 +29,7 @@ const Tracks = ({ tracks, setSelectedTrack, selectedTrack }) => {
     <ul className={styles.menu_container}>
       {tracks?.map((track, i) => (
         <Item
+          key={`track-${i}`}
           track={track}
           onClick={() => setSelectedTrack(i)}
           active={selectedTrack === i}
@@ -61,8 +62,8 @@ const Item = ({ onClick, active, track }) => {
 
 const Talks = ({ sessions }) => (
   <div className={styles.talks}>
-    {sessions.map((talk) => (
-      <Talk {...talk} />
+    {sessions.map((talk, i) => (
+      <Talk {...talk} key={`talk-${i}`} />
     ))}
   </div>
 );

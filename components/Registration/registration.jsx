@@ -41,7 +41,7 @@ const Registration = () => {
   };
 
   return (
-    <div>
+    <>
       <div className={styles.inputDiv}>
         <input
           type="email"
@@ -56,7 +56,7 @@ const Registration = () => {
         </button>
       </div>
       {error && <div style={{ marginTop: 5, color: "red" }}>{error}</div>}
-    </div>
+    </>
   );
 };
 
