@@ -11,7 +11,7 @@ import Link from 'next/link'
 const Layout = ({ children, title = "", type = "", url = "", image = "", description = "" }) => { 
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh", minWidth: "100%"  }}>
+    <div  className={styles.ticketLayout}>
       {/* <NextSeo config={seoConfig} /> */}
       
       <Head>
@@ -40,11 +40,7 @@ const Layout = ({ children, title = "", type = "", url = "", image = "", descrip
         <span className={styles.powredBy}>powered by #DevC_Morocco</span>
       </div>
       {children}
-      <div className={styles.footer}>
-        <div className={styles.footer_text}>
-          Copyright © 2020 BlablaConf. All rights reserved.
-        </div>
-      </div>
+
     </div>
   );
 };

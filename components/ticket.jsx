@@ -65,7 +65,6 @@ const Ticket = () => {
           </div>
           {!user ? (
             <button className={styles.githubButton} onClick={generateTicket}>
-              <i className="fab fa-github"></i>
               Generate with GitHub
             </button>
           ) : (

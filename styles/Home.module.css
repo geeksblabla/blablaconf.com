@@ -1,3 +1,11 @@
+.ticketLayout{
+
+  display: flex;
+  flex-direction: column;
+  background: url(../public/back.png),
+    linear-gradient(254.4deg, #4732af 0%, #7360d4 98.94%);
+}
+
 .header {
   background-image: url("../public/background3.png");
   background-repeat: no-repeat;
