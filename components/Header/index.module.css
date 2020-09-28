@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  margin-left: 2rem;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@media (max-width: 600px) {
+  .links {
+    display: none;
+  }
+  .header {
+    justify-content: space-around;
+  }
+}
