@@ -1,3 +1,4 @@
+
 .mainDiv {
   display: flex;
   margin-top: 125px;
@@ -40,7 +41,7 @@
   font-style: normal;
   font-weight: 900;
   line-height: 100%;
-  font-size: 64px;
+  font-size: 57px;
   width: 375px;
   color: #FFFFFF;
 }
@@ -89,6 +90,7 @@
 
 .ticketBadge{
   display: flex;
+  margin-top: 20px;
 }
 
 .ticketBadgeInfo{
@@ -141,7 +143,7 @@
 
 .mainDivAfterAuth{
   display: flex;
-  margin-top: 156px;
+  margin-top: 35px;
   justify-content: center;
   width: 100%;
   flex-direction: column;
@@ -205,6 +207,10 @@
   line-height: 19px;
   text-align: center;
   color: #220C79;
+}
+
+.ticketBadgeImg{
+  width: 100%;
 }
 
 @media (max-width: 850px) {
@@ -279,13 +285,10 @@
     height: 45px;
     border-radius: 50%;
   }
-
-  .usernameInfo{
-    /* margin-top: 50px; */
-  }
+ 
 
   .ticketBadgeImg{
-    width: 300px;
+    width: 100%;
   }
 }
 

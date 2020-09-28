@@ -20,8 +20,9 @@ const TicketPage = ({ user, seoConfig }) => {
           <div className={styles.title}>{user.name}'s Ticket</div>
         )}
         <div className={styles.subtitle}>Join them on October 19, 2020.</div>
-        <Registration />
-        <div style={{ marginTop: 20 }}>
+        <div style={{ width: "70%" }}>
+          <Registration />
+
           <TicketBadge user={user} />
         </div>
       </div>
@@ -51,12 +52,7 @@ export async function getServerSideProps({ query }) {
             process.env.NEXT_PUBLIC_HOST +
             "/myticket/" +
             user.username,
-          image:
-            "https://res.cloudinary.com/dvapezchz/image/upload/b_rgb:220c79/co_rgb:ffffff,l_text:montserrat_40:" +
-            user.name +
-            ",x_-30,y_-100/co_rgb:ffffff,l_text:montserrat_20:" +
-            user.username +
-            ",x_-90,y_-50/v1600707055/Group_1139_1_m81mmr.png",
+          image: `https://res.cloudinary.com/dvapezchz/image/upload/c_scale,l_text:montserrat_100:${user.name}%20,w_600,x_-700,y_-380/c_scale,l_text:montserrat_40:${user.username}%20,w_300,x_-720,y_-250/v1601087114/Mask_Group_qglnkm.png`,
         };
         // seoConfig = {
         //   title: 'Next.js SEO Plugin',
