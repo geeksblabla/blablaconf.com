@@ -11,11 +11,8 @@
     "@sendgrid/mail": "^7.2.6",
     "axios": "^0.20.0",
     "firebase": "^7.20.0",
-<<<<<<< HEAD
     "js-yaml": "^3.14.0",
-=======
     "mailgun-js": "^0.22.0",
->>>>>>> 818242774a725b653fbcd6a93fcac96d86b43728
     "next": "9.5.3",
     "next-seo": "^4.7.3",
     "raw-loader": "^4.0.1",
