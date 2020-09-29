@@ -1,10 +1,11 @@
 import React from "react";
+import { Container } from "../Container";
 import styles from "./index.module.css";
 
 export const About = () => {
   return (
     <div className={styles.about} id="about">
-      <div className={styles.container}>
+      <Container>
         <div className={styles.img_container}>
           <img src="/crea.svg" className={styles.img} />
         </div>
@@ -19,7 +20,7 @@ export const About = () => {
             etiam etiam pulvinar mi.
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

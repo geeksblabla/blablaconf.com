@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Container } from "../Container";
 import styles from "./index.module.css";
 
 export const Agenda = ({ tracks }) => {
@@ -6,7 +7,7 @@ export const Agenda = ({ tracks }) => {
   const track = tracks[selectedTrack];
   return (
     <div className={styles.agenda} id="agenda">
-      <div className={styles.container}>
+      <Container>
         <div>
           <h1 className={styles.title}> Agenda 📅</h1>
           <p className={styles.description}> See what's happening & when.</p>
@@ -19,7 +20,7 @@ export const Agenda = ({ tracks }) => {
           />
           <Talks {...track} />
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
