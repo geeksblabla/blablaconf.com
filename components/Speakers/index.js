@@ -1,17 +1,18 @@
+import { Container } from "../Container";
 import styles from "./index.module.css";
 
 export const Speakers = ({ speakers }) => {
   return (
     <div className={styles.speakers} id="speakers">
       <span className={styles.pattern} />
-      <div className={styles.container}>
+      <Container>
         <h1 className={styles.title}> Our Speakers 💪 </h1>
         <div className={styles.list}>
           {speakers?.map((speaker, i) => (
             <Speaker key={`speaker-${i}`} {...speaker} />
           ))}
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
