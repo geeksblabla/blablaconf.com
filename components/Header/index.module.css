@@ -10,7 +10,6 @@
   font-size: 16px;
   line-height: 19px;
 }
-
 @media (max-width: 600px) {
   .links {
     display: none;

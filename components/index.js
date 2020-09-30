@@ -7,3 +7,4 @@ export * from "./Footer";
 export * from "./Registration";
 export * from "./layout";
 export * from "./Ticket";
+export * from "./RegistrationForm";

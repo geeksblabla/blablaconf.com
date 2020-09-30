@@ -1,11 +1,9 @@
 import styles from "../../styles/Ticket.module.css";
-import Ticket from "../../components/ticket";
-import TicketLayout from "../../components/ticket_layout";
-import React, { useState, useEffect } from "react";
-import { auth, firebase, firestore } from "../../config/firebase";
-import TicketBadge from "../../components/ticket_badge";
-import Registration from "../../components/Hero/registration";
-import { useRouter } from "next/router";
+import React from "react";
+import { firestore } from "../../config/firebase";
+import { NextSeo } from "next-seo";
+import { Layout, RegistrationForm } from "../../components";
+import { getTicketImg } from "../../components/Ticket/utils";
 
 console.log("11");
 
@@ -13,20 +11,20 @@ const TicketPage = ({ user, seoConfig }) => {
   console.log("props.data");
 
   return (
-    <TicketLayout title="BlaBlaConf Ticket" {...seoConfig}>
-      {/* <Ticket username={"soufianelf"} /> */}
+    <Layout>
+      <NextSeo {...seoConfig} />
       <div className={styles.mainDivAfterAuth}>
         {user && user.name && (
           <div className={styles.title}>{user.name}'s Ticket</div>
         )}
         <div className={styles.subtitle}>Join them on October 19, 2020.</div>
         <div style={{ width: "70%" }}>
-          <Registration />
+          <RegistrationForm />
 
-          <TicketBadge user={user} />
+          <img src={getTicketImg(user)} style={{ height: 100 }} />
         </div>
       </div>
-    </TicketLayout>
+    </Layout>
   );
 };
 
@@ -39,7 +37,7 @@ export async function getServerSideProps({ query }) {
   if (username && username !== "")
     await firestore
       .collection("/tickets")
-      .doc("soufianelf")
+      .doc(username)
       .get()
       .then(function (doc) {
         user = doc.data();

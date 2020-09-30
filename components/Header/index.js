@@ -1,10 +1,10 @@
 import styles from "./index.module.css";
 import Link from "next/link";
-import Logo from "../../svg/logo";
+import Logo from "./Logo";
 
 export const Header = ({ withLinks = false }) => (
   <div className={styles.header}>
-    <div className={styles.logo}>
+    <div>
       <Link href="/">
         <a>
           <Logo />
