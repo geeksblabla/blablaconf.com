@@ -7,10 +7,28 @@ import Popup from "reactjs-popup";
 import Girl from "./Girl";
 import Boy from "./Boy";
 // const Ser
+import { auth, firebase, firestore } from "../../config/firebase";
+import Share from "./Share";
 
 // const ServerLessPopup = typeof window !== undefined ? <></> : <></>;
 
 export const Ticket = () => {
+  const [user, setUser] = useState(undefined);
+  const [isBoy, setIsBoy] = useState(undefined);
+
+  const host = process.env.NEXT_PUBLIC_HOST;
+  const shareUrl =  user ? "https://" + host + "/myticket/" + user.username : "";
+
+ const copyLink = () => {
+  const el = document.createElement("textarea");
+  el.value = "https://" + host + "/myticket/" + user.username;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand("copy");
+  document.body.removeChild(el);
+  console.log(el.value);
+};
+
   return (
     <div className={styles.hero}>
       <Container>
@@ -22,14 +40,21 @@ export const Ticket = () => {
               Congratulation your are in!
             </h1>
             <p className={styles.description}>
-              You can share your ticket using the link
+              {!!user && "You can share your ticket using the link"}
             </p>
-            <div suppressHydrationWarning={true}>
-              {process.browser && <SelectGenderModal />}
-            </div>
+            {!user ?
+              <div suppressHydrationWarning={true}>
+                {process.browser && <SelectGenderModal isBoy={isBoy} setIsBoy={setIsBoy} user={user} setUser={setUser} />}
+              </div>
+              :
+              <>
+                <button onClick={copyLink}> coppy link</button>
+                 <Share title={"share"} shareUrl={shareUrl} />
+              </>
+            }
           </div>
           <div className={styles.img_container}>
-            <img src={getTicketImg()} className={styles.img} />
+            <img src={getTicketImg(user)} className={styles.img} />
           </div>
         </div>
       </Container>
@@ -37,8 +62,35 @@ export const Ticket = () => {
   );
 };
 
-const SelectGenderModal = () => {
-  const [isBoy, setIsBoy] = useState(undefined);
+const SelectGenderModal = ({ isBoy, setIsBoy, setUser }) => {
+
+  const generateTicket = () => {
+    const githubAuthProvider = new firebase.auth.GithubAuthProvider();
+    const uniqueNumber = new Date().valueOf();
+
+    auth
+      .signInWithPopup(githubAuthProvider)
+      .then(function (result) {
+        const user = result.user;
+        const additionalUserInfo = result.additionalUserInfo;
+
+        const tmpUser = {
+          name: user.displayName,
+          username: additionalUserInfo.username,
+          email: user.email,
+          photo: user.photoURL,
+          ticketNumber:  "000"+Math.floor(1000 + Math.random() * 9000),
+          gender: isBoy ? "boy" : "girl"
+        };
+
+        firestore
+          .collection("/tickets")
+          .doc(additionalUserInfo.username)
+          .set(tmpUser);
+        setUser(tmpUser);
+      });
+  };
+
   return (
     <Popup
       trigger={
@@ -67,7 +119,7 @@ const SelectGenderModal = () => {
               <p className={styles.modal_option_text}>I’m a boy</p>
             </div>
           </div>
-          <button className={styles.modal_button}> Continue </button>
+          <button disabled={isBoy === undefined} className={styles.modal_button} onClick={generateTicket}> Continue </button>
         </div>
       </div>
     </Popup>
