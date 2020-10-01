@@ -1,0 +1,76 @@
+/* registration  */
+
+.input {
+  background: #4538a4;
+  border-radius: 8px 0px 0px 8px;
+  width: 343px;
+  height: 60px;
+  border: none;
+  text-indent: 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+.input_secondary {
+  background: rgba(72, 51, 176, 0.03);
+  border: 1px solid rgba(72, 51, 176, 0.4);
+  color: rgba(72, 51, 176, 0.9);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.input_secondary::placeholder {
+  color: rgba(72, 51, 176, 0.6);
+}
+
+.button {
+  width: 160px;
+  height: 60px;
+  background: #fefefe;
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #4833b0;
+}
+.button_secondary {
+  color: #ffffff;
+  background-color: #4833b0;
+}
+
+@media (max-width: 750px) {
+  .inputDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input {
+    width: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.14),
+      rgba(255, 255, 255, 0.14)
+    );
+    border-radius: 8px;
+    margin-bottom: 13px;
+  }
+
+  .button {
+    width: 100%;
+    height: 57px;
+    background: #fefefe;
+    border-radius: 8px;
+  }
+}

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { firestore } from "../../config/firebase";
 import axios from "axios";
 
-const Registration = () => {
+export const RegistrationForm = ({ secondary = false }) => {
   const router = useRouter();
 
   const [error, setError] = useState("");
@@ -47,11 +47,14 @@ const Registration = () => {
           type="email"
           value={email}
           placeholder="Enter email to register for free"
-          className={styles.input}
+          className={`${styles.input} ${secondary && styles.input_secondary}`}
           required
           onChange={(e) => changeEmail(e.target.value)}
         />
-        <button className={styles.button} onClick={registration}>
+        <button
+          className={`${styles.button} ${secondary && styles.button_secondary}`}
+          onClick={registration}
+        >
           Register Now
         </button>
       </div>
@@ -59,8 +62,6 @@ const Registration = () => {
     </>
   );
 };
-
-export default Registration;
 
 const validateEmail = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

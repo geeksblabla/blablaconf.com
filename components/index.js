@@ -5,3 +5,7 @@ export * from "./Header";
 export * from "./About";
 export * from "./Footer";
 export * from "./Registration";
+export * from "./layout";
+export * from "./Ticket";
+export * from "./RegistrationForm";
+export * from "./MyTicket";

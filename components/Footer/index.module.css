@@ -13,14 +13,3 @@
   color: #4f4c60;
   padding: 3rem 0px;
 }
-
-.container {
-  max-width: 1240px;
-  margin: auto;
-}
-
-@media (max-width: 1240px) {
-  .container {
-    padding: 1rem;
-  }
-}

@@ -42,15 +42,15 @@ const Ticket = () => {
       });
   };
 
-  const copyLink = () => { 
-    const el = document.createElement('textarea');
+  const copyLink = () => {
+    const el = document.createElement("textarea");
     el.value = "https://" + host + "/myticket/" + user.username;
     document.body.appendChild(el);
     el.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(el);
-    console.log(el.value)
-  }
+    console.log(el.value);
+  };
 
   return (
     <div className={styles.mainDivAfterAuth}>
@@ -68,20 +68,22 @@ const Ticket = () => {
               Generate with GitHub
             </button>
           ) : (
-              <div style={{ display: "flex" }}>
-                   <input
-                    type="email"
-                    // value={email}
-                    id="myLink"
-                    placeholder={"https://" + host + "/myticket/" + user.username}
-                    className={styles.input}
-                  // onChange={(e) => changeEmail(e.target.value)}
-                  />
-                  <button className={styles.button} >
-                    <span className={styles.button_title} onClick={copyLink}>Copy The link</span>
-                  </button>
-              </div>
-            )}
+            <div style={{ display: "flex" }}>
+              <input
+                type="email"
+                // value={email}
+                id="myLink"
+                placeholder={"https://" + host + "/myticket/" + user.username}
+                className={styles.input}
+                // onChange={(e) => changeEmail(e.target.value)}
+              />
+              <button className={styles.button}>
+                <span className={styles.button_title} onClick={copyLink}>
+                  Copy The link
+                </span>
+              </button>
+            </div>
+          )}
         </div>
       </div>
       <div className={styles.rightDiv} style={{ marginTop: 40 }}>

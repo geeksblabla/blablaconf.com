@@ -2,11 +2,6 @@
   background-color: #f8f7ff;
   position: relative;
 }
-
-.container {
-  max-width: 1240px;
-  margin: auto;
-}
 .speakers::after {
   content: "";
   position: absolute;
@@ -50,7 +45,10 @@
 
 .title {
   text-align: center;
-  margin: 5rem 0px;
+  padding: 5rem 0px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
 }
 .list {
   display: flex;

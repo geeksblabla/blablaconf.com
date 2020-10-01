@@ -1,15 +1,12 @@
-import Ticket from "../components/ticket";
-import TicketLayout from "../components/ticket_layout";
+// import Ticket from "../components/ticket";
+import { Layout, Ticket } from "../components";
 
 const TicketPage = () => {
   return (
-    <TicketLayout title="BlaBlaConf Ticket">
+    <Layout>
       <Ticket />
-    </TicketLayout>
+    </Layout>
   );
 };
 
 export default TicketPage;
-
-
-
