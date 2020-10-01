@@ -8,3 +8,4 @@ export * from "./Registration";
 export * from "./layout";
 export * from "./Ticket";
 export * from "./RegistrationForm";
+export * from "./MyTicket";
