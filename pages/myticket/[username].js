@@ -1,6 +1,7 @@
 import { firestore } from "../../config/firebase";
 import { NextSeo } from "next-seo";
 import { Layout, MyTicket } from "../../components";
+import { getTicketGraphImg } from "../../components/utils";
 
 const TicketPage = ({ user, seoConfig }) => {
   return (
@@ -26,7 +27,7 @@ export async function getServerSideProps({ query }) {
         user = doc.data();
         seoConfig = {
           title: user.name + "'s Ticket",
-          description: user + "'s Ticket",
+          description: user.name + "'s BlaBlaConf Ticket",
           openGraph: {
             type: "website",
             locale: "en_IE",
@@ -36,15 +37,10 @@ export async function getServerSideProps({ query }) {
               "/myticket/" +
               user.username,
             title: user.name + "'s Ticket",
-            description: "BlaBlaConf Ticket",
+            description: user.name + "'s BlaBlaConf Ticket",
             images: [
               {
-                url:
-                  "https://res.cloudinary.com/dvapezchz/image/upload/b_rgb:220c79/co_rgb:ffffff,l_text:montserrat_40:" +
-                  user.name +
-                  ",x_-30,y_-100/co_rgb:ffffff,l_text:montserrat_20:" +
-                  user.username +
-                  ",x_-90,y_-50/v1600707055/Group_1139_1_m81mmr.png",
+                url: getTicketGraphImg(user),
               },
             ],
             site_name: "blablaconf.com",
