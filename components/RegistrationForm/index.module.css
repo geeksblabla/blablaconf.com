@@ -1,7 +1,6 @@
 /* registration  */
 
 .input {
-  background: #4538a4;
   border-radius: 8px 0px 0px 8px;
   width: 343px;
   height: 60px;
@@ -10,7 +9,16 @@
   font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
   border: none;
+
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  backdrop-filter: blur(6px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 8px 0px 0px 8px;
 }
+
 .input_secondary {
   background: rgba(72, 51, 176, 0.03);
   border: 1px solid rgba(72, 51, 176, 0.4);
@@ -19,6 +27,12 @@
 
 .input:focus {
   outline: none;
+  border: 1px solid rgba(255, 255, 255);
+}
+
+.input_secondary:focus {
+  outline: none;
+  border: 1px solid rgba(72, 51, 176);
 }
 
 .input::placeholder {

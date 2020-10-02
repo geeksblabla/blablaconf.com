@@ -55,7 +55,7 @@ export const RegistrationForm = ({ secondary = false }) => {
           className={`${styles.button} ${secondary && styles.button_secondary}`}
           onClick={registration}
         >
-          Register Now
+          Grab your ticket
         </button>
       </div>
       {error && <div style={{ marginTop: 5, color: "red" }}>{error}</div>}
