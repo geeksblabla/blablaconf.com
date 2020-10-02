@@ -14,7 +14,7 @@ export const Ticket = () => {
   return (
     <div className={styles.hero}>
       <Container>
-        <Header />
+        <Header withLinks />
         <div className={styles.main}>
           <div className={styles.content}>
             <h1 className={styles.title}>
