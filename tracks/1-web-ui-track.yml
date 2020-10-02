@@ -1,15 +1,15 @@
-title: Web Ui and design
+title: Web & UI/UX
 date: 20 October
 sessions:
-  - title: What the hell is static site regeneration?
+  - title: "What the hell is static site regeneration?"
     description: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
-    time: "time: NA"
+    time: "time: N/A"
     speaker:
       name: Ismail Ghallou
       role: Full Stack JavaScript Developer
       about: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
       avatar: https://lh3.googleusercontent.com/pw/ACtC-3dng3_gNJD0VBhfvx_bXXzVtVU0D7o2AJzEHGrWP4dtgcbNpHUwSulW0WysaTI96Fd5DNKUH-AykJcMoig34zpm1ILRitY_zY5QukJxelGDsjqK9Y22CGZudp97ZrTmOp1lPWa0D8HDvGdeCwFxBxSs=s640-no?authuser=0
-  - title: Demystifying  state management in Angular with NgRx
+  - title: "Demystifying  state management in Angular with NgRx."
     description: "Many frontend developers especially those new to large production apps have difficulties  with the different concepts involved in state management in their applications. this workshop is entry point to most of these concepts. It is structured in a way that explains the concept in a couple of slides, followed by code snippets, and finally a code demo. Depending on the available time there could be a hands-on coding challenge for the audience.
           The programme looks something like the following;
           Introduction ::
@@ -22,43 +22,51 @@ sessions:
           Developers will get the most of the deep dive part of the talk if they are already familiar with Angular and have deployed at least one app to production.
 
           The first part (introduction) could be of use to beginner frontend developers regardless of the framework of libraries they use."
-    time: "time: NA"
+    time: "time: N/A"
     speaker:
-      name: Abdellah iraamane
+      name: Abdellah Iraamane
       role: Frontend Developer
-      about: I'm a Frontend developer based in Dublin, Ireland. I specialise in building high-traffic performance-driven frontend applications in Angular. When I'm not coding I'm probably at a pizza restaurant nearby or ordering donuts. 
+      about: I'm a frontend developer based in Dublin, Ireland. I specialise in building high-traffic performance-driven frontend applications in Angular. When I'm not coding I'm probably at a pizza restaurant nearby or ordering donuts. 
       avatar: https://lh3.googleusercontent.com/pw/ACtC-3fYgnHAoMM9a1YlZFyGffFKQKyVRpiE5GsEwdhCNRFekYq1dFLyv4OLuTU2Hxy5ocZ0uEHMXTy-1di_X-VPfcheJ0qE3iB4B-peZfHCoey0Fe5kj41aFPBkYsSk1OUjwpt16OKi0HOFwhsoo8As-lLdKQ=w1830-h1220-no?authuser=0
   - title: Reactivity Patterns in Web Frameworks.
     description: "Reactivity is the ability of a web framework to update the view whenever the application state has changed.
         Web frameworks ship in reactivity by default, always making sure that the view is up to date of the application state changes.
         Let's explore how do web frameworks achieve reactivity?"
-    time: "time: NA"
+    time: "time: N/A"
     speaker:
       name: Chihab Otmani
       role: Software Engineer
-      about: I am a Software engineer passionate about the JavaScript ecosystem.
+      about: I am a software engineer passionate about the JavaScript ecosystem.
       avatar: https://lh6.googleusercontent.com/6WaY8iiu1obfwJvSdfhc7dJwcHgWCd7fOFGOGPC-KaPMAO8J4p1vcgi7GHPKmVNbrZhQa0GJRYh3F6vm_5gk=w2509-h1121-rw
-  - title: web accessibility, why and how?
-    description: While the web is growing we have more users with disability they need the right to have access in the web content, unfortunately a lot of plateformes does not provide an easy access to them , so in this talk I will talk about the importance of having the accessibility in your web app and how you can reach the highest level of accessibility.
-    time: "time: NA"
+  - title: Web accessibility, why and how?
+    description: "While the web is growing we have more users with disability they need the right to have access in the web content, unfortunately a lot of plateformes does not provide an easy access to them , so in this talk I will talk about the importance of having the accessibility in your web app and how you can reach the highest level of accessibility."
+    time: "time: N/A"
     speaker:
-      name: Soufian El foukahi
+      name: Soufian El Foukahi
       role: Software Engineer
-      about:  
+      about: Frontend Engineer At Prevail Health
       avatar: https://media-exp1.licdn.com/dms/image/C4D03AQHfzPFtSxvD2w/profile-displayphoto-shrink_400_400/0?e=1606953600&v=beta&t=0xhhTQ2hBgyMDe_a4JDxmN4mGOs6N5i3KxQkDoUxvcc
   - title: "HCI: Designing for a better user experience"
     description: A process of design that Builds on understandings of psychology and technology and supports machine-human communication.
-    time: "time: NA"
+    time: "time: N/A"
     speaker:
       name: Maroua Ezouhri
       role: Ux & product designer
       about: Ux & product designer, Figma design Ambassador, Women techmaker ambassador 
       avatar: https://lh4.googleusercontent.com/hO5Kn7PK_vTjlfZ-VW5MKzFYpkePW_TEw47wns8dw0Sm_s05OqxigoWeTT33uCPtL-QIAlIbEX2hBq8nnUIr=w2509-h1121-rw
   - title: Design Without Losing Your Mind.
-    description: Design is not that hard, it is not as you think. Design is all about making decisions and good design is a result of good decisions, in this presentation I will teach how to make good decisions in order to make good design.
-    time: "time: NA"
+    description: "Design is not that hard, it is not as you think. Design is all about making decisions and good design is a result of good decisions, in this presentation I will teach how to make good decisions in order to make good design."
+    time: "time: N/A"
     speaker:
       name: Ismail El Azizi
       role: UX/UI Designer
-      about: About Ismail
+      about: ""
+      avatar: https://avatars2.githubusercontent.com/u/22155037?s=460&u=e997870e74819a8d757e468ed5a08b3c0d8a376e&v=4
+  - title: Let's Talk About SaaS
+    description: "What is SaaS? and Why developers should adopt SaaS business model instead of software traditional business model (On-Premise Softwares). This will be a short, but rich session to introduce you to the SaaS basics"
+    time: "time: N/A"
+    speaker:
+      name: Ayoub Moustaid
+      role: CEO of Overflow Digital Solutions
+      about: "Serial Digital Entrepreneur, SaaS Business, and CEO of Overflow Digital Solutions, With 7+ Years Experience In the Digital Field. I Try Everyday To Solve Real Problems Through Digital Solutions & Technologies ... Let's Make It Happen Digitally!"
       avatar: https://avatars2.githubusercontent.com/u/22155037?s=460&u=e997870e74819a8d757e468ed5a08b3c0d8a376e&v=4
