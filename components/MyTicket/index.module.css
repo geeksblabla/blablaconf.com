@@ -30,11 +30,12 @@
 }
 
 .img_container {
-  margin: 4rem 0px;
+  margin: 5rem 0px;
   max-width: 60%;
   position: relative;
   display: flex;
   align-items: flex-end;
+  margin-top: 0rem;
 }
 .img {
   width: 100%;

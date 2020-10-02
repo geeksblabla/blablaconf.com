@@ -22,6 +22,7 @@
     "react-share": "^4.3.0",
     "reactjs-popup": "^2.0.4",
     "styled-components": "^5.2.0",
-    "swr": "^0.3.3"
+    "swr": "^0.3.3",
+    "universal-base64": "^2.1.0"
   }
 }
