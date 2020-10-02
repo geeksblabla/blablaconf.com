@@ -38,14 +38,14 @@ sessions:
       role: Software Engineer
       about: I am a Software engineer passionate about the JavaScript ecosystem.
       avatar: https://lh6.googleusercontent.com/6WaY8iiu1obfwJvSdfhc7dJwcHgWCd7fOFGOGPC-KaPMAO8J4p1vcgi7GHPKmVNbrZhQa0GJRYh3F6vm_5gk=w2509-h1121-rw
-  - title: We design and make concrete products.
+  - title: web accessibility, why and how?
     description: While the web is growing we have more users with disability they need the right to have access in the web content, unfortunately a lot of plateformes does not provide an easy access to them , so in this talk I will talk about the importance of having the accessibility in your web app and how you can reach the highest level of accessibility.
     time: "time: NA"
     speaker:
       name: Soufian El foukahi
       role: Software Engineer
       about:  
-      avatar: https://image-uviadeo.journaldunet.com/image/450/1709607933/1016860.jpg
+      avatar: https://media-exp1.licdn.com/dms/image/C4D03AQHfzPFtSxvD2w/profile-displayphoto-shrink_400_400/0?e=1606953600&v=beta&t=0xhhTQ2hBgyMDe_a4JDxmN4mGOs6N5i3KxQkDoUxvcc
   - title: "HCI: Designing for a better user experience"
     description: A process of design that Builds on understandings of psychology and technology and supports machine-human communication.
     time: "time: NA"
