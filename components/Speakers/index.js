@@ -2,6 +2,7 @@ import { Container } from "../Container";
 import styles from "./index.module.css";
 
 export const Speakers = ({ speakers }) => {
+  console.log(speakers);
   return (
     <div className={styles.speakers} id="speakers">
       <span className={styles.pattern} />
