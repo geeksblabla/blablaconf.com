@@ -14,7 +14,7 @@ export const Hero = () => {
             5 Days and 5 Tracks covering hottest Technology Trends in{" "}
             <span className={styles.ma}> Darija </span>
           </h1>
-          <div className={styles.date}>19-23 October | Online</div>
+          <div className={styles.date}>20-24 October | Online</div>
           <RegistrationForm />
         </div>
       </Container>

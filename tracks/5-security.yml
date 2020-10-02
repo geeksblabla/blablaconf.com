@@ -1,0 +1,62 @@
+title: Security
+date: 24 October
+sessions:
+  - title: How to set up a secure system
+    description: "my speech will be based on the presentation of IT system security architectures, so I'm going to talk about the cloud and virtualization. 
+                I will present the nagios and proxmox tools"
+    time: "time: NA"
+    speaker:
+      name: Mouad Sissank
+      role: Security Advise
+      about: security adviser and also i am junior customer care
+      avatar: https://lh5.googleusercontent.com/CVb9Om9FRvD67n6ZJzTJzH7D5KwGyXZZCNfhrYsN-IEo1ulkkDGyXoKgcPewvFhF_P4jXTQYAXiVbA=w2289-h1220
+  - title: "Introduction to Cyber Security : You'll want to hack after this talk"
+    description: "This talk includes :
+- Quick Introduction of Information Security (InfoSec, Types of hackers, types of vulnerabilities)
+- Different security threats that we're facing on our era.
+- In-Depth real life scenarios/examples of security issues that targeted some IoT devices.
+- Q&A Session
+
+You can find the the talk slides here : https://www.othmanetamagart.com/Slides/slides-tais.html
+P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
+    time: "time: NA"
+    speaker:
+      name: Othmane TAMAGART
+      role:  Information Security Researcher
+      about: ""
+      avatar: "https://www.othmanetamagart.com/images/Personal-Profile-Photo.jpg"
+  - title: Advanced Attacks in Decentralized Application
+    description: "In this workshop, we will explore the fundamentals of decentralized applications, of the Solidity language as well as the advanced attacks that can affect your Smart contract and how to protect yourself.
+                  We will also discuss the tools and techniques for auditing Smarts Contracts and best methods and practices in the secure development of the dAPP"  
+    time: "time: NA"
+    speaker:
+      name: MSSASSI Souhail
+      role: CEO of CRISIS
+      about: "He is the CEO of CRISIS, he has a 5+ years experience in cybersecurity in offensive Security specialized in application security, cryptography and security of decentralized applications.
+              He conducted several audit missions, particularly in the banking sector.
+              He is Also a Speaker and he presented Security lectures in schools as well as universities in Morocco.
+              In parallel, he also does research in the field of security lately in Formal Verification."
+      avatar: https://lh3.googleusercontent.com/XGvkcjD4UzpTOu-Qzw4geZiEzKvPf7-7GVU4V4xurtPwzlS6gr4frrveDgq9y00YU8GJWmosr6x8XpCe4W8c=w2509-h1121-rw  
+  - title: "Android Security: An In-depth Analysis of Access Control Policies in Android Firmwares and Linux Kernel"
+    description: "What I will be covering? 
+                In this talk, I will be talking about the internals of the security of Android operating system from a firmware perspective. I will be presenting how access control mechanisms are designed in this large system and how to find inconsistencies that can lead to zero-day exploits in vendors' firmwares. I will also show that many vendors' apps are vulnerable to various security issues. My talk is all backed up by the official Android documentation and the research that I am doing in my PhD in this field.
+
+                Does the talk include Demo?
+                For the moment no because I am still working on a tool to automate the process and I don't think (for the moment) that it will be open source.
+
+                How participants will benefit from your talk?
+                Participants will get an idea of how Android run their applications and how it ensures a decent level of security for the user from a low level perspective. In addition, they will get an idea of how to find zero-day vulnerabilities in Android by finding inconsistencies in access control policies. "
+    time: "time: NA"
+    speaker:
+      name: Ahmed Lekssays
+      role: Phd Researcher
+      about: I am 24 years old.  I got a master’s degree in Software Engineering from at Al Akhawayn University in Ifrane, Morocco. I am currently pursuing a PhD degree in Computer Security at the University of Insubria in Varese, Italy under the Marie-Curie Fellowship. I am a cybersecurity analyst and an enthusiast of computer science. I am an ex-champion of ACM MCPC twice, and I have been acknowledge by several companies for finding security issues in their applications such as WhatsApp and Microsoft.
+      avatar: https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/52650486_2018417031795579_1141776884812480512_o.jpg?_nc_cat=107&_nc_sid=174925&_nc_ohc=136_0QdsUXcAX9LkudH&_nc_ht=scontent-mxp1-1.xx&oh=3c5d9225e28583f051a4eb6db803bc7e&oe=5F8B8331
+  - title: Container supply chain security
+    description: In this talk we will explore the concepts of containers security, from build to deployment. We will look at some of the popular tools and cloud products that allow to scan images when they are built, find vulnerabilities and flag them and how can configure you CI/CD pipeline to be as secure as possible. 
+    time: "time: NA"
+    speaker:
+      name: Abdellfetah SGHIOUAR
+      role: Google Cloud engineer
+      about: Google Cloud engineer working on Google Cloud Platform and all cloud stuff, specializes and work mainly on k8s, containers, istio and all the cool stuff
+      avatar: https://lh5.googleusercontent.com/NR1jyg4mMeltMnAvgIB-0R03fvbp0q8lI_Ni6lCAiLoc-Fk52WdCTogb3aRXP3sx0TE5xtSWP6T3HA=w2289-h1220
