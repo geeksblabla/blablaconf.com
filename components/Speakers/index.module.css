@@ -1,6 +1,7 @@
 .speakers {
   background-color: #f8f7ff;
   position: relative;
+  font-family: Inter;
 }
 .speakers::after {
   content: "";
@@ -58,7 +59,7 @@
 }
 
 .speaker {
-  margin: 1rem 3rem;
+  margin: 3rem 3rem;
 }
 .speaker_name {
   font-weight: 600;
@@ -69,8 +70,8 @@
 }
 
 .speaker_avatar {
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
   border-radius: 156px;
   border-bottom-left-radius: 0px;
 }
@@ -80,6 +81,15 @@
   color: #45414d;
   margin: 0rem;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 440px) {
+  .speaker_avatar {
+    height: 250px;
+    width: 250px;
+    border-radius: 256px;
+    border-bottom-left-radius: 0px;
+  }
 }
 
 @media (max-width: 1240px) {

@@ -6,6 +6,7 @@ import {
   Hero,
   About,
   Registration,
+  Sponsors,
 } from "../components";
 import { getData } from "./api/index";
 
@@ -20,6 +21,7 @@ const Index = ({ tracks, speakers }) => {
       </Head>
       <Hero />
       <About />
+
       <Speakers speakers={speakers} />
       <Agenda tracks={tracks} />
       <Registration />
