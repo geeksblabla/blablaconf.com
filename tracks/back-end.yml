@@ -1,27 +1,46 @@
 title: Backend Technologies  & PL
 date: 22 October
 sessions:
-  - title: We design and make concrete products.
-    description: talk description Here
-    time: 6:30pm - 7:00pm GMT+1
+  - title: Python Survival Skills
+    description: "I will in this workshop present some Python skills that are beneficial for a Python developer and that facilitates his tasks.
+                  The talk of course include a practical Demo. "
+    time: "time: NA"
     speaker:
-      name: Ismail El Azizi
-      role: UX/UI Designer
-      about: About Ismail
-      avatar: https://avatars2.githubusercontent.com/u/22155037?s=460&u=e997870e74819a8d757e468ed5a08b3c0d8a376e&v=4
-  - title: We design and make concrete products.
-    description: talk description Here
-    time: 6:30pm - 7:00pm GMT+1
+      name: HoussameEddine WARDI
+      role: Backend Software Engineer
+      about: about HoussameEddine
+      avatar: 
+  - title: Introduction to Java Platform Module System (JPMS)
+    description: "My session covers how to define, build and run Java modules, what impact they have on existing projects, what problems they solve, what are benefits they provide, and JDK decomposition to modules.
+                  Participants will be introduced to the module's system basics and see how future Java projects will be organized and developed."
+    time: "time: NA"
     speaker:
-      name: Ismail El Azizi
-      role: UX/UI Designer
-      about: About Ismail
-      avatar: https://avatars2.githubusercontent.com/u/22155037?s=460&u=e997870e74819a8d757e468ed5a08b3c0d8a376e&v=4
-  - title: We design and make concrete products.
-    description: talk description Here
-    time: 6:30pm - 7:00pm GMT+1
+      name: Hamza Belmellouki
+      role: Backend Developer
+      about: Self-Taught backend developer | focusing on the JVM ecosystem | Works at xHub
+      avatar: 
+  - title: Java bytecode for the rest of us
+    description:  "Java is one of the most popular programming languages in the world, It conquered by performance, expressiveness and portability, bytecode contributed a great deal to it's success, and by knowing how to read and write it, we can understand some of the interesting magic tricks that frameworks such as Spring, Mockito ... use to helps us write cleaner and less verbose code.
+                  The session's goal is to help people understand what Java bytecode is? How the JVM uses it? How is it structured? What are the common bytecodes that you should know? How some of the most popular language constructs (loops, lambdas, functions ...) translates to bytecode? and some real world examples all of the things presented above. "
+    time: "time: NA"
     speaker:
-      name: Ismail El Azizi
-      role: UX/UI Designer
-      about: About Ismail
-      avatar: https://avatars2.githubusercontent.com/u/22155037?s=460&u=e997870e74819a8d757e468ed5a08b3c0d8a376e&v=4
+      name: Mehdi Cheracher
+      role: Software Engineer
+      about: Software Engineer, Java enthusiast and a Competitive programmer
+      avatar: https://pbs.twimg.com/profile_images/1288813556880642048/vRghS7jk_400x400.jpg
+  - title: Let's make a graphql api using Nestjs
+    description: This session will be mostly hands-on with a few slides if needed, we should cover all aspects of a graphql endpoint, queries, mutations, security, participations should be able to write their own graphql apis after this talks. should be able to know when to do so and why.
+    time: "time: NA"
+    speaker:
+      name: Amine Hakkou
+      role: Software engineer
+      about: Software engineer, FP enthusiast, loves challenge
+      avatar: https://lh3.googleusercontent.com/fife/ABSRlIqTQdF7DJW-YHJIsQ7eCqp81nAlaGQXscya4XKlhE_UqQzUKXfOi02o486CSGm57SjH1CvwLyfTp5oC9N6MxxSwBoAR_QUa_6QQm4zdzK8882twKTu2X6F4fT6HevrjABDJxe11IJpRx5ap4M7380jf_rMrBT_Tu1YOCY1xiynswE3qt2hxoIQJr2BmgxcWNbyjCsFIy5iRXdhf1bWLO920xAYVZIRjogxWy6oowAY8Viu7EJWCuaoxgfTzqcylwrznHcu0w4kYMcqiLbkZIhs6BugJZT--EOnYzXKnVRX9-chhaA30nIk0mjHInvt2zHMuaYyGRvWxgCTjh3-D35H4u9n7Dm6SiAO0-Vv5csw1fhkPg9BB7lAc42fbqTsCl7WaKv8kEQGVJjOSERBGrJUsWfxqbDSyCVNM9rxrnwKmvYwNmhhSvAx82PDePEax7Z314CiT4jcGn1gWrS1FbZRoyrsEbkQPCFuOGbi-jBmD8Dtji-Io3NaEKOQKdUtk6bWuFtV1vWgpjiuDtvDa44nMHDI4Yfpurc2DJUEI2Zv-Gyf4Nj6VFn9RDot-lZj031JDDWZ4bEzK-HLqKVyH6fFMIAycIPwuW59UdHVrTu51omcdRgHXoH3dJ7uRXLCXB5NICRw5Qk0e5FovG7xs2yFvR4l3u2EiK3ytLU3D9wAf0PyQbqNs2sCMUi8m6pnWQiT0kyBA2ErfhtJ_qy1vVVoVE610QocfUCyIjg=s916-w687-h916-no?authuser=0
+  - title: 
+    description:  
+    time: "time: NA"
+    speaker:
+      name: 
+      role: 
+      about: 
+      avatar: 
