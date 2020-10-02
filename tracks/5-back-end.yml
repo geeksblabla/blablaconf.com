@@ -39,3 +39,11 @@ sessions:
       role: Software engineer
       about: Software engineer, FP enthusiast, loves challenge.
       avatar: /speakers/hakkou.jpg
+  - title: Introduction to IZMjs
+    description: "Will talk about IZMjs and create a small application together with it. The session will be a coding one." 
+    time: "time: N/A"
+    speaker:
+      name: Mohamed Idrissi
+      role: Service architect  
+      about: "A service architect at 4D Logiciels Maroc and a JS lover." 
+      avatar: /speakers/idrissi.jpg
