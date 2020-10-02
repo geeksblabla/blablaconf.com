@@ -36,3 +36,11 @@ sessions:
       role: Software engineer
       about: Software engineer, FP enthusiast, loves challenge
       avatar: https://lh3.googleusercontent.com/fife/ABSRlIqTQdF7DJW-YHJIsQ7eCqp81nAlaGQXscya4XKlhE_UqQzUKXfOi02o486CSGm57SjH1CvwLyfTp5oC9N6MxxSwBoAR_QUa_6QQm4zdzK8882twKTu2X6F4fT6HevrjABDJxe11IJpRx5ap4M7380jf_rMrBT_Tu1YOCY1xiynswE3qt2hxoIQJr2BmgxcWNbyjCsFIy5iRXdhf1bWLO920xAYVZIRjogxWy6oowAY8Viu7EJWCuaoxgfTzqcylwrznHcu0w4kYMcqiLbkZIhs6BugJZT--EOnYzXKnVRX9-chhaA30nIk0mjHInvt2zHMuaYyGRvWxgCTjh3-D35H4u9n7Dm6SiAO0-Vv5csw1fhkPg9BB7lAc42fbqTsCl7WaKv8kEQGVJjOSERBGrJUsWfxqbDSyCVNM9rxrnwKmvYwNmhhSvAx82PDePEax7Z314CiT4jcGn1gWrS1FbZRoyrsEbkQPCFuOGbi-jBmD8Dtji-Io3NaEKOQKdUtk6bWuFtV1vWgpjiuDtvDa44nMHDI4Yfpurc2DJUEI2Zv-Gyf4Nj6VFn9RDot-lZj031JDDWZ4bEzK-HLqKVyH6fFMIAycIPwuW59UdHVrTu51omcdRgHXoH3dJ7uRXLCXB5NICRw5Qk0e5FovG7xs2yFvR4l3u2EiK3ytLU3D9wAf0PyQbqNs2sCMUi8m6pnWQiT0kyBA2ErfhtJ_qy1vVVoVE610QocfUCyIjg=s916-w687-h916-no?authuser=0
+  - title: Introduction to IZMjs
+    description: Will talk about IZMjs and create a small application together with it. The session will be a coding one.
+    time: "time: NA"
+    speaker:
+      name: Mohamed IDRISSI
+      role: Service Architect
+      about: A service architect at 4D Logiciels Maroc and a JS lover
+      avatar: https://avatars3.githubusercontent.com/u/3237344
