@@ -25,9 +25,10 @@ export const RegistrationForm = ({ secondary = false }) => {
           if (!doc.exists) {
             firestore
               .collection("/registrations")
-              .add({ email })
+              .doc(email)
+              .set({ email, date: new Date() })
               .then(function (response) {
-                axios.post("/api/sendEmail", { email });
+                axios.post("/api/sendEmail", { email });       
               });
           }
 
