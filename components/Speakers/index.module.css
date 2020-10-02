@@ -10,7 +10,6 @@
   width: 200px;
   top: -2.5rem;
   right: 7rem;
-  background-color: red;
   background: url("./pattern.svg") no-repeat;
   background-position-x: 90%;
   background-position-y: -10px;
@@ -59,7 +58,9 @@
 }
 
 .speaker {
-  margin: 3rem 3rem;
+  width: 20%;
+  min-width: 250px;
+  margin-bottom: 3rem;
 }
 .speaker_name {
   font-weight: 600;

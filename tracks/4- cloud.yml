@@ -1,16 +1,16 @@
 title: Cloud, infrastructure & containers
 date: 23 October
 sessions:
-  - title: Ajiw tfhmu achnahoua l cloud 
-    description:  
+  - title: Ajiw tfhmu achnahoua l cloud
+    description:
     time: "time: N/A"
     speaker:
       name: Benohoud Elmahdi
-      role: Passioned by the cloud computing 
+      role: Passioned by the cloud computing
       about: "During my talk m going to cover the basics about the cloud: the différentes architectures and the services, m goin to talk about , software as service, platforme as as servises and also hardware as a servises, m going also to talk about the type of the cloud private , public and hybrid cloud ,also m going to give some exampls about the cloud providers: aws , azure , Google cloud"
       avatar: /speakers/benohoud.jpg
-  - title: "Devops for newbies, Devops in the enterprise." 
-    description: Devops in real enterprise, no demo, participants will benefit more from my talk if interessed about the subject and if needed a real feedback and also if they have questions to ask, it can be as a modestic feedback from my present experience. Not my first talk, but I'd love to help others if they find me helpfull. 
+  - title: "Devops for newbies, Devops in the enterprise."
+    description: Devops in real enterprise, no demo, participants will benefit more from my talk if interessed about the subject and if needed a real feedback and also if they have questions to ask, it can be as a modestic feedback from my present experience. Not my first talk, but I'd love to help others if they find me helpfull.
     time: "time: N/A"
     speaker:
       name: Madiha Harifi
@@ -24,9 +24,9 @@ sessions:
       name: Mohammed Daoudi
       role: Devops Engineer
       about: Devops Engineer, Interested in Linux containers and distributed systems. when I am not working I try to cook or go for hikes or both.
-      avatar: /speakers/Daoudi.jpg
+      avatar: /speakers/daoudi.jpg
   - title: Introduction to Elasticsearch
-    description: I will talk about my professional experience with elasticsearch searxh engine, and some best practices yo use it effectively...  
+    description: I will talk about my professional experience with elasticsearch searxh engine, and some best practices yo use it effectively...
     time: "time: N/A"
     speaker:
       name: Ayoub Chaabi
@@ -47,24 +47,24 @@ sessions:
     description: In this very not-technical talk we will explore what jobs exist today in the Cloud space and what are people doing beyond software engineering
     time: "time: N/A"
     speaker:
-      name: Abdellfetah Sghiouar 
+      name: Abdellfetah Sghiouar
       role: Google Cloud engineer
       about:  Google Cloud engineer working on Google Cloud Platform and all cloud stuff, specializes and work mainly on k8s, containers, istio and all the cool stuff
       avatar: /speakers/abdel.jpg
   - title: Efficient Cloud workloads with GraalVM
-    description: "The cloud is ubiquitous and can take many forms: from infrastructure as a service (IaaS), where you get low-level control, to function as a service (FaaS), where the platform is essentially abstracted away and managed for you. No matter the model used, startup time, low resource consumption, and overall performance are key goals for deploying a workload in the cloud. This session discusses how GraalVM, a high-performance, open source, polyglot virtual machine, helps meet those goals. It addresses how GraalVM can be used in IaaS/platform as a service (PaaS) setups and then looks at the other side of the cloud spectrum—FaaS—and explains how GraalVM can be leveraged for serverless functions. Attend this session to understand how to leverage GraalVM to improve your cloud (JVM) workload." 
+    description: "The cloud is ubiquitous and can take many forms: from infrastructure as a service (IaaS), where you get low-level control, to function as a service (FaaS), where the platform is essentially abstracted away and managed for you. No matter the model used, startup time, low resource consumption, and overall performance are key goals for deploying a workload in the cloud. This session discusses how GraalVM, a high-performance, open source, polyglot virtual machine, helps meet those goals. It addresses how GraalVM can be used in IaaS/platform as a service (PaaS) setups and then looks at the other side of the cloud spectrum—FaaS—and explains how GraalVM can be leveraged for serverless functions. Attend this session to understand how to leverage GraalVM to improve your cloud (JVM) workload."
     time: "time: N/A"
     speaker:
       name: Mohamed Ez-zarghili
       role: Software Development Manager
       about: "Mohamed is the GraalVM Sustaining Manager at Oracle Labs, Oracle’s Research Center in Casablanca.
-Mohamed is managing the global sustaining efforts for GraalVM Project, through his career he worked in different IT roles and co-founded multiple startups, He is also deeply involved with local tech communities." 
+Mohamed is managing the global sustaining efforts for GraalVM Project, through his career he worked in different IT roles and co-founded multiple startups, He is also deeply involved with local tech communities."
       avatar:  https://lh3.googleusercontent.com/pw/ACtC-3cMd71zGaazM_u43URfX7gNMvEr7JVIAOCYmI99jiLnBATkNQxc5-4oBvz4XE89uYOk9GwZgpUA7YNspOrIBGxg_ScRtY79QCDhnTEjMfSvEXgSHj5wYWuw-aJ7DraXI4WXYhcRrUJv8OaKv2wbZxQvTg=w842-h1122-no?authuser=0
   - title: Kubernetes VS Docker Swarm
     description: I will draw comparisons between Kubernetes and Docker Swarm. I will possibly include simple demos. Participants will benefit from knowing what to pick between these two technologies and when.
     time: "time: N/A"
     speaker:
       name: Zakaria Boualaid
-      role: Senior DevOps Engineer 
-      about: "Senior DevOps Engineer at Nimbleways, former DevOps Engineer at Oracle. I am passionate about technology and work ethic." 
+      role: Senior DevOps Engineer
+      about: "Senior DevOps Engineer at Nimbleways, former DevOps Engineer at Oracle. I am passionate about technology and work ethic."
       avatar: /speakers/boulaid.jpg
