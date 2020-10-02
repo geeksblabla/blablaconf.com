@@ -16,7 +16,7 @@ sessions:
       name: Anas Temouden
       role: Student
       about: "I am a 16 year old high school student, passionate about IT Development, Machine Learning & DeepLearning Enthusiast. I can implement an ML algorithm from scratch (without using any library or framework), among my other interests: Competitive Programming, Web Development..."
-      avatar: https://media-exp1.licdn.com/dms/image/C4D03AQH4GjFFnwi_tw/profile-displayphoto-shrink_200_200/0?e=1605744000&v=beta&t=dCtFwU4zzwTcxHX5piSIzWFzWFm6yotoizpxIIK4iSU
+      avatar: /speakers/temouden.jpeg
   - title: Building smarter app empowered with Machine Learning
     description: "What if your apps could solve problems, deduce information from pictures and solve complex tasks? In the future, mobile apps will be so much more than a data displaying device. Using AI, apps will be able to answer complex problems at a whole new level!
         In this session, I'll  show you how to get started building apps with Xamarin powered by Machine Learning. and  how you can use services in the cloud, like Azure Cognitive Services, but also how you can use trained models locally on mobile devices using CoreML and Tensorflow."
@@ -25,7 +25,7 @@ sessions:
       name: Meriem Zaid
       role: Front-end Developer 
       about: Front-end Developer with more interest in AI&ML projects.
-      avatar: https://lh3.googleusercontent.com/fife/ABSRlIrJxUsQbWOaHL2D6TjRdNnbFewPfthI9CW1fQShyTWuy7wNdhR2tOvzonl7Azn8d_UCDPpikxdf7ReYD5k1MN0IoTlHJVSRLG63qMoPYfeX3qoDaW0X6hQR4wvuP19lPapV_4QPceV4v7RsnxbxvS6nDiQA-zMAeA5MTZgm7lTPN64h7DIb_YTV_K9RW7AB9ta9CT_IFxJGnoGhj9QcNnILC3crn4BHwAMTQcIL5kKZbvClMgnay9sWUCnwTzpGrwYJjvt1BNsz2_mlJM5AX2gSuekBwNTR2tGt5w5PDUO1TjYsdAMzvfRtyAbQmYfVcTlMUwaMFPtklpq8Vp4YlXScLjuDcoAk5zGj5sVsS5LOY1F_x5cowvGFZUTRXGVLeqZ1ZB-FiJ__UXiCyJo62S6Mb_sIeEpCCrcSfuv6H2mv7vd_cwyov0mMFy9zRBP_KPabBsWDMOPOrPRnnxNOPvEVCNJczEJPRUv432KnKz4i53978fEvA323N_3ZJfD7GX4e6q5z8gggmGgn0HcHEDJWNqJ56f86FNf9PtMdf-5h5vmzfWOM8IJu0H23Pb0Lz5qQDZLei57RSVdhyU4NalglHFCfW2xuLQceyaUmSjcKA7YokqnECZwFHHI1tsLmy0QKBrMqrbkC-VPbDQD1MrQo-Rye__jjuI26joJXSrmTeykLu4bcUV25-kB2EYZ6yEEv0So8g1wGX6a9tCPus97DwUUklxJ8rFalZA=s657-w490-h657-no?authuser=0
+      avatar: /speakers/zaid.jpg
   - title: The Art Of The State
     description: It's a talk that explain what Orchestration is and how to implement a State Machine using Step Functions
     time: "time: N/A"
@@ -33,7 +33,7 @@ sessions:
       name: Ilyas Bakouch
       role: Solutions Architect
       about: A solutions architect and software engineer with a wide technical breadth and deep understanding of many systems.
-      avatar: https://lh3.googleusercontent.com/pw/ACtC-3eQiajQ8AruP2U8OOQEuKDZ7xLqmCXYtBR4jrwkn5QOVJ_QW0ON8PV-5qK3LHzWbKmj-vhN5IjUZ5G3xESzemR2L4kQTd0tTPeD76Dghi3lK-0J7_GwXGK66_l6VAAfbc8sKOdTx9VkXl83hJew0esK-Q=w808-h1122-no?authuser=0
+      avatar: /speakers/bakouch.jpg
   - title: Blogging, Why you should care?
     description: ""
     time: "time: N/A"
@@ -41,4 +41,4 @@ sessions:
       name: Youssouf el Azizi
       role: Front End Developer
       about: ""
-      avatar: https://pbs.twimg.com/profile_images/1209891793531224069/H_QPoHD4.jpg
+      avatar: /speakers/yjose.jpg
