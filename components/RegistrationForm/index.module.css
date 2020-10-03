@@ -87,4 +87,9 @@
     background: #fefefe;
     border-radius: 8px;
   }
+
+  .button_secondary {
+    color: #ffffff;
+    background-color: #4833b0;
+  }
 }

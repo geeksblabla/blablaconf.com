@@ -29,7 +29,7 @@ export default ({ shareUrl }) => {
     "👋 I am attending #BlaBlaConf Grab your ticket too 👇👇  #GeeksBalBla #DevC_Morocco";
 
   return (
-    <div>
+    <div className={styles.share}>
       <p className={styles.description}>
         You can share your ticket using the link{" "}
       </p>
