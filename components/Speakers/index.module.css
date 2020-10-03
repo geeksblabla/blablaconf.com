@@ -53,26 +53,25 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: center; */
   padding-bottom: 5rem;
 }
 
 .speaker {
-  width: 20%;
-  min-width: 250px;
-  margin-bottom: 3rem;
+  margin: 2rem;
+  margin-bottom: 2rem;
 }
 .speaker_name {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 18px;
   color: #2f2d32;
   margin-bottom: 0.2rem;
 }
 
 .speaker_avatar {
-  height: 150px;
-  width: 150px;
+  height: 180px;
+  width: 180px;
   border-radius: 156px;
   border-bottom-left-radius: 0px;
 }
@@ -84,10 +83,10 @@
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 440px) {
+@media (max-width: 450px) {
   .speaker_avatar {
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
     border-radius: 256px;
     border-bottom-left-radius: 0px;
   }

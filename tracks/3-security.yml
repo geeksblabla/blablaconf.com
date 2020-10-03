@@ -2,7 +2,7 @@ title: Architecture, security & methodologies
 date: 22 October
 sessions:
   - title: How to set up a secure system.
-    description: "My speech will be based on the presentation of IT system security architectures, so I'm going to talk about the cloud and virtualization. 
+    description: "My speech will be based on the presentation of IT system security architectures, so I'm going to talk about the cloud and virtualization.
                 I will present the Nagios and Proxmox tools."
     time: "time: N/A"
     speaker:
@@ -27,18 +27,18 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
       avatar: /speakers/tamaghart.jpg
   - title: "Advanced attacks in decentralized applications."
     description: "In this workshop, we will explore the fundamentals of decentralized applications, of the Solidity language as well as the advanced attacks that can affect your Smart contract and how to protect yourself.
-                  We will also discuss the tools and techniques for auditing Smarts Contracts and best methods and practices in the secure development of the dAPP"  
+                  We will also discuss the tools and techniques for auditing Smarts Contracts and best methods and practices in the secure development of the dAPP"
     time: "time: N/A"
     speaker:
-      name: Souhail Mssassi 
+      name: Souhail Mssassi
       role: CEO of CRISIS
       about: "He is the CEO of CRISIS, he has a 5+ years experience in cybersecurity in offensive security specialized in application security, cryptography and security of decentralized applications.
               He conducted several audit missions, particularly in the banking sector.
               He is also a speaker and he presented Security lectures in schools as well as universities in Morocco.
               In parallel, he does research in the field of security lately in Formal Verification."
-      avatar: /speakers/mssassi.jpg
+      avatar: /speakers/mssassi.png
   - title: "Android Security: An In-depth Analysis of Access Control Policies in Android Firmwares and Linux Kernel."
-    description: "What I will be covering? 
+    description: "What I will be covering?
                 In this talk, I will be talking about the internals of the security of Android operating system from a firmware perspective. I will be presenting how access control mechanisms are designed in this large system and how to find inconsistencies that can lead to zero-day exploits in vendors' firmwares. I will also show that many vendors' apps are vulnerable to various security issues. My talk is all backed up by the official Android documentation and the research that I am doing in my PhD in this field.
 
                 Does the talk include Demo?
