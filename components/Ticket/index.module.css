@@ -161,6 +161,7 @@
     flex-direction: column;
     justify-content: center;
     justify-items: center;
+    width: 70vw;
   }
   .modal_option_text {
     display: none;

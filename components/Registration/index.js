@@ -13,7 +13,9 @@ export const Registration = () => {
             </h1>
             <RegistrationForm secondary />
           </div>
-          <img src="/tickets.png" className={styles.tickets} />
+          <div className={styles.tickets_container}>
+            <img src="/tickets.png" className={styles.tickets} />
+          </div>
         </div>
       </div>
     </div>

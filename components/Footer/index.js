@@ -4,7 +4,16 @@ import styles from "./index.module.css";
 export const Footer = () => (
   <div className={styles.footer}>
     <Container>
-      <p> This Website made with ❤️ By DevC Team, sourced on GitHub.</p>
+      <p>
+        This Website made with ❤️ By DevC Team,{" "}
+        <a
+          href="https://github.com/DevC-Casa/blablaconf.com"
+          target="_blank"
+          style={{ color: "#4833b0", fontWeight: "bold" }}
+        >
+          sourced on GitHub.
+        </a>
+      </p>
       <p>
         Copyright © {new Date().getFullYear()} Blabla Conf. All rights reserved.
       </p>

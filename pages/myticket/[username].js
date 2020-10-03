@@ -26,8 +26,9 @@ export async function getServerSideProps({ query }) {
       .then(function (doc) {
         user = doc.data();
         seoConfig = {
-          title: user.name + "'s Ticket",
-          description: user.name + "'s BlaBlaConf Ticket",
+          title: user.name + "'s BlaBlaConf Ticket",
+          description:
+            "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
           openGraph: {
             type: "website",
             locale: "en_IE",
@@ -37,7 +38,8 @@ export async function getServerSideProps({ query }) {
               "/myticket/" +
               user.username,
             title: user.name + "'s Ticket",
-            description: user.name + "'s BlaBlaConf Ticket",
+            description:
+              "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
             images: [
               {
                 url: getTicketGraphImg(user),
