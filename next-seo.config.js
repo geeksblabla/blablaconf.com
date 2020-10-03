@@ -1,21 +1,22 @@
+const host = process.env.NEXT_PUBLIC_HOST;
 export default {
   title:
-    "BlaBla Conf | 5 Days and 5 Tracks covering hottest Technology Trends in Darija",
+    "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
   description:
-    "BlaBla Conf | 5 Days and 5 Tracks covering hottest Technology Trends in Darija",
-  canonical: "https://www.blablaconf.com/",
+    "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 20th to 24th October",
+  canonical: host,
   openGraph: {
     title:
       "BlaBla Conf | 5 Days and 5 Tracks covering hottest Technology Trends in Darija",
     description:
-      "BlaBla Conf | 5 Days and 5 Tracks covering hottest Technology Trends in Darija",
+      "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 20th to 24th October",
     type: "website",
     locale: "en_IE",
-    url: "https://www.blablaconf.com/",
+    url: host,
     site_name: "BlaBlaConf",
     images: [
       {
-        url: "https://www.blablaconf.com/moha_meriem.png",
+        url: `${host}/cover.jpg`,
       },
     ],
   },

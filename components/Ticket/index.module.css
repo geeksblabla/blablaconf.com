@@ -120,7 +120,7 @@
 }
 .modal_button:disabled {
   background-color: #f8f6fe;
-  color: #000;
+  color: rgba(72, 53, 169, 0.4);
 }
 
 /* share  */
