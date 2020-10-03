@@ -1,6 +1,6 @@
 .hero {
   background: url(../../public/back.png),
-    linear-gradient(254.4deg, #4732af 0%, #7360d4 98.94%);
+    linear-gradient(254.4deg, #7360d4 0%, #4732af 98.94%);
   font-family: Inter;
   color: #ffffff;
   padding: 5rem 0rem;

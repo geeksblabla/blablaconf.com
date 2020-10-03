@@ -23,10 +23,15 @@ export const Ticket = () => {
         <Header />
         <div className={styles.main}>
           <div className={styles.content}>
-            <h1 className={styles.title}>
-              🎉🎉🎉 <br />
-              Congratulation your are in!
-            </h1>
+            {!user ? (
+              <h1 className={styles.title}>Congratulation your are in!</h1>
+            ) : (
+              <h1>
+                🎉🎉🎉 <br />
+                Share your ticket with friends
+              </h1>
+            )}
+
             {!user ? (
               <>
                 <p className={styles.description}>

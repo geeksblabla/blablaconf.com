@@ -30,9 +30,6 @@ export default ({ shareUrl }) => {
 
   return (
     <div className={styles.share}>
-      <p className={styles.description}>
-        You can share your ticket using the link{" "}
-      </p>
       <button
         className={styles.copy}
         onClick={() => {
