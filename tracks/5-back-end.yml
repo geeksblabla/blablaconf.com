@@ -1,0 +1,49 @@
+title: Backend tech & programming languages
+date: 24 October
+sessions:
+  - title: Python Survival Skills
+    description:
+      "I will in this workshop present some Python skills that are beneficial for a Python developer and that facilitates his tasks.
+      The talk of course include a practical Demo."
+    time: "time: N/A"
+    speaker:
+      name: HoussameEddine Wardi
+      role: Backend Software Engineer
+      about: ""
+      avatar: /speakers/wardi.jpg
+  - title: Introduction to Java Platform Module System (JPMS)
+    description:
+      "My session covers how to define, build and run Java modules, what impact they have on existing projects, what problems they solve, what are benefits they provide, and JDK decomposition to modules.
+      Participants will be introduced to the module's system basics and see how future Java projects will be organized and developed."
+    time: "time: N/A"
+    speaker:
+      name: Hamza Belmellouki
+      role: Backend Developer
+      about: Self-Taught backend developer | focusing on the JVM ecosystem | Works at xHub.
+      avatar: /speakers/belmellouki.jpg
+  - title: Java bytecode for the rest of us
+    description:
+      "Java is one of the most popular programming languages in the world, It conquered by performance, expressiveness and portability, bytecode contributed a great deal to it's success, and by knowing how to read and write it, we can understand some of the interesting magic tricks that frameworks such as Spring, Mockito ... use to helps us write cleaner and less verbose code.
+      The session's goal is to help people understand what Java bytecode is? How the JVM uses it? How is it structured? What are the common bytecodes that you should know? How some of the most popular language constructs (loops, lambdas, functions ...) translates to bytecode? and some real world examples all of the things presented above. "
+    time: "time: N/A"
+    speaker:
+      name: Mehdi Cheracher
+      role: Software Engineer
+      about: Software Engineer, Java enthusiast and a Competitive programmer.
+      avatar: /speakers/cheracher.jpg
+  - title: Let's make a graphql api using Nestjs
+    description: "This session will be mostly hands-on with a few slides if needed, we should cover all aspects of a graphql endpoint, queries, mutations, security, participations should be able to write their own graphql apis after this talks. should be able to know when to do so and why."
+    time: "time: N/A"
+    speaker:
+      name: Amine Hakkou
+      role: Software engineer
+      about: Software engineer, FP enthusiast, loves challenge.
+      avatar: /speakers/hakkou.jpg
+  - title: Introduction to IZMjs
+    description: "Will talk about IZMjs and create a small application together with it. The session will be a coding one." 
+    time: "time: N/A"
+    speaker:
+      name: Mohamed Idrissi
+      role: Service architect  
+      about: "A service architect at 4D Logiciels Maroc and a JS lover." 
+      avatar: /speakers/idrissi.jpg

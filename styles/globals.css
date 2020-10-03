@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
 html,
-body {
+body,
+#__next {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Inter sans-serif;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 a {
@@ -13,4 +17,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+button {
+  border: none;
 }

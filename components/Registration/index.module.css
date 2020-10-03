@@ -1,0 +1,56 @@
+.registration {
+  font-family: Inter;
+  padding-top: 1rem;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.main {
+  margin-top: -8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+  min-height: 400px;
+  /* background-color: red; */
+}
+
+.title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 120%;
+}
+
+.tickets {
+  width: 55%;
+}
+
+.form {
+  /* background: red; */
+  max-width: 530px;
+  padding-bottom: 4rem;
+  /* margin: 10rem 0px; */
+}
+
+@media (max-width: 1240px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    padding: 5rem 0px;
+    padding-bottom: 1rem;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .tickets {
+    width: 90%;
+  }
+}

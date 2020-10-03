@@ -1,0 +1,53 @@
+.about {
+  font-family: Inter;
+  background: #ffffff;
+  padding: 5rem 0rem;
+  padding-top: 3rem;
+}
+
+.img_container {
+  margin: auto;
+  width: fit-content;
+  margin-top: -12rem;
+}
+.img {
+  max-width: 100%;
+}
+
+.main {
+  padding: 2rem 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  color: #2e2c37;
+  text-align: center;
+}
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 170%;
+  text-align: center;
+  color: #575560;
+}
+
+@media (max-width: 750px) {
+  .about {
+    padding: 2rem 0px;
+  }
+  .main {
+    padding: 2rem 0px;
+  }
+  .img_container {
+    margin-top: -10rem;
+  }
+}

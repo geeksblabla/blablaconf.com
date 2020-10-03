@@ -1,3 +1,4 @@
+
 .mainDiv {
   display: flex;
   margin-top: 125px;
@@ -13,10 +14,11 @@
   align-items: center;
 }
 
-.leftDivContent {
-  /* margin-top: 125px; */ 
-  justify-content: flex-start;
-  align-items: flex-start;
+.leftDivContent { 
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .rightDiv {
@@ -39,7 +41,7 @@
   font-style: normal;
   font-weight: 900;
   line-height: 100%;
-  font-size: 64px;
+  font-size: 57px;
   width: 375px;
   color: #FFFFFF;
 }
@@ -59,14 +61,36 @@
 
 .githubButton{
     padding: 20px;
-    width: 256px;
+    width: 200px;
     height: 64px;
     background: #FEFEFE;
     border-radius: 8px;
 }
 
+.shareActions{
+  padding: 20px;
+  width: 200px;
+  height: 64px;
+  background: #FEFEFE;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.ticketNumber{
+  position: absolute;
+  transform: rotate(90deg);
+  left: 414px;
+  font-size: 27px;
+  top: 97px;
+  color: white;
+  text-align: center;
+  width: 266px;
+}
+
 .ticketBadge{
   display: flex;
+  margin-top: 20px;
 }
 
 .ticketBadgeInfo{
@@ -90,7 +114,7 @@
   margin-left: 8px;
 }
 
-.ticketNumber{
+.ticketNumberMobile{
   visibility: hidden;
 }
 
@@ -111,8 +135,104 @@
   height: 20px;
 }
 
+.usenameIcon{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.mainDivAfterAuth{
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+
+.input{
+  background: #4538A4;
+  border-radius: 8px 0px 0px 8px;
+  width: 343px;
+  height: 60px;
+  border: none;
+  text-indent: 20px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::-webkit-input-placeholder { /* Edge */
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+
+}
+
+.input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+
+}
+
+.input::placeholder {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+.button{
+  width: 160px;
+  height: 60px; 
+  background: #FEFEFE;
+  border-radius: 0px 8px 8px 0px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.button_title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #220C79;
+}
+
+.ticketBadgeImg{
+  width: 100%;
+}
 
 @media (max-width: 850px) {
+
+  .title {
+    font-size: 45px;
+
+  }
+  
+  .subtitle {
+    font-size: 15px;
+
+      margin-bottom: 0;
+  }
+
+  
+.githubButton{
+  padding: 15px;
+  width: 200px;
+}
+
+
   .mainDiv{
     flex-direction: column;
   }
@@ -124,7 +244,6 @@
   }
 
   .rightDivContent, .leftDivContent{
-    margin-top: 46px;
     text-align: center;
   }
  
@@ -135,7 +254,7 @@
     color: #FFFFFF
   }
 
-  .ticketNumber{
+  .ticketNumberMobile{
     font-weight: 800;
     font-size: 16.7619px;
     line-height: 100%;
@@ -164,10 +283,12 @@
   .usenameIcon{
     width: 45px;
     height: 45px;
+    border-radius: 50%;
   }
+ 
 
-  .usernameInfo{
-    margin-top: 50px;
+  .ticketBadgeImg{
+    width: 100%;
   }
 }
 

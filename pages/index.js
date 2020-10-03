@@ -1,35 +1,42 @@
-import Layout from "../components/layout";
-import { createGlobalStyle } from "styled-components";
-import Registration from "../components/registration";
-import Ticket from "../components/ticket";
-import ComingSoon from "../components/coming_soon";
+import Head from "next/head";
+import {
+  Layout,
+  Speakers,
+  Agenda,
+  Hero,
+  About,
+  Registration,
+  Sponsors,
+} from "../components";
+import { getData } from "./api/index";
 
-const GlobalStyle = createGlobalStyle`
-
-html,
-body {
-  background-image: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%);
-  height: 100%;
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
- 
- 
- 
-`;
-  
-//background: linear-gradient(300.87deg, #220C79 3.7%, #4A37AB 100%) no-repeat;
-  
-const Index = () => {
+const Index = ({ tracks, speakers }) => {
   return (
-     <Layout title="Create Next App">
-        <GlobalStyle />
-        {/* <Registration />  */}
-        {/* <Ticket />  */}
-        <ComingSoon />
-     </Layout>
+    <Layout>
+      <Head>
+        <title>
+          BlablaConf | 5 Days and 5 Tracks covering hottest Technology Trends in
+          Darija
+        </title>
+      </Head>
+      <Hero />
+      <About />
+
+      <Speakers speakers={speakers} />
+      <Agenda tracks={tracks} />
+      <Registration />
+    </Layout>
   );
 };
 
 export default Index;
+
+export async function getStaticProps() {
+  const { speakers, tracks } = await getData();
+  return {
+    props: {
+      tracks,
+      speakers,
+    },
+  };
+}
