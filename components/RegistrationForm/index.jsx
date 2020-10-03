@@ -28,7 +28,7 @@ export const RegistrationForm = ({ secondary = false }) => {
               .doc(email)
               .set({ email, date: new Date() })
               .then(function (response) {
-                axios.post("/api/sendEmail", { email });       
+                axios.post("/api/sendEmail", { email });
               });
           }
 
@@ -56,7 +56,7 @@ export const RegistrationForm = ({ secondary = false }) => {
           className={`${styles.button} ${secondary && styles.button_secondary}`}
           onClick={registration}
         >
-          Grab your ticket
+          Grab Your Ticket
         </button>
       </div>
       {error && <div style={{ marginTop: 5, color: "red" }}>{error}</div>}

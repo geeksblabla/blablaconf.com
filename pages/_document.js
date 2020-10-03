@@ -11,8 +11,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
-
           <link
             rel="apple-touch-icon"
             sizes="57x57"

@@ -11,7 +11,7 @@ export const Hero = () => {
         <Header isHome />
         <div className={styles.main}>
           <h1 className={styles.title}>
-            5 Days and 5 Tracks covering hottest Technology Trends in{" "}
+            5 Days and 5 Tracks Covering Hottest Technology Trends in{" "}
             <span className={styles.ma}> Darija </span>
           </h1>
           <div className={styles.date}>20-24 October | Online</div>
