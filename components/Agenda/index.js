@@ -72,7 +72,7 @@ const Talks = ({ sessions }) => (
 const Talk = ({ title, time, speaker }) => (
   <div className={styles.talk}>
     <p className={styles.talk_title}> {title} </p>
-    <p className={styles.talk_time}> {time} </p>
+    {time !== "time: N/A" && <p className={styles.talk_time}> {time} </p>}
     <div className={styles.talk_speaker}>
       <img className={styles.talk_speaker_avatar} src={speaker.avatar} />
       <div>

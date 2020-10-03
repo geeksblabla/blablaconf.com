@@ -69,14 +69,17 @@
   padding: 24px;
   margin: 10px;
   color: #ffffff;
-  max-width: 44%;
+  width: 46%;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 .talk_title {
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 140%;
+  flex: 1;
 }
 .talk_time {
   font-size: 14px;
@@ -106,24 +109,25 @@
   margin: 0.5rem 3px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
   .talks {
     justify-content: space-around;
     padding-left: 0rem;
   }
   .talk {
-    max-width: 80%;
+    width: 90%;
   }
   .speakers::after {
     display: none;
   }
 }
+
 @media (max-width: 700px) {
   .main {
     flex-direction: column;
   }
   .talk {
-    max-width: 100%;
+    width: 100%;
   }
   .menu_container {
     display: flex;

@@ -10,28 +10,30 @@ sessions:
       about: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
       avatar: /speakers/ghallou.jpg
   - title: "Demystifying  state management in Angular with NgRx."
-    description: "Many frontend developers especially those new to large production apps have difficulties  with the different concepts involved in state management in their applications. this workshop is entry point to most of these concepts. It is structured in a way that explains the concept in a couple of slides, followed by code snippets, and finally a code demo. Depending on the available time there could be a hands-on coding challenge for the audience.
-          The programme looks something like the following;
-          Introduction ::
-          - state management in frontend applications.
-          - Redux in a nutshell.
-          Core ::
-          - Deep dive into NgRx store, actions, reducers, selectors and effects. 
-          - Code demo: flight tracker application.
+    description:
+      "Many frontend developers especially those new to large production apps have difficulties  with the different concepts involved in state management in their applications. this workshop is entry point to most of these concepts. It is structured in a way that explains the concept in a couple of slides, followed by code snippets, and finally a code demo. Depending on the available time there could be a hands-on coding challenge for the audience.
+      The programme looks something like the following;
+      Introduction ::
+      - state management in frontend applications.
+      - Redux in a nutshell.
+      Core ::
+      - Deep dive into NgRx store, actions, reducers, selectors and effects.
+      - Code demo: flight tracker application.
 
-          Developers will get the most of the deep dive part of the talk if they are already familiar with Angular and have deployed at least one app to production.
+      Developers will get the most of the deep dive part of the talk if they are already familiar with Angular and have deployed at least one app to production.
 
-          The first part (introduction) could be of use to beginner frontend developers regardless of the framework of libraries they use."
+      The first part (introduction) could be of use to beginner frontend developers regardless of the framework of libraries they use."
     time: "time: N/A"
     speaker:
       name: Abdellah Iraamane
       role: Frontend Developer
-      about: I'm a frontend developer based in Dublin, Ireland. I specialise in building high-traffic performance-driven frontend applications in Angular. When I'm not coding I'm probably at a pizza restaurant nearby or ordering donuts. 
+      about: I'm a frontend developer based in Dublin, Ireland. I specialise in building high-traffic performance-driven frontend applications in Angular. When I'm not coding I'm probably at a pizza restaurant nearby or ordering donuts.
       avatar: /speakers/iraamane.jpg
   - title: Reactivity Patterns in Web Frameworks.
-    description: "Reactivity is the ability of a web framework to update the view whenever the application state has changed.
-        Web frameworks ship in reactivity by default, always making sure that the view is up to date of the application state changes.
-        Let's explore how do web frameworks achieve reactivity?"
+    description:
+      "Reactivity is the ability of a web framework to update the view whenever the application state has changed.
+      Web frameworks ship in reactivity by default, always making sure that the view is up to date of the application state changes.
+      Let's explore how do web frameworks achieve reactivity?"
     time: "time: N/A"
     speaker:
       name: Chihab Otmani
@@ -52,7 +54,7 @@ sessions:
     speaker:
       name: Maroua Ezouhri
       role: Ux & product designer
-      about: Ux & product designer, Figma design Ambassador, Women techmaker ambassador 
+      about: Ux & product designer, Figma design Ambassador, Women techmaker ambassador
       avatar: /speakers/ezouhri.jpg
   - title: Design Without Losing Your Mind.
     description: "Design is not that hard, it is not as you think. Design is all about making decisions and good design is a result of good decisions, in this presentation I will teach how to make good decisions in order to make good design."
@@ -62,11 +64,11 @@ sessions:
       role: UX/UI Designer
       about: ""
       avatar: /speakers/azizi.jpg
-  # - title: Let's Talk About SaaS
-  #   description: "What is SaaS? and Why developers should adopt SaaS business model instead of software traditional business model (On-Premise Softwares). This will be a short, but rich session to introduce you to the SaaS basics"
-  #   time: "time: N/A"
-  #   speaker:
-  #     name: Ayoub Moustaid
-  #     role: CEO of Overflow Digital Solutions
-  #     about: "Serial Digital Entrepreneur, SaaS Business, and CEO of Overflow Digital Solutions, With 7+ Years Experience In the Digital Field. I Try Everyday To Solve Real Problems Through Digital Solutions & Technologies ... Let's Make It Happen Digitally!"
-  #     avatar: /speakers/moustaid.jpg
+  - title: Tools & Methods to Grow!
+    description: "What is SaaS? and Why developers should adopt SaaS business model instead of software traditional business model (On-Premise Softwares). This will be a short, but rich session to introduce you to the SaaS basics"
+    time: "time: N/A"
+    speaker:
+      name: Ayoub Moustaid
+      role: CEO of ODS
+      about: "Let's discover some of the most useful tools & methods, you should absolutely know to help you grow in the digital era"
+      avatar: /speakers/moustaid.jpg
