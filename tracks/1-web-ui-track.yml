@@ -29,11 +29,8 @@ sessions:
       role: Frontend Developer
       about: I'm a frontend developer based in Dublin, Ireland. I specialise in building high-traffic performance-driven frontend applications in Angular. When I'm not coding I'm probably at a pizza restaurant nearby or ordering donuts.
       avatar: /speakers/iraamane.jpg
-  - title: Reactivity Patterns in Web Frameworks.
-    description:
-      "Reactivity is the ability of a web framework to update the view whenever the application state has changed.
-      Web frameworks ship in reactivity by default, always making sure that the view is up to date of the application state changes.
-      Let's explore how do web frameworks achieve reactivity?"
+  - title: Building large scale applications in a Monorepo.
+    description: "In the last couple of years Babel, Angular, React, Vue and many other open source projects switched to using Mono-repositories. Instead of having a lot of repositories with their own configs, we will have only one source of truth mono repository with logically separated packages within. "
     time: "time: N/A"
     speaker:
       name: Chihab Otmani
