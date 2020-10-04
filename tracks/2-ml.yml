@@ -1,16 +1,16 @@
-title: Big data, ML & AI  
+title: Big data, ML & AI
 date: 21 October
 sessions:
   - title: '"Hello Word" for Machine Learning'
     description: "1 Intro in AI , ML , DL
-        2 Types of ML algorithms( Supervised, Unsupervised, Renforcement)
-        3 Trainig a ML model : 
-          .1 the dataset ( Training and testing )
-          .2 the model  (explanation of the concept of some ML algorithms + sklearn cheatsheet)
-          .3 The Error Fonction
-          .4 The Optimizer ( Explanation  of the Gradient Descent Algorithm)
-        4. Application in Kaggle :Predicting the Survival of Titanic Passengers    
-        5. Questions  + What next ?? "
+      2 Types of ML algorithms( Supervised, Unsupervised, Renforcement)
+      3 Trainig a ML model :
+      .1 the dataset ( Training and testing )
+      .2 the model  (explanation of the concept of some ML algorithms + sklearn cheatsheet)
+      .3 The Error Fonction
+      .4 The Optimizer ( Explanation  of the Gradient Descent Algorithm)
+      4. Application in Kaggle :Predicting the Survival of Titanic Passengers
+      5. Questions  + What next ?? "
     time: "time: N/A"
     speaker:
       name: Anas Temouden
@@ -18,12 +18,13 @@ sessions:
       about: "I am a 16 year old high school student, passionate about IT Development, Machine Learning & DeepLearning Enthusiast. I can implement an ML algorithm from scratch (without using any library or framework), among my other interests: Competitive Programming, Web Development..."
       avatar: /speakers/temouden.jpeg
   - title: Building smarter app empowered with Machine Learning
-    description: "What if your apps could solve problems, deduce information from pictures and solve complex tasks? In the future, mobile apps will be so much more than a data displaying device. Using AI, apps will be able to answer complex problems at a whole new level!
-        In this session, I'll  show you how to get started building apps with Xamarin powered by Machine Learning. and  how you can use services in the cloud, like Azure Cognitive Services, but also how you can use trained models locally on mobile devices using CoreML and Tensorflow."
+    description:
+      "What if your apps could solve problems, deduce information from pictures and solve complex tasks? In the future, mobile apps will be so much more than a data displaying device. Using AI, apps will be able to answer complex problems at a whole new level!
+      In this session, I'll  show you how to get started building apps with Xamarin powered by Machine Learning. and  how you can use services in the cloud, like Azure Cognitive Services, but also how you can use trained models locally on mobile devices using CoreML and Tensorflow."
     time: "time: N/A"
     speaker:
       name: Meriem Zaid
-      role: Front-end Developer 
+      role: Front-end Developer
       about: Front-end Developer with more interest in AI&ML projects.
       avatar: /speakers/zaid.jpg
   - title: The Art Of The State
@@ -39,6 +40,6 @@ sessions:
     time: "time: N/A"
     speaker:
       name: Youssouf el Azizi
-      role: Front End Developer
+      role: Software Engineer
       about: ""
-      avatar: /speakers/yjose.jpg
+      avatar: /speakers/y_elazizi.jpg
