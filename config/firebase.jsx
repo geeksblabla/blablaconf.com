@@ -12,11 +12,16 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-const auth = firebase.auth();
-const firestore = firebase.firestore();
+let auth, firestore = null;
 
+try {
+  auth = firebase.auth();
+  firestore = firebase.firestore();
+} catch (error) {
+  console.log(error)
+}
 export {
- auth,
- firestore,
- firebase
+  auth,
+  firestore,
+  firebase
 };
