@@ -47,3 +47,34 @@ sessions:
       role: Service architect  
       about: "A service architect at 4D Logiciels Maroc and a JS lover." 
       avatar: /speakers/idrissi.jpg
+  - title: The majestic monolith or a microservices architecture?
+    description: "I want to talk about the majestic monolith and why to use this type of architecture.
+I will present examples of use cases from well known companies and will compare this architecture to microservices.
+Is microservices architecture always the best answer ?
+Why a lot of other companies prefer a monolith ?
+The benefits of monolith applications.
+A bit about the role of Rails in building a good reputation for monolith apps.
+What software architects said about monolith vs microservices.
+When to go from a monolith to a microservices architecture.
+Is performance really an issue in a monolith app ?!
+
+Currently I work in a company where we have a monolith architecture in most apps."
+    time: "time: N/A"
+    speaker:
+      name: Naoufal El Hassnaoui
+      role: Software Developer
+      about: "I started as a software developer intern at Eutech. Today, 18 months later, I’m managing the team and the company.
+My strong ability to learn fast helped me get to where I am, I’m proud of myself but still improving each day, learning new things, and developing new skills.
+As of now, I have a great experience in web & mobile development focusing on Ruby On Rails & GraphQL in the backend and React Native in the frontend.
+
+I'm a Technical Lead and full-stack Ruby on Rails developer at Eutech Maroc, a development team working with the Eutech France team to develop and maintain a suite of web and mobile eHealth applications.
+
+I'm leading this team while reporting to our CTO in France, my job consists of managing the development team in Morocco, assignment of tasks to each member of the team, projects management in coordination with the French team, providing the team with the necessary support and some other tasks out of the development process such as hirings, salary changes, contracts management and purchase of necessary equipment for the team.
+
+I'm also a full-stack engineer with Eutech so I actively participate in designing, developing, monitoring, and maintaining Ruby on Rails web applications, REST API, and GraphQL API.
+I have a good experience working with JavaScript frameworks and libraries such as ReactJS, React Native, NodeJS, KoaJS. These different technologies led me to get a great understanding of how JavaScript works in the frontend as in the backend.
+These experiences plus my monthly experiments with a variety of other libraries and frameworks, make an outstanding full-stack engineer with a skill set focused on designing and building great architectures for web applications.
+
+My main goal is to always help the company in different areas, not just web development, improve our development process to build better web applications, maintain and improve the old ones. " 
+      avatar: /speakers/hassnaoui.jpg
+      
