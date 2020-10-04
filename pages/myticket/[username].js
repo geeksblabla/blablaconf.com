@@ -37,7 +37,7 @@ export async function getServerSideProps({ query }) {
               process.env.NEXT_PUBLIC_HOST +
               "/myticket/" +
               user.username,
-            title: user.name + "'s Ticket",
+            title: user.name + "'s BlaBlaConf Ticket",
             description:
               "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
             images: [

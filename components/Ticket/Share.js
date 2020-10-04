@@ -26,7 +26,7 @@ export default ({ shareUrl }) => {
     if (copied) setTimeout(() => setCopied(false), 2000);
   }, [copied]);
   const title =
-    "👋 I am attending #BlaBlaConf Grab your ticket too 👇👇  #GeeksBlaBla #DevC_Morocco";
+    "Hey, I am attending #BlaBlaConf Grab your ticket too  #GeeksBlaBla #DevC_Morocco";
 
   return (
     <div className={styles.share}>
