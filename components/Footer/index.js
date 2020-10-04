@@ -5,7 +5,7 @@ export const Footer = () => (
   <div className={styles.footer}>
     <Container>
       <p>
-        This Website made with ❤️ By DevC Team,{" "}
+        Made with ❤️ By DevC Team,{" "}
         <a
           href="https://github.com/DevC-Casa/blablaconf.com"
           target="_blank"
