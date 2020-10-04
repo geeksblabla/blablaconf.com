@@ -9,7 +9,7 @@ export const Registration = () => {
         <div className={styles.main}>
           <div className={styles.form}>
             <h1 className={styles.title}>
-              What are you waiting for? Claim your spot now!
+              What are you waiting for? Claim your ticket now!
             </h1>
             <RegistrationForm secondary />
           </div>
