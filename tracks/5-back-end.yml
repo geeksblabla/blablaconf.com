@@ -39,6 +39,14 @@ sessions:
       role: Software engineer
       about: Software engineer, FP enthusiast, loves challenge.
       avatar: /speakers/hakkou.jpg
+  - title: Healthy Programming Learning
+    description: "This talk is about knowing how to learn a programming language properly; what to avoid, what to focus on and how you can benefit the maximum amount of information."
+    time: "time: N/A"
+    speaker:
+      name: Afaf Ridaoui
+      role: Computer Engineering Student
+      about: "A newborn binary kid in her 19s, passionate & ambitious while creating web sites & apps."
+      avatar:  /speakers/affaf.jpg
   - title: The importance of competitive programming
     description: "List some advantages of CP (abstraction , input , output , complexities) and give some examples (search in huge lists ...)"
     time: "time: N/A"
@@ -46,7 +54,7 @@ sessions:
       name: Diaa Alhak El Fallous
       role: MCPC director, MOI coordinator 
       about: "MCPC director , MOI coordinator."
-      avatar:  /speakers/fallous.jpg
+      avatar:  /speakers/fallous.jpg      
   - title: Introduction to IZMjs
     description: "Will talk about IZMjs and create a small application together with it. The session will be a coding one." 
     time: "time: N/A"
