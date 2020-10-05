@@ -28,16 +28,17 @@ export const getStaticProps = async ({ params: { username } }) => {
 	const doc = await firestore.collection("/tickets").doc(username).get();
 
 	user = doc.data();
+	const name = user.name === null ? user.username : user.name;
 
 	seoConfig = {
-		title: user.name + "'s BlaBlaConf Ticket",
+		title: name + "'s BlaBlaConf Ticket",
 		description:
 			"BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
 		openGraph: {
 			type: "website",
 			locale: "en_IE",
 			url: `https://${process.env.NEXT_PUBLIC_HOST}/myticket/${user.username}`,
-			title: `${user.name}'s BlaBlaConf Ticket`,
+			title: `${name}'s BlaBlaConf Ticket`,
 			description:
 				"BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
 			images: [

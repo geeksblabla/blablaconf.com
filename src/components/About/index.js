@@ -1,5 +1,4 @@
-import { Container } from "components/Container";
-import { Sponsors } from "components/Sponsors";
+import { Container, Sponsors } from "components";
 import styles from "./index.module.css";
 
 export const About = () => {
@@ -13,9 +12,9 @@ export const About = () => {
 					<h1 className={styles.title}>Made by and for the community</h1>
 					<div className={styles.description}>
 						By the Moroccan developer community, for the Moroccan developer
-						community, BlaBla Conf is your one stop shop for lattest and hottest
-						technology trends, in darija, and completely free! Join us from 20th
-						to 24th October
+						community, BlaBla Conf is your one-stop-shop for the latest and
+						hottest technology trends, in Darija, and completely free! Join us
+						from 20th to 24th October.
 					</div>
 				</div>
 				<Sponsors />

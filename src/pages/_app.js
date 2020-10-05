@@ -7,11 +7,15 @@ import "nprogress/nprogress.css";
 import "theme/font.css";
 import "reactjs-popup/dist/index.css";
 import SEO from "config/next-seo.config.js";
+import * as gtag from "../components/gtag";
 
 Router.events.on("routeChangeStart", () => {
 	NProgress.start();
 });
-Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeComplete", (url) => {
+	gtag.pageview(url);
+	NProgress.done();
+});
 Router.events.on("routeChangeError", () => NProgress.done());
 
 export default class MyApp extends App {

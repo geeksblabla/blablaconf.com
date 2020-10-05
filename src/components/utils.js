@@ -1,9 +1,13 @@
 import { encode } from "universal-base64";
+import yaml from "js-yaml";
 const host = process.env.NEXT_PUBLIC_HOST;
 
 export const getTicketImg = (user) => {
   if (!user) return "/img/ticket_placeholder.png";
-  const NameLayout = `l_text:Roboto_60_bold:${user.name},co_rgb:40347B,g_north_west,x_321,y_76`;
+
+  const name = user.name === null ? user.username : user.name;
+  const FontSize = name.length > 20 ? 50 : 60;
+  const NameLayout = `l_text:Roboto_${FontSize}_bold:${name},co_rgb:40347B,g_north_west,x_321,y_76`;
   const UserNameLayout = `l_text:Roboto_40:${user.username},co_rgb:6A6198,g_north_west,x_377,y_160`;
   const base64 = encode(user.photo);
   const TicketNumber = `l_text:Arial_70_bold:№ 0${user.ticketNumber},co_rgb:FFFFFF,g_north_west,x_1533,y_120,a_90/`;
@@ -22,3 +26,35 @@ export const getTicketGraphImg = (user) => {
   const ticket = getTicketImg(user);
   return `https://res.cloudinary.com/demo/image/fetch/w_1200,h_630,c_pad,b_rgb:6955CB/${ticket}`;
 };
+
+function compare(a, b) {
+  // Use toUpperCase() to ignore character casing
+  const bandA = a.name.toUpperCase();
+  const bandB = b.name.toUpperCase();
+
+  let comparison = 0;
+  if (bandA > bandB) {
+    comparison = 1;
+  } else if (bandA < bandB) {
+    comparison = -1;
+  }
+  return comparison;
+}
+
+export async function getData() {
+  const context = require.context("../tracks/", false, /\.yml$/);
+  const tracks = [];
+  let speakers = [];
+  for (const key of context.keys()) {
+    const trackName = key.slice(2);
+    const content = await import(`../tracks/${trackName}`);
+    const track = yaml.safeLoad(content.default);
+    tracks.push(track);
+    const trackSpeakers = track.sessions
+      .map((s) => s.speaker)
+      .filter((sp) => !speakers.some((s) => s.name === sp.name));
+    speakers.push(...trackSpeakers);
+  }
+
+  return { tracks, speakers: speakers.sort(compare) };
+}

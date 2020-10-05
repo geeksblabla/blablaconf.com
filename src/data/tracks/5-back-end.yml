@@ -39,6 +39,22 @@ sessions:
       role: Software engineer
       about: Software engineer, FP enthusiast, loves challenge.
       avatar: /speakers/hakkou.jpg
+  - title: Healthy Programming Learning
+    description: "This talk is about knowing how to learn a programming language properly; what to avoid, what to focus on and how you can benefit the maximum amount of information."
+    time: "time: N/A"
+    speaker:
+      name: Afaf Ridaoui
+      role: Computer Engineering Student
+      about: "A newborn binary kid in her 19s, passionate & ambitious while creating web sites & apps."
+      avatar:  /speakers/affaf.jpg
+  - title: The importance of competitive programming
+    description: "List some advantages of CP (abstraction , input , output , complexities) and give some examples (search in huge lists ...)"
+    time: "time: N/A"
+    speaker:
+      name: Diaa Alhak El Fallous
+      role: MCPC director, MOI coordinator 
+      about: "MCPC director , MOI coordinator."
+      avatar:  /speakers/fallous.jpg      
   - title: Introduction to IZMjs
     description: "Will talk about IZMjs and create a small application together with it. The session will be a coding one." 
     time: "time: N/A"
@@ -47,3 +63,21 @@ sessions:
       role: Service architect  
       about: "A service architect at 4D Logiciels Maroc and a JS lover." 
       avatar: /speakers/idrissi.jpg
+  - title: The majestic monolith or a microservices architecture?
+    description: "I'm here not to convince you to use a monolith architecture in your next project! I'm just here to give you an overall view of when to build your next project using a monolith architecture and when to choose Micro/services-oriented architecture.
+I want this talk to answer the following questions :
+Why some companies, like Shopify, are still using monolith architecture? 
+What is the modular monolith?
+When to go from a monolith to microservices?
+When starting a new project what to choose for my architecture?
+What software architects said about monolith vs microservices?
+A bit about the role of Rails in building a reputation for monolith apps."
+    time: "time: N/A"
+    speaker:
+      name: Naoufal El Hassnaoui
+      role: Software Engineer
+      about: "I’m a technical lead at Eutech Maroc, managing a team of 6 engineers, with two years of experience in building eHealth web and mobile applications for hospitals and health professionals.
+In the other hand I’m a software engineer working mainly with Ruby on Rails, GraphQL and React Native.
+I help in designing the architecture of new projects while also maintaining legacy monolith applications" 
+      avatar: /speakers/hassnaoui.jpg
+      
