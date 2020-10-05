@@ -11,7 +11,9 @@ export const MyTicket = ({ user }) => {
       <Container>
         <Header />
         <div className={styles.main}>
-          <h1 className={styles.title}> {user.name} 's Ticket</h1>
+          <h1 className={styles.title}>
+            {user.name === null ? user.username : user.name} 's Ticket
+          </h1>
           <div className={styles.img_container}>
             <img src={getTicketImg(user)} className={styles.img} />
           </div>
