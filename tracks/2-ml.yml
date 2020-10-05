@@ -27,6 +27,15 @@ sessions:
       role: Front-end Developer
       about: Front-end Developer with more interest in AI&ML projects.
       avatar: /speakers/zaid.jpg
+  - title: Build your first chatbot with python and Rasa
+    description:
+      "In this session, we'll build a simple chatbot with Rasa and learn about model Configuration, writing stories, defining a domain and training the model."
+    time: "time: N/A"
+    speaker:
+      name: Mehdi hadji
+      role: Data Engineer
+      about: "Mehdi is a machine learning practitioner, and his interest focuses on the fields of machine learning and deep learning as well as applying predictive modeling techniques to problem solving. Mehdi loves to write and talk about data science, machine learning, and Python, and he is very motivated to help people developing data-driven solutions without necessarily requiring a machine learning background."
+      avatar: /speakers/hadji.jpg
   - title: Blogging, Why you should care?
     description: ""
     time: "time: N/A"
