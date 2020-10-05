@@ -60,11 +60,11 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
       role: Google Cloud engineer
       about: "Google Cloud engineer working on Google Cloud Platform and all cloud stuff, specializes and work mainly on k8s, containers, istio and all the cool stuff"
       avatar:  /speakers/abdel.jpg
-  - title: The importance of competitive programming
-    description: "List some advantages of CP (abstraction , input , output , complexities) and give some examples (search in huge lists ...)"
+  - title: Tools & Methods to Grow!
+    description: "What is SaaS? and Why developers should adopt SaaS business model instead of software traditional business model (On-Premise Softwares). This will be a short, but rich session to introduce you to the SaaS basics"
     time: "time: N/A"
     speaker:
-      name: Diaa Alhak El Fallous
-      role: MCPC director, MOI coordinator 
-      about: "MCPC director , MOI coordinator."
-      avatar:  /speakers/fallous.jpg
+      name: Ayoub Moustaid
+      role: CEO of ODS
+      about: "Let's discover some of the most useful tools & methods, you should absolutely know to help you grow in the digital era"
+      avatar: /speakers/moustaid.jpg

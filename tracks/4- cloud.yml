@@ -68,3 +68,19 @@ Mohamed is managing the global sustaining efforts for GraalVM Project, through h
       role: Senior DevOps Engineer
       about: "Senior DevOps Engineer at Nimbleways, former DevOps Engineer at Oracle. I am passionate about technology and work ethic."
       avatar: /speakers/boulaid.jpg
+  - title: No-Code tools
+    description: As a developer, we have so many opportunities these days : serverless, SAAS and now... low code? We will discuss how no code is really for developers first, why it matters so much and how we can leverage platforms for fun and profit!
+    time: "time: N/A"
+    speaker:
+      name: Djalal e.b
+      role: Devops Architect, Trainer
+      about: "Jalal is a DevOps and Docker enthusiast, he builds next-generation cloud native platforms. With many workshops and trained developers, his focus is in infusing Dev/Ops best practices : Continuous Everything, Everything As Code, People before Tools"
+      avatar: /speakers/jalal.jpg
+  - title: The Art Of The State
+    description: It's a talk that explain what Orchestration is and how to implement a State Machine using Step Functions
+    time: "time: N/A"
+    speaker:
+      name: Ilyas Bakouch
+      role: Solutions Architect
+      about: A solutions architect and software engineer with a wide technical breadth and deep understanding of many systems.
+      avatar: /speakers/bakouch.jpg
