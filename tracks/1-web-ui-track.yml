@@ -61,14 +61,6 @@ sessions:
       role: UX/UI Designer
       about: ""
       avatar: /speakers/azizi.jpg
-  - title: Tools & Methods to Grow!
-    description: "What is SaaS? and Why developers should adopt SaaS business model instead of software traditional business model (On-Premise Softwares). This will be a short, but rich session to introduce you to the SaaS basics"
-    time: "time: N/A"
-    speaker:
-      name: Ayoub Moustaid
-      role: CEO of ODS
-      about: "Let's discover some of the most useful tools & methods, you should absolutely know to help you grow in the digital era"
-      avatar: /speakers/moustaid.jpg
   - title: What the heck is web components?
     description: "web components the  new frontend hype for building agnostic building block for web apps"
     time: "time: N/A"

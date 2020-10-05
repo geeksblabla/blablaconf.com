@@ -39,6 +39,14 @@ sessions:
       role: Software engineer
       about: Software engineer, FP enthusiast, loves challenge.
       avatar: /speakers/hakkou.jpg
+  - title: The importance of competitive programming
+    description: "List some advantages of CP (abstraction , input , output , complexities) and give some examples (search in huge lists ...)"
+    time: "time: N/A"
+    speaker:
+      name: Diaa Alhak El Fallous
+      role: MCPC director, MOI coordinator 
+      about: "MCPC director , MOI coordinator."
+      avatar:  /speakers/fallous.jpg
   - title: Introduction to IZMjs
     description: "Will talk about IZMjs and create a small application together with it. The session will be a coding one." 
     time: "time: N/A"
