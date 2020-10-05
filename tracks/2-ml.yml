@@ -36,6 +36,19 @@ sessions:
       role: Data Engineer
       about: "Mehdi is a machine learning practitioner, and his interest focuses on the fields of machine learning and deep learning as well as applying predictive modeling techniques to problem solving. Mehdi loves to write and talk about data science, machine learning, and Python, and he is very motivated to help people developing data-driven solutions without necessarily requiring a machine learning background."
       avatar: /speakers/hadji.jpg
+  - title: Introduction to data analysis with dash plotly
+    description:
+      "In this session, we'll cover:
+        + Introduction to data analysis
+        + Application domains
+        + Some analysis methods
+        + diving into dash and its capabilities"
+    time: "time: N/A"
+    speaker:
+      name: GHARBI Hajar
+      role: Data Engineer
+      about: "TBD"
+      avatar: /speakers/hajar.jpg
   - title: Blogging, Why you should care?
     description: ""
     time: "time: N/A"
