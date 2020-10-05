@@ -25,8 +25,9 @@ export async function getServerSideProps({ query }) {
       .get()
       .then(function (doc) {
         user = doc.data();
+        const name = user.name === null ? user.username : user.name;
         seoConfig = {
-          title: user.name + "'s BlaBlaConf Ticket",
+          title: name + "'s BlaBlaConf Ticket",
           description:
             "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
           openGraph: {
@@ -37,7 +38,7 @@ export async function getServerSideProps({ query }) {
               process.env.NEXT_PUBLIC_HOST +
               "/myticket/" +
               user.username,
-            title: user.name + "'s BlaBlaConf Ticket",
+            title: name + "'s BlaBlaConf Ticket",
             description:
               "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
             images: [
