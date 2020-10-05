@@ -6,7 +6,8 @@ export const getTicketImg = (user) => {
   if (!user) return "/img/ticket_placeholder.png";
 
   const name = user.name === null ? user.username : user.name;
-  const NameLayout = `l_text:Roboto_60_bold:${name},co_rgb:40347B,g_north_west,x_321,y_76`;
+  const FontSize = name.length > 20 ? 50 : 60;
+  const NameLayout = `l_text:Roboto_${FontSize}_bold:${name},co_rgb:40347B,g_north_west,x_321,y_76`;
   const UserNameLayout = `l_text:Roboto_40:${user.username},co_rgb:6A6198,g_north_west,x_377,y_160`;
   const base64 = encode(user.photo);
   const TicketNumber = `l_text:Arial_70_bold:№ 0${user.ticketNumber},co_rgb:FFFFFF,g_north_west,x_1533,y_120,a_90/`;
