@@ -28,8 +28,7 @@ sessions:
       about: Front-end Developer with more interest in AI&ML projects.
       avatar: /speakers/zaid.jpg
   - title: Build your first chatbot with python and Rasa
-    description:
-      "In this session, we'll build a simple chatbot with Rasa and learn about model Configuration, writing stories, defining a domain and training the model."
+    description: "In this session, we'll build a simple chatbot with Rasa and learn about model Configuration, writing stories, defining a domain and training the model."
     time: "time: N/A"
     speaker:
       name: Mehdi hadji
@@ -37,8 +36,7 @@ sessions:
       about: "Mehdi is a machine learning practitioner, and his interest focuses on the fields of machine learning and deep learning as well as applying predictive modeling techniques to problem solving. Mehdi loves to write and talk about data science, machine learning, and Python, and he is very motivated to help people developing data-driven solutions without necessarily requiring a machine learning background."
       avatar: /speakers/hadji.jpg
   - title: Introduction to data analysis with dash plotly
-    description:
-      "In this session, we'll cover:
+    description: "In this session, we'll cover:
         + Introduction to data analysis
         + Application domains
         + Some analysis methods
@@ -57,21 +55,30 @@ sessions:
       role: Software Engineer
       about: ""
       avatar: /speakers/y_elazizi.jpg
+  - title: Natural Language Processing In a Nutshell
+    description: "In order to be able to cooperate or even cohabit with the machines, it is necessary to be able to communicate with them. NLP is a set of interesting methods allowing machines to understand our language as humans. How can the machine understand that you are sad, happy, or angry based on your words? Well, let's see that together."
+    time: "time: N/A"
+    speaker:
+      name: Anass El Houd
+      role: AI & Data Science Student
+      about: ""
+      avatar: /speakers/elhoud.jpg
   - title: Machine Learning with Microsoft Azure.
-    description: "I wanna talk about The ML, how to design an intelligent machine, we learn and predict the future with Microsoft Azure ML 
-Content : 
-Introduction To ML
-what is DataSet?
-Supervised & Unsupervised Learning
-Two Classification, Multi Classification, and Regression Mini-Project"
+    description:
+      "I wanna talk about The ML, how to design an intelligent machine, we learn and predict the future with Microsoft Azure ML
+      Content :
+      Introduction To ML
+      what is DataSet?
+      Supervised & Unsupervised Learning
+      Two Classification, Multi Classification, and Regression Mini-Project"
     time: "time: N/A"
     speaker:
       name: Oussama Touil
       role: Computer Science Student
-      about: "Hello, I am OUSSAMA TOUIL a Computer Science Student and Android Developer. A student with a technological university degree in computer science.
+      about:
+        "Hello, I am OUSSAMA TOUIL a Computer Science Student and Android Developer. A student with a technological university degree in computer science.
+        Within my establishment, I was able to create two clubs (Technology Next level TNL and Data Science & Artficial Intelligence DSAI) which is interested in computing and we were able to organize many events also online (During confinement), Events where information sharing and learning is our goal. It was about Machine Learning, Artificial Intelligence, Data Science, Web Development, Mobile Development, Cyber Security, ....
+        In fact, I have experiences, since I have already made two Android Mobile applications, one for My end of studies' project and the second for End of study internship. In addition to that, I have other experiences in developing Web applications (HTML5, CSS3, PHP7, MySQL ....)
 
-Within my establishment, I was able to create two clubs (Technology Next level TNL and Data Science & Artficial Intelligence DSAI) which is interested in computing and we were able to organize many events also online (During confinement), Events where information sharing and learning is our goal. It was about Machine Learning, Artificial Intelligence, Data Science, Web Development, Mobile Development, Cyber Security, ....
-In fact, I have experiences, since I have already made two Android Mobile applications, one for My end of studies' project and the second for End of study internship. In addition to that, I have other experiences in developing Web applications (HTML5, CSS3, PHP7, MySQL ....)
-
-Skills/Interests: Java , C++, VB.NET, RSA Cryptology, Git, Machine Learning, PostMan API Testing."
+        Skills/Interests: Java , C++, VB.NET, RSA Cryptology, Git, Machine Learning, PostMan API Testing."
       avatar: /speakers/touil.jpg
