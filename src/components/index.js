@@ -3,6 +3,7 @@ export * from "./Agenda";
 export * from "./Hero";
 export * from "./Header";
 export * from "./About";
+export * from "./Container";
 export * from "./Footer";
 export * from "./Registration";
 export * from "./layout";

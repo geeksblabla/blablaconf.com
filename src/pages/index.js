@@ -24,20 +24,19 @@ const Index = ({ tracks, speakers }) => {
 
 			<Speakers speakers={speakers} />
 			<Agenda tracks={tracks} />
-			{/* <Registration /> */}
+			<Registration />
 		</Layout>
 	);
 };
 
 export default Index;
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
 	const { speakers, tracks } = await getData();
-
 	return {
 		props: {
 			tracks,
 			speakers,
 		},
 	};
-};
+}
