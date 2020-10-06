@@ -28,7 +28,7 @@ export const RegistrationForm = ({ secondary = false }) => {
               .doc(email)
               .set({ email, date: new Date() })
               .then(function (response) {
-                axios.post("/api/sendEmail", { email });
+                // axios.post("/api/sendEmail", { email });
               });
           }
 
