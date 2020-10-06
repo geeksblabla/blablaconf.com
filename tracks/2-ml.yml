@@ -37,15 +37,15 @@ sessions:
       avatar: /speakers/hadji.jpg
   - title: Introduction to data analysis with dash plotly
     description: "In this session, we'll cover:
-      + Introduction to data analysis
-      + Application domains
-      + Some analysis methods
-      + diving into dash and its capabilities"
+        + Introduction to data analysis
+        + Application domains
+        + Some analysis methods
+        + diving into dash and its capabilities"
     time: "time: N/A"
     speaker:
       name: GHARBI Hajar
       role: Data Engineer
-      about: "TBD"
+      about: "Hajar is a Junior Data scientist working at xHUB. She's been passionate about data science since his first year in ENSIAS, and worked on many projects around Computer vision and text mining"
       avatar: /speakers/hajar.jpg
   - title: Blogging, Why you should care?
     description: ""
