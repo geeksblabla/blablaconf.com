@@ -6,7 +6,7 @@ sessions:
                 I will present the Nagios and Proxmox tools."
     time: "time: N/A"
     speaker:
-      name: Mouad Sissank
+      name: Mouad Sissani
       role: Security Advise
       about: "Security adviser and a junior customer care."
       avatar: /speakers/sissank.jpg
