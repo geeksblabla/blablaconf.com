@@ -50,8 +50,8 @@ sessions:
     time: "time: N/A"
     speaker:
       name: Maroua Ezouhri
-      role: Ux & product designer
-      about: Ux & product designer, Figma design Ambassador, Women techmaker ambassador
+      role: UX & Product Designer
+      about: UX & product designer, Figma design Ambassador, Women techmaker ambassador
       avatar: /speakers/ezouhri.jpg
   - title: Design Without Losing Your Mind.
     description: "Design is not that hard, it is not as you think. Design is all about making decisions and good design is a result of good decisions, in this presentation I will teach how to make good decisions in order to make good design."
@@ -66,6 +66,6 @@ sessions:
     time: "time: N/A"
     speaker:
       name: Abderrahim SOUBAI
-      role: Fullstack web dev
+      role: Fullstack Web Dev
       about: "Fullstack web dev / Cloud Architect"
       avatar: /speakers/soubai.jpeg

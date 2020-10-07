@@ -36,7 +36,7 @@ sessions:
     time: "time: N/A"
     speaker:
       name: Amine Hakkou
-      role: Software engineer
+      role: Software Engineer
       about: Software engineer, FP enthusiast, loves challenge.
       avatar: /speakers/hakkou.jpg
   - title: Healthy Programming Learning
@@ -52,21 +52,21 @@ sessions:
     time: "time: N/A"
     speaker:
       name: Diaa Alhak El Fallous
-      role: MCPC director, MOI coordinator 
+      role: MCPC director, MOI Coordinator
       about: "MCPC director , MOI coordinator."
-      avatar:  /speakers/fallous.jpg      
+      avatar:  /speakers/fallous.jpg
   - title: Introduction to IZMjs
     description: "Will talk about IZMjs and create a small application together with it. The session will be a coding one." 
     time: "time: N/A"
     speaker:
       name: Mohamed Idrissi
-      role: Service architect  
-      about: "A service architect at 4D Logiciels Maroc and a JS lover." 
+      role: Service Architect
+      about: "A service architect at 4D Logiciels Maroc and a JS lover."
       avatar: /speakers/idrissi.jpg
   - title: The majestic monolith or a microservices architecture?
     description: "I'm here not to convince you to use a monolith architecture in your next project! I'm just here to give you an overall view of when to build your next project using a monolith architecture and when to choose Micro/services-oriented architecture.
 I want this talk to answer the following questions :
-Why some companies, like Shopify, are still using monolith architecture? 
+Why some companies, like Shopify, are still using monolith architecture?
 What is the modular monolith?
 When to go from a monolith to microservices?
 When starting a new project what to choose for my architecture?

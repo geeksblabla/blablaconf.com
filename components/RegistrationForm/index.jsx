@@ -12,7 +12,7 @@ export const RegistrationForm = ({ secondary = false }) => {
 
   const registration = () => {
     if (email === "") {
-      setError("Please Enter the Email");
+      setError("Please Enter your Email");
     } else if (!validateEmail(email)) {
       setError("Invalid Email Format");
     } else {
@@ -47,7 +47,7 @@ export const RegistrationForm = ({ secondary = false }) => {
         <input
           type="email"
           value={email}
-          placeholder="Enter email to register for free"
+          placeholder="Enter your email to register for free"
           className={`${styles.input} ${secondary && styles.input_secondary}`}
           required
           onChange={(e) => changeEmail(e.target.value)}
