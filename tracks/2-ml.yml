@@ -63,6 +63,19 @@ sessions:
       role: AI & Data Science Student
       about: ""
       avatar: /speakers/elhoud.jpg
+  - title: "Amazon Alexa: créer une application qui entend et répond"
+    description: "Avec l'explosion du machine learning, vous avez sans doute rêvé du jour où vous atteindriez le niveau des films science fiction en développant des applications inteligentes capables de réagir à vos commandes vocales ! Tout comme Ava du film EX MACHINA ou bien Jarvis d'iron man.
+      Manifestez-vous, ce jour est déjà venu avec amazon Alexa!
+      Ce que nous allons voir ensemble:
+      * Créer une application vocal pour Alexa
+      * Coder avec Node.js la partie back-end
+      * Déployer le code sur AWS Lambda"
+    time: "time: N/A"
+    speaker:
+      name: Ouadie Lahdioui
+      role: Passionate software developer
+      about: "Microsoft MVP passionné par le métier de développeur et par les challenges techniques de toutes sortes, j'interviens en tant que consultant IT sur des missions diverses et variées, convaincu par les pratiques agiles, le software craftsmanship et l'approche DevOps."
+      avatar: /speakers/ouadie.jpg
   - title: Machine Learning with Microsoft Azure.
     description:
       "I wanna talk about The ML, how to design an intelligent machine, we learn and predict the future with Microsoft Azure ML
