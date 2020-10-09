@@ -69,3 +69,11 @@ sessions:
       role: Fullstack Web Dev
       about: "Fullstack web dev / Cloud Architect"
       avatar: /speakers/soubai.jpeg
+  - title: Cognitive psychology, what contributions for design?
+    description: "User experience design is centered around human experiences. Psychology is one way we can better understand the behaviors, habits, motivations, expectations, and emotions of the people using products. We can look to psychology to better understand how users engage with the digital worlds we've created."
+    time: "time: N/A"
+    speaker:
+      name: Youness Jamal
+      role: Passionate UX/UI Designer
+      about: "A passionate designer, and psychology enthusiast. Trying to combine both words I dedicated myself to design for the people, this is why I always thrive in UX in order to create customer centric products."
+      avatar: /speakers/jamal.jpg
