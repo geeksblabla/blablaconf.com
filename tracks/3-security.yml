@@ -6,8 +6,8 @@ sessions:
                 I will present the Nagios and Proxmox tools."
     time: "time: N/A"
     speaker:
-      name: Mouad Sissank
-      role: Security Advise
+      name: Mouad Sissani
+      role: Security Adviser
       about: "Security adviser and a junior customer care."
       avatar: /speakers/sissank.jpg
   - title: "Introduction to Cyber Security: You'll want to hack after this talk."
@@ -57,7 +57,7 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
     time: "time: N/A"
     speaker:
       name: Abdellfetah Sghiouar
-      role: Google Cloud engineer
+      role: Google Cloud Engineer
       about: "Google Cloud engineer working on Google Cloud Platform and all cloud stuff, specializes and work mainly on k8s, containers, istio and all the cool stuff"
       avatar:  /speakers/abdel.jpg
   - title: Tools & Methods to Grow!

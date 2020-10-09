@@ -1,18 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./index.module.css";
 import { useRouter } from "next/router";
+import ReCAPTCHA from "react-google-recaptcha";
 import { firestore } from "../../config/firebase";
 import axios from "axios";
+
+const RECAPTCHA_KEY = "6LerT9UZAAAAAFOZW2syuTwCMAq1EBLkOSoEUvdF";
 
 export const RegistrationForm = ({ secondary = false }) => {
   const router = useRouter();
 
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
+  const recaptchaRef = useRef();
+  const onChange = (e) => {
+    console.log(e);
+  };
 
-  const registration = () => {
-    if (email === "") {
-      setError("Please Enter the Email");
+  const registration = async () => {
+    await recaptchaRef.current.executeAsync();
+    const reCaptchaValue = recaptchaRef.current.getValue();
+    if (email === "" && reCaptchaValue) {
+      setError("Please Enter your Email");
     } else if (!validateEmail(email)) {
       setError("Invalid Email Format");
     } else {
@@ -28,7 +37,7 @@ export const RegistrationForm = ({ secondary = false }) => {
               .doc(email)
               .set({ email, date: new Date() })
               .then(function (response) {
-                axios.post("/api/sendEmail", { email });
+                // axios.post("/api/sendEmail", { email });
               });
           }
 
@@ -47,7 +56,7 @@ export const RegistrationForm = ({ secondary = false }) => {
         <input
           type="email"
           value={email}
-          placeholder="Enter email to register for free"
+          placeholder="Enter your email to register for free"
           className={`${styles.input} ${secondary && styles.input_secondary}`}
           required
           onChange={(e) => changeEmail(e.target.value)}
@@ -59,6 +68,12 @@ export const RegistrationForm = ({ secondary = false }) => {
           Grab Your Ticket
         </button>
       </div>
+      <ReCAPTCHA
+        sitekey={RECAPTCHA_KEY}
+        onChange={onChange}
+        size="invisible"
+        ref={recaptchaRef}
+      />
       {error && <div style={{ marginTop: 5, color: "red" }}>{error}</div>}
     </>
   );
