@@ -6,7 +6,7 @@ sessions:
     time: "time: N/A"
     speaker:
       name: Benohoud Elmahdi
-      role: Passioned by the Cloud Computing
+      role: Passioned by the Cloud
       about: "During my talk m going to cover the basics about the cloud: the différentes architectures and the services, m goin to talk about , software as service, platforme as as servises and also hardware as a servises, m going also to talk about the type of the cloud private , public and hybrid cloud ,also m going to give some exampls about the cloud providers: aws , azure , Google cloud"
       avatar: /speakers/benohoud.jpg
   - title: "Devops for newbies, Devops in the enterprise."
