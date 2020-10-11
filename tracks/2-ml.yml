@@ -63,6 +63,15 @@ sessions:
       role: AI & Data Science Student
       about: ""
       avatar: /speakers/elhoud.jpg
+  - title: Dark side of Artificial intelligence
+    description: "بلا شك أن خوارزميات الذكاء الاصطناعي كانستعملوها كثيراً فحياتنا اليومية، و عام على عام هاد الثورة التقنية كاتخرج لينا أدوات قوية و مبهرة. و لكن هادشي ماخاصش يغطي أن الدومين مزال كايتطور و انه كاين مشاكل و أسئلة كاتشكل لحد الساعة نقط ضعف للخوارزميات الحالية.
+فهاد التقديم عادي ندويو على المشاكل اللي كايعاني منها الذكاء الاصطناعي و اللي مزال جاري البحث عن حلول ليها. و عانتكلمو أيضا على الجانب الأخلاقي لاستعمالات الذكاء الاصطناعي اللي خاص كل واحد أو وحدة يكون حاضي معاهم."
+    time: "time: N/A"
+    speaker:
+      name: Redouane Lguensat
+      role: Postdoc researcher IPSL
+      about: "Postdoc researcher IPSL"
+      avatar: /speakers/redouane.jpg
   - title: "Amazon Alexa: créer une application qui entend et répond"
     description: "Avec l'explosion du machine learning, vous avez sans doute rêvé du jour où vous atteindriez le niveau des films science fiction en développant des applications inteligentes capables de réagir à vos commandes vocales ! Tout comme Ava du film EX MACHINA ou bien Jarvis d'iron man.
       Manifestez-vous, ce jour est déjà venu avec amazon Alexa!
