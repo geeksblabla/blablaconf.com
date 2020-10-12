@@ -12,7 +12,7 @@ export default (req, res) => {
     });
     const data = {
       to: email,
-      from: "regitration@blablaconf.com",
+      from: "registration@blablaconf.com",
       subject: "BlaBlaConf Registration",
       text: "Welcome to BlaBlaConf",
       html: `<strong>مرحبا بكم فبلابلا كونف هاد الإيمايل كايعني بلي راك تسجلتي معانا ف الكونفيرونص و لي غادي تكون ما بين 20 و 24 أكتوبر على الساعة السادسة بتوقيت المغرب، للمزيد من المعلومات تابعونا على صفحتنا الرسمية في الفايسبوك.
