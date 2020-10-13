@@ -5,7 +5,7 @@ const mailgun = require("mailgun-js");
 export default (req, res) => {
   if (req.method === "POST") {
     const email = req.body.email;
-    const DOMAIN = "mail.blablaconf.com";
+    const DOMAIN = "sandboxdc7614a5916940c0844f37df03339f1d.mailgun.org";
     const mg = mailgun({
       apiKey: process.env.NEXT_PUBLIC_MAIL_GUN_API_KEY,
       domain: DOMAIN,

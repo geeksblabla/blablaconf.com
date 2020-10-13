@@ -9,6 +9,7 @@ import Boy from "./Boy";
 import { auth, firebase, firestore } from "../../config/firebase";
 import Share from "./Share";
 import { Github } from "./icons";
+import axios from "axios";
 
 export const Ticket = () => {
   const [user, setUser] = useState(undefined);
@@ -83,7 +84,9 @@ const SelectGenderModal = ({ isBoy, setIsBoy, setUser }) => {
         .collection("/tickets")
         .doc(additionalUserInfo.username)
         .set(tmpUser);
-      setUser(tmpUser);
+      setUser(tmpUser).then(result => {
+       axios.post("/api/sendEmail", { email: user.email });
+      });
     });
   };
 
