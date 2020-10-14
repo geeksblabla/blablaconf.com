@@ -20,7 +20,7 @@ export const Speakers = ({ speakers }) => {
 const Speaker = ({ name, role, avatar }) => (
   <div className={styles.speaker}>
     <div style={{ margin: "auto" }}>
-      <img src={avatar} className={styles.speaker_avatar} />
+      <img src={avatar} alt={`picture of ${name}`} className={styles.speaker_avatar} />
       <p className={styles.speaker_name}>{name}</p>
       <p className={styles.speaker_role}>{role}</p>
     </div>

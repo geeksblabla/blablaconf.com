@@ -72,6 +72,7 @@ const Talks = ({ sessions }) => (
 
 const Talk = ({ title, startTime, endTime, speaker }) => (
   <div className={styles.talk}>
+
     <AddToCalendar event={getEvent({ title, startTime, endTime })} />
 
     <div className={styles.talk_container}>
@@ -88,12 +89,12 @@ const Talk = ({ title, startTime, endTime, speaker }) => (
         </div>
       )}
 
-      <div className={styles.talk_speaker}>
-        <img className={styles.talk_speaker_avatar} src={speaker.avatar} />
-        <div>
-          <p className={styles.talk_speaker_name}> {speaker.name}</p>
-          <p className={styles.talk_speaker_role}> {speaker.role}</p>
-        </div>
+
+    <div className={styles.talk_speaker}>
+      <img className={styles.talk_speaker_avatar} alt={`picture of ${speaker.name}`}  src={speaker.avatar} />
+      <div>
+        <p className={styles.talk_speaker_name}> {speaker.name}</p>
+        <p className={styles.talk_speaker_role}> {speaker.role}</p>
       </div>
     </div>
   </div>

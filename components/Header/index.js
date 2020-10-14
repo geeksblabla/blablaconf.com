@@ -5,8 +5,8 @@ import Logo from "./Logo";
 export const Header = ({ isHome = false }) => (
   <div className={styles.header}>
     <div>
-      <Link href="/">
-        <a>
+      <Link href="/"> 
+        <a role="link" aria-label="blablaconf link">
           <Logo />
         </a>
       </Link>
