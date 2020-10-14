@@ -3,12 +3,31 @@ date: 20 October
 sessions:
   - title: "What the hell is static site regeneration?"
     description: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
-    time: "time: N/A"
+    startTime: "2020-10-20T16:45:00+01:00"
+    endTime: "2020-10-20T17:15:00+01:00"
     speaker:
       name: Ismail Ghallou
       role: Full Stack JavaScript Developer
       about: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
       avatar: /speakers/ghallou.jpg
+  - title: What the heck is web components?
+    description: "web components the  new frontend hype for building agnostic building block for web apps"
+    startTime: "2020-10-20T17:25:00+01:00"
+    endTime: "2020-10-20T17:55:00+01:00"
+    speaker:
+      name: Abderrahim SOUBAI
+      role: Fullstack Web Dev
+      about: "Fullstack web dev / Cloud Architect"
+      avatar: /speakers/soubai.jpeg
+  - title: Web accessibility, why and how?
+    description: "While the web is growing we have more users with disability they need the right to have access in the web content, unfortunately a lot of plateformes does not provide an easy access to them , so in this talk I will talk about the importance of having the accessibility in your web app and how you can reach the highest level of accessibility."
+    startTime: "2020-10-20T18:05:00+01:00"
+    endTime: "2020-10-20T18:25:00+01:00"
+    speaker:
+      name: Soufian El Foukahi
+      role: Software Engineer
+      about: Frontend Engineer At Prevail Health
+      avatar: /speakers/foukahi.jpg
   - title: "Demystifying  state management in Angular with NgRx."
     description:
       "Many frontend developers especially those new to large production apps have difficulties  with the different concepts involved in state management in their applications. this workshop is entry point to most of these concepts. It is structured in a way that explains the concept in a couple of slides, followed by code snippets, and finally a code demo. Depending on the available time there could be a hands-on coding challenge for the audience.
@@ -23,7 +42,8 @@ sessions:
       Developers will get the most of the deep dive part of the talk if they are already familiar with Angular and have deployed at least one app to production.
 
       The first part (introduction) could be of use to beginner frontend developers regardless of the framework of libraries they use."
-    time: "time: N/A"
+    startTime: "2020-10-20T18:25:00+01:00"
+    endTime: "2020-10-20T18:55:00+01:00"
     speaker:
       name: Abdellah Iraamane
       role: Frontend Developer
@@ -31,23 +51,18 @@ sessions:
       avatar: /speakers/iraamane.jpg
   - title: Building large scale applications in a Monorepo.
     description: "In the last couple of years Babel, Angular, React, Vue and many other open source projects switched to using Mono-repositories. Instead of having a lot of repositories with their own configs, we will have only one source of truth mono repository with logically separated packages within. "
-    time: "time: N/A"
+    startTime: "2020-10-20T19:05:00+01:00"
+    endTime: "2020-10-20T19:45:00+01:00"
     speaker:
       name: Chihab Otmani
       role: Software Engineer
       about: I am a software engineer passionate about the JavaScript ecosystem.
       avatar: /speakers/chihab.jpg
-  - title: Web accessibility, why and how?
-    description: "While the web is growing we have more users with disability they need the right to have access in the web content, unfortunately a lot of plateformes does not provide an easy access to them , so in this talk I will talk about the importance of having the accessibility in your web app and how you can reach the highest level of accessibility."
-    time: "time: N/A"
-    speaker:
-      name: Soufian El Foukahi
-      role: Software Engineer
-      about: Frontend Engineer At Prevail Health
-      avatar: /speakers/foukahi.jpg
+
   - title: "HCI: Designing for a better user experience"
     description: A process of design that Builds on understandings of psychology and technology and supports machine-human communication.
-    time: "time: N/A"
+    startTime: "2020-10-20T19:55:00+01:00"
+    endTime: "2020-10-20T20:20:00+01:00"
     speaker:
       name: Maroua Ezouhri
       role: UX & Product Designer
@@ -55,23 +70,17 @@ sessions:
       avatar: /speakers/ezouhri.jpg
   - title: Design Without Losing Your Mind.
     description: "Design is not that hard, it is not as you think. Design is all about making decisions and good design is a result of good decisions, in this presentation I will teach how to make good decisions in order to make good design."
-    time: "time: N/A"
+    startTime: "2020-10-20T20:30:00+01:00"
+    endTime: "2020-10-20T21:00:00+01:00"
     speaker:
       name: Ismail El Azizi
       role: UX/UI Designer
       about: ""
       avatar: /speakers/azizi.jpg
-  - title: What the heck is web components?
-    description: "web components the  new frontend hype for building agnostic building block for web apps"
-    time: "time: N/A"
-    speaker:
-      name: Abderrahim SOUBAI
-      role: Fullstack Web Dev
-      about: "Fullstack web dev / Cloud Architect"
-      avatar: /speakers/soubai.jpeg
   - title: Cognitive psychology, what contributions for design?
     description: "User experience design is centered around human experiences. Psychology is one way we can better understand the behaviors, habits, motivations, expectations, and emotions of the people using products. We can look to psychology to better understand how users engage with the digital worlds we've created."
-    time: "time: N/A"
+    startTime: "2020-10-20T21:00:00+01:00"
+    endTime: "2020-10-20T21:30:00+01:00"
     speaker:
       name: Youness Jamal
       role: Passionate UX/UI Designer
