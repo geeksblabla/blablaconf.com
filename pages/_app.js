@@ -1,5 +1,5 @@
-import "../styles/globals.css";
 import "reactjs-popup/dist/index.css";
+import "../styles/globals.css";
 
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config.js";
