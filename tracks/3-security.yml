@@ -4,7 +4,8 @@ sessions:
   - title: How to set up a secure system.
     description: "My speech will be based on the presentation of IT system security architectures, so I'm going to talk about the cloud and virtualization.
                 I will present the Nagios and Proxmox tools."
-    time: "time: N/A"
+    startTime: "2020-10-22T18:15:00+01:00"
+    endTime: "2020-10-22T18:45:00+01:00"
     speaker:
       name: Mouad Sissani
       role: Security Adviser
@@ -19,7 +20,8 @@ sessions:
 
 You can find the the talk slides here : https://www.othmanetamagart.com/Slides/slides-tais.html
 P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
-    time: "time: N/A"
+    startTime: "2020-10-22T18:50:00+01:00"
+    endTime: "2020-10-22T19:20:00+01:00"
     speaker:
       name: Othmane Tamagart
       role:  Information Security Researcher
@@ -28,7 +30,8 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
   - title: "Advanced attacks in decentralized applications."
     description: "In this workshop, we will explore the fundamentals of decentralized applications, of the Solidity language as well as the advanced attacks that can affect your Smart contract and how to protect yourself.
                   We will also discuss the tools and techniques for auditing Smarts Contracts and best methods and practices in the secure development of the dAPP"
-    time: "time: N/A"
+    startTime: "2020-10-22T19:25:00+01:00"
+    endTime: "2020-10-22T20:15:00+01:00"
     speaker:
       name: Souhail Mssassi
       role: CEO of CRISIS
@@ -46,7 +49,8 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
 
                 How participants will benefit from your talk?
                 Participants will get an idea of how Android run their applications and how it ensures a decent level of security for the user from a low level perspective. In addition, they will get an idea of how to find zero-day vulnerabilities in Android by finding inconsistencies in access control policies."
-    time: "time: N/A"
+    startTime: "2020-10-22T20:20:00+01:00"
+    endTime: "2020-10-22T20:50:00+01:00"
     speaker:
       name: Ahmed Lekssays
       role: Phd Researcher
@@ -54,7 +58,8 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
       avatar: /speakers/lekssays.jpg
   - title: Container supply chain security
     description: "In this talk we will explore the concepts of containers security, from build to deployment. We will look at some of the popular tools and cloud products that allow to scan images when they are built, find vulnerabilities and flag them and how can configure you CI/CD pipeline to be as secure as possible."
-    time: "time: N/A"
+    startTime: "2020-10-22T20:55:00+01:00"
+    endTime: "2020-10-22T21:25:00+01:00"
     speaker:
       name: Abdellfetah Sghiouar
       role: Google Cloud Engineer
@@ -62,7 +67,8 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
       avatar:  /speakers/abdel.jpg
   - title: Tools & Methods to Grow!
     description: "What is SaaS? and Why developers should adopt SaaS business model instead of software traditional business model (On-Premise Softwares). This will be a short, but rich session to introduce you to the SaaS basics"
-    time: "time: N/A"
+    startTime: "2020-10-22T21:30:00+01:00"
+    endTime: "2020-10-22T21:45:00+01:00"
     speaker:
       name: Ayoub Moustaid
       role: CEO of ODS

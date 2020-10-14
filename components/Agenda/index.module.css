@@ -63,16 +63,60 @@
 
 .talk {
   background: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
   border-radius: 14px;
   margin-bottom: 2rem;
-  padding: 24px;
+
   margin: 10px;
   color: #ffffff;
   width: 46%;
   min-width: 300px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  /* overflow: hidden; */
+}
+.talk_container {
+  padding: 24px;
+}
+
+.talk:hover > .add_to_calendar {
+  display: flex;
+}
+.add_to_calendar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(75, 58, 161, 0.4);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 22;
+}
+.add_to_calendar_link {
+  background: #ffffff;
+  backdrop-filter: blur(4px);
+  border-radius: 14px;
+  padding: 20px 30px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #4833b0;
+  position: relative;
+  padding-left: 40px;
+}
+.add_to_calendar_link::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  top: 22px;
+  left: 20px;
+  position: absolute;
+  background: url(./notif.png) no-repeat;
 }
 .talk_title {
   font-style: normal;
@@ -80,6 +124,13 @@
   font-size: 20px;
   line-height: 140%;
   flex: 1;
+  margin-top: 2px;
+}
+.time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 .talk_time {
   font-size: 14px;

@@ -1,6 +1,16 @@
 title: Big data, ML & AI
 date: 21 October
 sessions:
+  - title: Dark side of Artificial intelligence
+    description: "بلا شك أن خوارزميات الذكاء الاصطناعي كانستعملوها كثيراً فحياتنا اليومية، و عام على عام هاد الثورة التقنية كاتخرج لينا أدوات قوية و مبهرة. و لكن هادشي ماخاصش يغطي أن الدومين مزال كايتطور و انه كاين مشاكل و أسئلة كاتشكل لحد الساعة نقط ضعف للخوارزميات الحالية.
+فهاد التقديم عادي ندويو على المشاكل اللي كايعاني منها الذكاء الاصطناعي و اللي مزال جاري البحث عن حلول ليها. و عانتكلمو أيضا على الجانب الأخلاقي لاستعمالات الذكاء الاصطناعي اللي خاص كل واحد أو وحدة يكون حاضي معاهم."
+    startTime: "2020-10-21T16:45:00+01:00"
+    endTime: "2020-10-21T17:15:00+01:00"
+    speaker:
+      name: Redouane Lguensat
+      role: Postdoc researcher IPSL
+      about: "Postdoc researcher IPSL"
+      avatar: /speakers/redouane.jpg
   - title: '"Hello Word" for Machine Learning'
     description: "1 Intro in AI , ML , DL
       2 Types of ML algorithms( Supervised, Unsupervised, Renforcement)
@@ -11,67 +21,35 @@ sessions:
       .4 The Optimizer ( Explanation  of the Gradient Descent Algorithm)
       4. Application in Kaggle :Predicting the Survival of Titanic Passengers
       5. Questions  + What next ?? "
-    time: "time: N/A"
+    startTime: "2020-10-21T17:25:00+01:00"
+    endTime: "2020-10-21T17:55:00+01:00"
     speaker:
       name: Anas Temouden
       role: Student
       about: "I am a 16 year old high school student, passionate about IT Development, Machine Learning & DeepLearning Enthusiast. I can implement an ML algorithm from scratch (without using any library or framework), among my other interests: Competitive Programming, Web Development..."
       avatar: /speakers/temouden.jpeg
-  - title: Building smarter app empowered with Machine Learning
-    description:
-      "What if your apps could solve problems, deduce information from pictures and solve complex tasks? In the future, mobile apps will be so much more than a data displaying device. Using AI, apps will be able to answer complex problems at a whole new level!
-      In this session, I'll  show you how to get started building apps with Xamarin powered by Machine Learning. and  how you can use services in the cloud, like Azure Cognitive Services, but also how you can use trained models locally on mobile devices using CoreML and Tensorflow."
-    time: "time: N/A"
-    speaker:
-      name: Meriem Zaid
-      role: Front-end Developer
-      about: Front-end Developer with more interest in AI&ML projects.
-      avatar: /speakers/zaid.jpg
-  - title: Build your first chatbot with python and Rasa
-    description: "In this session, we'll build a simple chatbot with Rasa and learn about model Configuration, writing stories, defining a domain and training the model."
-    time: "time: N/A"
-    speaker:
-      name: Mehdi hadji
-      role: Data Engineer
-      about: "Mehdi is a machine learning practitioner, and his interest focuses on the fields of machine learning and deep learning as well as applying predictive modeling techniques to problem solving. Mehdi loves to write and talk about data science, machine learning, and Python, and he is very motivated to help people developing data-driven solutions without necessarily requiring a machine learning background."
-      avatar: /speakers/hadji.jpg
   - title: Introduction to data analysis with dash plotly
     description: "In this session, we'll cover:
         + Introduction to data analysis
         + Application domains
         + Some analysis methods
         + diving into dash and its capabilities"
-    time: "time: N/A"
+    startTime: "2020-10-21T18:05:00+01:00"
+    endTime: "2020-10-21T18:20:00+01:00"
     speaker:
       name: GHARBI Hajar
       role: Data Engineer
       about: "Hajar is a Junior Data scientist working at xHUB. She's been passionate about data science since his first year in ENSIAS, and worked on many projects around Computer vision and text mining"
       avatar: /speakers/hajar.jpg
-  - title: Blogging, Why you should care?
-    description: ""
-    time: "time: N/A"
+  - title: Build your first chatbot with python and Rasa
+    description: "In this session, we'll build a simple chatbot with Rasa and learn about model Configuration, writing stories, defining a domain and training the model."
+    startTime: "2020-10-21T18:25:00+01:00"
+    endTime: "2020-10-21T18:55:00+01:00"
     speaker:
-      name: Youssouf EL Azizi
-      role: Software Engineer
-      about: ""
-      avatar: /speakers/y_elazizi.jpg
-  - title: Natural Language Processing In a Nutshell
-    description: "In order to be able to cooperate or even cohabit with the machines, it is necessary to be able to communicate with them. NLP is a set of interesting methods allowing machines to understand our language as humans. How can the machine understand that you are sad, happy, or angry based on your words? Well, let's see that together."
-    time: "time: N/A"
-    speaker:
-      name: Anass El Houd
-      role: AI & Data Science Student
-      about: ""
-      avatar: /speakers/elhoud.jpg
-  - title: Dark side of Artificial intelligence
-    description: "بلا شك أن خوارزميات الذكاء الاصطناعي كانستعملوها كثيراً فحياتنا اليومية، و عام على عام هاد الثورة التقنية كاتخرج لينا أدوات قوية و مبهرة. و لكن هادشي ماخاصش يغطي أن الدومين مزال كايتطور و انه كاين مشاكل و أسئلة كاتشكل لحد الساعة نقط ضعف للخوارزميات الحالية.
-فهاد التقديم عادي ندويو على المشاكل اللي كايعاني منها الذكاء الاصطناعي و اللي مزال جاري البحث عن حلول ليها. و عانتكلمو أيضا على الجانب الأخلاقي لاستعمالات الذكاء الاصطناعي اللي خاص كل واحد أو وحدة يكون حاضي معاهم."
-    time: "time: N/A"
-    speaker:
-      name: Redouane Lguensat
-      role: Postdoc researcher IPSL
-      about: "Postdoc researcher IPSL"
-      avatar: /speakers/redouane.jpg
+      name: Mehdi hadji
+      role: Data Engineer
+      about: "Mehdi is a machine learning practitioner, and his interest focuses on the fields of machine learning and deep learning as well as applying predictive modeling techniques to problem solving. Mehdi loves to write and talk about data science, machine learning, and Python, and he is very motivated to help people developing data-driven solutions without necessarily requiring a machine learning background."
+      avatar: /speakers/hadji.jpg
   - title: "Amazon Alexa: créer une application qui entend et répond"
     description: "Avec l'explosion du machine learning, vous avez sans doute rêvé du jour où vous atteindriez le niveau des films science fiction en développant des applications inteligentes capables de réagir à vos commandes vocales ! Tout comme Ava du film EX MACHINA ou bien Jarvis d'iron man.
       Manifestez-vous, ce jour est déjà venu avec amazon Alexa!
@@ -79,12 +57,22 @@ sessions:
       * Créer une application vocal pour Alexa
       * Coder avec Node.js la partie back-end
       * Déployer le code sur AWS Lambda"
-    time: "time: N/A"
+    startTime: "2020-10-21T19:05:00+01:00"
+    endTime: "2020-10-21T19:35:00+01:00"
     speaker:
       name: Ouadie Lahdioui
       role: Passionate software developer
       about: "Microsoft MVP passionné par le métier de développeur et par les challenges techniques de toutes sortes, j'interviens en tant que consultant IT sur des missions diverses et variées, convaincu par les pratiques agiles, le software craftsmanship et l'approche DevOps."
       avatar: /speakers/ouadie.jpg
+  - title: Natural Language Processing In a Nutshell
+    description: "In order to be able to cooperate or even cohabit with the machines, it is necessary to be able to communicate with them. NLP is a set of interesting methods allowing machines to understand our language as humans. How can the machine understand that you are sad, happy, or angry based on your words? Well, let's see that together."
+    startTime: "2020-10-21T19:45:00+01:00"
+    endTime: "2020-10-21T20:15:00+01:00"
+    speaker:
+      name: Anass El Houd
+      role: AI & Data Science Student
+      about: ""
+      avatar: /speakers/elhoud.jpg
   - title: Machine Learning with Microsoft Azure.
     description:
       "I wanna talk about The ML, how to design an intelligent machine, we learn and predict the future with Microsoft Azure ML
@@ -93,7 +81,8 @@ sessions:
       what is DataSet?
       Supervised & Unsupervised Learning
       Two Classification, Multi Classification, and Regression Mini-Project"
-    time: "time: N/A"
+    startTime: "2020-10-21T20:25:00+01:00"
+    endTime: "2020-10-21T20:55:00+01:00"
     speaker:
       name: Oussama Touil
       role: Computer Science Student
@@ -104,3 +93,26 @@ sessions:
 
         Skills/Interests: Java , C++, VB.NET, RSA Cryptology, Git, Machine Learning, PostMan API Testing."
       avatar: /speakers/touil.jpg
+  - title: Building smarter app empowered with Machine Learning
+    description:
+      "What if your apps could solve problems, deduce information from pictures and solve complex tasks? In the future, mobile apps will be so much more than a data displaying device. Using AI, apps will be able to answer complex problems at a whole new level!
+      In this session, I'll  show you how to get started building apps with Xamarin powered by Machine Learning. and  how you can use services in the cloud, like Azure Cognitive Services, but also how you can use trained models locally on mobile devices using CoreML and Tensorflow."
+    startTime: "2020-10-21T21:05:00+01:00"
+    endTime: "2020-10-21T21:35:00+01:00"
+    speaker:
+      name: Meriem Zaid
+      role: Front-end Developer
+      about: Front-end Developer with more interest in AI&ML projects.
+      avatar: /speakers/zaid.jpg
+  - title: Blogging, Why you should care?
+    description: ""
+    startTime: "2020-10-21T21:45:00+01:00"
+    endTime: "2020-10-21T22:00:00+01:00"
+    speaker:
+      name: Youssouf EL Azizi
+      role: Software Engineer
+      about: ""
+      avatar: /speakers/y_elazizi.jpg
+
+
+

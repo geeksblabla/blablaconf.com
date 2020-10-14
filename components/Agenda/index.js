@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container } from "../Container";
 import styles from "./index.module.css";
+import { AddToCalendar } from "./AddToCalendar";
 
 export const Agenda = ({ tracks }) => {
   const [selectedTrack, setSelectedTrack] = useState(0);
@@ -69,10 +70,26 @@ const Talks = ({ sessions }) => (
   </div>
 );
 
-const Talk = ({ title, time, speaker }) => (
+const Talk = ({ title, startTime, endTime, speaker }) => (
   <div className={styles.talk}>
-    <p className={styles.talk_title}> {title} </p>
-    {time !== "time: N/A" && <p className={styles.talk_time}> {time} </p>}
+
+    <AddToCalendar event={getEvent({ title, startTime, endTime })} />
+
+    <div className={styles.talk_container}>
+      <p className={styles.talk_title}> {title} </p>
+
+      {startTime !== "time: N/A" && (
+        <div className={styles.time}>
+          <p className={styles.talk_time}>
+            {" "}
+            {`${getTimeFormat(startTime)} - ${getTimeFormat(
+              endTime
+            )} GMT+1 `}{" "}
+          </p>
+        </div>
+      )}
+
+
     <div className={styles.talk_speaker}>
       <img className={styles.talk_speaker_avatar} alt={`picture of ${speaker.name}`}  src={speaker.avatar} />
       <div>
@@ -96,3 +113,22 @@ function Arrow(props) {
     </svg>
   );
 }
+
+const getTimeFormat = (d) => {
+  const date = new Date(d);
+  return `${date.getHours()}:${
+    date.getMinutes() < 10 ? `0` : ""
+  }${date.getMinutes()}`;
+};
+
+const getEvent = ({ title, startTime, endTime }) => {
+  const event = {
+    title: `BlaBla Conf : ${title}`,
+    description: `Facebook Page : https://facebook.com/geeksblabla
+    Youtube Channel : https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA`,
+    location: "https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA",
+    startTime: startTime,
+    endTime: endTime,
+  };
+  return event;
+};
