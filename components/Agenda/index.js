@@ -74,7 +74,7 @@ const Talk = ({ title, time, speaker }) => (
     <p className={styles.talk_title}> {title} </p>
     {time !== "time: N/A" && <p className={styles.talk_time}> {time} </p>}
     <div className={styles.talk_speaker}>
-      <img className={styles.talk_speaker_avatar} src={speaker.avatar} />
+      <img className={styles.talk_speaker_avatar} alt={`picture of ${speaker.name}`}  src={speaker.avatar} />
       <div>
         <p className={styles.talk_speaker_name}> {speaker.name}</p>
         <p className={styles.talk_speaker_role}> {speaker.role}</p>

@@ -7,9 +7,9 @@ export const Sponsors = () => {
     <div className={styles.sponsors}>
       <h1 className={styles.title}>sponsored by</h1>
       <div className={styles.logos}>
-        <img src="/img/oracle.png" className={styles.logo} />
-        <img src="/img/devc.png" className={styles.logo} />
-        <img src="/img/obytes.png" className={styles.logo} />
+        <img src="/img/oracle.png" alt="oracle logo" className={styles.logo} />
+        <img src="/img/devc.png" alt="facebook for developers logo" className={styles.logo} />
+        <img src="/img/obytes.png" alt="obytes" className={styles.logo} />
       </div>
     </div>
   );

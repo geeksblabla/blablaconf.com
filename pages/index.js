@@ -21,7 +21,6 @@ const Index = ({ tracks, speakers }) => {
       </Head>
       <Hero />
       <About />
-
       <Speakers speakers={speakers} />
       <Agenda tracks={tracks} />
       <Registration />
