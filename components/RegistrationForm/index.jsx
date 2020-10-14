@@ -60,10 +60,13 @@ export const RegistrationForm = ({ secondary = false }) => {
           className={`${styles.input} ${secondary && styles.input_secondary}`}
           required
           onChange={(e) => changeEmail(e.target.value)}
+          aria-labelledby="registrationButton"
+          name="email"
         />
         <button
           className={`${styles.button} ${secondary && styles.button_secondary}`}
           onClick={registration}
+          id="registrationButton"
         >
           Grab Your Ticket
         </button>

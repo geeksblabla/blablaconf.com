@@ -8,7 +8,7 @@ export const About = () => {
     <div className={styles.about} id="about">
       <Container>
         <div className={styles.img_container}>
-          <img src="/crea.svg" className={styles.img} />
+          <img src="/crea.svg" alt="image shows a boy and girl using thier laptop" className={styles.img} />
         </div>
         <div className={styles.main}>
           <h1 className={styles.title}>Made by and for the community</h1>

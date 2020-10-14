@@ -14,7 +14,7 @@ export const Registration = () => {
             <RegistrationForm secondary />
           </div>
           <div className={styles.tickets_container}>
-            <img src="/tickets.png" className={styles.tickets} />
+            <img src="/tickets.png" alt={"image og tickets"} className={styles.tickets} />
           </div>
         </div>
       </div>
