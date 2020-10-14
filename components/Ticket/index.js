@@ -9,7 +9,6 @@ import Boy from "./Boy";
 import { auth, firebase, firestore } from "../../config/firebase";
 import Share from "./Share";
 import { Github } from "./icons";
-import axios from "axios";
 
 export const Ticket = () => {
   const [user, setUser] = useState(undefined);
@@ -55,7 +54,7 @@ export const Ticket = () => {
             )}
           </div>
           <div className={styles.img_container}>
-            <img src={getTicketImg(user)} className={styles.img} />
+            <img src={getTicketImg(user)} alt="ticket" className={styles.img} />
           </div>
         </div>
       </Container>
@@ -84,9 +83,7 @@ const SelectGenderModal = ({ isBoy, setIsBoy, setUser }) => {
         .collection("/tickets")
         .doc(additionalUserInfo.username)
         .set(tmpUser);
-      setUser(tmpUser).then(result => {
-       axios.post("/api/sendEmail", { email: user.email });
-      });
+        setUser(tmpUser);
     });
   };
 
