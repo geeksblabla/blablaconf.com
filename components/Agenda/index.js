@@ -128,7 +128,7 @@ const getEvent = ({ title, startTime, endTime }) => {
   const event = {
     title: `BlaBla Conf : ${title}`,
     description: `Live will be on : Facebook Page : https://facebook.com/geeksblabla
-    Youtube Channel : https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA`,
+    And Youtube Channel : https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA`,
     location: "https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA",
     startTime: startTime,
     endTime: endTime,
