@@ -2,16 +2,26 @@ import helpersClass from "react-add-to-calendar/lib/helpers";
 const helpers = new helpersClass();
 import styles from "./index.module.css";
 
-export const AddToCalendar = ({ event }) => {
+/*
+TODO: remove react-add-to-calendar and create a function to generate event link
+https://github.com/InteractionDesignFoundation/add-event-to-calendar-docs/blob/master/services/google.md
+
+*/
+
+export const AddToCalendar = ({ event, outline = false, recur = false }) => {
   return (
-    <div className={styles.add_to_calendar}>
-      <a
-        className={styles.add_to_calendar_link}
-        href={helpers.buildUrl(event, "google", false)}
-        target="_blank"
-      >
-        Add To Calendar
-      </a>
-    </div>
+    <a
+      className={
+        outline
+          ? `${styles.add_to_calendar_link} ${styles.add_to_calendar_link_outline}`
+          : `${styles.add_to_calendar_link}`
+      }
+      href={`${helpers.buildUrl(event, "google", false)} ${
+        recur ? "&recur=RRULE:FREQ=DAILY;COUNT=5" : ""
+      }`}
+      target="_blank"
+    >
+      Add To Calendar
+    </a>
   );
 };

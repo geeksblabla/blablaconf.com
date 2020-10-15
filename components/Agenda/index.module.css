@@ -6,6 +6,19 @@
   padding: 5rem 0rem;
 }
 
+.agenda_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  flex-wrap: wrap;
+}
+.agenda_title {
+  display: block;
+  flex-direction: column;
+}
+
 .main {
   display: flex;
 }
@@ -108,6 +121,12 @@
   color: #4833b0;
   position: relative;
   padding-left: 40px;
+  display: block;
+}
+.add_to_calendar_link_outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #fff;
 }
 .add_to_calendar_link::before {
   content: "";

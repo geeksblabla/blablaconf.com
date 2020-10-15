@@ -6,12 +6,28 @@ import { AddToCalendar } from "./AddToCalendar";
 export const Agenda = ({ tracks }) => {
   const [selectedTrack, setSelectedTrack] = useState(0);
   const track = tracks[selectedTrack];
+  const startTime = "2020-10-20T16:30:00+01:00";
+  const endTime = "2020-10-20T22:00:00+01:00";
+  const event = {
+    title: `BlaBla Conf Days`,
+    description: `Facebook Page: https://facebook.com/geeksblabla
+    Youtube Channel: https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA
+    Website: https://blablaconf.com/`,
+    location: "https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA",
+    startTime: startTime,
+    endTime: endTime,
+  };
   return (
     <div className={styles.agenda} id="agenda">
       <Container>
-        <div>
-          <h1 className={styles.title}> Agenda 📅</h1>
-          <p className={styles.description}> See what's happening & when.</p>
+        <div className={styles.agenda_header}>
+          <div className={styles.agenda_title}>
+            <h1 className={styles.title}> Agenda 📅</h1>
+            <p className={styles.description}> See what's happening & when.</p>
+          </div>
+          <div>
+            <AddToCalendar event={event} outline recur />
+          </div>
         </div>
         <div className={styles.main}>
           <Tracks
@@ -62,17 +78,21 @@ const Item = ({ onClick, active, track }) => {
   );
 };
 
-const Talks = ({ sessions }) => (
-  <div className={styles.talks}>
-    {sessions.map((talk, i) => (
-      <Talk {...talk} key={`talk-${i}`} />
-    ))}
-  </div>
-);
+const Talks = ({ sessions }) => {
+  return (
+    <div className={styles.talks}>
+      {sessions.map((talk, i) => (
+        <Talk {...talk} key={`talk-${i}`} />
+      ))}
+    </div>
+  );
+};
 
 const Talk = ({ title, startTime, endTime, speaker }) => (
   <div className={styles.talk}>
-    <AddToCalendar event={getEvent({ title, startTime, endTime })} />
+    <div className={styles.add_to_calendar}>
+      <AddToCalendar event={getEvent({ title, startTime, endTime })} />
+    </div>
 
     <div className={styles.talk_container}>
       <p className={styles.talk_title}> {title} </p>
@@ -127,11 +147,16 @@ const getTimeFormat = (d) => {
 const getEvent = ({ title, startTime, endTime }) => {
   const event = {
     title: `BlaBla Conf : ${title}`,
-    description: `Facebook Page : https://facebook.com/geeksblabla
-    Youtube Channel : https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA`,
+    description: `Facebook Page: https://facebook.com/geeksblabla
+Youtube Channel: https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA
+Website: https://blablaconf.com/`,
     location: "https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA",
     startTime: startTime,
     endTime: endTime,
   };
   return event;
 };
+
+{
+  /* /* https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20201020T154500Z/20201020T161500Z&location=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCW2WV7NKU0WPyuv4YoNSqBA&text=BlaBla%20Conf%20%3A%20What%20the%20hell%20is%20static%20site%20regeneration%3F&details=Live%20will%20be%20on%20%3A%20Facebook%20Page%20%3A%20https%3A%2F%2Ffacebook.com%2Fgeeksblabla%0A%20%20%20%20And%20Youtube%20Channel%20%3A%20https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCW2WV7NKU0WPyuv4YoNSqBA&recur=RRULE:FREQ=DAILY;COUNT=10 */
+}
