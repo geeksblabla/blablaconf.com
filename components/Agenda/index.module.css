@@ -98,6 +98,7 @@
   display: flex;
 }
 .add_to_calendar {
+  border-radius: 14px;
   position: absolute;
   height: 100%;
   width: 100%;

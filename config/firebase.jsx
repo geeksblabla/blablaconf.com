@@ -1,5 +1,6 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
@@ -12,16 +13,13 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-let auth, firestore = null;
+let auth,
+  firestore = null;
 
 try {
   auth = firebase.auth();
   firestore = firebase.firestore();
 } catch (error) {
-  console.log(error)
+  console.log(error);
 }
-export {
-  auth,
-  firestore,
-  firebase
-};
+export { auth, firestore, firebase };

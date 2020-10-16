@@ -1,6 +1,7 @@
 import helpersClass from "react-add-to-calendar/lib/helpers";
 const helpers = new helpersClass();
 import styles from "./index.module.css";
+import { event as GEvent } from "../gtag";
 
 /*
 TODO: remove react-add-to-calendar and create a function to generate event link
@@ -9,6 +10,14 @@ https://github.com/InteractionDesignFoundation/add-event-to-calendar-docs/blob/m
 */
 
 export const AddToCalendar = ({ event, outline = false, recur = false }) => {
+  const onLinkClick = () => {
+    GEvent({
+      action: "add_to_calendar",
+      category: "tracks",
+      label: event.title,
+      value: 1,
+    });
+  };
   return (
     <a
       className={
@@ -20,6 +29,7 @@ export const AddToCalendar = ({ event, outline = false, recur = false }) => {
         recur ? "&recur=RRULE:FREQ=DAILY;COUNT=5" : ""
       }`}
       target="_blank"
+      onClick={onLinkClick}
     >
       Add To Calendar
     </a>
