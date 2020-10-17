@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 import styles from "./index.module.css";
 import { useRouter } from "next/router";
 import ReCAPTCHA from "react-google-recaptcha";
-import { firestore } from "../../config/firebase";
-import axios from "axios";
+// import { firestore } from "../../config/firebase";
+// import axios from "axios";
 
 const RECAPTCHA_KEY = "6LerT9UZAAAAAFOZW2syuTwCMAq1EBLkOSoEUvdF";
 
@@ -26,23 +26,7 @@ export const RegistrationForm = ({ secondary = false }) => {
       setError("Invalid Email Format");
     } else {
       setError("");
-      firestore
-        .collection("/registrations")
-        .doc(email)
-        .get()
-        .then(function (doc) {
-          if (!doc.exists) {
-            firestore
-              .collection("/registrations")
-              .doc(email)
-              .set({ email, date: new Date() })
-              .then(function (response) {
-                // axios.post("/api/sendEmail", { email });
-              });
-          }
-
-          router.push("/ticket");
-        });
+      router.push("/ticket");
     }
   };
 
