@@ -1,24 +1,24 @@
 title: Web & UI/UX
 date: 20 October
 sessions:
-  - title: "What the hell is static site regeneration?"
-    description: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
-    startTime: "2020-10-20T16:45:00+01:00"
-    endTime: "2020-10-20T17:15:00+01:00"
-    speaker:
-      name: Ismail Ghallou
-      role: Full Stack JavaScript Developer
-      about: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
-      avatar: /speakers/ghallou.jpg
   - title: What the heck is web components?
     description: "web components the  new frontend hype for building agnostic building block for web apps"
-    startTime: "2020-10-20T17:25:00+01:00"
-    endTime: "2020-10-20T17:55:00+01:00"
+    startTime: "2020-10-20T16:45:00+01:00"
+    endTime: "2020-10-20T17:15:00+01:00"
     speaker:
       name: Abderrahim SOUBAI
       role: Fullstack Web Dev
       about: "Fullstack web dev / Cloud Architect"
       avatar: /speakers/soubai.jpeg
+  - title: "What the hell is static site regeneration?"
+    description: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
+    startTime: "2020-10-20T17:25:00+01:00"
+    endTime: "2020-10-20T17:55:00+01:00"
+    speaker:
+      name: Ismail Ghallou
+      role: Full Stack JavaScript Developer
+      about: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
+      avatar: /speakers/ghallou.jpg
   - title: Web accessibility, why and how?
     description: "While the web is growing we have more users with disability they need the right to have access in the web content, unfortunately a lot of plateformes does not provide an easy access to them , so in this talk I will talk about the importance of having the accessibility in your web app and how you can reach the highest level of accessibility."
     startTime: "2020-10-20T18:05:00+01:00"
