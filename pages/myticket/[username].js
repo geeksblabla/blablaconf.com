@@ -1,4 +1,5 @@
-import { firestore } from "../../config/firebase";
+// import { firestore } from "../../config/firebase";
+import { getTicketsInfo } from "../../config/firebase-admin";
 import { NextSeo } from "next-seo";
 import { Layout, MyTicket } from "../../components";
 import { getTicketGraphImg } from "../../components/utils";
@@ -18,10 +19,8 @@ export async function getServerSideProps({ query }) {
   let seoConfig = null;
   let user = null;
 
-  if (username && username !== "")
-    await firestore
-      .collection("/tickets")
-      .doc(username)
+  if (username && username !== "") {
+    await getTicketsInfo(username)
       .get()
       .then(function (doc) {
         user = doc.data();
@@ -52,6 +51,7 @@ export async function getServerSideProps({ query }) {
           },
         };
       });
+  }
 
   return {
     props: {
