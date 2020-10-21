@@ -4,7 +4,7 @@ import styles from "./index.module.css";
 import { AddToCalendar } from "./AddToCalendar";
 
 export const Agenda = ({ tracks }) => {
-  const [selectedTrack, setSelectedTrack] = useState(0);
+  const [selectedTrack, setSelectedTrack] = useState(2);
   const track = tracks[selectedTrack];
   const startTime = "2020-10-20T16:30:00+01:00";
   const endTime = "2020-10-20T22:00:00+01:00";
