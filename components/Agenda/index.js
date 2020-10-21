@@ -103,7 +103,7 @@ const Talk = ({ title, startTime, endTime, speaker }) => (
             {" "}
             {`${getTimeFormat(startTime)} - ${getTimeFormat(
               endTime
-            )} GMT+1 `}{" "}
+            )} ${getCurrentTimeZone()} `}{" "}
           </p>
         </div>
       )}
@@ -143,6 +143,11 @@ const getTimeFormat = (d) => {
     date.getMinutes() < 10 ? `0` : ""
   }${date.getMinutes()}`;
 };
+
+const getCurrentTimeZone = () => {
+  const offset = new Date().getTimezoneOffset()/-60;
+  return `GMT${offset>0?'+':''}${offset}`
+}
 
 const getEvent = ({ title, startTime, endTime }) => {
   const event = {
