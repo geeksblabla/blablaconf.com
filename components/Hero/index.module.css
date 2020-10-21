@@ -25,6 +25,28 @@
   text-align: center;
   max-width: 920px;
 }
+.stream {
+  text-align: center;
+  font-size: 18px;
+  max-width: 500px;
+  margin-bottom: 0.5rem;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.social_icon {
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 1rem;
+}
+.social_icon:hover {
+  transform: scale(1.2);
+}
 .ma {
   position: relative;
 }
