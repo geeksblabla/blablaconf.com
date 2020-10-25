@@ -88,14 +88,19 @@ const Talks = ({ sessions }) => {
   );
 };
 
-const Talk = ({ title, startTime, endTime, speaker }) => (
+const Talk = ({ title, startTime, endTime, speaker, youtubeLink }) => (
   <div className={styles.talk}>
-    <div className={styles.add_to_calendar}>
-      <AddToCalendar event={getEvent({ title, startTime, endTime })} />
-    </div>
-
     <div className={styles.talk_container}>
       <p className={styles.talk_title}> {title} </p>
+      {youtubeLink !== "" && (
+        <a
+          href={youtubeLink}
+          target="__blank"
+          rel="noopener"
+        >
+          Watch on Youtube
+        </a>
+      )}
 
       {startTime !== "time: N/A" && (
         <div className={styles.time}>
