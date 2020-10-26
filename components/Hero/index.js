@@ -17,7 +17,7 @@ export const Hero = () => {
           <div className={styles.date}>20-24 October | Online</div>
           <div>
             <p className={styles.stream}>
-              Conference will be streamed in our YouTube channel & facebook page
+              You Will find the conference content in our YouTube channel & facebook page
               👇👇👇{" "}
             </p>
             <div className={styles.social}>
