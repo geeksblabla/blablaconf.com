@@ -48,7 +48,7 @@ export const Hero = () => {
               </a>
             </div>
           </div>
-          <RegistrationForm />
+          {/* <RegistrationForm /> */}
         </div>
       </Container>
     </div>
