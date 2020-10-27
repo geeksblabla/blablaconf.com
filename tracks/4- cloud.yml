@@ -2,6 +2,7 @@ title: Cloud, infrastructure & containers
 date: 23 October
 sessions:
   - title: Ajiw tfhmu achnahoua l cloud
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=803"
     description:
     startTime: "2020-10-23T16:15:00+01:00"
     endTime: "2020-10-23T16:30:00+01:00"
@@ -11,6 +12,7 @@ sessions:
       about: "During my talk m going to cover the basics about the cloud: the différentes architectures and the services, m goin to talk about , software as service, platforme as as servises and also hardware as a servises, m going also to talk about the type of the cloud private , public and hybrid cloud ,also m going to give some exampls about the cloud providers: aws , azure , Google cloud"
       avatar: /speakers/benohoud.jpg
   - title: What the hell is a container
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=1954"
     description: "We'll show how you can create a container without using docker, to illustrate those 3 main features that helps maintaining isolation on different levels.
         During this confinement period, I realized that the preventative and healthy measurements taken by governments and Docker to emphasis isolation are somehow similar and symmetrical, so i'm making a fun comparison to remind the three main linux kernel features used by Docker under the hood to maintain isolation between containers.
         https://haffani.netlify.app/docker.pdf"
@@ -22,6 +24,7 @@ sessions:
       about: I'm a software engineer, i'm always eager to learn new things, i'm 2 years working on payment systems.
       avatar: /speakers/affani.jpg
   - title: Efficient Cloud workloads with GraalVM
+    youtubeLink: ""
     description: "The cloud is ubiquitous and can take many forms: from infrastructure as a service (IaaS), where you get low-level control, to function as a service (FaaS), where the platform is essentially abstracted away and managed for you. No matter the model used, startup time, low resource consumption, and overall performance are key goals for deploying a workload in the cloud. This session discusses how GraalVM, a high-performance, open source, polyglot virtual machine, helps meet those goals. It addresses how GraalVM can be used in IaaS/platform as a service (PaaS) setups and then looks at the other side of the cloud spectrum—FaaS—and explains how GraalVM can be leveraged for serverless functions. Attend this session to understand how to leverage GraalVM to improve your cloud (JVM) workload."
     startTime: "2020-10-23T16:55:00+01:00"
     endTime: "2020-10-23T17:25:00+01:00"
@@ -31,7 +34,18 @@ sessions:
       about: "Mohamed is the GraalVM Sustaining Manager at Oracle Labs, Oracle’s Research Center in Casablanca.
 Mohamed is managing the global sustaining efforts for GraalVM Project, through his career he worked in different IT roles and co-founded multiple startups, He is also deeply involved with local tech communities."
       avatar:  /speakers/ez-zarghili.jpg
+  - title: What the hell is service mesh
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=3365"
+    description: "An introduction to service mesh and an interactive session to answer service mesh-related questions asked by the viewers"
+    startTime: "2020-10-23T16:55:00+01:00"
+    endTime: "2020-10-23T17:25:00+01:00"
+    speaker:
+      name: Mohammed Aboullaite
+      role: Head Of Engineering
+      about: "Developer, OSS contributor, community catalyst."
+      avatar: /speakers/aboullaite.jpg
   - title: "Devops for newbies, Devops in the enterprise."
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=5161"
     description: Devops in real enterprise, no demo, participants will benefit more from my talk if interessed about the subject and if needed a real feedback and also if they have questions to ask, it can be as a modestic feedback from my present experience. Not my first talk, but I'd love to help others if they find me helpfull.
     startTime: "2020-10-23T17:30:00+01:00"
     endTime: "2020-10-23T18:00:00+01:00"
@@ -41,6 +55,7 @@ Mohamed is managing the global sustaining efforts for GraalVM Project, through h
       about: Working as devops engineer in sofrecom Morroco Casablanca, would love to share my modestic knowledge with others.
       avatar: /speakers/harifi.jpg
   - title: Kubernetes VS Docker Swarm
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=7637"
     description: I will draw comparisons between Kubernetes and Docker Swarm. I will possibly include simple demos. Participants will benefit from knowing what to pick between these two technologies and when.
     startTime: "2020-10-23T18:10:00+01:00"
     endTime: "2020-10-23T18:40:00+01:00"
@@ -50,6 +65,7 @@ Mohamed is managing the global sustaining efforts for GraalVM Project, through h
       about: "Senior DevOps Engineer at Nimbleways, former DevOps Engineer at Oracle. I am passionate about technology and work ethic."
       avatar: /speakers/boulaid.jpg
   - title: Perfect your documents using latex and docker.
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=9669"
     description: Sometimes using Word Processors (e.g MS Word) to write documents can be a daunting task, especially if it involves more than one collaborator. in This session we will learn about an alternative way to write documents (reports, theses or even resumes) using Latex and docker.
     startTime: "2020-10-23T18:45:00+01:00"
     endTime: "2020-10-23T19:00:00+01:00"
@@ -59,6 +75,7 @@ Mohamed is managing the global sustaining efforts for GraalVM Project, through h
       about: Devops Engineer, Interested in Linux containers and distributed systems. when I am not working I try to cook or go for hikes or both.
       avatar: /speakers/daoudi.jpg
   - title: Leveraging no-code for dev profit and career
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=10947"
     description: "As a developer, we have so many opportunities these days : serverless, SAAS and now... low code? We will discuss how no code is really for developers first, why it matters so much and how we can leverage platforms for fun and profit!"
     startTime: "2020-10-23T19:10:00+01:00"
     endTime: "2020-10-23T19:40:00+01:00"
@@ -68,6 +85,7 @@ Mohamed is managing the global sustaining efforts for GraalVM Project, through h
       about: "Jalal is a DevOps and Docker enthusiast, he builds next-generation cloud native platforms. With many workshops and trained developers, his focus is in infusing Dev/Ops best practices : Continuous Everything, Everything As Code, People before Tools"
       avatar: /speakers/jalal.jpg
   - title: The Art Of The State
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=13264"
     description: It's a talk that explain what Orchestration is and how to implement a State Machine using Step Functions
     startTime: "2020-10-23T19:50:00+01:00"
     endTime: "2020-10-23T20:20:00+01:00"
@@ -77,6 +95,7 @@ Mohamed is managing the global sustaining efforts for GraalVM Project, through h
       about: A solutions architect and software engineer with a wide technical breadth and deep understanding of many systems.
       avatar: /speakers/bakouch.jpg
   - title: Introduction to Elasticsearch
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=15525"
     description: I will talk about my professional experience with elasticsearch searxh engine, and some best practices yo use it effectively...
     startTime: "2020-10-23T20:30:00+01:00"
     endTime: "2020-10-23T21:00:00+01:00"
@@ -86,6 +105,7 @@ Mohamed is managing the global sustaining efforts for GraalVM Project, through h
       about:  Ayoub Chaabi software engineer in societe Generale ATS
       avatar: /speakers/chaabi.jpg
   - title: Cloud careers, what are people working on in the cloud space
+    youtubeLink: "https://youtu.be/VlTuikNKQsA?t=18508"
     description: In this very not-technical talk we will explore what jobs exist today in the Cloud space and what are people doing beyond software engineering
     startTime: "2020-10-23T21:10:00+01:00"
     endTime: "2020-10-23T21:25:00+01:00"

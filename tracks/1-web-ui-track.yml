@@ -2,6 +2,7 @@ title: Web & UI/UX
 date: 20 October
 sessions:
   - title: What the heck is web components?
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=1054"
     description: "web components the  new frontend hype for building agnostic building block for web apps"
     startTime: "2020-10-20T16:45:00+01:00"
     endTime: "2020-10-20T17:15:00+01:00"
@@ -11,6 +12,7 @@ sessions:
       about: "Fullstack web dev / Cloud Architect"
       avatar: /speakers/soubai.jpeg
   - title: "What the hell is static site regeneration?"
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=3232"
     description: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
     startTime: "2020-10-20T17:25:00+01:00"
     endTime: "2020-10-20T17:55:00+01:00"
@@ -20,6 +22,7 @@ sessions:
       about: I'm Ismail Ghallou also known as Smakosh, a self-taught full stack JavaScript developer, I help founders add value to society by crafting software using JavaScript tools, I love open source and building side projects.
       avatar: /speakers/ghallou.jpg
   - title: Web accessibility, why and how?
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=5244"
     description: "While the web is growing we have more users with disability they need the right to have access in the web content, unfortunately a lot of plateformes does not provide an easy access to them , so in this talk I will talk about the importance of having the accessibility in your web app and how you can reach the highest level of accessibility."
     startTime: "2020-10-20T18:05:00+01:00"
     endTime: "2020-10-20T18:25:00+01:00"
@@ -29,6 +32,7 @@ sessions:
       about: Frontend Engineer At Prevail Health
       avatar: /speakers/foukahi.jpg
   - title: "Demystifying  state management in Angular with NgRx."
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=6928"
     description:
       "Many frontend developers especially those new to large production apps have difficulties  with the different concepts involved in state management in their applications. this workshop is entry point to most of these concepts. It is structured in a way that explains the concept in a couple of slides, followed by code snippets, and finally a code demo. Depending on the available time there could be a hands-on coding challenge for the audience.
       The programme looks something like the following;
@@ -50,6 +54,7 @@ sessions:
       about: I'm a frontend developer based in Dublin, Ireland. I specialise in building high-traffic performance-driven frontend applications in Angular. When I'm not coding I'm probably at a pizza restaurant nearby or ordering donuts.
       avatar: /speakers/iraamane.jpg
   - title: Building large scale applications in a Monorepo.
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=9385"
     description: "In the last couple of years Babel, Angular, React, Vue and many other open source projects switched to using Mono-repositories. Instead of having a lot of repositories with their own configs, we will have only one source of truth mono repository with logically separated packages within. "
     startTime: "2020-10-20T19:05:00+01:00"
     endTime: "2020-10-20T19:45:00+01:00"
@@ -60,6 +65,7 @@ sessions:
       avatar: /speakers/chihab.jpg
 
   - title: "HCI: Designing for a better user experience"
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=12305"
     description: A process of design that Builds on understandings of psychology and technology and supports machine-human communication.
     startTime: "2020-10-20T19:55:00+01:00"
     endTime: "2020-10-20T20:20:00+01:00"
@@ -69,6 +75,7 @@ sessions:
       about: UX & product designer, Figma design Ambassador, Women techmaker ambassador
       avatar: /speakers/ezouhri.jpg
   - title: Design Without Losing Your Mind.
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=14027"
     description: "Design is not that hard, it is not as you think. Design is all about making decisions and good design is a result of good decisions, in this presentation I will teach how to make good decisions in order to make good design."
     startTime: "2020-10-20T20:30:00+01:00"
     endTime: "2020-10-20T21:00:00+01:00"
@@ -78,6 +85,7 @@ sessions:
       about: ""
       avatar: /speakers/azizi.jpg
   - title: Cognitive psychology, what contributions for design?
+    youtubeLink: "https://youtu.be/8gU5G7PfTcs?t=16245"
     description: "User experience design is centered around human experiences. Psychology is one way we can better understand the behaviors, habits, motivations, expectations, and emotions of the people using products. We can look to psychology to better understand how users engage with the digital worlds we've created."
     startTime: "2020-10-20T21:00:00+01:00"
     endTime: "2020-10-20T21:30:00+01:00"

@@ -2,6 +2,7 @@ title: Architecture, security & methodologies
 date: 22 October
 sessions:
   - title: Architecture Hexagonale pour le commun des mortels
+    youtubeLink: "https://youtu.be/Xht_RYb6R5c?t=378"
     description: "Entendez vous parler de DDD sans comprendre de quoi il s'agit ou vous ne voyez pas la plus value ? Venez découvrir dans cette présentation comment organiser votre code et rentrer par la grande porte dans le monde du Domain Driven Design en passant d'une architecture n-tiers à une architecture hexagonale pour un meilleur maintien du code et une meilleur représentation du métier dans votre application."
     startTime: "2020-10-22T17:35:00+01:00"
     endTime: "2020-10-22T18:05:00+01:00"
@@ -11,6 +12,7 @@ sessions:
       about: "Marouane is a passionate developer, a continous learner, Spring Meetup Paris co-organizer and Neo4j independent trainer."
       avatar: /speakers/gazanayi.jpg
   - title: How to set up a secure system.
+    youtubeLink: ""
     description: "My speech will be based on the presentation of IT system security architectures, so I'm going to talk about the cloud and virtualization.
                 I will present the Nagios and Proxmox tools."
     startTime: "2020-10-22T18:15:00+01:00"
@@ -21,6 +23,7 @@ sessions:
       about: "Security adviser and a junior customer care."
       avatar: /speakers/sissank.jpg
   - title: "Introduction to Cyber Security: You'll want to hack after this talk."
+    youtubeLink: "https://youtu.be/Xht_RYb6R5c?t=4843"
     description: "This talk includes :
 - Quick Introduction of Information Security (InfoSec, Types of hackers, types of vulnerabilities)
 - Different security threats that we're facing on our era.
@@ -37,6 +40,7 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
       about: ""
       avatar: /speakers/tamaghart.jpg
   - title: "Advanced attacks in decentralized applications."
+    youtubeLink: "https://youtu.be/Xht_RYb6R5c?t=6678"
     description: "In this workshop, we will explore the fundamentals of decentralized applications, of the Solidity language as well as the advanced attacks that can affect your Smart contract and how to protect yourself.
                   We will also discuss the tools and techniques for auditing Smarts Contracts and best methods and practices in the secure development of the dAPP"
     startTime: "2020-10-22T19:25:00+01:00"
@@ -50,6 +54,7 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
               In parallel, he does research in the field of security lately in Formal Verification."
       avatar: /speakers/mssassi.png
   - title: "Android Security: An In-depth Analysis of Access Control Policies in Android Firmwares and Linux Kernel."
+    youtubeLink: "https://youtu.be/Xht_RYb6R5c?t=10119"
     description: "What I will be covering?
                 In this talk, I will be talking about the internals of the security of Android operating system from a firmware perspective. I will be presenting how access control mechanisms are designed in this large system and how to find inconsistencies that can lead to zero-day exploits in vendors' firmwares. I will also show that many vendors' apps are vulnerable to various security issues. My talk is all backed up by the official Android documentation and the research that I am doing in my PhD in this field.
 
@@ -66,6 +71,7 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
       about: "I am 24 years old. I got a master’s degree in Software Engineering from at Al Akhawayn University in Ifrane, Morocco. I am currently pursuing a PhD degree in Computer Security at the University of Insubria in Varese, Italy under the Marie-Curie Fellowship. I am a cybersecurity analyst and an enthusiast of computer science. I am an ex-champion of ACM MCPC twice, and I have been acknowledge by several companies for finding security issues in their applications such as WhatsApp and Microsoft."
       avatar: /speakers/lekssays.jpg
   - title: Container supply chain security
+    youtubeLink: "https://youtu.be/Xht_RYb6R5c?t=12094"
     description: "In this talk we will explore the concepts of containers security, from build to deployment. We will look at some of the popular tools and cloud products that allow to scan images when they are built, find vulnerabilities and flag them and how can configure you CI/CD pipeline to be as secure as possible."
     startTime: "2020-10-22T20:55:00+01:00"
     endTime: "2020-10-22T21:25:00+01:00"
@@ -75,6 +81,7 @@ P.S : the slides can be later modified/tailored for BlaBLaConf specifically."
       about: "Google Cloud engineer working on Google Cloud Platform and all cloud stuff, specializes and work mainly on k8s, containers, istio and all the cool stuff"
       avatar:  /speakers/abdel.jpg
   - title: Tools & Methods to Grow!
+    youtubeLink: "https://youtu.be/Xht_RYb6R5c?t=14017"
     description: "What is SaaS? and Why developers should adopt SaaS business model instead of software traditional business model (On-Premise Softwares). This will be a short, but rich session to introduce you to the SaaS basics"
     startTime: "2020-10-22T21:30:00+01:00"
     endTime: "2020-10-22T21:45:00+01:00"

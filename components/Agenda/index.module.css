@@ -131,12 +131,15 @@
 }
 .add_to_calendar_link::before {
   content: "";
-  height: 20px;
-  width: 20px;
-  top: 22px;
-  left: 20px;
+  height: 22px;
+  width: 22px;
+  top: 16px;
+  left: 12px;
   position: absolute;
-  background: url(./notif.png) no-repeat;
+  background: url(./video.svg) no-repeat;
+}
+.add_to_calendar_link_outline::before {
+  background: url(./video_outline.svg) no-repeat;
 }
 .talk_title {
   font-style: normal;

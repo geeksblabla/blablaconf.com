@@ -35,3 +35,20 @@ export const AddToCalendar = ({ event, outline = false, recur = false }) => {
     </a>
   );
 };
+
+export const WatchOnYoutube = ({ youtubeLink, outline = false }) => {
+  return (
+    <a
+      className={
+        outline
+          ? `${styles.add_to_calendar_link} ${styles.add_to_calendar_link_outline}`
+          : `${styles.add_to_calendar_link}`
+      }
+      href={youtubeLink}
+      target="__blank"
+      rel="noopener"
+    >
+      Watch on Youtube
+    </a>
+  );
+};

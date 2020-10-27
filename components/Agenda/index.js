@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container } from "../Container";
 import styles from "./index.module.css";
-import { AddToCalendar } from "./AddToCalendar";
+import { AddToCalendar, WatchOnYoutube } from "./AddToCalendar";
 
 export const Agenda = ({ tracks }) => {
   const [selectedTrack, setSelectedTrack] = useState(2);
@@ -26,7 +26,10 @@ export const Agenda = ({ tracks }) => {
             <p className={styles.description}> See what's happening & when.</p>
           </div>
           <div>
-            <AddToCalendar event={event} outline recur />
+            <WatchOnYoutube
+              youtubeLink="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
+              outline
+            />
           </div>
         </div>
         <div className={styles.main}>
@@ -88,40 +91,41 @@ const Talks = ({ sessions }) => {
   );
 };
 
-const Talk = ({ title, startTime, endTime, speaker }) => (
-  <div className={styles.talk}>
-    <div className={styles.add_to_calendar}>
-      <AddToCalendar event={getEvent({ title, startTime, endTime })} />
-    </div>
+const Talk = ({ title, startTime, endTime, speaker, youtubeLink }) => {
+  console.log({ youtubeLink });
+  return (
+    <div className={styles.talk}>
+      <div className={styles.add_to_calendar}>
+        <WatchOnYoutube youtubeLink={youtubeLink} />
+      </div>
+      <div className={styles.talk_container}>
+        <p className={styles.talk_title}> {title} </p>
+        {startTime !== "time: N/A" && (
+          <div className={styles.time}>
+            <p className={styles.talk_time}>
+              {" "}
+              {`${getTimeFormat(startTime)} - ${getTimeFormat(
+                endTime
+              )} ${getCurrentTimeZone()} `}{" "}
+            </p>
+          </div>
+        )}
 
-    <div className={styles.talk_container}>
-      <p className={styles.talk_title}> {title} </p>
-
-      {startTime !== "time: N/A" && (
-        <div className={styles.time}>
-          <p className={styles.talk_time}>
-            {" "}
-            {`${getTimeFormat(startTime)} - ${getTimeFormat(
-              endTime
-            )} ${getCurrentTimeZone()} `}{" "}
-          </p>
-        </div>
-      )}
-
-      <div className={styles.talk_speaker}>
-        <img
-          className={styles.talk_speaker_avatar}
-          alt={`picture of ${speaker.name}`}
-          src={speaker.avatar}
-        />
-        <div>
-          <p className={styles.talk_speaker_name}> {speaker.name}</p>
-          <p className={styles.talk_speaker_role}> {speaker.role}</p>
+        <div className={styles.talk_speaker}>
+          <img
+            className={styles.talk_speaker_avatar}
+            alt={`picture of ${speaker.name}`}
+            src={speaker.avatar}
+          />
+          <div>
+            <p className={styles.talk_speaker_name}> {speaker.name}</p>
+            <p className={styles.talk_speaker_role}> {speaker.role}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 function Arrow(props) {
   return (
@@ -145,9 +149,9 @@ const getTimeFormat = (d) => {
 };
 
 const getCurrentTimeZone = () => {
-  const offset = new Date().getTimezoneOffset()/-60;
-  return `GMT${offset>0?'+':''}${offset}`
-}
+  const offset = new Date().getTimezoneOffset() / -60;
+  return `GMT${offset > 0 ? "+" : ""}${offset}`;
+};
 
 const getEvent = ({ title, startTime, endTime }) => {
   const event = {
