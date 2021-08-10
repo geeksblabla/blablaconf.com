@@ -69,6 +69,15 @@
   padding-bottom: 2rem;
 }
 
+.cfp_open {
+  font-family: Inter;
+  font-style: normal;
+  /* font-weight: 800; */
+  font-size: 22px;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
 @media (max-width: 750px) {
   .main {
     padding: 2rem 0px;

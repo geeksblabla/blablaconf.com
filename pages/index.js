@@ -9,6 +9,7 @@ import {
   Sponsors,
 } from "../components";
 import { getData } from "../components/utils";
+import { WatchAll } from "../components/WatchAll";
 
 const Index = ({ tracks, speakers }) => {
   return (
@@ -22,8 +23,9 @@ const Index = ({ tracks, speakers }) => {
       <Hero />
       <About />
       <Speakers speakers={speakers} />
-      <Agenda tracks={tracks} />
-      <Registration />
+      <WatchAll />
+      {/* <Agenda tracks={tracks} /> */}
+      {/* <Registration /> */}
     </Layout>
   );
 };
