@@ -10,3 +10,4 @@ export * from "./Ticket";
 export * from "./RegistrationForm";
 export * from "./MyTicket";
 export * from "./Sponsors";
+export * from "./SponsorsPacks";
