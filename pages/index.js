@@ -7,6 +7,7 @@ import {
   About,
   Registration,
   Sponsors,
+  SponsorsPacks,
 } from "../components";
 import { getData } from "../components/utils";
 import { WatchAll } from "../components/WatchAll";
@@ -22,6 +23,7 @@ const Index = ({ tracks, speakers }) => {
       </Head>
       <Hero />
       <About />
+      <SponsorsPacks />
       <Speakers speakers={speakers} />
       <WatchAll />
       {/* <Agenda tracks={tracks} /> */}
