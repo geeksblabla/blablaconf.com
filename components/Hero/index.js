@@ -14,7 +14,7 @@ export const Hero = () => {
             5 Days and 5 Tracks Covering Hottest Technology Trends in{" "}
             <span className={styles.ma}> Darija </span>
           </h1>
-          <div className={styles.date}>22-26 October, 2021 | Online</div>
+          <div className={styles.date}>25-29 October, 2021 | Online</div>
 
           <div style={{ marginTop: "0rem" }}>
             <p className={styles.cfp_open}>
