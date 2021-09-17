@@ -15,13 +15,6 @@ export const Hero = () => {
             <span className={styles.ma}> Darija </span>
           </h1>
           <div className={styles.date}>25-29 October, 2021 | Online</div>
-
-          <div style={{ marginTop: "0rem" }}>
-            <p className={styles.cfp_open}>
-              CFP is now Open! Be Part of our next Edition
-            </p>
-          </div>
-          <CFPButton />
         </div>
       </Container>
     </div>
