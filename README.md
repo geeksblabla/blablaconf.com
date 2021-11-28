@@ -7,4 +7,6 @@
   Blabla Conf Website
 </h1>
 
-The website is built using [Nextjs](https://nextjs.org/)
+The website is built using [Webflow](https://webflow.com/)
+
+Check `2020` branch for 2020 version
