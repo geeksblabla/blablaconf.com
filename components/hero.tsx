@@ -1,43 +1,52 @@
 import Image from "next/image";
 
+//bg-gradient-to-r from-emerald-50 via-emerald-100 to-emerald-200
 export const Hero = () => {
   return (
-    <div className="mx-auto max-w-screen-lg md:max-w-screen-xl my-16 md:mt-16 mt-8 flex flex-col justify-center items-center  md:px-8 px-4 ">
-      <div className=" bg-gray-100 py-2 px-5 w-fit align-middle self-center rounded-full text-sm animated-border text-center">
-        <span className="font-medium"> 19-23 October, 2022 💻 </span>
-        <span className="text-emerald-700">Online </span>
-        <span className="hidden md:inline-block"> | </span>
-        <br className="md:hidden" />
-        <span className="font-medium"> 24 October, 2022 🤝</span>
-        <span className="text-red-500"> In Person </span>
-      </div>
-      <div className="mx-auto flex justify-center mt-2 font-sans w-full max-w-[800px] ">
-        <p className="lg:text-7xl md:text-6xl text-5xl font-bold leading-tight md:leading-normal font-almaghribi  text-center">
-          <span className="text-[#C1272D]"> العشية تعاشات</span>، الخيم تعلات،
-          الخيل تسرجات،
-          <span className="text-[#006233]"> و خمسيام د لموسم قربـــــات</span>
-        </p>
-        {/* <p className="text-6xl font-bold leading-normal font-sans text-center">
-          العشية تعاشات، الخيم تعلات، الخيل تسرجات، و خمسيام د لموسم قربـــــات
-        </p> */}
-      </div>
-      <Image
-        src="/blablaconf-taxi.png"
-        alt="BlablaConf Taxi"
-        width={700}
-        height={700}
-        className="mx-auto mt-16 rounded-xl"
-      />
-
-      <div className="bg-gray-200 flex flex-row justify-between p-2 relative mx-auto mt-10 w-full max-w-md space-y-2 overflow-hidden  focus-within:ring-2 sm:space-y-0 sm:rounded-full">
-        <input
-          className="flex flex-1  py-2 px-5  outline-none sm:text-left bg-transparent"
-          type="text"
-          placeholder="Your email"
+    <div className="relative  bg-opacity-90 py-16 md:pt-16 pt-8 ">
+      {/* <svg
+        className="absolute inset-x-0 -bottom-1 text-white"
+        viewBox="0 0 1160 163"
+      >
+        <path
+          fill="currentColor"
+          d="M-164 13L-104 39.7C-44 66 76 120 196 141C316 162 436 152 556 119.7C676 88 796 34 916 13C1036 -8 1156 2 1216 7.7L1276 13V162.5H1216C1156 162.5 1036 162.5 916 162.5C796 162.5 676 162.5 556 162.5C436 162.5 316 162.5 196 162.5C76 162.5 -44 162.5 -104 162.5H-164V13Z"
+        ></path>
+      </svg> */}
+      <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 ">
+        <div className=" bg-gray-100 py-2 px-5 w-fit align-middle self-center rounded-full text-sm animated-border text-center">
+          <span className="font-medium"> 19-23 October, 2022 💻 </span>
+          <span className="text-emerald-700">Online </span>
+          <span className="hidden md:inline-block"> | </span>
+          <br className="md:hidden" />
+          <span className="font-medium"> 24 October, 2022 🤝</span>
+          <span className="text-red-500"> In Person </span>
+        </div>
+        <div className="mx-auto flex justify-center mt-2 font-sans w-full max-w-[800px] ">
+          <p className="lg:text-7xl md:text-6xl text-5xl font-bold leading-tight md:leading-normal font-almaghribi  text-center">
+            <span className="text-[#C1272D]"> العشية تعاشات</span>، الخيم تعلات،
+            الخيل تسرجات،
+            <span className="text-[#006233]"> و خمسيام د لموسم قربـــــات</span>
+          </p>
+        </div>
+        <Image
+          src="/blablaconf-taxi.png"
+          alt="BlablaConf Taxi"
+          width={700}
+          height={700}
+          className="mx-auto mt-16 rounded-xl"
         />
-        <button className="w-full rounded-full bg-[#006233] px-8 py-3 text-white sm:w-auto">
-          Get Your Free Ticket
-        </button>
+        <div className="mx-auto mt-8 flex max-w-md w-full flex-col border-gray-600 sm:bg-gray-200 bg-transparent sm:flex-row sm:rounded-full ">
+          <input
+            className="m-2 h-12 rounded-full px-4  sm:w-full  bg-transparent sm:border-slate-100 border md:border-none"
+            placeholder="Enter your email"
+            type="email"
+            name="email"
+          />
+          <button className="shrink-0 m-2 rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]">
+            Get Your Free Ticket
+          </button>
+        </div>
       </div>
     </div>
   );

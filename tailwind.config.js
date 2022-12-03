@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,7 +10,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-jakarta)"],
+        sans: ["var(--font-jakarta)", ...fontFamily.sans],
+        almaghribi: ["var(--font-almaghribi)"],
       },
     },
   },

@@ -12,7 +12,7 @@ const links = [
 
 export const Header = () => {
   return (
-    <header className="mb-2 px-4 shadow-sm">
+    <header className="px-4 shadow-sm  bg-white">
       <div className="relative mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
         <a className="flex items-center text-2xl font-black" href="/">
           <Logo />
