@@ -39,8 +39,8 @@ const tracks = [
 
 export const Tracks = () => {
   return (
-    <section className="py-20">
-      <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16">
+    <section className="py-16">
+      <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           5 + 1 Tracks
         </h2>
@@ -49,7 +49,7 @@ export const Tracks = () => {
           additional track because excellence is not only about code!
         </p>
       </div>
-      <div className="mx-auto  grid max-w-screen-xl grid-cols-1 gap-6 py-6 md:px-0 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto  grid max-w-screen-xl grid-cols-1 gap-6 py-6  sm:px-6 md:grid-cols-2 lg:grid-cols-3 md:px-8 px-4">
         {tracks.map((track, index) => (
           <Track key={index} {...track} />
         ))}

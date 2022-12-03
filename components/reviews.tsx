@@ -42,14 +42,16 @@ export const Reviews = () => {
   const chunks = spliceIntoChunks(tweets, 9);
   return (
     <div className="py-16 px-5">
-      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           What community members <br /> say about the conference
         </h2>
-        <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px] mx-auto text-center"></p>
+        <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px]  ">
+          We love our community and our community loves us back ❤️ 💚
+        </p>
       </div>
 
-      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl flex px-2 pt-10 ">
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl flex md:px-6 px-2 pt-10 ">
         {chunks.map((chunk, i) => (
           <div className="flex flex-col space-y-3 px-2" key={`col${i}`}>
             {chunk.map((tweet, index) => (

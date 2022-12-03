@@ -5,8 +5,9 @@ import { Hero } from "@/components/hero";
 import { PreviousSessions } from "@/components/previous-sessions";
 import { Reviews } from "@/components/reviews";
 import { Speakers } from "@/components/speakers";
+import { Sponsors } from "@/components/sponsors";
 import { Tracks } from "@/components/tracks";
-import { getSpeakers } from "@/utils/api";
+import { getSpeakers } from "@/utils/sessionize";
 
 export default async function Home() {
   const speakers = await getSpeakers();
@@ -20,6 +21,7 @@ export default async function Home() {
       <CommunityProjects />
       <Reviews />
       <FAQ />
+      <Sponsors />
     </div>
   );
 }

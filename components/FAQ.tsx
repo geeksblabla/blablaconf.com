@@ -21,7 +21,21 @@ const questions: QuestionType[] = [
   },
   {
     question: "How I can support BlablaConf?",
-    answer: `You can support us by sharing the event with your friends, colleagues, and community. You can also support us by sponsoring the event. If you are interested in sponsoring BlablaConf, please get in touch with us in our social media channels`,
+    answer: () => (
+      <p>
+        You can support us by sharing the event with your friends, colleagues,
+        and community. Sharing is caring! <br />
+        If you find any issue or typo in the website,Make sure to open an issue
+        or submit a new PR on our{" "}
+        <Link href="https://github.com/DevC-Casa/blablaconf.com">
+          {" "}
+          GitHub repo{" "}
+        </Link>{" "}
+        . You can also support us by sponsoring the event. If you are interested
+        in sponsoring BlablaConf, please get in touch with us in our social
+        media channels
+      </p>
+    ),
   },
   {
     question: "How can I register to BlablaConf?",
@@ -163,7 +177,7 @@ const Arrow = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_277_5712)">
+    <g clipPath="url(#clip0_277_5712)">
       <path
         d="M12.5 6.15137L12.5 20.1514"
         stroke="currentColor"

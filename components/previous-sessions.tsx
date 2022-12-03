@@ -26,8 +26,8 @@ const sessions = [
 
 export const PreviousSessions = () => {
   return (
-    <section className="bg-blue-100/50">
-      <div className="mx-auto grid max-w-lg gap-x-8 gap-y-12 px-4 py-32 md:max-w-screen-xl md:grid-cols-2 md:px-8 lg:grid-cols-3">
+    <section className="bg-blue-100/50 py-16">
+      <div className="mx-auto grid max-w-lg gap-x-8 gap-y-12 px-4  md:max-w-screen-xl md:grid-cols-2 md:px-8 lg:grid-cols-3">
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold text-black">
             BlablaConf 2021

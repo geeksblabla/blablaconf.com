@@ -2,17 +2,24 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <div className="mx-auto max-w-screen-lg md:max-w-screen-xl my-16 flex flex-col justify-center items-center ">
-      <div className=" bg-gray-100 py-2 px-5 w-fit align-middle self-center rounded-full text-base animated-border">
-        <span className="font-medium"> 24-27 October, 2022 💻 </span>
-        <span className="text-emerald-700">Online </span> |{" "}
-        <span className="font-medium"> 28 October, 2022 🤝</span>
+    <div className="mx-auto max-w-screen-lg md:max-w-screen-xl my-16 md:mt-16 mt-8 flex flex-col justify-center items-center  md:px-8 px-4 ">
+      <div className=" bg-gray-100 py-2 px-5 w-fit align-middle self-center rounded-full text-sm animated-border text-center">
+        <span className="font-medium"> 19-23 October, 2022 💻 </span>
+        <span className="text-emerald-700">Online </span>
+        <span className="hidden md:inline-block"> | </span>
+        <br className="md:hidden" />
+        <span className="font-medium"> 24 October, 2022 🤝</span>
         <span className="text-red-500"> In Person </span>
       </div>
-      <div className="mx-auto flex justify-center mt-2 font-sans w-full max-w-[800px]">
-        <p className="text-6xl font-bold leading-normal font-sans text-center">
-          العشية تعاشات، الخيم تعلات، الخيل تسرجات، و خمسيام د لموسم قربـــــات
+      <div className="mx-auto flex justify-center mt-2 font-sans w-full max-w-[800px] ">
+        <p className="lg:text-7xl md:text-6xl text-5xl font-bold leading-tight md:leading-normal font-almaghribi  text-center">
+          <span className="text-[#C1272D]"> العشية تعاشات</span>، الخيم تعلات،
+          الخيل تسرجات،
+          <span className="text-[#006233]"> و خمسيام د لموسم قربـــــات</span>
         </p>
+        {/* <p className="text-6xl font-bold leading-normal font-sans text-center">
+          العشية تعاشات، الخيم تعلات، الخيل تسرجات، و خمسيام د لموسم قربـــــات
+        </p> */}
       </div>
       <Image
         src="/blablaconf-taxi.png"

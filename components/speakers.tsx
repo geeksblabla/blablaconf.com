@@ -3,11 +3,11 @@ import Image from "next/image";
 import type {
   Speaker as SpeakerType,
   SpeakerLink as SpeakerLinkType,
-} from "@/utils/api";
+} from "@/utils/sessionize";
 
 export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
-    <section className="bg-blue-50/50 mx-auto py-16 ">
+    <section className="bg-blue-50/50 mx-auto py-16">
       <svg aria-hidden="true" width="0" height="0">
         <defs>
           <clipPath id=":R9m:-0" clipPathUnits="objectBoundingBox">
@@ -21,7 +21,7 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
           </clipPath>
         </defs>
       </svg>
-      <div className="mx-auto max-w-lg md:max-w-screen-xl flex flex-col">
+      <div className="mx-auto max-w-lg md:max-w-screen-xl flex flex-col md:px-8 px-4">
         <div className="flex flex-row ">
           <Image
             height={44}
