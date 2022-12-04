@@ -59,7 +59,7 @@ const Session = ({ src, url }: { src: string; url: string }) => {
       className="shadow-md rounded-lg relative h-[220px] cursor-pointer overflow-hidden hover:scale-105 transition-all"
       rel="noreferrer"
     >
-      <Image fill className="w-full  object-cover" src={src} alt="session 1" />
+      <Image fill className="w-full  object-fill" src={src} alt="session 1" />
       <div className="absolute top-0 h-ful w-full bottom-0 bg-gray-600/20 flex justify-center items-center  ">
         <svg
           width="65"

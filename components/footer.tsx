@@ -9,7 +9,7 @@ export const Footer = () => {
           <div className="mb-6 flex h-10 items-center space-x-2">
             <Logo />
           </div>
-          <div className="text-gray-500">
+          <div className="text-gray-500 ">
             Participate and let us know what working in tech really looks like
             in Morocco 🇲🇦
           </div>
@@ -72,7 +72,7 @@ export const Footer = () => {
           </nav>
         </div>
         <div className="">
-          <div className="mt-4 mb-2 font-medium xl:mb-4">Links</div>
+          <div className="mt-4 mb-2 font-medium xl:mb-4">Stay in touch</div>
           <nav aria-label="Footer Navigation" className="text-gray-500">
             <ul className="space-y-3">
               <li>

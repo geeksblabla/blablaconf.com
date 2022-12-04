@@ -56,7 +56,7 @@ const Speaker = ({ profilePicture, fullName, tagLine, links }: SpeakerType) => {
     <>
       <div>
         <div className="rounded-4xl group relative h-[17.5rem] transform overflow-hidden rounded-md ">
-          <div className="rounded-4xl absolute top-0 left-0 right-4  rounded-md bottom-6 border border-indigo-300 transition duration-300 group-hover:scale-95 xl:right-6"></div>
+          <div className="rounded-4xl absolute top-0 left-0 right-4  rounded-md bottom-6  transition duration-300 group-hover:scale-95 xl:right-6"></div>
           <div
             className="absolute inset-0 bg-indigo-50"
             style={{ clipPath: "url(#:R9m:-0)" }}
