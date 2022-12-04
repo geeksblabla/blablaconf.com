@@ -1,22 +1,23 @@
+import Link from "next/link";
 import { Logo } from "./logo";
 
 const links = [
   { label: "About", href: "/#about" },
-  { label: "Tracks", href: "/#track" },
+  { label: "Tracks", href: "/#tracks" },
   { label: "Speakers", href: "/#speakers" },
-  { label: "Agenda", href: "/#agenda" },
+  // { label: "Agenda", href: "/#agenda" },
   { label: "FAQ", href: "/#faq" },
   { label: "Sponsors", href: "/#sponsors" },
-  { label: "Offline Day", href: "/#offline-day" },
+  // { label: "Offline Day", href: "/#offline-day" },
 ];
 
 export const Header = () => {
   return (
     <header className="px-4 shadow-sm  bg-white">
       <div className="relative mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-        <a className="flex items-center text-2xl font-black" href="/">
+        <Link className="flex items-center text-2xl font-black" href="/">
           <Logo />
-        </a>
+        </Link>
         <input className="peer hidden" type="checkbox" id="navbar-open" />
         <label
           className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden"

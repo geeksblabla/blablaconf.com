@@ -10,7 +10,7 @@ export const generateTicketsSeoConfig = (user: User): NextSeoProps => {
     openGraph: {
       type: "website",
       locale: "en_IE",
-      url: process.env.NEXT_PUBLIC_HOST + "/user/" + user.login,
+      url: process.env.NEXT_PUBLIC_HOST + "/ticket/" + user.login,
       title: name + "'s BlaBlaConf Ticket",
       description:
         "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
@@ -30,7 +30,13 @@ export const generateTicketsSeoConfig = (user: User): NextSeoProps => {
 
 const getTicketImg = (user: User) => {
   const name = user.name === null ? user.login : user.name;
-  const ticketImg = `https://res.cloudinary.com/blablaconf/image/upload/v1627977252/tickets/${name}.png`;
+  const ticketImg = `${
+    process.env.NEXT_PUBLIC_HOST
+  }/api/og?name=${encodeURIComponent(name)}&login=${encodeURIComponent(
+    user.login
+  )}&avatar=${encodeURIComponent(
+    user.avatar
+  )}&ticketNumber=${encodeURIComponent(user.ticketNumber)}`;
   return ticketImg;
 };
 
@@ -47,7 +53,7 @@ export const getUserInfo = async (username: string) => {
       user = {
         name: u.name === null ? u.login : u.name,
         image: getTicketImg(u),
-        url: process.env.NEXT_PUBLIC_HOST + "/user/" + u.login,
+        url: process.env.NEXT_PUBLIC_HOST + "/ticket/" + u.login,
       };
     }
   }

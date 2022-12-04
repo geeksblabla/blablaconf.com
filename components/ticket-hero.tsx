@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { DateConf } from "./date-conf";
 import { GithubButton } from "./github-button";
 import { ShareActions } from "./share-actions";
@@ -24,15 +25,16 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
       ? "me"
       : "home";
   return (
-    <div className="relative bg-opacity-90 py-16 md:pt-16 pt-8  pb-20 min-h-screen">
+    <div className="relative bg-opacity-90 py-20 md:pt-20 pt-8  pb-20 min-h-screen">
       <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 text-center ">
         <DateConf />
-        <h2 className="md:text-5xl text-4xl font-bold my-4 capitalize">
+
+        <h2 className=" relative md:text-5xl text-4xl font-bold my-4 capitalize">
           {page === "home" && "Make your own ticket"}
           {(page === "user" || page === "me") &&
             `${name}'s BlaBlaConf 2022 Ticket`}
         </h2>
-        <p className="text-base font-medium text-gray-600 capitalize max-w-[500px]">
+        <p className="text-base font-medium text-gray-600 capitalize max-w-[500px] pt-8">
           {page === "home" &&
             "Generate a unique ticket with your Github profile"}
           {page === "me" &&
@@ -48,18 +50,21 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
         {page === "home" && <GithubButton />}
 
         {page === "user" && (
-          <button className="mt-4 shrink-0 m-2 rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]">
+          <Link
+            href="/"
+            className="mt-4 shrink-0 m-2 rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]"
+          >
             Back to Home
-          </button>
+          </Link>
         )}
 
-        <div className="letter mt-16 -rotate-3">
+        <div className="letter mt-16 -rotate-3 px-2">
           {page === "user" || page === "me" ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={image}
               alt="BlablaConf Ticket"
-              className="mx-auto  border-2 border-gray-200 rounded-md"
+              className="mx-auto  border-2 border-gray-200 rounded-md max-w-2xl w-full"
             />
           ) : (
             <Image

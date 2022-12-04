@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Community = () => {
   return (
-    <div className=" py-16">
+    <section id="about" className=" py-16">
       <div className=" relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:px-8 px-4">
         <div className="mx-auto  flex-col flex w-full max-w-xl lg:max-w-screen-xl">
           <div className="max-w-screen-md ">
@@ -50,7 +50,7 @@ export const Community = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

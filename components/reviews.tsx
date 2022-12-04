@@ -41,7 +41,7 @@ function spliceIntoChunks(arr: string[], chunkSize: number) {
 export const Reviews = () => {
   const chunks = spliceIntoChunks(tweets, 9);
   return (
-    <div className="py-16 px-5">
+    <section id="reviews" className="py-16 px-5">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           What community members <br /> say about the conference
@@ -60,7 +60,7 @@ export const Reviews = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

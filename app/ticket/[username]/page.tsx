@@ -8,5 +8,5 @@ export default async function Page({
 }) {
   // TODO  fetch user da
   const { user } = await getUserInfo(params.username);
-  return <TicketHero {...user} />;
+  return <TicketHero {...user} url={undefined} />;
 }

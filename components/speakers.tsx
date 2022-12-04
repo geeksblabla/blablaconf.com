@@ -7,7 +7,7 @@ import type {
 
 export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
-    <section className="bg-blue-50/50 mx-auto py-16">
+    <section id="speakers" className="bg-blue-50/50 mx-auto py-16">
       <svg aria-hidden="true" width="0" height="0">
         <defs>
           <clipPath id=":R9m:-0" clipPathUnits="objectBoundingBox">

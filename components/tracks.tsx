@@ -39,7 +39,7 @@ const tracks = [
 
 export const Tracks = () => {
   return (
-    <section className="py-16">
+    <section id="tracks" className="py-16">
       <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           5 + 1 Tracks

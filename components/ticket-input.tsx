@@ -10,6 +10,7 @@ export const TicketInput = () => {
         placeholder="Enter your email"
         type="email"
         name="email"
+        pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
         required
       />
       <button className="shrink-0 m-2 rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]">

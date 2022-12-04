@@ -28,7 +28,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
     "Hey, I am attending #BlaBlaConf 2021 by @geeksblabla. Grab your ticket too! It's free";
 
   return (
-    <div className="flex flex-row items-center mt-4">
+    <div className="flex md:flex-row flex-col items-center mt-4">
       <button
         className="shrink-0  rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]"
         onClick={() => {
@@ -38,8 +38,8 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
       >
         {copied ? "Link Copied" : "Copy Ticket URL"}
       </button>
-      <div className="flex flex-row justify-center items-center">
-        <p className="mx-2">Or share on </p>
+      <div className="flex md:flex-row flex-col justify-center items-center">
+        <p className="mx-2 md:my-0 my-2">Or share on </p>
         <div>
           <FacebookShareButton
             url={shareUrl}

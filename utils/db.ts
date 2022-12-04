@@ -36,11 +36,11 @@ export const addEmail = (email: string) => {
 };
 
 export type User = {
-  name?: string;
+  name: string | null;
   login: string; // username
   avatar: string;
   email: string;
-  ticketNumber?: number;
+  ticketNumber: number;
   bio: string;
 };
 
@@ -49,8 +49,9 @@ export const isUserExist = async (username: string) => {
 
   return userDoc.exists;
 };
+export type UserWithoutTicketNumber = Omit<User, "ticketNumber">;
 
-export const saveUser = async (user: User) => {
+export const saveUser = async (user: UserWithoutTicketNumber) => {
   const exists = await isUserExist(user.login);
 
   if (exists) return Promise.resolve(true);

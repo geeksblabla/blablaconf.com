@@ -88,7 +88,10 @@ const questions: QuestionType[] = [
 
 export const FAQ = () => {
   return (
-    <div className="relative mx-auto w-full py-16 px-5 font-sans text-gray-800 sm:px-20 md:max-w-screen-lg lg:py-24">
+    <section
+      id="faq"
+      className="relative mx-auto w-full py-16 px-5 font-sans text-gray-800 sm:px-20 md:max-w-screen-lg lg:py-24"
+    >
       <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl text-center">
         Frequently asked Questions
       </h2>
@@ -106,7 +109,7 @@ export const FAQ = () => {
           />
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
