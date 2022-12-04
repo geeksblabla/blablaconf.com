@@ -1,3 +1,9 @@
+import { TicketHero } from "@/components/ticket-hero";
+
 export default function Page() {
-  return <div>Ticket page</div>;
+  return (
+    <>
+      <TicketHero />
+    </>
+  );
 }

@@ -6,7 +6,6 @@ export default async function Page({
 }: {
   params: { username: string };
 }) {
-  // TODO  fetch user da
   const { user } = await getUserInfo(params.username);
   return <TicketHero {...user} />;
 }

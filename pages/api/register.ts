@@ -42,7 +42,7 @@ export default async function handler(
 
   try {
     await addEmail(email);
-    return res.redirect(303, `/`);
+    return res.redirect(303, `/ticket`);
   } catch (error) {
     return res.status(400).json({
       error: {

@@ -94,10 +94,8 @@ export default async function handler(
     // res.status(200).json(user);
     // fetch images and dont wait for response
 
-    return res.redirect(`/my-ticket/${user.login}`);
+    return res.redirect(`/ticket/${user.login}/me`);
   } catch (error) {
-    console.log(error);
-
     return res.status(400).json({
       code: "error_database",
       description: "Error saving to database ",

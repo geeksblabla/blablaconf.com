@@ -36,7 +36,7 @@ export const addEmail = (email: string) => {
 };
 
 export type User = {
-  name: string;
+  name?: string;
   login: string; // username
   avatar: string;
   email: string;
