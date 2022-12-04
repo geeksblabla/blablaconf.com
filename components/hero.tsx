@@ -32,7 +32,6 @@ export const Hero = () => {
           className="mx-auto mt-16 rounded-xl"
         />
         <TicketInput />
-        <p className=" text-xs text-gray-400 mt-1">We promise we won't spam you</p>
       </div>
     </div>
   );
