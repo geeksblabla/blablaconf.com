@@ -1,12 +1,37 @@
-<p align="center">
-  <a href="https://blablaconf.com">
-    <img alt="Gatsby" src="https://user-images.githubusercontent.com/11137944/95002187-24dd9980-05c9-11eb-960e-f4b39e740199.png" width="200" />
-  </a>
-</p>
-<h1 align="center">
-  Blabla Conf Website
-</h1>
+This project is based on [Next.js](https://nextjs.org/) with the new `app` directory structure. It also uses [Tailwind CSS](https://tailwindcss.com/) for styling.
 
-The website is built using [Webflow](https://webflow.com/)
+## Getting Started
 
-Check `2020` branch for 2020 version
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Setup
+
+1. Create a firebase app and with a firestore database.
+
+2. Go to firebase project setting > Service account and generate a new private key,Download the json file and add the copy the following environment variables 👇
+
+```
+#.env.development.local
+NEXT_PUBLIC_HOST=
+PROJECT_ID=
+FIREBASE_CLIENT_EMAIL=
+FIREBASE_PRIVATE_KEY=
+```
+
+3. Create a Github auth application and add `https://yourwebsite.com/api/github-auth` as redirect url. Add you github client id and the the secret key to your environment variables:
+
+```
+NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID=
+GITHUB_OAUTH_CLIENT_SECRET=
+
+```
+
+4. Configure ticket generation by updating the `api/og.tsx` file.
