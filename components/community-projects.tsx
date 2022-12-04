@@ -80,7 +80,7 @@ const Project = ({ name, image, url, description }: ProjectType) => {
           </p>
         </h2>
 
-        <p className="text-gray-500 pr-3">{description}</p>
+        <p className="text-gray-500 pr-3 sm:text-xs pr-20 md:pr-0 mt-2">{description}</p>
       </div>
       <div className="absolute bottom-0 right-0 flex h-12 w-12 items-center justify-center bg-emerald-500 text-white transition-all hover:w-16">
         <svg
