@@ -29,7 +29,7 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
       <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 text-center ">
         <DateConf />
 
-        <h2 className=" relative md:text-5xl text-4xl font-bold my-4 capitalize">
+        <h2 className=" relative md:text-5xl text-4xl font-bold my-4 capitalize max-w-[700px]">
           {page === "home" && "Make your own ticket"}
           {(page === "user" || page === "me") &&
             `${name}'s BlaBlaConf 2022 Ticket`}
