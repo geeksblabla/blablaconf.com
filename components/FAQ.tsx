@@ -9,7 +9,7 @@ type QuestionType = {
 const questions: QuestionType[] = [
   {
     question: "What is BlablConf?",
-    answer: `BlablaConf is a community driven online conference, made by developers for developers. Blabla contains 5 tracks in 5 days and one offline day to connect with the community in person. we discuss all the web related topics, from Web & UI/UX, Big Data & ML, Cloud, Security, Backend technologies, to Soft skills, with our speakers from different backgrounds and completely in our Moroccan Darija.`,
+    answer: `BlablaConf is a community driven online conference, made by developers for developers. BlablaConf contains 5 tracks in 5 days and one offline day to connect with the community in person. we discuss all the IT related topics, from Web & UI/UX, Big Data & ML, Cloud, Security, Backend technologies, to Soft skills, with our speakers from different backgrounds and completely in our Moroccan Darija.`,
   },
   {
     question: "How much does BlablaConf cost?",
