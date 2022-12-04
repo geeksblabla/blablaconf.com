@@ -41,7 +41,7 @@ function spliceIntoChunks(arr: string[], chunkSize: number) {
 export const Reviews = () => {
   const chunks = spliceIntoChunks(tweets, 9);
   return (
-    <section id="reviews" className="py-16 px-5">
+    <section id="reviews" className="py-16 px-4">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           What community members <br /> say about the conference
@@ -51,7 +51,7 @@ export const Reviews = () => {
         </p>
       </div>
 
-      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl flex md:px-6 px-2 pt-10 ">
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl flex flex-col md:flex-row md:px-6 pt-10 ">
         {chunks.map((chunk, i) => (
           <div className="flex flex-col space-y-3 px-2" key={`col${i}`}>
             {chunk.map((tweet, index) => (
@@ -65,9 +65,11 @@ export const Reviews = () => {
 };
 
 const Card = ({ image }: { image: string }) => (
-  <div className="relative rounded-xl p-2 shadow-md hover:scale-[1.03] hover:shadow-lg transition-all">
-    <img
+  <div className="relative rounded-xl overflow-hidden p-2 shadow-md hover:scale-[1.03] hover:shadow-lg transition-all">
+    <Image
       alt=""
+      width={400}
+      height={400}
       src={`/images/tweets/tweet-${image}.png`}
       className="mx-auto w-full h-full  object-cover"
     />

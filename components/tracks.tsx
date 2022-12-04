@@ -1,39 +1,41 @@
+import Image from "next/image";
+
 const tracks = [
   {
     title: "Web, mobile and uX",
     description:
       "Design and prototype faster, with an entire library of ready components.",
-    image: "/images/track-1.png",
+    image: "/images/tracks/web-mobile.png",
   },
   {
     title: "Backend Technologies & Programming languages",
     description:
       "All about programming languages, functional, reactive, emerging languages, tools, libraries, etc",
-    image: "/images/track-1.png",
+    image: "/images/tracks/backend.png",
   },
   {
     title: "Security and Architecture",
     description:
       "How-Tos, strategies, tools, techniques, and best practices for getting architecture and security right.",
-    image: "/images/track-1.png",
+    image: "/images/tracks/sec-arch.png",
   },
   {
     title: "Big Data & Machine Learning",
     description:
       "Big Data, Fast Data, NoSQL, Machine learning, Deep Learning, Neural Networks, TensorFlow, etc",
-    image: "/images/track-1.png",
+    image: "/images/tracks/big-data.png",
   },
   {
     title: "Cloud, Containers & Infrastructure",
     description:
       "Serverless, Docker, Kubernetes, Service Mesh, Cloud, PaaS, and anything in between.",
-    image: "/images/track-1.png",
+    image: "/images/tracks/cloud.png",
   },
   {
     title: "Soft Skills",
     description:
       "Emotional Intelligence, Critical Thinking, Evaluation, Mindfulness, Leadership...",
-    image: "/images/track-1.png",
+    image: "/images/tracks/soft-skills.png",
   },
 ];
 
@@ -64,11 +66,11 @@ type TrackType = {
   image: string;
 };
 
-const Track = ({ title, description }: TrackType) => {
+const Track = ({ title, description, image }: TrackType) => {
   return (
     <article className="rounded-xl  p-3 shadow-sm hover:shadow-md bg-gray-100/50 cursor-pointer">
       <div className="relative flex items-center justify-center overflow-hidden rounded-xl p-6">
-        <img src="/images/tarbouch.png" alt="track photo" />
+        <Image height={200} width={200} src={image} alt="track photo" />
       </div>
 
       <div className="mt-1 p-2">
