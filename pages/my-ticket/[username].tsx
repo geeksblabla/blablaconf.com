@@ -8,9 +8,9 @@ import { GetStaticPaths } from "next";
 
 const TicketPage = ({
   user,
-  seoConfig,
+  seo,
 }: {
-  seoConfig: NextSeoProps;
+  seo: NextSeoProps;
   user?: { name: string; image: string; url: string };
 }) => {
   if (!user) {
@@ -22,7 +22,7 @@ const TicketPage = ({
   }
   return (
     <Layout>
-      <NextSeo {...seoConfig} />
+      <NextSeo {...seo} />
       <TicketHero {...user} />;
     </Layout>
   );
@@ -33,8 +33,7 @@ export const getStaticProps = async ({
 }: {
   params: { username: string };
 }) => {
-  const { user } = await getUserInfo(params.username);
-  const { seoConfig } = await getUserInfo(params.username);
+  const { user, seoConfig } = await getUserInfo(params.username);
   const seo = { ...NEXT_SEO_DEFAULT, ...seoConfig };
 
   return {
