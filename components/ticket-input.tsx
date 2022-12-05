@@ -26,7 +26,15 @@ export const TicketInput = () => {
           required
         />
         <button className="shrink-0 m-2 rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]">
-          {loading ? "Loading Ticket ..." : "Get Your Free Ticket"}
+          {loading ? (
+            "Loading Ticket ..."
+          ) : (
+            <>
+              <span className="pl-1"> قطع </span>
+              <span> ورقتك </span>
+            </>
+          )}
+          {/* //"Get Your Free Ticket"} */}
         </button>
       </form>
 

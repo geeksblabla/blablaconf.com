@@ -25,7 +25,7 @@ export const Hero = () => {
       <div className="relative mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 ">
         <DateConf className="bg-gray-200" />
         <div className="mx-auto flex justify-center mt-2 font-sans w-full max-w-[800px] ">
-          <p className="lg:text-7xl md:text-6xl text-5xl font-medium leading-tight md:leading-normal font-almaghribi  text-center">
+          <p className="lg:text-6xl md:text-5xl text-4xl font-bold leading-normal md:leading-normal   text-center">
             <span className="text-[#C1272D]"> العشية تعاشات</span>، الخيم تعلات،
             الخيل تسرجات،
             <span className="text-[#006233]"> و خمسيام د لموسم قربـــــات</span>

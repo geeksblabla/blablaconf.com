@@ -9,10 +9,10 @@ const jakarta = Plus_Jakarta_Sans({
   variable: "--font-jakarta",
 });
 
-const almaghribi = localFont({
-  src: "../utils/AALMAGHRIBI.ttf",
-  variable: "--font-almaghribi",
-});
+// const almaghribi = localFont({
+//   src: "../utils/AALMAGHRIBI.ttf",
+//   variable: "--font-almaghribi",
+// });
 
 export default function RootLayout({
   children,
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jakarta.variable} ${almaghribi.variable}`}>
+    <html lang="en" className={`${jakarta.variable} `}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
