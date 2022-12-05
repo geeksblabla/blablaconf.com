@@ -18,7 +18,7 @@ export const NEXT_SEO_DEFAULT: NextSeoProps = {
     site_name: "BlaBlaConf",
     images: [
       {
-        url: `${host}/cover.png`,
+        url: `${host}/cover.jpeg`,
       },
     ],
   },
