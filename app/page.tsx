@@ -1,4 +1,4 @@
-import { Agenda } from "@/components/Agenda";
+import { Agenda } from "@/components/agenda";
 import { Community } from "@/components/community";
 import { CommunityProjects } from "@/components/community-projects";
 import { FAQ } from "@/components/FAQ";
@@ -12,7 +12,7 @@ import { getSessions, getSpeakers } from "@/utils/sessionize";
 
 export default async function Home() {
   const speakers = await getSpeakers();
-  // const days = await getSessions();
+  const days = await getSessions();
 
   return (
     <div>
@@ -20,12 +20,12 @@ export default async function Home() {
       <Community />
       <Tracks />
       <Speakers speakers={speakers} />
-      {/* <Agenda days={days} /> */}
+      <Agenda days={days} />
       <PreviousSessions />
       <CommunityProjects />
+      <Sponsors />
       <Reviews />
       <FAQ />
-      <Sponsors />
     </div>
   );
 }

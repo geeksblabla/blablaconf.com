@@ -84,7 +84,7 @@ const Speaker = ({ profilePicture, fullName, tagLine, links }: SpeakerType) => {
   );
 };
 
-const Links = ({ links }: { links: SpeakerLinkType[] }) => (
+export const Links = ({ links }: { links: SpeakerLinkType[] }) => (
   <ul className="list-inside flex py-2 text-slate-500">
     {links
       .filter(

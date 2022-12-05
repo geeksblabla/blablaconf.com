@@ -1,19 +1,28 @@
 import { Session } from "@/utils/sessionize";
 
-export const SessionTime = ({ session }: { session: Session }) => {
+export const SessionTime = ({
+  session,
+  showDay = false,
+}: {
+  session: Session;
+  showDay?: boolean;
+}) => {
   return (
     <time className="block mb-2 text-sm font-normal leading-none text-gray-500 ">
-      {getSessionTime(session)}
+      {getSessionTime(session, showDay)}
     </time>
   );
 };
 
-const getSessionTime = (session: Session) => {
+const getSessionTime = (session: Session, showDay: boolean) => {
   const start = new Date(session.startsAt);
   const end = new Date(session.endsAt);
+  const day = showDay
+    ? `${end.getHours()}:${getMinutes(end)} - ${start.getDate()} December`
+    : "";
   return `${start.getHours()}:${getMinutes(
     start
-  )} - ${end.getHours()}:${getMinutes(end)}`;
+  )} - ${end.getHours()}:${getMinutes(end)} - ${day} `;
 };
 
 const getMinutes = (date: Date) => {

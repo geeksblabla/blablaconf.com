@@ -5,7 +5,14 @@ import { TicketInput } from "./ticket-input";
 //bg-gradient-to-r from-emerald-50 via-emerald-100 to-emerald-200
 export const Hero = () => {
   return (
-    <div className="relative  bg-opacity-90 py-16 md:pt-16 md:pb-36 pt-8 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 ">
+    <div className="relative  bg-opacity-90 py-16 md:pt-16 md:pb-36 pt-8 bg-gradient-to-r from-gray-100/60 via-gray-100 to-gray-200 ">
+      <Image
+        fill
+        sizes="(max-width: 640px) 640px, 100vw"
+        src="/back.png"
+        className="absolute inset-0 h-full w-full object-cover"
+        alt=""
+      />
       <svg
         className="absolute inset-x-0 -bottom-1 text-white"
         viewBox="0 0 1160 163"
@@ -16,7 +23,7 @@ export const Hero = () => {
         ></path>
       </svg>
       <div className="relative mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 ">
-        <DateConf />
+        <DateConf className="bg-gray-200" />
         <div className="mx-auto flex justify-center mt-2 font-sans w-full max-w-[800px] ">
           <p className="lg:text-7xl md:text-6xl text-5xl font-medium leading-tight md:leading-normal font-almaghribi  text-center">
             <span className="text-[#C1272D]"> العشية تعاشات</span>، الخيم تعلات،

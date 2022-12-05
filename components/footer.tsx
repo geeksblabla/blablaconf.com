@@ -10,8 +10,8 @@ export const Footer = () => {
             <Logo />
           </div>
           <div className="text-gray-500 ">
-            Participate and let us know what working in tech really looks like
-            in Morocco 🇲🇦
+            Wants to join ? Make sure to get your ticket and join 5 days of
+            learning, networking and fun in Darija
           </div>
         </div>
         <div className="">

@@ -3,14 +3,20 @@ import Image from "next/image";
 export const Sponsors = () => {
   return (
     <section id="sponsors" className="bg-gray-100">
-      <div className="mx-auto max-w-screen-lg px-8 pt-20 pb-16 text-gray-700 md:pt-24 md:pb-20">
+      <div className="md:text-left text-center mx-auto max-w-screen-lg px-8 pt-20 pb-16 text-gray-700 md:pt-24 md:pb-20">
         <div className="flex flex-wrap">
           <div className="w-full max-w-full flex-shrink-0 lg:mt-2 lg:w-1/3 lg:flex-none">
-            <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize sm:text-center text-left">
+            <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize  ">
               Our Sponsors
             </h2>
-            <p className=" text-lg font-medium text-gray-600 leading-normal lg:max-w-[350px] sm:text-center text-left">
+            <p className=" text-lg font-medium text-gray-600 leading-normal lg:max-w-[350px]  ">
               We are grateful to our sponsors for their support and contribution
+            </p>
+            <p className=" text-sm font-medium text-gray-500 leading-normal lg:max-w-[350px]  ">
+              Want to support and sponsor BlablaConf,{" "}
+              <a className="underline" href="mailto:geeksblabla@gmail.com">
+                Get In Touch
+              </a>{" "}
             </p>
           </div>
           <div className="w-full  max-w-full pt-10 lg:w-2/3 lg:flex-none lg:px-8 lg:py-0">

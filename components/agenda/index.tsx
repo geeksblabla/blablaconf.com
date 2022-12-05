@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { Session, SessionByDay } from "@/utils/sessionize";
 import Link from "next/link";
-import { SessionTime } from "./session-time";
+import { SessionTime } from "../session-time";
+import { DaysMenu } from "./days-menu";
 
 const days_titles = [
   {
@@ -21,7 +22,7 @@ const days_titles = [
     date: "December 22",
   },
   {
-    title: "Backend Technologies & Programming Languages",
+    title: "Backend & Programming Languages",
     date: "December 23",
   },
   {
@@ -32,7 +33,7 @@ const days_titles = [
 
 export const Agenda = ({ days }: { days: SessionByDay[] }) => {
   return (
-    <section id="agenda" className=" py-16 bg-green-100/50">
+    <section id="agenda" className=" py-16 bg-green-50">
       <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           Agenda
@@ -43,20 +44,7 @@ export const Agenda = ({ days }: { days: SessionByDay[] }) => {
         </p>
       </div>
       <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between md:px-8 px-4">
-        <div className="sticky top-8  h-fit ">
-          <ul className="relative border-l border-gray-300 pr-12 h-fit">
-            {days_titles.map((day, index) => {
-              return (
-                <Day
-                  day={day.date}
-                  title={day.title}
-                  key={`day-${index}`}
-                  index={index}
-                />
-              );
-            })}
-          </ul>
-        </div>
+        <DaysMenu days={days_titles} />
         <div className="flex flex-col h-full w-full  bg-white p-4 rounded-lg ">
           {days.map((day, index) => {
             return (
@@ -76,44 +64,6 @@ export const Agenda = ({ days }: { days: SessionByDay[] }) => {
         </div>
       </div>
     </section>
-  );
-};
-
-const Day = ({
-  day,
-  title,
-  index,
-}: {
-  day: string;
-  title: string;
-  index: number;
-}) => {
-  return (
-    <li className="mb-10 ml-6 min-h-[80px]">
-      <a href={`/#day-${index}`}>
-        <span className="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-2 ring-blue-200 ">
-          <svg
-            aria-hidden="true"
-            className="w-4 h-4 text-blue-400 "
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </span>
-        <time className="block mb-2 text-sm font-normal leading-none text-gray-500 ">
-          {day}
-        </time>
-        <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 ">
-          {title}
-        </h3>
-      </a>
-    </li>
   );
 };
 

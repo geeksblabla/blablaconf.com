@@ -1,4 +1,5 @@
 import { SessionTime } from "@/components/session-time";
+import { Links } from "@/components/speakers";
 import { getArrayOfSessions, getSession } from "@/utils/sessionize";
 
 export async function generateStaticParams() {
@@ -12,27 +13,31 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: { id: string } }) {
   const session = await getSession(params.id);
   if (session === undefined) {
-    return <div>Session not found</div>;
+    return (
+      <section className="py-16 px-4 bg-green-100/50 h-screen">
+        session not founded
+      </section>
+    );
   }
   return (
-    <section id="reviews" className="py-16 px-4">
+    <section className="py-16 px-4 bg-green-100/50">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
-        <SessionTime session={session} />
-
+        <SessionTime session={session} showDay />
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           {session.title}{" "}
         </h2>
-        <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px]  ">
-          {session.description}
+        <p className="mb-12 text-lg font-medium text-gray-600 leading-normal">
+          <Text text={session.description} />
         </p>
       </div>
-      <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl py-6 border-b-gray-200 border-solid border-b-[1px]">
+      <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 py-6 border-b-gray-200 border-solid border-b-[1px]">
+        <p className="text-gray-500 text-bold pb-3"> Speaker </p>
         {session?.speakers?.[0] && (
           <>
-            <div className="flex flex-row items-center p-2">
+            <div className="flex flex-row items-center ">
               <img
                 src={session?.speakers?.[0]?.profilePicture}
-                className="w-10 h-10 rounded-full"
+                className="w-16 h-16 rounded-full"
               />
               <p className="pl-4 font-bold text-gray-700">
                 {session?.speakers?.[0]?.fullName}
@@ -42,10 +47,27 @@ export default async function Page({ params }: { params: { id: string } }) {
                 </span>
               </p>
             </div>
-            <p>{session?.speakers?.[0].bio}</p>
+            <Links links={session?.speakers?.[0]?.links || []} />
+            <p className="py-3">
+              <Text text={session?.speakers?.[0].bio} />{" "}
+            </p>
           </>
         )}
       </div>
     </section>
   );
 }
+const Text = ({ text }: { text: string }) => {
+  return (
+    <>
+      {text.split("\n").map(function (item, idx) {
+        return (
+          <span key={idx}>
+            {item}
+            <br />
+          </span>
+        );
+      })}
+    </>
+  );
+};

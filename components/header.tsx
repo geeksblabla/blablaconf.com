@@ -5,7 +5,7 @@ const links = [
   { label: "About", href: "/#about" },
   { label: "Tracks", href: "/#tracks" },
   { label: "Speakers", href: "/#speakers" },
-  // { label: "Agenda", href: "/#agenda" },
+  { label: "Agenda", href: "/#agenda" },
   { label: "FAQ", href: "/#faq" },
   { label: "Sponsors", href: "/#sponsors" },
   // { label: "Offline Day", href: "/#offline-day" },
