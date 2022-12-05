@@ -7,9 +7,13 @@ import {
 
 import { useState, useEffect, SVGProps } from "react";
 
+const share_message = `ياله خديت التيكي ديالي باش نحضر بلابلاكونف اللي منضمة من طرف الكومينوتي غيغس بلابلا. اش مازال كتسنى، بالي قبل ما يسالي و قطع ورقتك حتى نتا
+@geeksblabla #blablaconf`;
+
 const copyToClipboard = (str: string) => {
   const el = document.createElement("textarea");
-  el.value = str;
+  el.value = `${share_message}
+  ${str} `;
   el.setAttribute("readonly", "");
   el.style.position = "absolute";
   el.style.left = "-9999px";
@@ -24,8 +28,6 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
   useEffect(() => {
     if (copied) setTimeout(() => setCopied(false), 2000);
   }, [copied]);
-  const title =
-    "Hey, I am attending #BlaBlaConf 2021 by @geeksblabla. Grab your ticket too! It's free";
 
   return (
     <div className="flex md:flex-row flex-col items-center mt-4">
@@ -43,14 +45,14 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
         <div>
           <FacebookShareButton
             url={shareUrl}
-            quote={title}
+            quote={share_message}
             className="mx-2 hover:scale-105"
           >
             <Facebook className="bg-slate-100 rounded-full  text-gray-500 border-solid" />
           </FacebookShareButton>
           <TwitterShareButton
             url={shareUrl}
-            title={title}
+            title={share_message}
             className="mx-2 hover:scale-105"
           >
             <Twitter className="bg-slate-100 rounded-full text-gray-500" />

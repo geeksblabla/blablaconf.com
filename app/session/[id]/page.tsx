@@ -57,10 +57,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     </section>
   );
 }
-const Text = ({ text }: { text: string }) => {
+const Text = ({ text = "" }: { text: string }) => {
   return (
     <>
-      {text.split("\n").map(function (item, idx) {
+      {text?.split("\n").map(function (item, idx) {
         return (
           <span key={idx}>
             {item}
