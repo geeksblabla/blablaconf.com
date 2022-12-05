@@ -10,7 +10,7 @@ export const Footer = () => {
             <Logo />
           </div>
           <div className="text-gray-500 ">
-            Wants to join ? Make sure to get your ticket and join 5 days of
+            Want to join ? Make sure to get your ticket and join 5 days of
             learning, networking and fun in Darija
           </div>
         </div>
