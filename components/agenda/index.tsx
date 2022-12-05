@@ -14,7 +14,7 @@ const days_titles = [
     date: "December 20",
   },
   {
-    title: "Security & Architecture",
+    title: "Backend & Programming Languages",
     date: "December 21",
   },
   {
@@ -22,7 +22,7 @@ const days_titles = [
     date: "December 22",
   },
   {
-    title: "Backend & Programming Languages",
+    title: "Security & Architecture ",
     date: "December 23",
   },
   {

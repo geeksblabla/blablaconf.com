@@ -2,7 +2,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Plus_Jakarta_Sans } from "@next/font/google";
 import "./globals.css";
-import localFont from "@next/font/local";
+// import localFont from "@next/font/local";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
