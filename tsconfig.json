@@ -25,6 +25,13 @@
       "@/utils/*": ["utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "next-seo.config.js",
+    "components/gtag.js"
+  ],
   "exclude": ["node_modules"]
 }

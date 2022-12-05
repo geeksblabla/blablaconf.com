@@ -1,7 +1,5 @@
-import type { NextSeoProps } from "next-seo";
-
 const host = process.env.NEXT_PUBLIC_HOST;
-export const NEXT_SEO_DEFAULT: NextSeoProps = {
+export const NEXT_SEO_DEFAULT = {
   title:
     "BlaBlaConf 22 | 5+1 Days and 5+1 Tracks Covering Hottest Technology Trends in Darija",
   description:
