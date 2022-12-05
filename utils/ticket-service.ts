@@ -6,14 +6,14 @@ export const generateTicketsSeoConfig = (user: User): NextSeoProps => {
   const seoConfig = {
     title: name + "'s BlaBlaConf Ticket",
     description:
-      "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
+      "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 19th to 24th October",
     openGraph: {
       type: "website",
       locale: "en_IE",
       url: process.env.NEXT_PUBLIC_HOST + "/ticket/" + user.login,
       title: name + "'s BlaBlaConf Ticket",
       description:
-        "BlaBla Conf | 5 Days and 5 Tracks Covering Hottest Technology Trends in Darija",
+        "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 19th to 24th October",
       images: [
         {
           url: getTicketImg(user),
