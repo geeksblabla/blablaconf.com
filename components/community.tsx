@@ -13,7 +13,7 @@ export const Community = () => {
               By the Moroccan developer community, for the Moroccan developer
               community, BlaBla Conf is your one-stop-shop for the latest and
               hottest technology trends, in Darija, and completely free! Join us
-              from 19th to 23th October.
+              from 19th to 23th December.
               <br />
             </p>
           </div>
@@ -65,7 +65,7 @@ export const Community1 = () => {
           By the Moroccan developer community, for the Moroccan developer
           community, BlaBla Conf is your one-stop-shop for the latest and
           hottest technology trends, in Darija, and completely free! Join us
-          from 19th to 23th October.
+          from 19th to 23th December.
           <br />
         </p>
       </div>
