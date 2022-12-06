@@ -8,11 +8,50 @@ export function slugify(text: string) {
     .replace(/[^\w-]+/g, "");
 }
 
+function debounce<A = unknown, R = void>(
+  fn: (args: A) => R,
+  ms: number
+): [(args: A) => Promise<R>, () => void] {
+  let timer: NodeJS.Timeout;
+
+  const debouncedFunc = (args: A): Promise<R> =>
+    new Promise((resolve) => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+
+      timer = setTimeout(() => {
+        resolve(fn(args));
+      }, ms);
+    });
+
+  const teardown = () => clearTimeout(timer);
+
+  return [debouncedFunc, teardown];
+}
+
+const scrollToPosition = (id: string | null) => {
+  const container = document.getElementById("agenda-scroll");
+  if (container) {
+    const index = parseInt(id?.split("-")[1] || "0");
+    container.scroll(320 * index, 0);
+  }
+};
+
 export const DaysMenu = ({
   days,
 }: {
   days: { date: string; title: string }[];
 }) => {
+  const isClick = React.useRef<boolean>(false);
+
+  // we add this to avoid the scroll behavior to element position on click as we already scrolled manually
+  const onClick = () => {
+    isClick.current = true;
+    setTimeout(() => {
+      isClick.current = false;
+    }, 2000);
+  };
   React.useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,7 +62,9 @@ export const DaysMenu = ({
           if (!document.querySelector(selector)) return;
           if (entry.intersectionRatio > 0.1) {
             const el = document.querySelector(selector);
-            // el?.scrollIntoView({ behavior: "smooth", block: "center" });
+            if (!isClick.current) {
+              scrollToPosition(id);
+            }
             el?.classList.add("text-gray-900");
             el?.classList.add("underline");
           } else {
@@ -48,9 +89,12 @@ export const DaysMenu = ({
     };
   }, []);
   return (
-    <div className="sticky top-0  md:h-full h-fit bg-green-50 overflow-scroll md:overflow-visible">
+    <div
+      id="agenda-scroll"
+      className="sticky top-0  md:h-full h-fit bg-green-50 overflow-scroll md:overflow-visible scroll-smooth"
+    >
       <div className="mt-8">
-        <ul className="pt-6 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-gray-300 pr-12  h-fit  w-full flex flex-row md:flex-col  ">
+        <ul className="pt-6 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-gray-300 pr-12  h-fit  w-fit flex flex-row md:flex-col  ">
           {days.map((day, index) => {
             return (
               <Day
@@ -58,6 +102,7 @@ export const DaysMenu = ({
                 title={day.title}
                 key={`day-${index}`}
                 index={index}
+                onClick={onClick}
               />
             );
           })}
@@ -71,14 +116,20 @@ const Day = ({
   day,
   title,
   index,
+  onClick,
 }: {
   day: string;
   title: string;
   index: number;
+  onClick: () => void;
 }) => {
   return (
-    <li className="mb-10 ml-6 min-h-[80px]  min-w-[200px] text-gray-400">
-      <a href={`#day-${index}`} className="transition-all duration-75">
+    <li className="md:mb-10 mb-0 ml-6 md:min-h-[80px]  md:w-[350px] w-[300px] text-gray-400">
+      <a
+        onClick={() => onClick()}
+        href={`#day-${index}`}
+        className="transition-all duration-75"
+      >
         <span className="md:flex absolute hidden -left-3 justify-center items-center w-6 h-6 bg-gray-200 rounded-full  ">
           <svg
             aria-hidden="true"
@@ -107,10 +158,10 @@ const Day = ({
             ></path>
           </svg>
         </span>
-        <time className="block mb-2 text-sm font-normal leading-none ">
+        <time className="block md:mb-2 mb-1 text-xs md:text-sm font-normal leading-none ">
           {day}
         </time>
-        <h3 className="flex items-center mb-1 text-lg font-semibold">
+        <h3 className="flex items-center mb-5 text-md md:text-lg font-semibold">
           {title}
         </h3>
       </a>
