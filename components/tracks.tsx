@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const tracks = [
   {
-    title: "Web, mobile and uX",
+    title: "Web, mobile & UX",
     description:
       "Design and prototype faster, with an entire library of ready components.",
     image: "/images/tracks/web-mobile.png",
@@ -14,7 +14,7 @@ const tracks = [
     image: "/images/tracks/backend.png",
   },
   {
-    title: "Security and Architecture",
+    title: "Security & Architecture",
     description:
       "How-Tos, strategies, tools, techniques, and best practices for getting architecture and security right.",
     image: "/images/tracks/sec-arch.png",
@@ -28,7 +28,7 @@ const tracks = [
   {
     title: "Cloud, Containers & Infrastructure",
     description:
-      "Serverless, Docker, Kubernetes, Service Mesh, Cloud, PaaS, and anything in between.",
+      "Serverless, Docker, Kubernetes, Service Mesh, Cloud, PaaS, and anything in-between.",
     image: "/images/tracks/cloud.png",
   },
   {
@@ -47,7 +47,7 @@ export const Tracks = () => {
           5 + 1 Tracks
         </h2>
         <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px]  ">
-          5 Tracks covering everything you need to sharpen your IT skills. 1
+          5 tracks covering everything you need to sharpen your IT skills. 1
           additional track because excellence is not only about code!
         </p>
       </div>

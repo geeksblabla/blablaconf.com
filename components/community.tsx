@@ -11,7 +11,7 @@ export const Community = () => {
             </h2>
             <p className="text-base font-medium text-gray-600 capitalize">
               By the Moroccan developer community, for the Moroccan developer
-              community, BlaBla Conf is your one-stop-shop for the latest and
+              community, BlaBlaConf is your one-stop shop for the latest and
               hottest technology trends, in Darija, and completely free! Join us
               from 19th to 23th December.
               <br />

@@ -8,24 +8,24 @@ type QuestionType = {
 
 const questions: QuestionType[] = [
   {
-    question: "What is BlablConf?",
-    answer: `BlablaConf is a community driven online conference, made by developers for developers. BlablaConf contains 5 tracks in 5 days and one offline day to connect with the community in person. we discuss all the IT related topics, from Web & UI/UX, Big Data & ML, Cloud, Security, Backend technologies, to Soft skills, with our speakers from different backgrounds and completely in our Moroccan Darija.`,
+    question: "What is BlablaConf?",
+    answer: `BlablaConf is a community driven online conference, made by developers for developers. BlablaConf contains 5 tracks in 5 days and one offline day to connect with the community in person. We discuss all IT related topics, from Web & UI/UX, Big Data & ML, Cloud, Security, Backend technologies, to Soft skills, with our speakers from different backgrounds and completely in our beloved dialect, Moroccan Darija.`,
   },
   {
     question: "How much does BlablaConf cost?",
-    answer: `BlablaConf is 100% FREE. BlablaConf is bringing together a truly  speakers lineup to help each other find out more about different topics.  The caliber of speakers in Blabla could be seen in events costing thousands of MAD in Morocco and abroad.  As sharing is caring, we want this content to be accessible for everyone, for FREE`,
+    answer: `BlablaConf is 100% FREE. BlablaConf is bringing together a truly speakers lineup to help each other find out more about different topics.  The caliber of speakers in BlablaConf could be seen in events costing thousands of MAD in Morocco and abroad.  As sharing is caring, we want this content to be accessible for everyone, for FREE`,
   },
   {
     question: "Will the talks be recorded?",
     answer: `A recording of the entire tracks and each session will be available after the end of the conference`,
   },
   {
-    question: "How I can support BlablaConf?",
+    question: "How can I support BlablaConf?",
     answer: () => (
       <p>
         You can support us by sharing the event with your friends, colleagues,
         and community. Sharing is caring! <br />
-        If you find any issue or typo in the website,Make sure to open an issue
+        If you find any issue or typo in the website, make sure to open an issue
         or submit a new PR on our{" "}
         <Link href="https://github.com/DevC-Casa/blablaconf.com">
           {" "}
@@ -33,7 +33,7 @@ const questions: QuestionType[] = [
         </Link>{" "}
         . You can also support us by sponsoring the event. If you are interested
         in sponsoring BlablaConf, please get in touch with us in our social
-        media channels
+        media channels.
       </p>
     ),
   },
@@ -61,7 +61,7 @@ const questions: QuestionType[] = [
   },
   {
     question: "Can I apply as a speaker?",
-    answer: "Unfortunately, the CFP for this edition is already closed",
+    answer: "Of course! Please subscribe to our newsletter to watch for the next Call For Papers.",
   },
   {
     question: "Where can I get updates about upcoming events of Geeksblabla?",
@@ -69,7 +69,7 @@ const questions: QuestionType[] = [
       <p>
         You can subscribe to{" "}
         <Link href="https://tinyletter.com/geeksBlabla">the mailing list</Link>{" "}
-        to keep yourself updated about future events of Geeksblabla and
+        to keep updated about future events of Geeksblabla and
         BlablaConf. You can also follow us on{" "}
         <Link href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA">
           Youtube
@@ -93,11 +93,11 @@ export const FAQ = () => {
       className="relative mx-auto w-full py-16 px-5 font-sans text-gray-800 sm:px-20 md:max-w-screen-lg lg:py-24"
     >
       <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl text-center">
-        Frequently asked Questions
+        Frequently asked questions
       </h2>
       <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px] mx-auto text-center">
         We have written down answers to some of the frequently asked questions.
-        But, if you still have any queries, feel free to ping us on chat.
+        But if you still have any inquiries, feel free to ping us on social networks.
       </p>
       <ul className="space-y-4">
         {questions.map((question, index) => (

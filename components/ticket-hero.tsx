@@ -41,11 +41,11 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
             "Share your ticket with your friends and get a chance to win a free BlablaConf t-shirt"}
 
           {page === "user" &&
-            "Go back to the home page to Get your free ticket"}
+            "Go back to the home page to get your free ticket"}
           <br />
         </p>
         {page === "me" && (
-          <ShareActions shareUrl={url || "https://blablconf.com"} />
+          <ShareActions shareUrl={url || "https://blablaconf.com"} />
         )}
         {page === "home" && <GithubButton />}
 

@@ -20,7 +20,7 @@ const projects = [
     url: "https://stateofdev.ma",
     image: "/images/state.svg",
     description:
-      "List of awesome Moroccan things for developers. Communities, Events, Blogs, Podcasts, Youtube Channels, Open Source Projects, Books and more",
+      "The annual survey on Software Developers in Morocco to provide data on the tech community and their professional paths",
   },
   {
     name: "Awesome Moroccan ",
@@ -41,7 +41,7 @@ export const CommunityProjects = () => {
           <p className="text-lg font-medium text-gray-600 leading-normal max-w-[650px]">
             BlaBlaConf is our yearly show, where we get together and celebrate
             the achievement of the Moroccan community. Of the same DNA, find
-            here more community initiatives
+            here more community initiatives.
           </p>
         </div>
 

@@ -34,7 +34,7 @@ export const PreviousSessions = () => {
           </h2>
           <br />
           <p className="w-full text-xl text-gray-600 pr-8 ">
-            Rewatch last year’s sessions, and get a sneak peek of What BlaBLa
+            Rewatch last year’s sessions, and get a sneak peek of what BlaBLaConf
             2022 would be like.
             <br />
           </p>

@@ -22,7 +22,7 @@ const days_titles = [
     date: "December 22",
   },
   {
-    title: "Security & Architecture ",
+    title: "Security & Architecture",
     date: "December 23",
   },
   {
@@ -33,13 +33,13 @@ const days_titles = [
 
 export const Agenda = ({ days }: { days: SessionByDay[] }) => {
   return (
-    <section id="agenda" className=" py-16 bg-green-50">
+    <section id="agenda" className="py-16 bg-green-50">
       <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           Agenda
         </h2>
         <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px]">
-          Make sure to not miss any talks by adding them to your calendar.
+          Make sure not to miss any talks by adding them to your calendar.
           <br /> PS: The schedule below is Moroccan Timezone (GMT+1)
         </p>
       </div>
