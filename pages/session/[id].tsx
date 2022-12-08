@@ -1,3 +1,4 @@
+import { AddToCalendar } from "@/components/agenda/add-to-calendar";
 import { Layout } from "@/components/layout";
 import { SessionTime } from "@/components/session-time";
 import { Links } from "@/components/speakers";
@@ -18,14 +19,19 @@ const Home = ({ session }: { session: Session | undefined }) => {
   return (
     <Layout>
       <section className="py-16 px-4 bg-green-100/50">
-        <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
-          <SessionTime session={session} showDay />
-          <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
-            {session.title}{" "}
-          </h2>
-          <p className="mb-12 text-lg font-medium text-gray-600 leading-normal">
-            <Text text={session.description} />
-          </p>
+        <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 flex flex-row">
+          <div>
+            <SessionTime session={session} showDay />
+            <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
+              {session.title}{" "}
+            </h2>
+            <p className="mb-12 text-lg font-medium text-gray-600 leading-normal">
+              <Text text={session.description} />
+            </p>
+          </div>
+          <div>
+            <AddToCalendar session={session} />
+          </div>
         </div>
         <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 py-6 border-b-gray-200 border-solid border-b-[1px]">
           <p className="text-gray-500 text-bold pb-3"> Speaker </p>

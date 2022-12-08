@@ -2,6 +2,7 @@
 import { Session, SessionByDay } from "@/utils/sessionize";
 import Link from "next/link";
 import { SessionTime } from "../session-time";
+import { AddToCalendar } from "./add-to-calendar";
 import { DaysMenu } from "./days-menu";
 
 const days_titles = [
@@ -22,7 +23,7 @@ const days_titles = [
     date: "December 22",
   },
   {
-    title: "Security & Architecture",
+    title: "Security & Architecture ",
     date: "December 23",
   },
   {
@@ -33,13 +34,13 @@ const days_titles = [
 
 export const Agenda = ({ days }: { days: SessionByDay[] }) => {
   return (
-    <section id="agenda" className="py-16 bg-green-50">
+    <section id="agenda" className=" py-16 bg-green-50">
       <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
         <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
           Agenda
         </h2>
         <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px]">
-          Make sure not to miss any talks by adding them to your calendar.
+          Make sure to not miss any talks by adding them to your calendar.
           <br /> PS: The schedule below is Moroccan Timezone (GMT+1)
         </p>
       </div>
@@ -71,34 +72,41 @@ const Session = ({ session }: { session: Session }) => {
   return (
     <div className="py-6 border-b-gray-200 border-solid border-b-[1px]">
       <SessionTime session={session} />
-      <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900 ">
-        {session.title}
-      </h3>
-      {session?.speakers?.[0] && (
-        <>
-          <div className="flex flex-row items-center p-2">
-            <img
-              src={session?.speakers?.[0]?.profilePicture}
-              className="w-10 h-10 rounded-full"
-              alt={`Speaker ${session?.speakers?.[0]?.fullName}`}
-            />
-            <p className="pl-4 font-bold text-gray-700">
-              {session?.speakers?.[0]?.fullName}
-              <br />
-              <span className="font-normal text-xs text-gray-500">
-                {session?.speakers?.[0]?.tagLine}{" "}
-              </span>
-            </p>
-          </div>
+      <div className="flex flex-row justify-between ">
+        <div className="flex flex-col ">
+          <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900 ">
+            {session.title}
+          </h3>
+          {session?.speakers?.[0] && (
+            <>
+              <div className="flex flex-row items-center p-2">
+                <img
+                  src={session?.speakers?.[0]?.profilePicture}
+                  className="w-10 h-10 rounded-full"
+                  alt={`Speaker ${session?.speakers?.[0]?.fullName}`}
+                />
+                <p className="pl-4 font-bold text-gray-700">
+                  {session?.speakers?.[0]?.fullName}
+                  <br />
+                  <span className="font-normal text-xs text-gray-500">
+                    {session?.speakers?.[0]?.tagLine}{" "}
+                  </span>
+                </p>
+              </div>
 
-          <Link
-            className="underline underline-offset-1"
-            href={`/session/${session.id}`}
-          >
-            See More
-          </Link>
-        </>
-      )}
+              <Link
+                className="underline underline-offset-1"
+                href={`/session/${session.id}`}
+              >
+                See More
+              </Link>
+            </>
+          )}
+        </div>
+        <div>
+          <AddToCalendar session={session} />
+        </div>
+      </div>
     </div>
   );
 };

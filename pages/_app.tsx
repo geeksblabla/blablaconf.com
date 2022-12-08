@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/atcb-flat.css";
 import type { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
 import { NEXT_SEO_DEFAULT } from "../next-seo.config.js";
