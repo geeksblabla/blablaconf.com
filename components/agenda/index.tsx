@@ -75,33 +75,38 @@ const Session = ({ session }: { session: Session }) => {
       <div className="flex flex-row justify-between ">
         <div className="flex flex-col ">
           <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900 ">
+            <Link href={`/session/${session.id}`}>
             {session.title}
+            </Link>
           </h3>
-          {session?.speakers?.[0] && (
-            <>
-              <div className="flex flex-row items-center p-2">
-                <img
-                  src={session?.speakers?.[0]?.profilePicture}
-                  className="w-10 h-10 rounded-full"
-                  alt={`Speaker ${session?.speakers?.[0]?.fullName}`}
-                />
-                <p className="pl-4 font-bold text-gray-700">
-                  {session?.speakers?.[0]?.fullName}
-                  <br />
-                  <span className="font-normal text-xs text-gray-500">
-                    {session?.speakers?.[0]?.tagLine}{" "}
-                  </span>
-                </p>
-              </div>
 
-              <Link
-                className="underline underline-offset-1"
-                href={`/session/${session.id}`}
-              >
-                See More
-              </Link>
-            </>
-          )}
+        {session?.speakers && session?.speakers.map(speaker =>  (
+          <div className="flex flex-col" key={speaker?.id} id={`speaker-session-${speaker?.id}`}>
+            <div className="flex flex-row items-center p-2">
+              <img
+                src={speaker?.profilePicture}
+                className="w-10 h-10 rounded-full"
+                alt={`Speaker ${speaker?.fullName}`}
+              />
+              <p className="pl-4 font-bold text-gray-700">
+                {speaker?.fullName}
+                <br />
+                <span className="font-normal text-xs text-gray-500">
+                  {speaker?.tagLine}{" "}
+                </span>
+              </p>
+            </div>
+
+            <Link
+              className="underline underline-offset-1"
+              href={`/session/${session.id}`}
+            >
+              See More
+            </Link>
+          </div>
+          )
+        )}
+       
         </div>
         <div>
           <AddToCalendar session={session} />
@@ -110,3 +115,4 @@ const Session = ({ session }: { session: Session }) => {
     </div>
   );
 };
+
