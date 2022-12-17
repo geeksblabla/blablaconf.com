@@ -38,10 +38,12 @@ export const getSpeakers: () => Promise<Speaker[]> = async () => {
 
 export const getSessions = async () => {
   const sessionsRes = await fetch(
-    "https://sessionize.com/api/v2/bnh6bsfu/view/Sessions"
+    "https://sessionize.com/api/v2/0m5k0g9w/view/Sessions"
+    // "https://sessionize.com/api/v2/bnh6bsfu/view/Sessions"
   );
   const speakersRes = await fetch(
-    "https://sessionize.com/api/v2/bnh6bsfu/view/Speakers"
+    "https://sessionize.com/api/v2/0m5k0g9w/view/Speakers"
+    // "https://sessionize.com/api/v2/bnh6bsfu/view/Speakers"
   );
   const sessions: SessionByDay[] = await sessionsRes.json();
   const speakers: Speaker[] = await speakersRes.json();

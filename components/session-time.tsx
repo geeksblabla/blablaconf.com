@@ -18,10 +18,10 @@ export const SessionTime = ({
 const getSessionTime = (session: Session, showDay: boolean) => {
   const start = new Date(session.startsAt);
   const end = new Date(session.endsAt);
-  const day = showDay ? ` - ${start.getDate()} December` : "";
+  const day = showDay ? `- ${start.getDate()}  December` : "";
   return `${start.getHours()}:${getMinutes(
     start
-  )} - ${end.getHours()}:${getMinutes(end)} - ${day} `;
+  )} - ${end.getHours()}:${getMinutes(end)}  ${day} `;
 };
 
 const getMinutes = (date: Date) => {
