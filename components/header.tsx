@@ -8,7 +8,7 @@ const links = [
   { label: "Agenda", href: "/#agenda" },
   { label: "FAQ", href: "/#faq" },
   { label: "Sponsors", href: "/#sponsors" },
-  // { label: "Offline Day", href: "/#offline-day" },
+  { label: "In Person Day", href: "/#day-5" },
 ];
 
 export const Header = () => {

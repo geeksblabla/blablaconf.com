@@ -27,7 +27,7 @@ const days_titles = [
     date: "December 23",
   },
   {
-    title: "Offline Day",
+    title: "In Person Day",
     date: "December 24",
   },
 ];
@@ -103,9 +103,11 @@ const Session = ({ session }: { session: Session }) => {
             </>
           )}
         </div>
-        <div>
-          <AddToCalendar session={session} />
-        </div>
+        {session?.speakers?.[0] && (
+          <div>
+            <AddToCalendar session={session} />
+          </div>
+        )}
       </div>
     </div>
   );

@@ -20,11 +20,11 @@ export const Sponsors = () => {
             </p>
           </div>
           <div className="w-full  max-w-full pt-10 lg:w-2/3 lg:flex-none lg:px-8 lg:py-0">
-            <div className="h-full flex flex-row justify-start items-end ">
+            <div className="h-full  flex md:flex-row flex-col justify-start items-center md:items-end flex-warp ">
               <a
                 href="https://obytes.com"
                 target="_blank"
-                className="w-60 px-6  hover:scale-105 cursor-pointer transition-all"
+                className="py-6 w-60 px-6  hover:scale-105 cursor-pointer transition-all"
                 rel="noreferrer"
               >
                 <Image
@@ -38,13 +38,27 @@ export const Sponsors = () => {
               <a
                 href="https://1337.ma"
                 target="_blank"
-                className="w-60 px-6  hover:scale-105 cursor-pointer transition-all"
+                className="py-6 w-60 px-6  hover:scale-105 cursor-pointer transition-all"
                 rel="noreferrer"
               >
                 <Image
                   height={40}
                   width={150}
                   src="/images/sponsors/1337.png"
+                  alt=""
+                  className=""
+                />
+              </a>
+              <a
+                href="https://emsi.ma"
+                target="_blank"
+                className="py-6 w-60 px-6  hover:scale-105 cursor-pointer transition-all"
+                rel="noreferrer"
+              >
+                <Image
+                  height={40}
+                  width={150}
+                  src="/images/sponsors/emsi.png"
                   alt=""
                   className=""
                 />
