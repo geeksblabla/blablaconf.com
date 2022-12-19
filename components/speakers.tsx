@@ -60,7 +60,7 @@ const Speaker = ({
   id,
 }: SpeakerType) => {
   return (
-    <>
+    <Link href={`/#speaker-session-${id}`}>
       <div>
         <div className="rounded-4xl group relative h-[17.5rem] transform overflow-hidden rounded-md ">
           <div className="rounded-4xl absolute top-0 left-0 right-4  rounded-md bottom-6  transition duration-300 group-hover:scale-95 xl:right-6"></div>
@@ -87,7 +87,7 @@ const Speaker = ({
         <p className="mt-1 text-sm text-slate-500">{tagLine}</p>
         <Links links={links} />
       </div>
-    </>
+    </Link>
   );
 };
 

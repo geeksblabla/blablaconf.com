@@ -56,6 +56,23 @@ export const Agenda = ({ days }: { days: SessionByDay[] }) => {
                 <h1 className="text-3xl py-4 font-bold">
                   {days_titles[index].title}
                 </h1>
+                {index === 5 && (
+                  <p className="text-md font-medium text-gray-600 leading-normal max-w-[650px]">
+                    Location :{" "}
+                    <span className="text-lg font-medium text-gray-800">
+                      EMSI Moulay Youssef, Casablanca
+                    </span>
+                    <a
+                      href="https://goo.gl/maps/3ZFXp2iVJkgQpXEf7"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-md underline underline-offset-1 pl-2"
+                    >
+                      View on Google Maps
+                    </a>
+                  </p>
+                )}
+
                 {day.sessions.map((session, index) => {
                   return <Session key={`session-${index}`} session={session} />;
                 })}
@@ -75,38 +92,39 @@ const Session = ({ session }: { session: Session }) => {
       <div className="flex flex-row justify-between ">
         <div className="flex flex-col ">
           <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900 ">
-            <Link href={`/session/${session.id}`}>
-            {session.title}
-            </Link>
+            <Link href={`/session/${session.id}`}>{session.title}</Link>
           </h3>
 
-        {session?.speakers && session?.speakers.map(speaker =>  (
-          <div className="flex flex-col" key={speaker?.id} id={`speaker-session-${speaker?.id}`}>
-            <div className="flex flex-row items-center p-2">
-              <img
-                src={speaker?.profilePicture}
-                className="w-10 h-10 rounded-full"
-                alt={`Speaker ${speaker?.fullName}`}
-              />
-              <p className="pl-4 font-bold text-gray-700">
-                {speaker?.fullName}
-                <br />
-                <span className="font-normal text-xs text-gray-500">
-                  {speaker?.tagLine}{" "}
-                </span>
-              </p>
-            </div>
+          {session?.speakers &&
+            session?.speakers.map((speaker) => (
+              <div
+                className="flex flex-col"
+                key={speaker?.id}
+                id={`speaker-session-${speaker?.id}`}
+              >
+                <div className="flex flex-row items-center p-2">
+                  <img
+                    src={speaker?.profilePicture}
+                    className="w-10 h-10 rounded-full"
+                    alt={`Speaker ${speaker?.fullName}`}
+                  />
+                  <p className="pl-4 font-bold text-gray-700">
+                    {speaker?.fullName}
+                    <br />
+                    <span className="font-normal text-xs text-gray-500">
+                      {speaker?.tagLine}{" "}
+                    </span>
+                  </p>
+                </div>
 
-            <Link
-              className="underline underline-offset-1"
-              href={`/session/${session.id}`}
-            >
-              See More
-            </Link>
-          </div>
-          )
-        )}
-       
+                <Link
+                  className="underline underline-offset-1"
+                  href={`/session/${session.id}`}
+                >
+                  See More
+                </Link>
+              </div>
+            ))}
         </div>
         {session?.speakers?.[0] && (
           <div>
@@ -117,4 +135,3 @@ const Session = ({ session }: { session: Session }) => {
     </div>
   );
 };
-
