@@ -28,8 +28,8 @@ export const Sponsors = () => {
                 rel="noreferrer"
               >
                 <Image
-                  height={40}
-                  width={150}
+                  height={138}
+                  width={451}
                   src="/images/sponsors/obytes.png"
                   alt=""
                   className=""
@@ -38,26 +38,26 @@ export const Sponsors = () => {
               <a
                 href="https://1337.ma"
                 target="_blank"
-                className="py-6 w-60 px-6  hover:scale-105 cursor-pointer transition-all"
+                className="py-6 w-60 md:px-6 px-0   hover:scale-105 cursor-pointer transition-all"
                 rel="noreferrer"
               >
                 <Image
-                  height={40}
-                  width={150}
+                  height={120}
+                  width={451}
                   src="/images/sponsors/1337.png"
                   alt=""
                   className=""
                 />
               </a>
               <a
-                href="https://1337.ma"
+                href="https://youcode.ma"
                 target="_blank"
-                className="py-6 w-60 px-6  hover:scale-105 cursor-pointer transition-all"
+                className="py-6 w-60 md:px-6 px-0  hover:scale-105 cursor-pointer transition-all"
                 rel="noreferrer"
               >
                 <Image
-                  height={40}
-                  width={150}
+                  height={144}
+                  width={549}
                   src="/images/sponsors/youcode.png"
                   alt=""
                   className=""
@@ -66,26 +66,26 @@ export const Sponsors = () => {
               <a
                 href="https://emsi.ma"
                 target="_blank"
-                className="py-6 w-60 px-6  hover:scale-105 cursor-pointer transition-all"
+                className="py-6 w-60 md:px-6 px-0   hover:scale-105 cursor-pointer transition-all"
                 rel="noreferrer"
               >
                 <Image
-                  height={40}
-                  width={150}
+                  height={120}
+                  width={512}
                   src="/images/sponsors/emsi.png"
                   alt=""
-                  className=""
+                  className="center"
                 />
               </a>
               <a
                 href="https://google.com"
                 target="_blank"
-                className="py-6 w-56 px-6  hover:scale-105 cursor-pointer transition-all"
+                className="py-6 w-56 md:px-6 px-0  hover:scale-105 cursor-pointer transition-all"
                 rel="noreferrer"
               >
                 <Image
-                  height={35}
-                  width={150}
+                  height={156}
+                  width={456}
                   src="/images/sponsors/google.png"
                   alt=""
                   className=""
