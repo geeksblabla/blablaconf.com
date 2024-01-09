@@ -1,10 +1,13 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { Plus_Jakarta_Sans } from "@next/font/google";
+import { Cairo } from "@next/font/google";
 import "./globals.css";
+import "sal.js/dist/sal.css";
+import { SalLoader } from "@/components/sal-loader";
+
 // import localFont from "@next/font/local";
 
-const jakarta = Plus_Jakarta_Sans({
+const cairo = Cairo({
   subsets: ["latin"],
   variable: "--font-jakarta",
 });
@@ -20,13 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${jakarta.variable} `}>
+    <html lang="en" className={`${cairo.variable} `}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <SalLoader />
+      <body className="bg-primary-100">
         <Header />
         {children}
         <Footer />

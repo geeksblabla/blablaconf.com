@@ -2,23 +2,25 @@ import Link from "next/link";
 import { Logo } from "./logo";
 
 const links = [
-  { label: "About", href: "/#about" },
+  // { label: "About", href: "/#about" },
   { label: "Tracks", href: "/#tracks" },
   { label: "Speakers", href: "/#speakers" },
   { label: "Agenda", href: "/#agenda" },
+  { label: "In Person Days", href: "/#day-5" },
   { label: "FAQ", href: "/#faq" },
   { label: "Sponsors", href: "/#sponsors" },
-  { label: "In Person Day", href: "/#day-5" },
 ];
 
 export const Header = () => {
   return (
     <>
-      <Banner />
-
-      <header className="px-4 shadow-sm  bg-white sm:pt-[40px] pt-[65px]">
+      {/* <Banner /> */}
+      <header className="px-4 ">
         <div className="relative mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-          <Link className="flex items-center text-2xl font-black" href="/">
+          <Link
+            className="flex items-center text-2xl font-black sm:hidden"
+            href="/"
+          >
             <Logo />
           </Link>
           <input className="peer hidden" type="checkbox" id="navbar-open" />
@@ -42,18 +44,37 @@ export const Header = () => {
           </label>
           <nav
             aria-label="Header Navigation"
-            className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0"
+            className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0 mx-auto"
           >
-            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-8">
-              {links.map((link) => (
-                <li key={link.label}>
-                  <a
-                    className="text-gray-600 hover:text-black"
-                    href={link.href}
+            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-10">
+              {links.map((link, i) => (
+                <>
+                  <li
+                    key={link.label}
+                    className="my-auto "
+                    // data-sal={i > 3 ? "slide-right" : "slide-left"}
+                    data-sal="fade"
+                    data-sal-delay={`${Math.abs(i - 3) * 100}`}
+                    data-sal-duration="1000"
                   >
-                    {link.label}
-                  </a>
-                </li>
+                    <a
+                      className="text-[#3F2617]/70 font-medium text-xl hover:text-[#3F2617] "
+                      href={link.href}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                  {i === 2 && (
+                    <li className="sm:flex hidden">
+                      <Link
+                        className=" items-center text-2xl font-black mx-8"
+                        href="/"
+                      >
+                        <Logo />
+                      </Link>
+                    </li>
+                  )}
+                </>
               ))}
               {/* <li className="mt-2 sm:mt-0">
               <a

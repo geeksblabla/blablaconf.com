@@ -37,12 +37,15 @@ const tweets = [
 
 export const Reviews = () => {
   return (
-    <section id="reviews" className="py-16 px-4">
-      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
-        <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
+    <section
+      id="reviews"
+      className="py-16 px-4 bg-gradient-to-r from-[#7C5741] to-[#B28367] text-white"
+    >
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 justify-center text-center">
+        <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-5xl md:leading-tight capitalize  ">
           What community members <br /> say about the conference
         </h2>
-        <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px]  ">
+        <p className="mb-12 text-lg font-medium leading-normal ">
           We love our community and our community loves us back ❤️ 💚
         </p>
       </div>

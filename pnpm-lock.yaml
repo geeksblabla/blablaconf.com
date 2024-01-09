@@ -50,6 +50,9 @@ dependencies:
   react-share:
     specifier: ^5.0.3
     version: 5.0.3(react@18.2.0)
+  sal.js:
+    specifier: ^0.8.5
+    version: 0.8.5
   typescript:
     specifier: 5.3.3
     version: 5.3.3
@@ -3675,6 +3678,11 @@ packages:
       call-bind: 1.0.5
       get-intrinsic: 1.2.2
       is-regex: 1.1.4
+    dev: false
+
+  /sal.js@0.8.5:
+    resolution: {integrity: sha512-KUb3fNrVZ1oWxxkEAfQfQ4Mrd910yboIRHqsvioBkulQInqMVeSMah+J5f7ch7KXFLicKlAaE0TzTsG/eJ02Dg==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /satori@0.10.9:

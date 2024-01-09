@@ -61,7 +61,8 @@ const questions: QuestionType[] = [
   },
   {
     question: "Can I apply as a speaker?",
-    answer: "Of course! Please subscribe to our newsletter to watch for the next Call For Papers.",
+    answer:
+      "Of course! Please subscribe to our newsletter to watch for the next Call For Papers.",
   },
   {
     question: "Where can I get updates about upcoming events of Geeksblabla?",
@@ -69,8 +70,8 @@ const questions: QuestionType[] = [
       <p>
         You can subscribe to{" "}
         <Link href="https://tinyletter.com/geeksBlabla">the mailing list</Link>{" "}
-        to keep updated about future events of Geeksblabla and
-        BlablaConf. You can also follow us on{" "}
+        to keep updated about future events of Geeksblabla and BlablaConf. You
+        can also follow us on{" "}
         <Link href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA">
           Youtube
         </Link>
@@ -90,25 +91,28 @@ export const FAQ = () => {
   return (
     <section
       id="faq"
-      className="relative mx-auto w-full py-16 px-5 font-sans text-gray-800 sm:px-20 md:max-w-screen-lg lg:py-24"
+      className=" w-full py-16 px-5 font-sans text-[#5C4E45] sm:px-20 lg:py-24 "
     >
-      <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl text-center">
-        Frequently asked questions
-      </h2>
-      <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px] mx-auto text-center">
-        We have written down answers to some of the frequently asked questions.
-        But if you still have any inquiries, feel free to ping us on social networks.
-      </p>
-      <ul className="space-y-4">
-        {questions.map((question, index) => (
-          <Question
-            key={`q-${index}`}
-            question={question.question}
-            answer={question.answer}
-            index={index}
-          />
-        ))}
-      </ul>
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
+        <h2 className="mb-4 text-4xl font-bold md:mb-6 md:text-5xl text-center text-[#7D5A45]">
+          Frequently asked questions
+        </h2>
+        <p className="mb-12 md:text-xl text-lg font-medium text-gray-600 leading-normal max-w-[750px] mx-auto text-center">
+          We have written down answers to some of the frequently asked
+          questions. But if you still have any inquiries, feel free to ping us
+          on social networks.
+        </p>
+        <ul className="space-y-4">
+          {questions.map((question, index) => (
+            <Question
+              key={`q-${index}`}
+              question={question.question}
+              answer={question.answer}
+              index={index}
+            />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
@@ -119,7 +123,7 @@ const Question = ({
   index,
 }: QuestionType & { index: number }) => {
   return (
-    <li className="text-left">
+    <li className="text-left bg-white rounded-2xl">
       <label
         htmlFor={`accordion-${index}`}
         className="relative flex flex-col rounded-md border-b-[1px] border-gray-200"
@@ -133,11 +137,11 @@ const Question = ({
         <Arrow />
 
         <div className="relative ml-4 cursor-pointer select-none items-center py-4 pr-12">
-          <h3 className="text-md text-neutral-600 font-bold lg:text-base">
+          <h3 className="text-base text-[#7D5841] font-bold lg:text-lg">
             {question}
           </h3>
         </div>
-        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96">
+        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 text-black">
           <div className="p-5">
             {typeof answer === "string" ? (
               <p className="text-md">{answer}</p>
