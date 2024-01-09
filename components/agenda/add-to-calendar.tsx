@@ -1,3 +1,4 @@
+"use client";
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { atcb_action } from "add-to-calendar-button";
@@ -7,7 +8,7 @@ export const AddToCalendar = ({ session }: { session: Session }) => {
   const onClick = () => {
     atcb_action({
       name: session.title,
-      description: `Join ${session.speakers[0].fullName} for ${session.title} at BlaBlaConf 2022`,
+      description: `Join ${session.speakers[0].fullName} for ${session.title} at BlaBlaConf 2024`,
       location: "https://www.youtube.com/@GeeksBlaBla01",
       startDate: session.startsAt,
       endDate: session.endsAt,
