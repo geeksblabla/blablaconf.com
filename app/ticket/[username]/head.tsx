@@ -11,7 +11,7 @@ export default async function Head({
   const seo = { ...NEXT_SEO_DEFAULT, ...seoConfig };
   return (
     <>
-      <NextSeo {...seo} useAppDir={true} />
+      <NextSeo {...seo} />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
     </>
   );
