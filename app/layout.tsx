@@ -1,7 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Cairo } from "@next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 import "sal.js/dist/sal.css";
 import { SalLoader } from "@/components/sal-loader";
 
