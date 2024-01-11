@@ -5,14 +5,14 @@ import { SoukDoor } from "./souk-door";
 //bg-gradient-to-r from-emerald-50 via-emerald-100 to-emerald-200
 export const Hero = () => {
   return (
-    <div className="relative bg-opacity-90 py-16 md:pt-16 md:pb-36 pt-8">
-      <div className="absolute left-[50%] z-[-1]">
+    <div className="relative bg-opacity-90 py-16 md:pt-16 md:pb-36 pt-8 overflow-hidden">
+      <div className="absolute left-[50%] z-[-1] top-40 md:top-0">
         <SoukDoor />
       </div>
       <div className="relative mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 ">
         {/* <DateConf className="bg-gray-200" /> */}
         <div className="mx-auto flex  flex-col justify-center items-center mt-2 font-sans w-full max-w-[800px] ">
-          <div data-sal="fade" data-sal-delay="0" data-sal-duration="1000">
+          <div data-sal="fade" data-sal-delay="0" data-sal-duration="500">
             <TechSouk />
           </div>
 
@@ -20,15 +20,21 @@ export const Hero = () => {
             className="lg:text-7xl md:text-5xl text-4xl font-bold leading-normal md:leading-normal text-center text-[#78543E]"
             data-sal="fade"
             data-sal-delay="200"
-            data-sal-duration="1000"
+            data-sal-duration="500"
           >
             بلابلا كونف تعود
             <br /> من جديد
           </p>
         </div>
       </div>
-      <div className="bg-white/50">
-        <div className="mx-auto max-w-screen-lg flex flex-row mt-6 items-center py-8 justify-between">
+      <div className="relative">
+        <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-full bg-white/50 -z-10" />
+        <div
+          className="z-10 mx-auto max-w-screen-lg flex flex-col-reverse md:flex-row mt-6 items-center py-8 justify-between"
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="500"
+        >
           <svg
             width="218"
             height="60"
@@ -50,7 +56,7 @@ export const Hero = () => {
             />
           </svg>
 
-          <p className="text-[#5C4E45] text-lg  max-w-[400px]">
+          <p className="text-[#5C4E45] text-lg  max-w-[400px] py-8 md:py-0">
             و كيفما عودناكم بالحفاظ على عنصر الهوية المغربية ديالنا هاد العام
             رجعات بذوق فريد من اعماق تقافتنا
           </p>
@@ -86,6 +92,9 @@ export const Hero = () => {
         width={700}
         height={700}
         className="mx-auto mt-16 rounded-xl"
+        data-sal="fade"
+        data-sal-delay="400"
+        data-sal-duration="500"
       />
     </div>
   );

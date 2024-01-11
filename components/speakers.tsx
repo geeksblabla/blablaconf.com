@@ -10,7 +10,7 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
     <section
       id="speakers"
-      className="bg-[#7D5842]  mx-auto py-16 text-white bg-gradient-to-r from-[#7C5741] to-[#B28367]"
+      className="bg-[#7D5842]  mx-auto py-16 text-white bg-gradient-to-r from-[#7C5741] to-[#B28367] overflow-hidden"
     >
       <svg aria-hidden="true" width="0" height="0">
         <defs>
@@ -28,24 +28,20 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
           </clipPath>
         </defs>
       </svg>
-      <div className="mx-auto max-w-lg md:max-w-screen-xl flex flex-row md:px-8 px-4 py-4 bg-[#825C45] items-center my-5 ">
-        <div className="flex flex-row ">
-          {/* <Image
-            height={44}
-            width={44}
-            src="/images/tarbouch.png"
-            className="w-10 h-10 self-center -mt-3 mr-2"
-            alt="Tarbouch"
-          /> */}
-          <h1 className="text-4xl sm:text-6xl font-bold  capitalize mb-3 mr-6">
-            Speakers
-          </h1>
-        </div>
+      <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
+        <div className="absolute bg-[url('/images/pattern-black.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
+        <div className="flex flex-row items-center md:px-8 px-4 py-4">
+          <div className="flex flex-row ">
+            <h1 className="text-4xl sm:text-6xl font-bold  capitalize mb-3 mr-6  z-10">
+              Speakers
+            </h1>
+          </div>
 
-        <p className="text-lg font-medium leading-6  max-w-[650px] ">
-          CEOs, rock star developers, beginners and students, everyone has a
-          place to share content in BlaBlaConf
-        </p>
+          <p className="text-lg font-medium leading-6  max-w-[650px]  z-10 ">
+            CEOs, rock star developers, beginners and students, everyone has a
+            place to share content in BlaBlaConf
+          </p>
+        </div>
       </div>
       <div className="mx-auto grid  gap-x-8 gap-y-12 px-4  pt-8 max-w-lg md:max-w-screen-xl md:grid-cols-3 md:px-8 lg:grid-cols-4 mt-8">
         {speakers.map((speaker: SpeakerType, index: number) => (
@@ -68,7 +64,7 @@ const Speaker = ({
     <div
       data-sal="slide-right"
       data-sal-delay={`${(index % 4) * 50}`}
-      data-sal-duration="200"
+      data-sal-duration="500"
     >
       <Link href={`/#speaker-session-${id}`}>
         <div className="rounded-4xl group relative h-[19.5rem] w-[16rem] transform overflow-hidden rounded-md ">

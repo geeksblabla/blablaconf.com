@@ -9,7 +9,7 @@ export const SessionTime = ({
   showDay?: boolean;
 }) => {
   return (
-    <time className="block mb-2 text-sm font-normal leading-none text-gray-500 ">
+    <time className="block mb-1 text-sm font-normal leading-none  ">
       {getSessionTime(session, showDay)}
     </time>
   );

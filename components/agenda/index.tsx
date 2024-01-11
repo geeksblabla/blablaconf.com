@@ -34,22 +34,32 @@ const days_titles = [
 
 export const Agenda = ({ days }: { days: SessionByDay[] }) => {
   return (
-    <section id="agenda" className=" py-16 bg-green-50">
-      <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
-        <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
-          Agenda
-        </h2>
-        <p className="mb-12 text-lg font-medium text-gray-600 leading-normal max-w-[650px]">
-          Make sure to not miss any talks by adding them to your calendar.
-          <br /> PS: The schedule below is Moroccan Timezone (GMT+1)
-        </p>
+    <section
+      id="agenda"
+      className="mx-auto py-16 text-[#835E47]  overflow-hidden"
+    >
+      <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
+        <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
+        <div className="flex flex-row items-center md:px-8 px-4 py-4">
+          <div className="flex flex-row ">
+            <h1 className="text-4xl sm:text-6xl text-[#835E47] font-bold  capitalize mb-3 mr-6  z-10">
+              Agenda
+            </h1>
+          </div>
+
+          <p className="text-lg font-medium leading-6  text-[#835E47] max-w-[650px]  z-10 ">
+            Make sure to not miss any talks by adding them to your calendar.
+            <br />
+            PS:The schedule below is Moroccan Timezone (GMT+1)
+          </p>
+        </div>
       </div>
       <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between md:px-8 px-4">
         <DaysMenu days={days_titles} />
-        <div className="flex flex-col h-full w-full  bg-white p-4 rounded-lg ">
+        <div className="flex flex-col h-full w-full">
           {days.map((day, index) => {
             return (
-              <div id={`day-${index}`} key={`day-${index}`} className="py-4">
+              <div id={`day-${index}`} key={`day-${index}`} className="">
                 <span className="bg-gray-100 w-fit px-3 rounded-xl text-gray-700 -mb-4">
                   {days_titles[index].date}{" "}
                 </span>
@@ -74,7 +84,13 @@ export const Agenda = ({ days }: { days: SessionByDay[] }) => {
                 )}
 
                 {day.sessions.map((session, index) => {
-                  return <Session key={`session-${index}`} session={session} />;
+                  return (
+                    <Session
+                      key={`session-${index}`}
+                      session={session}
+                      index={index}
+                    />
+                  );
                 })}
               </div>
             );
@@ -85,52 +101,56 @@ export const Agenda = ({ days }: { days: SessionByDay[] }) => {
   );
 };
 
-const Session = ({ session }: { session: Session }) => {
+const Session = ({ session, index }: { session: Session; index: number }) => {
   return (
-    <div className="py-6 border-b-gray-200 border-solid border-b-[1px]">
-      <SessionTime session={session} />
-      <div className="flex flex-row justify-between ">
-        <div className="flex flex-col ">
-          <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900 ">
-            <Link href={`/session/${session.id}`}>{session.title}</Link>
-          </h3>
-
-          {session?.speakers &&
-            session?.speakers.map((speaker) => (
-              <div
-                className="flex flex-col"
-                key={speaker?.id}
-                id={`speaker-session-${speaker?.id}`}
-              >
-                <div className="flex flex-row items-center p-2">
-                  <img
-                    src={speaker?.profilePicture}
-                    className="w-10 h-10 rounded-full"
-                    alt={`Speaker ${speaker?.fullName}`}
-                  />
-                  <p className="pl-4 font-bold text-gray-700">
-                    {speaker?.fullName}
-                    <br />
-                    <span className="font-normal text-xs text-gray-500">
-                      {speaker?.tagLine}{" "}
-                    </span>
-                  </p>
-                </div>
-
-                <Link
-                  className="underline underline-offset-1"
-                  href={`/session/${session.id}`}
-                >
-                  See More
-                </Link>
-              </div>
-            ))}
-        </div>
-        {session?.speakers?.[0] && (
+    <div
+      className={`p-6 my-4 bg-[#CC9B80]/20  rounded-lg  ${
+        index === 0
+          ? "bg-[url('/images/pattern.svg')] bg-contain bg-repeat"
+          : ""
+      } `}
+    >
+      <div className="flex flex-col justify-between ">
+        <div className="flex flex-row content-end justify-between ">
           <div>
-            <AddToCalendar session={session} />
+            <SessionTime session={session} />
+            <h3 className="flex items-center mb-1 text-xl font-bold -mt-1 ">
+              <Link href={`/session/${session.id}`}>{session.title}</Link>
+            </h3>
           </div>
-        )}
+          {session?.speakers?.[0] && <AddToCalendar session={session} />}
+        </div>
+
+        {session?.speakers &&
+          session?.speakers.map((speaker) => (
+            <div
+              className="flex flex-row justify-between items-end  "
+              key={speaker?.id}
+              id={`speaker-session-${speaker?.id}`}
+            >
+              <div className="flex flex-row items-center p-2">
+                <img
+                  src={speaker?.profilePicture}
+                  className="w-14 h-14 rounded-full"
+                  alt={`Speaker ${speaker?.fullName}`}
+                />
+                <p className="pl-4 font-bold ">
+                  {speaker?.fullName}
+                  <br />
+                  <span className="font-normal text-sm text-[#434343]">
+                    {speaker?.tagLine}{" "}
+                  </span>
+                </p>
+              </div>
+
+              <Link
+                className="px-6 py-2 rounded-full bg-white text-sm"
+                href={`/session/${session.id}`}
+              >
+                See More
+              </Link>
+            </div>
+          ))}
       </div>
     </div>
   );

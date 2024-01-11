@@ -123,7 +123,12 @@ const Question = ({
   index,
 }: QuestionType & { index: number }) => {
   return (
-    <li className="text-left bg-white rounded-2xl">
+    <li
+      className="text-left bg-white rounded-2xl"
+      data-sal="slide-up"
+      data-sal-delay={`${index * 100}`}
+      data-sal-duration="500"
+    >
       <label
         htmlFor={`accordion-${index}`}
         className="relative flex flex-col rounded-md border-b-[1px] border-gray-200"

@@ -88,16 +88,16 @@ const Track = ({ title, description, image, index }: TrackType) => {
           alt="track photo"
           className=" transition duration-300 group-hover:animate-swing origin-bottom"
           data-sal="fade"
-          data-sal-delay={`${index * 100 + 200}`}
-          data-sal-duration="200"
+          data-sal-delay={`${index * 100}`}
+          data-sal-duration="400"
         />
       </div>
 
       <div
         className="mt-1 p-2 max-w-[330px] mx-auto"
         data-sal="fade"
-        data-sal-delay={`${index * 100 + 200}`}
-        data-sal-duration="200"
+        data-sal-delay={`${index * 100}`}
+        data-sal-duration="500"
       >
         <h2 className="text-2xl font-bold capitalize text-center text-[#7D5A45]">
           {title}
