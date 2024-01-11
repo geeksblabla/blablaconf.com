@@ -34,27 +34,26 @@ const days_titles = [
 
 export const Agenda = ({ days }: { days: SessionByDay[] }) => {
   return (
-    <section
-      id="agenda"
-      className="mx-auto py-16 text-[#835E47]  overflow-hidden"
-    >
-      <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
-        <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
-        <div className="flex flex-row items-center md:px-8 px-4 py-4">
-          <div className="flex flex-row ">
-            <h1 className="text-4xl sm:text-6xl text-[#835E47] font-bold  capitalize mb-3 mr-6  z-10">
-              Agenda
-            </h1>
-          </div>
+    <section id="agenda" className="mx-auto py-16 text-[#835E47]">
+      <div className="overflow-hidden">
+        <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
+          <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
+          <div className="flex flex-row items-center md:px-8 px-4 py-4">
+            <div className="flex flex-row ">
+              <h1 className="text-4xl sm:text-6xl text-[#835E47] font-bold  capitalize mb-3 mr-6  z-10">
+                Agenda
+              </h1>
+            </div>
 
-          <p className="text-lg font-medium leading-6  text-[#835E47] max-w-[650px]  z-10 ">
-            Make sure to not miss any talks by adding them to your calendar.
-            <br />
-            PS:The schedule below is Moroccan Timezone (GMT+1)
-          </p>
+            <p className="text-lg font-medium leading-6  text-[#835E47] max-w-[650px]  z-10 ">
+              Make sure to not miss any talks by adding them to your calendar.
+              <br />
+              PS:The schedule below is Moroccan Timezone (GMT+1)
+            </p>
+          </div>
         </div>
       </div>
-      <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between md:px-8 px-4">
+      <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between md:px-8 px-4 ">
         <DaysMenu days={days_titles} />
         <div className="flex flex-col h-full w-full">
           {days.map((day, index) => {

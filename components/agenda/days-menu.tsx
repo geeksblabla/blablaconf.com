@@ -91,7 +91,7 @@ export const DaysMenu = ({
   return (
     <div
       id="agenda-scroll"
-      className="sticky top-0  md:h-full h-fit overflow-scroll md:overflow-visible scroll-smooth"
+      className="sticky top-2  md:h-full h-fit overflow-scroll md:overflow-visible scroll-smooth"
     >
       <div className="mt-8">
         <ul className="pt-6 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-white pr-12  h-fit  w-fit flex flex-row md:flex-col  ">
@@ -129,6 +129,9 @@ const Day = ({
         onClick={() => onClick()}
         href={`#day-${index}`}
         className="transition-all duration-75"
+        data-sal="fade"
+        data-sal-delay={`${index * 100}`}
+        data-sal-duration="400"
       >
         <div className="md:flex absolute hidden -left-8  justify-center items-center w-16 h-16 rounded-full bg-white">
           <svg
