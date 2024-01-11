@@ -61,6 +61,9 @@ dependencies:
     version: 13.11.0
 
 devDependencies:
+  '@types/qs':
+    specifier: ^6.9.11
+    version: 6.9.11
   '@types/validator':
     specifier: ^13.11.7
     version: 13.11.7
@@ -715,7 +718,6 @@ packages:
 
   /@types/qs@6.9.11:
     resolution: {integrity: sha512-oGk0gmhnEJK4Yyk+oI7EfXsLayXatCWPHary1MtcmbAifkobT9cM9yutG/hZKIseOU0MqbIwQ/u2nn/Gb+ltuQ==}
-    dev: false
 
   /@types/range-parser@1.2.7:
     resolution: {integrity: sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==}

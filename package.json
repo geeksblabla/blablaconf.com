@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@next/font": "^14.0.4",
@@ -29,6 +30,7 @@
     "validator": "^13.11.0"
   },
   "devDependencies": {
+    "@types/qs": "^6.9.11",
     "@types/validator": "^13.11.7",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.33",
