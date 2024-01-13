@@ -89,9 +89,9 @@ export const Hero = () => {
       <Image
         src="/blabla-people.png"
         alt="BlablaConf Taxi"
-        width={700}
-        height={700}
-        className="mx-auto mt-16 rounded-xl"
+        width={900}
+        height={900}
+        className="mx-auto mt-0 rounded-xl"
         data-sal="fade"
         data-sal-delay="400"
         data-sal-duration="500"
