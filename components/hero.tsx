@@ -2,7 +2,6 @@ import Image from "next/image";
 import { TechSouk } from "./tech-souk";
 import { SoukDoor } from "./souk-door";
 
-//bg-gradient-to-r from-emerald-50 via-emerald-100 to-emerald-200
 export const Hero = () => {
   return (
     <div className="relative bg-opacity-90 py-16 md:pt-16 md:pb-36 pt-8 overflow-hidden">
@@ -92,9 +91,6 @@ export const Hero = () => {
         width={900}
         height={900}
         className="mx-auto mt-0 rounded-xl"
-        data-sal="fade"
-        data-sal-delay="400"
-        data-sal-duration="500"
       />
     </div>
   );

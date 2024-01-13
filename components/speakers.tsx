@@ -65,9 +65,10 @@ const Speaker = ({
       data-sal="slide-right"
       data-sal-delay={`${(index % 4) * 50}`}
       data-sal-duration="500"
+      className="mx-auto"
     >
       <Link href={`/#speaker-session-${id}`}>
-        <div className="rounded-4xl group relative h-[19.5rem] w-[16rem] transform overflow-hidden rounded-md ">
+        <div className="mx-auto rounded-4xl group relative h-[19.5rem] w-[16rem] transform overflow-hidden rounded-md ">
           <div className="rounded-4xl absolute top-0 left-0 right-4  rounded-md bottom-6  transition duration-300 group-hover:scale-95 xl:right-6"></div>
           <div
             className="absolute inset-0 bg-indigo-50"

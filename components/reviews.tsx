@@ -51,13 +51,13 @@ export const Reviews = () => {
       </div>
 
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl flex flex-col md:flex-row md:px-6 pt-10 ">
-        {tweets.map((chunk, i) => (
+        {/* {tweets.map((chunk, i) => (
           <div className="flex flex-col space-y-3 px-2" key={`col${i}`}>
             {chunk.map((tweet, index) => (
               <Card image={tweet} key={`tweet${index}`} />
             ))}
           </div>
-        ))}
+        ))} */}
       </div>
     </section>
   );

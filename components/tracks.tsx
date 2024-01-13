@@ -44,7 +44,7 @@ export const Tracks = () => {
     <section id="tracks" className="py-16">
       <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
         <h2
-          className="mb-4 text-3xl font-bold md:mb-6 md:text-7xl capitalize text-center text-[#7C5944] "
+          className="mb-4 text-6xl font-bold md:mb-6 md:text-7xl capitalize text-center text-gradient"
           ata-sal="fade"
           data-sal-delay="100"
           data-sal-duration="500"
@@ -99,7 +99,7 @@ const Track = ({ title, description, image, index }: TrackType) => {
         data-sal-delay={`${index * 100}`}
         data-sal-duration="500"
       >
-        <h2 className="text-2xl font-bold capitalize text-center text-[#7D5A45]">
+        <h2 className="text-2xl font-bold capitalize text-center text-gradient">
           {title}
         </h2>
         <p className=" text-center w-full text-sm font-medium leading-tight text-gray-600 capitalize pt-2">

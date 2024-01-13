@@ -8,14 +8,10 @@ import { SalLoader } from "@/components/sal-loader";
 // import localFont from "@next/font/local";
 
 const cairo = Cairo({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-jakarta",
 });
-
-// const almaghribi = localFont({
-//   src: "../utils/AALMAGHRIBI.ttf",
-//   variable: "--font-almaghribi",
-// });
 
 export default function RootLayout({
   children,
@@ -30,7 +26,7 @@ export default function RootLayout({
       */}
       <head />
       <SalLoader />
-      <body className="bg-primary-100">
+      <body className="bg-gradient-to-b from-[#EFEAE4] via-[#E8DBD0] to-[#EFEAE4]">
         <Header />
         {children}
         <Footer />

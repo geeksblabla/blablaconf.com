@@ -53,16 +53,16 @@ export const Agenda = ({ days }: { days: SessionByDay[] }) => {
           </div>
         </div>
       </div>
-      <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between md:px-8 px-4 ">
+      <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between">
         <DaysMenu days={days_titles} />
-        <div className="flex flex-col h-full w-full">
+        <div className="flex flex-col h-full w-full pt-16">
           {days.map((day, index) => {
             return (
-              <div id={`day-${index}`} key={`day-${index}`} className="">
-                <span className="bg-gray-100 w-fit px-3 rounded-xl text-gray-700 -mb-4">
+              <div id={`day-${index}`} key={`day-${index}`} className="mb-16">
+                <span className="bg-[#7D5841]/80 w-fit px-3 rounded-xl text-white -mb-4">
                   {days_titles[index].date}{" "}
                 </span>
-                <h1 className="text-3xl py-4 font-bold">
+                <h1 className="text-3xl py-4 font-bold text-gradient ">
                   {days_titles[index].title}
                 </h1>
                 {index === 5 && (
@@ -113,7 +113,7 @@ const Session = ({ session, index }: { session: Session; index: number }) => {
         <div className="flex flex-row content-end justify-between ">
           <div>
             <SessionTime session={session} />
-            <h3 className="flex items-center mb-1 text-xl font-bold -mt-1 ">
+            <h3 className="flex items-center mb-1 text-xl font-bold -mt-1 text-gradient">
               <Link href={`/session/${session.id}`}>{session.title}</Link>
             </h3>
           </div>
@@ -133,7 +133,7 @@ const Session = ({ session, index }: { session: Session; index: number }) => {
                   className="w-14 h-14 rounded-full"
                   alt={`Speaker ${speaker?.fullName}`}
                 />
-                <p className="pl-4 font-bold ">
+                <p className="pl-4 font-bold text-gradient ">
                   {speaker?.fullName}
                   <br />
                   <span className="font-normal text-sm text-[#434343]">
