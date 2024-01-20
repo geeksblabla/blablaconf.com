@@ -78,7 +78,7 @@ const questions: QuestionType[] = [
         , <Link href="https://twitter.com/geeksblabla">Twitter</Link> ,{" "}
         <Link href="https://www.facebook.com/geeksblabla">Facebook</Link>,{" "}
         <Link href="https://www.instagram.com/geeksblabla/">Instagram</Link> or{" "}
-        <Link href="https://www.linkedin.com/company/geeksblabla/">
+        <Link href="https://www.linkedin.com/company/geeksblabla-community">
           LinkedIn
         </Link>
         .

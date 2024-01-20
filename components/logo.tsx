@@ -47,7 +47,7 @@ export const LogoWhite = () => {
       <path
         d="M0 45.7773H50.3009V53.9978L0 45.7773Z"
         fill="#A6A380"
-        fill-opacity="0.34"
+        fillOpacity="0.34"
       />
     </svg>
   );

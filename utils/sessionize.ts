@@ -30,20 +30,20 @@ export type SessionByDay = {
 
 export const getSpeakers: () => Promise<Speaker[]> = async () => {
   const res = await fetch(
-    "https://sessionize.com/api/v2/bnh6bsfu/view/Speakers"
+    "https://sessionize.com/api/v2/ag7jpuyy/view/Speakers"
   );
   const data = await res.json();
-  return data;
+  // shuffle speakers to avoid the same speaker being on top
+  return data.sort(() => Math.random() - 0.5);
 };
 
 export const getSessions = async () => {
   const sessionsRes = await fetch(
-    "https://sessionize.com/api/v2/0m5k0g9w/view/Sessions"
+    "https://sessionize.com/api/v2/ag7jpuyy/view/Sessions"
     // "https://sessionize.com/api/v2/bnh6bsfu/view/Sessions"
   );
   const speakersRes = await fetch(
-    "https://sessionize.com/api/v2/0m5k0g9w/view/Speakers"
-    // "https://sessionize.com/api/v2/bnh6bsfu/view/Speakers"
+    "https://sessionize.com/api/v2/ag7jpuyy/view/Speakers"
   );
   const sessions: SessionByDay[] = await sessionsRes.json();
   const speakers: Speaker[] = await speakersRes.json();

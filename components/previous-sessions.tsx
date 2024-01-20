@@ -4,27 +4,15 @@ import Image from "next/image";
 const sessions = [
   {
     image: "/images/sessions/session-1.jpg",
-    url: "https://www.youtube.com/watch?v=QuzXJ-1eiq4",
+    url: "https://www.youtube.com/watch?v=FQGVka9AnF4",
   },
   {
     image: "/images/sessions/session-2.jpg",
-    url: "https://www.youtube.com/watch?v=BCMBvCYHUq0",
+    url: "https://www.youtube.com/watch?v=gm0NZV5x2bg",
   },
   {
     image: "/images/sessions/session-3.jpg",
-    url: "https://www.youtube.com/watch?v=oZmanpotSiw",
-  },
-  {
-    image: "/images/sessions/session-1.jpg",
-    url: "https://www.youtube.com/watch?v=QuzXJ-1eiq4",
-  },
-  {
-    image: "/images/sessions/session-2.jpg",
-    url: "https://www.youtube.com/watch?v=BCMBvCYHUq0",
-  },
-  {
-    image: "/images/sessions/session-3.jpg",
-    url: "https://www.youtube.com/watch?v=oZmanpotSiw",
+    url: "https://www.youtube.com/watch?v=AysuFKXk6AY",
   },
 ];
 
@@ -78,7 +66,7 @@ const Session = ({ src, url }: { src: string; url: string }) => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g filter="url(#filter0_b_493_1153)">
-            <circle cx="43" cy="43" r="43" fill="white" fill-opacity="0.8" />
+            <circle cx="43" cy="43" r="43" fill="white" fillOpacity="0.8" />
           </g>
           <path
             d="M54.7577 45.8282L41.2188 54.8541C38.5606 56.6263 35 54.7207 35 51.5259V33.4741C35 30.2793 38.5606 28.3737 41.2188 30.1459L54.7577 39.1718C57.1326 40.7551 57.1326 44.2449 54.7577 45.8282Z"
@@ -93,7 +81,7 @@ const Session = ({ src, url }: { src: string; url: string }) => {
               height="114"
               filterUnits="userSpaceOnUse"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feGaussianBlur in="BackgroundImageFix" stdDeviation="7" />
               <feComposite
                 in2="SourceAlpha"

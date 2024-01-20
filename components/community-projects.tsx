@@ -10,7 +10,7 @@ type ProjectType = {
 const projects = [
   {
     name: "Geeksblabla",
-    url: "https://geeksblabla.com",
+    url: "https://geeksblabla.io",
     image: "/images/geeksblabla.svg",
     description:
       "GeeksBlaBla is a community initiative, to discuss, highlight and share the latest IT topics in Moroccan Darija.",
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     name: "Awesome Moroccan ",
-    url: "https://github.com/DevC-Casa/awesome-morocco",
+    url: "https://awesome-morocco.dev",
     image: "/images/awesome-morocco.svg",
     description:
       "List of awesome Moroccan things for developers. Communities, Events, Blogs, Podcasts, Youtube Channels, Open Source Projects, Books and more",
