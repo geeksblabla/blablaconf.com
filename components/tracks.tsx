@@ -7,42 +7,42 @@ import cloudImage from "../images/tracks/cloud.png";
 import softSkillsImage from "../images/tracks/soft-skills.png";
 const tracks = [
   {
-    title: "Web, mobile & UX",
+    title: "Web, \n mobile & UX",
     description:
       "Design and prototype faster, with an entire library of ready components.",
     image: webImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
-    title: "Backend Technologies & Programming languages",
+    title: "Backend Technologies & \n Programming languages",
     description:
       "All about programming languages, functional, reactive, emerging languages, tools, libraries, etc",
     image: backendImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
-    title: "Security & Architecture",
+    title: "Security & \n Architecture",
     description:
-      "How-Tos, strategies, tools, techniques, and best practices for getting architecture and security right.",
+      "How-Tos, strategies, tools, and best practices for getting architecture and security right.",
     image: secArchImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
-    title: "Big Data & Machine Learning",
+    title: "Big Data &\n Machine Learning",
     description:
       "Big Data, Fast Data, NoSQL, Machine learning, Deep Learning, Neural Networks, TensorFlow, etc",
     image: bigDataImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
-    title: "Cloud, Containers & Infrastructure",
+    title: "Cloud, Containers &\n Infrastructure",
     description:
       "Serverless, Docker, Kubernetes, Service Mesh, Cloud, PaaS, and anything in-between.",
     image: cloudImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
-    title: "Soft Skills",
+    title: "Soft\n Skills",
     description:
       "Emotional Intelligence, Critical Thinking, Evaluation, Mindfulness, Leadership...",
     image: softSkillsImage,
@@ -90,6 +90,11 @@ type TrackType = {
 };
 
 const Track = ({ title, description, image, index, tooltip }: TrackType) => {
+  const titleStr = title.split("\n").map((str, index) => (
+    <span key={index} className="block">
+      {str}
+    </span>
+  ));
   return (
     <article className="rounded-xl  p-3  cursor-pointer group flex flex-col items-center">
       <div className="w-fit relative items-center justify-center overflow-visible rounded-xl  bg-[url('/images/tracks/t-back.svg')] bg-contain  bg-no-repeat bg-center">
@@ -114,10 +119,10 @@ const Track = ({ title, description, image, index, tooltip }: TrackType) => {
         data-sal-delay={`${index * 100}`}
         data-sal-duration="500"
       >
-        <h2 className="text-2xl font-bold capitalize text-center text-gradient">
-          {title}
+        <h2 className="text-2xl font-bold capitalize text-center text-gradient leading-tight">
+          {titleStr}
         </h2>
-        <p className=" text-center w-full text-sm font-medium leading-tight text-gray-600 capitalize pt-2">
+        <p className="text-center w-full mt-1 text-sm font-medium leading-tight text-gray-600 capitalize pt-2 max-w-[300px] ">
           {description}
         </p>
       </div>

@@ -1,17 +1,21 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+
+import session1Src from "../images/sessions/session-1.png";
+import session2Src from "../images/sessions/session-2.png";
+import session3Src from "../images/sessions/session-3.png";
 
 // TODO
 const sessions = [
   {
-    image: "/images/sessions/session-1.jpg",
+    image: session1Src,
     url: "https://www.youtube.com/watch?v=FQGVka9AnF4",
   },
   {
-    image: "/images/sessions/session-2.jpg",
+    image: session2Src,
     url: "https://www.youtube.com/watch?v=gm0NZV5x2bg",
   },
   {
-    image: "/images/sessions/session-3.jpg",
+    image: session3Src,
     url: "https://www.youtube.com/watch?v=AysuFKXk6AY",
   },
 ];
@@ -48,16 +52,16 @@ export const PreviousSessions = () => {
   );
 };
 
-const Session = ({ src, url }: { src: string; url: string }) => {
+const Session = ({ src, url }: { src: StaticImageData; url: string }) => {
   return (
     <a
       href={url}
       target="_blank"
-      className="shadow-md rounded-lg relative h-[220px] cursor-pointer overflow-hidden hover:scale-105 transition-all"
+      className="shadow-md bg-red-400 mx-auto rounded-2xl relative w-fit cursor-pointer overflow-hidden hover:scale-105 transition-all duration-200"
       rel="noreferrer"
     >
-      <Image fill className="w-full  object-fill" src={src} alt="session 1" />
-      <div className="absolute top-0 h-ful w-full bottom-0 bg-[#A2765D]/20 flex justify-center items-center  ">
+      <Image src={src} alt="session 1" />
+      <div className="absolute top-0 h-ful bottom-0 w-full  flex justify-center items-center  ">
         <svg
           width="60"
           height="60"

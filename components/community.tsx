@@ -1,4 +1,5 @@
 import Image from "next/image";
+import imageSrc from "../images/community-people.png";
 
 export const Community = () => {
   return (
@@ -46,11 +47,9 @@ export const Community = () => {
         </div>
         <div className="flex flex-1 h-full  md:justify-end justify-center ">
           <Image
-            width={688}
-            height={389}
             className="h-full object-cover "
-            src="/images/community-3.png"
-            alt=""
+            src={imageSrc}
+            alt="Geeksblabla community "
           />
         </div>
       </div>
