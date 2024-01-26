@@ -6,7 +6,7 @@ import { NEXT_SEO_DEFAULT } from "../next-seo.config.js";
 import Head from "next/head";
 import Router from "next/router";
 import * as gtag from "../components/gtag";
-import { Plus_Jakarta_Sans } from "@next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 if (process.env.NODE_ENV === "production")
   Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
