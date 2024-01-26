@@ -41,7 +41,7 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
         <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
           <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
           <div className="flex flex-row items-center md:px-8 px-4 py-4">
-            <div className="flex flex-row ">
+            <div className="flex md:flex-row flex-col md:items-center ">
               <h1 className="text-4xl sm:text-6xl text-[#835E47] font-bold  capitalize mb-3 mr-6  z-10">
                 Agenda
               </h1>
@@ -170,7 +170,7 @@ const Session = ({ session, index }: { session: Session; index: number }) => {
 
           {session?.speakers?.[0] && (
             <Link
-              className="px-6 py-2 rounded-full bg-white text-sm min-w-[110px] text-center self-end"
+              className="px-6 py-2 rounded-full bg-white/80 text-sm min-w-[110px] text-center self-end"
               href={`/session/${session.id}`}
             >
               See More

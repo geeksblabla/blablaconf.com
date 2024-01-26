@@ -30,14 +30,14 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
       </svg>
       <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
         <div className="absolute bg-[url('/images/pattern-black.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
-        <div className="flex flex-row items-center md:px-8 px-4 py-4">
+        <div className="flex md:flex-row flex-col md:items-center md:px-8 px-4 py-4">
           <div className="flex flex-row ">
-            <h1 className="text-4xl sm:text-6xl font-bold  capitalize mb-3 mr-6  z-10">
-              Speakers
+            <h1 className="text-4xl sm:text-6xl font-bold capitalize mb-3 mr-6 z-10">
+              {speakers.length} Speakers
             </h1>
           </div>
 
-          <p className="text-lg font-medium leading-6  max-w-[650px]  z-10 ">
+          <p className="text-lg font-medium leading-6  max-w-[650px]  z-10 pr-2 ">
             CEOs, rock star developers, beginners and students, everyone has a
             place to share content in BlaBlaConf
           </p>

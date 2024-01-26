@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { TechSouk } from "./tech-souk";
 import { SoukDoor } from "./souk-door";
+import Sfanj from "../images/sfanj.png";
 
 export const Hero = () => {
   return (
@@ -135,10 +136,18 @@ const TicketButton = () => {
           />
         </g>
       </svg>
-      <div className="popup-text text-right">
-        فين اوا غادي. راه ماكيسبق السوق غير السفناج (sfrnj emoji)
-        <br />
-        موعدنا 5 فبراير
+      <div className="popup-text text-right overflow-hidden relative min-h-[90px] ">
+        <Image
+          src={Sfanj}
+          alt="Sfanj"
+          width={60}
+          height={60}
+          className="absolute top-2 -left-[10px]   rounded-tl-[33px] -rotate-[8deg]"
+        />
+        <p className="pl-[20px] text-md">
+          فين اوا غادي. راه ماكيسبق السوق غير السفناج ضرب ضورة في السيت ورجع
+          نهار 5 فبراير تاخد التيكي
+        </p>
       </div>
     </div>
   );

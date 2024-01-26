@@ -69,7 +69,7 @@ export const DaysMenu = ({
               scrollToPosition(id);
             }
             el?.classList.add("text-gray-900");
-            icon?.classList.remove("bg-white");
+            icon?.classList.remove("bg-white/80");
             icon?.classList.remove("text-[#7D5841]");
             icon?.classList.add("text-white");
             icon?.classList.add("bg-[#7D5841]");
@@ -82,7 +82,7 @@ export const DaysMenu = ({
             icon?.classList.remove("animate-swing");
             icon?.classList.remove("text-white");
             icon?.classList.remove("bg-[#7D5841]");
-            icon?.classList.add("bg-white");
+            icon?.classList.add("bg-white/80");
             icon?.classList.add("text-[#7D5841]");
           }
         });
@@ -104,10 +104,10 @@ export const DaysMenu = ({
   return (
     <div
       id="agenda-scroll"
-      className="sticky md:top-2 top-0  md:h-full h-fit overflow-scroll md:overflow-visible scroll-smooth md:bg-transparent  bg-white z-40 hidden md:block"
+      className="sticky md:top-2 top-0  md:h-full h-fit overflow-scroll md:overflow-visible scroll-smooth md:bg-transparent  bg-white/60 z-40 hidden md:block"
     >
       <div className="md:mt-8 mt-1">
-        <ul className="md:pt-6 pt-3 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-white pr-12 h-fit  w-fit flex flex-row md:flex-col  ">
+        <ul className="md:pt-6 pt-3 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-white/80 pr-12 h-fit  w-fit flex flex-row md:flex-col  ">
           {days.map((day, index) => {
             return (
               <Day
@@ -148,7 +148,7 @@ const Day = ({
       >
         <div
           id={`icon-${index}`}
-          className="flex absolute md:-left-14 left-0  justify-center items-center md:w-16 md:h-16 w-12 h-12 rounded-full bg-white text-[#7D5841]"
+          className="flex absolute md:-left-14 left-0  justify-center items-center md:w-16 md:h-16 w-12 h-12 rounded-full bg-white/80 text-[#7D5841]"
         >
           <svg
             width="32"
