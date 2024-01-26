@@ -34,7 +34,7 @@ const days_titles = [
   // },
 ];
 
-export const Agenda = ({ days }: { days: SessionByDay[] }) => {
+export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
   return (
     <section id="agenda" className="mx-auto py-16 text-[#835E47]">
       <div className="overflow-hidden">

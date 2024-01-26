@@ -62,7 +62,6 @@ export const DaysMenu = ({
 
           if (!document.querySelector(selector)) return;
           const iconSelector = `icon-${id?.split("-")[1]}`;
-          console.log(iconSelector);
           if (entry.intersectionRatio > 0.1) {
             const el = document.querySelector(selector);
             const icon = document.getElementById(iconSelector);

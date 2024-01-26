@@ -1,6 +1,4 @@
 import { Session } from "@/utils/sessionize";
-import { AddToCalendar } from "./agenda/add-to-calendar";
-
 export const SessionTime = ({
   session,
   showDay = false,
@@ -16,14 +14,7 @@ export const SessionTime = ({
 };
 
 const getSessionTime = (session: Session, showDay: boolean) => {
-  const start = new Date(session.startsAt);
-  const end = new Date(session.endsAt);
+  const start = new Date(session.startDate);
   const day = showDay ? `- ${start.getDate()}  February` : "";
-  return `${start.getHours()}:${getMinutes(
-    start
-  )} - ${end.getHours()}:${getMinutes(end)}  ${day} `;
-};
-
-const getMinutes = (date: Date) => {
-  return date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+  return `${session.startTime} - ${session.endTime}  ${day} `;
 };

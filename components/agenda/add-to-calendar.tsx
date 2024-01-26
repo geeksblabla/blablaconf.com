@@ -3,8 +3,6 @@
 import React from "react";
 import { atcb_action } from "add-to-calendar-button";
 import { Session } from "@/utils/sessionize";
-import { format } from "date-fns";
-
 export const AddToCalendar = ({
   session,
   type = "icon",
@@ -12,21 +10,15 @@ export const AddToCalendar = ({
   session: Session;
   type?: "text" | "icon";
 }) => {
-  // TODO: migrate this to
-  const startDate = format(new Date(session.startsAt), "yyyy-MM-dd");
-  const endDate = format(new Date(session.endsAt), "yyyy-MM-dd");
-  const startTime = format(new Date(session.startsAt), "HH:mm");
-  const endTime = format(new Date(session.endsAt), "HH:mm");
-
   const onClick = () => {
     atcb_action({
       name: session.title,
       description: `Join ${session.speakers[0].fullName} for ${session.title} at BlaBlaConf 2024`,
       location: "https://www.youtube.com/@GeeksBlaBla01",
-      startDate,
-      endDate,
-      startTime,
-      endTime,
+      startDate: session.startDate,
+      endDate: session.endDate,
+      startTime: session.startTime,
+      endTime: session.endTime,
       timeZone: "Africa/Casablanca",
       options: [
         "Apple",

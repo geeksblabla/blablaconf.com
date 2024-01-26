@@ -60,7 +60,6 @@ const Speaker = ({
   id,
   index = 0,
 }: SpeakerType & { index: number }) => {
-  console.log(profilePicture);
   return (
     <div
       data-sal="slide-right"
