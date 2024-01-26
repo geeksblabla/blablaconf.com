@@ -23,7 +23,7 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
           <clipPath id=":R9m:-2" clipPathUnits="objectBoundingBox">
             <path d="M1,0 H0.271 v0.129 H0.15 l0.016,0.032 C0.185,0.198,0.157,0.243,0.115,0.243 H0 v0.757 h0.729 v-0.086 l0.121,0.057 v-0.214 c0,-0.032,0.026,-0.057,0.057,-0.057 h0.093 V0"></path>
           </clipPath>
-          <clipPath id="test3" clipPathUnits="objectBoundingBox">
+          <clipPath id="pattern3" clipPathUnits="objectBoundingBox">
             <path d="M1,0.485 C1,0.485,0.992,0.487,0.991,0.479 C0.986,0.478,0.984,0.477,0.983,0.474 C0.983,0.472,0.983,0.465,0.965,0.46 C0.962,0.459,0.965,0.458,0.96,0.457 C0.956,0.455,0.933,0.448,0.929,0.443 C0.928,0.436,0.978,0.388,0.978,0.341 C0.978,0.293,0.933,0.274,0.933,0.274 C0.933,0.274,0.967,0.243,0.945,0.205 C0.922,0.168,0.845,0.173,0.845,0.173 C0.845,0.173,0.892,0.113,0.788,0.083 C0.743,0.07,0.696,0.08,0.658,0.095 C0.614,0.035,0.513,0.028,0.5,0 C0.487,0.028,0.386,0.035,0.342,0.095 C0.304,0.08,0.257,0.07,0.212,0.083 C0.108,0.113,0.155,0.173,0.155,0.173 C0.155,0.173,0.078,0.168,0.055,0.205 C0.033,0.243,0.067,0.274,0.067,0.274 C0.067,0.274,0.022,0.293,0.022,0.341 C0.022,0.388,0.072,0.436,0.071,0.443 C0.067,0.448,0.044,0.455,0.04,0.457 C0.035,0.458,0.038,0.459,0.035,0.46 C0.017,0.465,0.017,0.472,0.017,0.474 C0.016,0.477,0.014,0.478,0.009,0.479 C0.008,0.487,0,0.485,0,0.485 L0,0.939 C0,0.973,0.046,1,0.103,1 H0.5 H0.897 C0.954,1,1,0.973,1,0.939 L1,0.485" />
           </clipPath>
         </defs>
@@ -60,6 +60,7 @@ const Speaker = ({
   id,
   index = 0,
 }: SpeakerType & { index: number }) => {
+  console.log(profilePicture);
   return (
     <div
       data-sal="slide-right"
@@ -72,17 +73,13 @@ const Speaker = ({
           <div className="rounded-4xl absolute top-0 left-0 right-4  rounded-md bottom-6  transition duration-300 group-hover:scale-95 xl:right-6"></div>
           <div
             className="absolute inset-0 bg-indigo-50"
-            style={{ clipPath: "url(#test3)" }}
+            style={{ clipPath: "url(#pattern3)" }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              alt="session 1"
-              width="1120"
-              height="560"
-              decoding="async"
-              data-nimg="1"
+            <Image
+              alt={`${fullName} profile picture`}
+              width="400"
+              height="400"
               className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-              //   style="color:transparent"
               src={profilePicture}
             />
           </div>
@@ -100,7 +97,7 @@ const Speaker = ({
 };
 
 export const Links = ({ links }: { links: SpeakerLinkType[] }) => (
-  <ul className="list-inside flex justify-center py-2 text-slate-500 mx-auto">
+  <ul className="list-inside flex justify-center py-2 mx-auto">
     {links
       .filter(
         (link) => link.linkType === "Twitter" || link.linkType === "LinkedIn"
@@ -120,7 +117,7 @@ const SocialLink = ({
 }) => (
   <a
     href={href}
-    className="pr-2 cursor-pointer text-white "
+    className="pr-2 cursor-pointer"
     target="_blank"
     rel="noreferrer"
   >

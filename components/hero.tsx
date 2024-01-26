@@ -4,8 +4,8 @@ import { SoukDoor } from "./souk-door";
 
 export const Hero = () => {
   return (
-    <div className="relative bg-opacity-90 py-16 md:pt-16 md:pb-36 pt-8 overflow-hidden">
-      <div className="absolute left-[50%] z-[-1] top-40 md:top-0">
+    <div className="relative bg-opacity-90 py-16 md:pt-16 md:pb-36 pt-8 overflow-hidden  min-h-[calc(100vh-90px)]">
+      <div className="absolute left-[50%] z-[-1] top-2 md:top-0">
         <SoukDoor />
       </div>
       <div className="relative mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 ">
@@ -16,17 +16,19 @@ export const Hero = () => {
           </div>
 
           <p
-            className="lg:text-7xl md:text-5xl text-4xl font-bold leading-normal md:leading-normal text-center text-[#78543E]"
+            className="lg:text-5xl md:text-6xl text-4xl font-bold leading-normal md:leading-normal text-center text-[#78543E] max-w-[500px] mt-8"
             data-sal="fade"
             data-sal-delay="200"
             data-sal-duration="500"
           >
-            بلابلا كونف تعود
-            <br /> من جديد
+            البيبان تحلات، البهجة رجعات، السلعة ترصات و ايام سوق التيك المغربي
+            بدات
+            {/* بلابلا كونف تعود
+            <br /> من جديد */}
           </p>
         </div>
       </div>
-      <div className="relative">
+      <div className="relative -mt-[100px]">
         <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-full bg-white/50 -z-10" />
         <div
           className="z-10 mx-auto max-w-screen-lg flex flex-col-reverse md:flex-row mt-6 items-center py-8 justify-between"
@@ -36,20 +38,33 @@ export const Hero = () => {
         >
           <TicketButton />
 
-          <p className="text-[#5C4E45] text-lg  max-w-[400px] py-8 md:py-0">
+          {/* <p className="text-[#5C4E45] text-lg  max-w-[400px] py-8 md:py-0">
             و كيفما عودناكم بالحفاظ على عنصر الهوية المغربية ديالنا هاد العام
             رجعات بذوق فريد من اعماق تقافتنا
-          </p>
+          </p> */}
           <YoutubeButton />
         </div>
       </div>
-      <Image
+      {/* <Image
         src="/blabla-people.png"
         alt="BlablaConf Taxi"
         width={900}
         height={900}
         className="mx-auto mt-0 rounded-xl"
-      />
+      /> */}
+      <div className="absolute bottom-[200px] w-full pointer-events-none h-[500px]">
+        <video
+          width="1800"
+          height="100%"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className=" mx-auto pointer-events-none mt-[-380px]"
+        >
+          <source src="/images/animation-2.webm" type="video/webm" />
+        </video>
+      </div>
     </div>
   );
 };
@@ -105,7 +120,7 @@ const TicketButton = () => {
         height="130"
         width="300"
       >
-        <g stroke-width="2" stroke-linecap="round">
+        <g strokeWidth="2" strokeLinecap="round">
           <path
             className="popup-outline-left"
             d="M233.5 129s-1.992-7.686-32.218-14c-17.933-5.043-118.204 3.687-163.51-2.544-21.317-2.932-33.706-8.26-34.228-27.022L2.272 39.717c-.46-16.58 12.34-23.718 34.23-27.022 15.897-2.4 32.554-4.284 82.975-3.815"
@@ -120,9 +135,10 @@ const TicketButton = () => {
           />
         </g>
       </svg>
-      <div className="popup-text">
-        و كيفما عودناكم بالحفاظ على عنصر الهوية المغربية ديالنا هاد العام رجعات
-        بذوق فريد من اعماق تقافتنا
+      <div className="popup-text text-right">
+        فين اوا غادي. راه ماكيسبق السوق غير السفناج (sfrnj emoji)
+        <br />
+        موعدنا 5 فبراير
       </div>
     </div>
   );

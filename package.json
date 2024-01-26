@@ -10,12 +10,12 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@next/font": "^14.0.4",
     "@types/node": "20.10.7",
     "@types/react": "18.2.47",
     "@types/react-dom": "18.2.18",
     "@vercel/og": "^0.6.2",
     "add-to-calendar-button": "^2.5.8",
+    "date-fns": "^3.3.1",
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
     "firebase-admin": "^11.11.1",

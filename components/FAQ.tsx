@@ -172,7 +172,7 @@ const Link = ({
       {...props}
       rel="noreferrer"
       target="_blank"
-      className="text-emerald-500 hover:underline"
+      className="text-[#7D5841] font-bold hover:underline"
     >
       {children}
     </a>

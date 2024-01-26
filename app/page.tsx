@@ -23,7 +23,7 @@ export default async function Home() {
       <Agenda days={days} />
       <PreviousSessions />
       <CommunityProjects />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Reviews />
       <FAQ />
     </div>

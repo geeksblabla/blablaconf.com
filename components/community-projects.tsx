@@ -73,12 +73,10 @@ const Project = ({ name, image, url, description }: ProjectType) => {
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-2">
+      <div className="flex flex-1 flex-col p-2 md:text-left text-center">
         <h2 className="text-2xl font-bold text-gradient">{name}</h2>
 
-        <p className="text-[#282828] text-lg pr-20 md:pr-0 mt-2">
-          {description}
-        </p>
+        <p className="text-[#282828] text-lg mt-2">{description}</p>
       </div>
     </a>
   );

@@ -23,7 +23,7 @@ export const Community = () => {
                 speakers
               </p>
               <p className="text-6xl font-bold  text-gradient capitalize">
-                40+
+                60+
               </p>
             </div>
             <div className="flex-col space-y-4 py-3 ">
@@ -31,7 +31,7 @@ export const Community = () => {
                 hours
               </p>
               <p className="text-6xl font-bold  text-gradient capitalize">
-                30+
+                40+
               </p>
             </div>
             <div className="flex-col space-y-4 py-3">
@@ -55,46 +55,5 @@ export const Community = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-export const Community1 = () => {
-  return (
-    <div className="mx-auto max-w-screen-lg my-24">
-      <div className="max-w-screen-md">
-        <h2 className="text-3xl font-bold my-4">
-          Made By The Community For The Community
-        </h2>
-        <p className="text-base font-medium text-gray-600 capitalize">
-          By the Moroccan developer community, for the Moroccan developer
-          community, BlaBla Conf is your one-stop-shop for the latest and
-          hottest technology trends, in Darija, and completely free! Join us
-          from 19th to 23th December.
-          <br />
-        </p>
-      </div>
-      <div className="inline-flex space-x-24 items-start justify-start mt-6">
-        <div className="inline-flex flex-col space-y-2 items-start justify-center">
-          <p className="text-xl font-semibold text-center capitalize">
-            speakers
-          </p>
-          <p className="text-5xl font-semibold text-center text-green-800 capitalize">
-            40+
-          </p>
-        </div>
-        <div className="inline-flex flex-col space-y-2 items-start justify-center">
-          <p className="text-xl font-semibold text-center capitalize">hours</p>
-          <p className="text-5xl font-semibold text-center text-green-800 capitalize">
-            30+
-          </p>
-        </div>
-        <div className="inline-flex flex-col space-y-2 items-start justify-center">
-          <p className="text-xl font-semibold text-center capitalize">views</p>
-          <p className="text-5xl font-semibold text-center text-green-800 capitalize">
-            100k+
-          </p>
-        </div>
-      </div>
-    </div>
   );
 };

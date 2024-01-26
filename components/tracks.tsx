@@ -1,46 +1,51 @@
-import Image from "next/image";
-
+import Image, { StaticImageData } from "next/image";
+import webImage from "../images/tracks/web-mobile.png";
+import backendImage from "../images/tracks/backend.png";
+import secArchImage from "../images/tracks/sec-arch.png";
+import bigDataImage from "../images/tracks/big-data.png";
+import cloudImage from "../images/tracks/cloud.png";
+import softSkillsImage from "../images/tracks/soft-skills.png";
 const tracks = [
   {
     title: "Web, mobile & UX",
     description:
       "Design and prototype faster, with an entire library of ready components.",
-    image: "/images/tracks/web-mobile.png",
+    image: webImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
     title: "Backend Technologies & Programming languages",
     description:
       "All about programming languages, functional, reactive, emerging languages, tools, libraries, etc",
-    image: "/images/tracks/backend.png",
+    image: backendImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
     title: "Security & Architecture",
     description:
       "How-Tos, strategies, tools, techniques, and best practices for getting architecture and security right.",
-    image: "/images/tracks/sec-arch.png",
+    image: secArchImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
     title: "Big Data & Machine Learning",
     description:
       "Big Data, Fast Data, NoSQL, Machine learning, Deep Learning, Neural Networks, TensorFlow, etc",
-    image: "/images/tracks/big-data.png",
+    image: bigDataImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
     title: "Cloud, Containers & Infrastructure",
     description:
       "Serverless, Docker, Kubernetes, Service Mesh, Cloud, PaaS, and anything in-between.",
-    image: "/images/tracks/cloud.png",
+    image: cloudImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
   {
     title: "Soft Skills",
     description:
       "Emotional Intelligence, Critical Thinking, Evaluation, Mindfulness, Leadership...",
-    image: "/images/tracks/soft-skills.png",
+    image: softSkillsImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
   },
 ];
@@ -79,7 +84,7 @@ export const Tracks = () => {
 type TrackType = {
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   index: number;
   tooltip: string;
 };
