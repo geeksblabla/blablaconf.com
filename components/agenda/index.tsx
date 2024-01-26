@@ -5,6 +5,7 @@ import { SessionTime } from "../session-time";
 import { AddToCalendar } from "./add-to-calendar";
 import { DaysMenu } from "./days-menu";
 import { SVGProps } from "react";
+import Image from "next/image";
 
 const days_titles = [
   {
@@ -148,10 +149,12 @@ const Session = ({ session, index }: { session: Session; index: number }) => {
                   id={`speaker-session-${speaker?.id}`}
                 >
                   <div className="flex flex-row items-center pr-2 pt-2">
-                    <img
+                    <Image
+                      alt={`${speaker?.fullName} profile picture`}
                       src={speaker?.profilePicture}
                       className="w-14 h-14 rounded-full"
-                      alt={`Speaker ${speaker?.fullName}`}
+                      height="60"
+                      width="60"
                     />
                     <p className="pl-4 font-bold text-gradient ">
                       {speaker?.fullName}
