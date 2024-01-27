@@ -55,7 +55,7 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
           </div>
         </div>
       </div>
-      <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between">
+      <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between  lg:px-4  xl:px-0">
         <DaysMenu days={days_titles} />
         <div className="flex flex-col h-full w-full">
           {days.slice(0, 5).map((day, index) => {

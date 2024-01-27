@@ -27,7 +27,7 @@ const questions: QuestionType[] = [
         and community. Sharing is caring! <br />
         If you find any issue or typo in the website, make sure to open an issue
         or submit a new PR on our{" "}
-        <Link href="https://github.com/DevC-Casa/blablaconf.com">
+        <Link href="https://github.com/geeksblabla/blablaconf.com">
           {" "}
           GitHub repo{" "}
         </Link>{" "}
@@ -42,7 +42,7 @@ const questions: QuestionType[] = [
     answer: () => (
       <p>
         Registration for BlablaConf are open until the start of the conference,
-        on December 19th, <a>Grab you ticket.</a>
+        on February 19th, <a>Grab you ticket.</a>
       </p>
     ),
   },
@@ -62,16 +62,13 @@ const questions: QuestionType[] = [
   {
     question: "Can I apply as a speaker?",
     answer:
-      "Of course! Please subscribe to our newsletter to watch for the next Call For Papers.",
+      "Of course! But not for this edition. Make sure to follow us and watch for the next Call for Papers.",
   },
   {
     question: "Where can I get updates about upcoming events of Geeksblabla?",
     answer: () => (
       <p>
-        You can subscribe to{" "}
-        <Link href="https://tinyletter.com/geeksBlabla">the mailing list</Link>{" "}
-        to keep updated about future events of Geeksblabla and BlablaConf. You
-        can also follow us on{" "}
+        Follow us on{" "}
         <Link href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA">
           Youtube
         </Link>
@@ -80,8 +77,8 @@ const questions: QuestionType[] = [
         <Link href="https://www.instagram.com/geeksblabla/">Instagram</Link> or{" "}
         <Link href="https://www.linkedin.com/company/geeksblabla-community">
           LinkedIn
-        </Link>
-        .
+        </Link>{" "}
+        to get the latest updates.
       </p>
     ),
   },
