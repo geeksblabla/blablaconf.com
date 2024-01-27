@@ -9,6 +9,7 @@ type ProjectType = {
   description: string;
   url: string;
   image: StaticImageData;
+  index: number;
 };
 const projects = [
   {
@@ -50,7 +51,7 @@ export const CommunityProjects = () => {
 
         <div className="">
           {projects.map((project, index) => (
-            <Project {...project} key={`project-${index}`} />
+            <Project {...project} key={`project-${index}`} index={index} />
           ))}
         </div>
       </div>
@@ -58,13 +59,16 @@ export const CommunityProjects = () => {
   );
 };
 
-const Project = ({ name, image, url, description }: ProjectType) => {
+const Project = ({ name, image, url, description, index }: ProjectType) => {
   return (
     <a
       href={url}
       target="_blank"
       className="overflow-hidden flex flex-col items-center  md:flex-row lg:gap-6 relative bg-[#CC9B80]/20 my-4 cursor-pointer rounded-xl hover:-translate-y-1 transition-all max-w-[900px] mx-auto"
       rel="noreferrer"
+      data-sal="slide-down"
+      data-sal-delay={`${index * 100}`}
+      data-sal-duration="500"
     >
       <div className="md:h-24 md:w-24 lg:h-40 w-full min-h-[150px] flex justify-center md:mx-4 mx-0 items-center lg:w-40 p-2">
         <Image

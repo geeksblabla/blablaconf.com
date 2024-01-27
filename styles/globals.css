@@ -119,72 +119,16 @@ html {
   transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* media queries for mobile */
+/* disable sal.js on mobile */
 
-
-.track-tooltip {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  background: transparent;
-  color: #FFF;
-}
-
-.track-tooltip:before,
-.track-tooltip:after {
-  position: absolute;
-  content: '';
-  opacity: 0;
-  transition: all 0.4s ease;
-}
-
-.track-tooltip:before {
-  border-width: 10px 8px 0 8px;
-  border-style: solid;
-  border-color: green transparent transparent transparent;
-  top: -15px;
-  transform: translateY(20px);
-}
-
-.track-tooltip:after {
-  content: attr(data-tooltip);
-  background: green;
-  width: 160px;
-  height: 40px;
-  font-size: 13px;
-  font-weight: 300;
-  top: -75px;
-  left: -10px;
-  padding: 10px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transform: translateY(20px);
-  overflow: hidden;
-}
-
-.track-tooltip:hover::before,
-.track-tooltip:hover::after {
-  opacity: 1;
-  transform: translateY(-2px);
-}
-
-@keyframes shake {
-  0% {
-    transform: rotate(2deg);
+@media (max-width: 640px) {
+  [data-sal='slide-left'] {
+    opacity: 1 !important;
+    transform: none !important;
   }
-  50% {
-   transform: rotate(-3deg);
-  }
-  70% {
-    transform: rotate(3deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
+  [data-sal='slide-right'] {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
-
-.track:hover {
-  animation: shake 500ms ease-in-out forwards;
-}
-
-

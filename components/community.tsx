@@ -5,7 +5,12 @@ export const Community = () => {
   return (
     <section id="about" className=" py-16">
       <div className=" relative  mx-auto flex flex-col-reverse sm:max-w-xl md:max-w-screen-xl md:flex-row px-4 md:px-0  content-between items-center">
-        <div className="flex-1  pr-4 flex-col flex max-w-xl lg:max-w-screen-xl">
+        <div
+          className="flex-1  pr-4 flex-col flex max-w-xl lg:max-w-screen-xl"
+          data-sal="slide-right"
+          data-sal-delay="100"
+          data-sal-duration="400"
+        >
           <div className="max-w-screen-md ">
             <h2 className="text-5xl font-bold my-4 text-gradient md:text-left text-center">
               Made By The Community For The Community
@@ -14,7 +19,12 @@ export const Community = () => {
               By the Moroccan developer community, for the Moroccan developer
               community, BlaBlaConf is your one-stop shop for the latest and
               hottest technology trends, in Darija, and completely free! Join us
-              from 19th to 23th December.
+              from{" "}
+              <span className="font-bold text-gradient">
+                {" "}
+                19th to 23th February{" "}
+              </span>
+              .
               <br />
             </p>
           </div>
@@ -45,7 +55,12 @@ export const Community = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-1 h-full  md:justify-end justify-center ">
+        <div
+          className="flex flex-1 h-full  md:justify-end justify-center "
+          data-sal="slide-left"
+          data-sal-delay="100"
+          data-sal-duration="400"
+        >
           <Image
             className="h-full object-cover "
             src={imageSrc}

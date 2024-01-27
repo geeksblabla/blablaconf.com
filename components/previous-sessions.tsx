@@ -29,7 +29,7 @@ export const PreviousSessions = () => {
       <div className="mx-auto max-w-lg px-4 md:max-w-screen-xl text-center">
         <div>
           <h2 className=" text-3xl font-bold md:text-5xl capitalize text-center text-gradient">
-            BlablaConf 2023
+            BlablaConf 3.0
           </h2>
           <br />
           <p className="w-full text-lg text-[#282828] max-w-[500px] mx-auto">
@@ -44,6 +44,7 @@ export const PreviousSessions = () => {
               src={session.image}
               url={session.url}
               key={`session-${index}`}
+              index={index}
             />
           ))}
         </div>
@@ -52,13 +53,24 @@ export const PreviousSessions = () => {
   );
 };
 
-const Session = ({ src, url }: { src: StaticImageData; url: string }) => {
+const Session = ({
+  src,
+  url,
+  index,
+}: {
+  src: StaticImageData;
+  url: string;
+  index: number;
+}) => {
   return (
     <a
       href={url}
       target="_blank"
-      className="shadow-md bg-red-400 mx-auto rounded-2xl relative w-fit cursor-pointer overflow-hidden hover:scale-105 transition-all duration-200"
+      className="shadow-md  mx-auto rounded-2xl relative w-fit cursor-pointer overflow-hidden hover:scale-105 transition-all duration-200"
       rel="noreferrer"
+      data-sal="slide-right"
+      data-sal-delay={`${index * 100}`}
+      data-sal-duration="500"
     >
       <Image src={src} alt="session 1" />
       <div className="absolute top-0 h-ful bottom-0 w-full  flex justify-center items-center  ">
