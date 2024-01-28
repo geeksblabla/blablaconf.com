@@ -53,17 +53,17 @@ export const Hero = () => {
         height={900}
         className="mx-auto mt-0 rounded-xl"
       /> */}
-      <div className="absolute bottom-[200px] w-full pointer-events-none h-[500px]">
+      <div className="w-full pointer-events-none h-[500px]">
         <video
-          width="1800"
+          width="1000"
           height="100%"
           autoPlay
           loop
           muted
           playsInline
-          className=" mx-auto pointer-events-none mt-[-380px]"
+          className=" mx-auto pointer-events-none"
         >
-          <source src="/images/animation-2.webm" type="video/webm" />
+          <source src="/images/people-walking.webm" type="video/webm" />
         </video>
       </div>
     </div>

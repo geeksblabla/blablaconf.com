@@ -97,7 +97,7 @@ const Track = ({ title, description, image, index, tooltip }: TrackType) => {
   ));
   return (
     <article className="rounded-xl  p-3  cursor-pointer group flex flex-col items-center">
-      <div className="w-fit relative items-center justify-center overflow-visible rounded-xl  bg-[url('/images/tracks/t-back.svg')] bg-contain  bg-no-repeat bg-center">
+      <div className="w-fit relative items-center justify-center overflow-visible rounded-xl  bg-[url('/images/t-back.svg')] bg-contain  bg-no-repeat bg-center">
         {/* <div className="absolute  bottom-0 left-0 top-0 w-full h-full z-10  rounded-xl flex">
           <span className="track-tooltip absolute " data-tooltip={tooltip} />
         </div> */}
