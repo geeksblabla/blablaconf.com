@@ -30,7 +30,7 @@ export const Hero = () => {
         </div>
       </div>
       <div className="relative -mt-[100px]">
-        <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-full bg-white/50 -z-10" />
+        <div className="absolute bg-[url('/images/min-pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-full bg-white/50 -z-10" />
         <div
           className="z-10 mx-auto max-w-screen-lg flex flex-col-reverse md:flex-row mt-6 items-center py-8 justify-between"
           data-sal="fade"

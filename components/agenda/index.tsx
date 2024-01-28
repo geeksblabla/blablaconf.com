@@ -39,7 +39,7 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
     <section id="agenda" className="mx-auto py-16 text-[#835E47]">
       <div className="overflow-hidden">
         <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
-          <div className="absolute bg-[url('/images/pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
+          <div className="absolute bg-[url('/images/min-pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
           <div className="flex md:flex-row flex-col md:items-center  md:px-8 px-4 py-4">
             <div className="flex  ">
               <h1 className="text-4xl sm:text-6xl text-[#835E47] font-bold  capitalize mb-3 mr-6  z-10">
@@ -125,7 +125,7 @@ const Session = ({ session, index }: { session: Session; index: number }) => {
     <div
       className={`p-5 my-4 bg-[#CC9B80]/20  rounded-lg  ${
         index === 0
-          ? "bg-[url('/images/pattern.svg')] bg-contain bg-repeat"
+          ? "bg-[url('/images/min-pattern.svg')] bg-contain bg-repeat"
           : ""
       } `}
     >

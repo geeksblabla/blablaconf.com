@@ -1,11 +1,42 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Cairo } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "../styles/globals.css";
 import "sal.js/dist/sal.css";
 import { SalLoader } from "@/components/sal-loader";
 
 // import localFont from "@next/font/local";
+
+import { Metadata } from "next";
+
+// either Static metadata
+export const metadata: Metadata = {
+  title: {
+    template: "%s | BlaBlaConf 2024",
+    default: "سوق التيك المغربي | BlaBlaConf 2024",
+  },
+  description:
+    "BlaBlaConf 22 | 5+1 Days and 5+1 Tracks covering hottest Technology Trends in Darija",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title:
+      "BlaBlaConf 22 | 5+1 Days and 5+1 Tracks covering hottest Technology Trends in Darija",
+    description:
+      "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 19th to 24th December",
+    type: "website",
+    locale: "en_IE",
+    url: `/`,
+    siteName: "BlaBlaConf",
+    images: [
+      {
+        url: `/cover.jpeg`,
+      },
+    ],
+  },
+};
 
 const cairo = Cairo({
   weight: ["400", "500", "600", "700"],
@@ -31,6 +62,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-21VT2DZDYW" />
     </html>
   );
 }

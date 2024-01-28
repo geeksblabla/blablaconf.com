@@ -1,5 +1,5 @@
 import Image from "next/image";
-import imageSrc from "../images/community-people.png";
+import imageSrc from "../images/community-people.webp";
 
 export const Community = () => {
   return (
