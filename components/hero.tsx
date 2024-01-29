@@ -50,8 +50,9 @@ export const Hero = () => {
               <p className="text-gradient font-bold md:text-2xl text-xl -mt-10  mb-1">
                 من 19 حتى 24 فبراير
               </p>
+              {/*
               و كيفما عودناكم بالحفاظ على عنصر الهوية المغربية ديالنا هاد العام
-              رجعات بذوق فريد من اعماق تقافتنا
+              رجعات بذوق فريد من اعماق تقافتنا */}
             </div>
             <YoutubeButton className="hidden md:block" />
           </div>
