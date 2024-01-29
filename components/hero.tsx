@@ -2,6 +2,7 @@ import Image from "next/image";
 import { TechSouk } from "./tech-souk";
 import { SoukDoor } from "./souk-door";
 import Sfanj from "../images/sfanj.png";
+import { VideoAnimation } from "./video-animation";
 
 export const Hero = () => {
   return (
@@ -61,15 +62,7 @@ export const Hero = () => {
           data-sal-delay="400"
           data-sal-duration="500"
         >
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="md:mx-auto -ml-16 pointer-events-none max-w-[1000px] min-w-[600px] w-full self-end"
-          >
-            <source src="/images/people-walking.webm" type="video/webm" />
-          </video>
+          <VideoAnimation />
         </div>
       </div>
       <div className="md:hidden mx-auto flex flex-col justify-center items-center mt-10">
