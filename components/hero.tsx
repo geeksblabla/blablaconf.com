@@ -7,7 +7,7 @@ import { VideoAnimation } from "./video-animation";
 export const Hero = () => {
   return (
     <>
-      <div className="relative flex flex-col justify-end pt-8 overflow-hidden min-h-[calc(100vh-90px)] ">
+      <div className="relative flex flex-col justify-end pt-8 overflow-hidden min-h-[calc(100svh-90px)] ">
         <div className="absolute left-[50%] z-[-1] bottom-32 md:bottom-32">
           <SoukDoor />
         </div>
@@ -18,7 +18,7 @@ export const Hero = () => {
               data-sal="fade"
               data-sal-delay="0"
               data-sal-duration="500"
-              className="md:hidden block"
+              className="hidden"
             >
               <TechSouk />
             </div>
