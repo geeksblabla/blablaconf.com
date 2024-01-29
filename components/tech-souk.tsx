@@ -1,7 +1,7 @@
 export const TechSouk = () => {
   return (
     <svg
-      width="200"
+      width="350"
       viewBox="0 0 263 57"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

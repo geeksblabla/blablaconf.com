@@ -1,9 +1,7 @@
 export const SoukDoor = () => {
   return (
     <svg
-      className="relative  left-[-50%] -bottom-1 text-white"
-      width="296"
-      height="571"
+      className="relative  left-[-50%] -bottom-1 text-white w-[356px] max-w-[calc(65vw)]"
       viewBox="0 0 296 571"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

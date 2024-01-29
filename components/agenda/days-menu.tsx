@@ -137,7 +137,7 @@ const Day = ({
   onClick: () => void;
 }) => {
   return (
-    <li className="relative md:mb-10 mb-0 ml-6  md:w-[350px] w-[300px] text-[#5E330E]">
+    <li className="relative mb-16 h-16 py-auto  ml-4  md:w-[350px] w-[300px] text-[#5E330E]">
       <a
         onClick={() => onClick()}
         href={`#day-${index}`}
@@ -167,11 +167,11 @@ const Day = ({
             />
           </svg>
         </div>
-        <div className="ml-8 md:pl-0 pl-12">
-          <time className="block md:mb-2 mb-1 text-xs md:text-sm font-normal leading-none text-gradient">
+        <div className="ml-8 pt-2">
+          <time className="block text-xs md:text-sm font-normal leading-none text-gradient">
             {day}
           </time>
-          <h3 className="flex items-center mb-5 text-xl md:text-lg font-bold text-gradient">
+          <h3 className="flex items-center  text-xl md:text-lg font-bold text-gradient">
             {title}
           </h3>
         </div>
