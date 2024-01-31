@@ -148,7 +148,7 @@ const Day = ({
       >
         <div
           id={`icon-${index}`}
-          className="flex absolute md:-left-14 left-0  justify-center items-center md:w-16 md:h-16 w-12 h-12 rounded-full bg-white/80 text-[#7D5841]"
+          className="flex absolute md:-left-[49px] left-0  justify-center items-center md:w-16 md:h-16 w-12 h-12 rounded-full bg-white/80 text-[#7D5841]"
         >
           <p className="absolute text-xs mt-[6px]"> {19 + index}</p>
           <svg
