@@ -48,7 +48,7 @@ export const Hero = () => {
 
             <div className="text-[#5C4E45]  md:text-lg text-md flex-1  md:mr-6  -mb-8 md:max-w-[350px] max-w-[300px] text-center">
               <p className="text-gradient font-bold md:text-2xl text-xl -mt-10  mb-1">
-                من 19 حتى 24 فبراير
+                من 19 حتى 23 فبراير
               </p>
               وجدو راسكم لخمسيام ديال الإفادة والفراجة
             </div>
