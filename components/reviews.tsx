@@ -7,21 +7,30 @@ import brahimSrc from "../images/tweets_avatars/brahim.jpg";
 import afafSrc from "../images/tweets_avatars/afaf.jpg";
 import mohamedSrc from "../images/tweets_avatars/mohamed.png";
 import t1337Src from "../images/tweets_avatars/1337.jpg";
+import wafSrc from "../images/tweets_avatars/waf.jpg";
 
 const tweets: TweetType[][] = [
   [
     {
-      text: "What you know may seem obvious to you but it's a groundbreaking information to someone new. \nShare like @geeksblabla gang does! #blablaconf",
-      name: "Nour Oumousse",
-      avatar: nourSrc,
-      handle: "@NourOumousse",
+      text: "You cannot just miss #blablaconf by @geeksblabla even when it coincides your working hours",
+      name: "Sanaa Harmach",
+      avatar: sanaaSrc,
+      handle: "@Harmach_",
       featured: true,
     },
+
     {
       text: "It's #Blablaconf WEEK\n Join this amazing tech community and meet the speakers to learn more about the hottest tech trends \nMany thanks to @geeksblabla team",
       name: "Amine AIT AAZIZI",
       avatar: amineSrc,
       handle: "@aaitaazizi",
+    },
+    {
+      text: "To me, BlablaConf is the best annual IT festival, baked by moroccans for moroccans 😍",
+      name: "Mohamed Boukhlif",
+      avatar: mohamedSrc,
+      handle: "@b0ndif",
+      featured: true,
     },
   ],
 
@@ -34,12 +43,13 @@ const tweets: TweetType[][] = [
       featured: true,
     },
     {
-      text: "You cannot just miss #blablaconf by @geeksblabla even when it coincides your working hours",
-      name: "Sanaa Harmach",
-      avatar: sanaaSrc,
-      handle: "@Harmach_",
+      text: "What you know may seem obvious to you but it's a groundbreaking information to someone new. \nShare like @geeksblabla gang does! #blablaconf",
+      name: "Nour Oumousse",
+      avatar: nourSrc,
+      handle: "@NourOumousse",
       featured: true,
     },
+
     {
       text: "#blablaconf was one of the best things this year, but sadly it reached the end.",
       name: "Brahim",
@@ -54,11 +64,12 @@ const tweets: TweetType[][] = [
       avatar: afafSrc,
       handle: "@__iamaf",
     },
+
     {
-      text: "To me, BlablaConf is the best annual IT festival, baked by moroccans for moroccans 😍",
-      name: "Mohamed Boukhlif",
-      avatar: mohamedSrc,
-      handle: "@b0ndif",
+      text: "I don't know how to explain it, but the combination of technology and our culture gives us a special touch in the global technical community. #Blablaconf is an event that gives us this opportunity, tell the world that we can be  global while preserving our culture",
+      name: "Wafwaf",
+      avatar: wafSrc,
+      handle: "@fofino_o",
       featured: true,
     },
   ],
