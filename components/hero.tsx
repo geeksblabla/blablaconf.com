@@ -50,9 +50,7 @@ export const Hero = () => {
               <p className="text-gradient font-bold md:text-2xl text-xl -mt-10  mb-1">
                 من 19 حتى 24 فبراير
               </p>
-              {/*
-              و كيفما عودناكم بالحفاظ على عنصر الهوية المغربية ديالنا هاد العام
-              رجعات بذوق فريد من اعماق تقافتنا */}
+              وجدو راسكم لخمسيام ديال الإفادة والفراجة
             </div>
             <YoutubeButton className="hidden md:block" />
           </div>
@@ -159,7 +157,11 @@ const TicketButton = ({ className = "" }: { className?: string }) => {
 
 const YoutubeButton = ({ className = "" }: { className?: string }) => {
   return (
-    <div className={className}>
+    <a
+      className={className}
+      href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
+      target="_blank"
+    >
       <svg
         role="button"
         width="191"
@@ -186,6 +188,6 @@ const YoutubeButton = ({ className = "" }: { className?: string }) => {
           fill="#78543E"
         />
       </svg>
-    </div>
+    </a>
   );
 };
