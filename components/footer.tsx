@@ -168,7 +168,7 @@ export const Footer = () => {
 
             <a
               className=" hover:underline"
-              href="https://github.com/devc-casa"
+              href="https://github.com/geeksblabla"
               target="_blank"
               rel="noreferrer"
             >
