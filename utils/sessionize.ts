@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 export type SpeakerLink = {
   title: string;
   url: string;
@@ -13,7 +15,7 @@ export type Speaker = {
   bio: string;
 };
 
-export type Session = {
+export type SessionizeSession = {
   id: string;
   title: string;
   description: string;
@@ -22,57 +24,83 @@ export type Session = {
   endsAt: string;
 };
 
-export type SessionByDay = {
+export type Session = {
+  id: string;
+  title: string;
+  description: string;
+  speakers: Speaker[];
+  startDate: string;
+  endDate: string;
+  startTime: string;
+  endTime: string;
+};
+
+export type SessionByDay<T> = {
   day: string;
   groupName: string;
-  sessions: Session[];
+  sessions: T[];
 };
 
 export const getSpeakers: () => Promise<Speaker[]> = async () => {
   const res = await fetch(
-    "https://sessionize.com/api/v2/bnh6bsfu/view/Speakers"
+    "https://sessionize.com/api/v2/ag7jpuyy/view/Speakers"
   );
   const data = await res.json();
-  return data;
+  // shuffle speakers to avoid the same speaker being on top
+  return data.sort(() => Math.random() - 0.5);
 };
 
 export const getSessions = async () => {
   const sessionsRes = await fetch(
-    "https://sessionize.com/api/v2/0m5k0g9w/view/Sessions"
+    "https://sessionize.com/api/v2/ag7jpuyy/view/Sessions"
     // "https://sessionize.com/api/v2/bnh6bsfu/view/Sessions"
   );
   const speakersRes = await fetch(
-    "https://sessionize.com/api/v2/0m5k0g9w/view/Speakers"
-    // "https://sessionize.com/api/v2/bnh6bsfu/view/Speakers"
+    "https://sessionize.com/api/v2/ag7jpuyy/view/Speakers"
   );
-  const sessions: SessionByDay[] = await sessionsRes.json();
+  const sessions: SessionByDay<SessionizeSession>[] = await sessionsRes.json();
   const speakers: Speaker[] = await speakersRes.json();
   return normalizeSessionsByDay(sessions, speakers);
 };
 
 const normalizeSessionsByDay = (
-  sessions: SessionByDay[],
+  sessions: SessionByDay<SessionizeSession>[],
   speakers: Speaker[]
 ) => {
   return sessions.map((sessionByDay) => {
     const sessions = normalizeSessions(sessionByDay.sessions, speakers);
     return {
       ...sessionByDay,
-      day: sessions[0].startsAt,
+      day: sessions[0].startDate,
       sessions,
     };
   });
 };
 
-const normalizeSessions = (sessions: Session[], speakers: Speaker[]) => {
+const normalizeSessions = (
+  sessions: SessionizeSession[],
+  speakers: Speaker[]
+) => {
   return sessions.map((session) => {
     const _speakers = session.speakers
       .map((speaker) => getSpeakerInfo(speaker.id, speakers))
       .filter((session) => session !== undefined) as Speaker[];
-    return {
-      ...session,
+
+    const startDate = format(new Date(session.startsAt), "yyyy-MM-dd");
+    const endDate = format(new Date(session.endsAt), "yyyy-MM-dd");
+    const startTime = format(new Date(session.startsAt), "HH:mm");
+    const endTime = format(new Date(session.endsAt), "HH:mm");
+    const s: Session = {
+      id: session.id,
+      title: session.title,
+      description: session.description,
+      startDate,
+      endDate,
+      startTime,
+      endTime,
       speakers: _speakers,
     };
+    return s;
   });
 };
 

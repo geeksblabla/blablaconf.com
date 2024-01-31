@@ -43,11 +43,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
       <div className="flex md:flex-row flex-col justify-center items-center">
         <p className="mx-2 md:my-0 my-2">Or share on </p>
         <div>
-          <FacebookShareButton
-            url={shareUrl}
-            quote={share_message}
-            className="mx-2 hover:scale-105"
-          >
+          <FacebookShareButton url={shareUrl} className="mx-2 hover:scale-105">
             <Facebook className="bg-slate-100 rounded-full  text-gray-500 border-solid" />
           </FacebookShareButton>
           <TwitterShareButton

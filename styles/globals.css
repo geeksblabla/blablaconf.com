@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.text-gradient {
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#7C5741] to-[#B18367]
+}
+
 .letter {
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -31,4 +35,101 @@ html {
   right: -3px;
   top: 1px;
   transform: rotate(1.4deg);
+}
+
+/* tooltip */
+
+.tooltip {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 2px;
+  position: relative;
+}
+.tooltip:hover {
+  cursor: help;
+}
+.tooltip-spacing {
+  position: relative;
+}
+
+.tooltip-text {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  position: relative;
+}
+
+.popup-bg {
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.16))
+    drop-shadow(0 3px 6px rgba(208, 191, 191, 0.23));
+  position: absolute;
+  top: -126px;
+  transform: scale(-1,1)
+
+}
+.popup-outline {
+  position: absolute;
+  top: -126px;
+  transform: scale(-1,1)
+}
+.popup-text {
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  left: 8px;
+  opacity: 0;
+  padding: 12px 16px;
+  position: absolute;
+  top: -117px;
+  transition: opacity 240ms 120ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 292px;
+}
+.tooltip:hover ~ .popup-text {
+  display: block;
+}
+.popup-bg {
+  opacity: 0;
+  transition: opacity 240ms 120ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.popup-outline-left {
+  stroke-dasharray: 0 426px;
+  stroke-dashoffset: 1px;
+  transition: stroke-dasharray 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.popup-outline-right {
+  stroke-dasharray: 352px 352px;
+  stroke-dashoffset: -352px;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tooltip:hover ~ .popup-text {
+  opacity: 1;
+}
+.tooltip:hover ~ .popup-bg {
+  opacity: 1;
+  transition: opacity 240ms 120ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tooltip:hover ~ .popup-outline .popup-outline-left {
+  stroke-dasharray: 426px 426px;
+  transition: stroke-dasharray 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tooltip:hover ~ .popup-outline .popup-outline-right {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* media queries for mobile */
+/* disable sal.js on mobile */
+
+@media (max-width: 640px) {
+  [data-sal='slide-left'] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  [data-sal='slide-right'] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }

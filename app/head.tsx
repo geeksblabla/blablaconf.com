@@ -4,7 +4,7 @@ import { NEXT_SEO_DEFAULT } from "../next-seo.config"; // your path will vary
 export default function Head() {
   return (
     <>
-      <NextSeo {...NEXT_SEO_DEFAULT} useAppDir={true} />
+      <NextSeo {...NEXT_SEO_DEFAULT} />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <link
         rel="apple-touch-icon"
