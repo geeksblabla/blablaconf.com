@@ -74,7 +74,7 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
               alt="BlablaConf Ticket"
               width={1200}
               height={630}
-              className="mx-auto  border-2 border-[#8e664d] rounded-md"
+              className="mx-auto border-2 border-[#8e664d] rounded-md max-w-2xl w-full aspect-[1200/630]"
             />
           )}
         </div>
