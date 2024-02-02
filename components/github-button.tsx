@@ -12,7 +12,7 @@ export const GithubButton = () => {
     <a
       href={githubUrl}
       onClick={() => setLoading(true)}
-      className="shrink-0 m-2 rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]"
+      className="shrink-0 mt-4 relative px-8 py-3 rounded-full border-2  bg-white/60 flex items-center justify-center font-medium  hover:scale-105 transition-all "
     >
       {loading ? "Loading Github Profile ...." : "Customize with Github"}
     </a>

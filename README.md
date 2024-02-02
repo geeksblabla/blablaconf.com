@@ -14,9 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Setup
 
-1. Create a firebase app and with a firestore database.
+1. Create a Firebase app with a Firestore database.
 
-2. Go to firebase project setting > Service account and generate a new private key,Download the json file and add the copy the following environment variables 👇
+2. Go to Firebase project settings > Service Account and generate a new private key. Download the JSON file and copy the following environment variables: 👇
 
 ```
 #.env.development.local
@@ -26,7 +26,7 @@ FIREBASE_CLIENT_EMAIL=
 FIREBASE_PRIVATE_KEY=
 ```
 
-3. Create a Github auth application and add `https://yourwebsite.com/api/github-auth` as redirect url. Add you github client id and the the secret key to your environment variables:
+3. Create a GitHub authentication application and add `https://yourwebsite.com/api/github-auth` as the redirect URL. Add your GitHub client ID and the secret key to your environment variables.
 
 ```
 NEXT_PUBLIC_GITHUB_OAUTH_CLIENT_ID=
@@ -34,4 +34,4 @@ GITHUB_OAUTH_CLIENT_SECRET=
 
 ```
 
-4. Configure ticket generation by updating the `api/og.tsx` file.
+4. Configure ticket generation by updating the `app/ticket/og/route.tsx` file.

@@ -32,7 +32,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
   return (
     <div className="flex md:flex-row flex-col items-center mt-4">
       <button
-        className="shrink-0  rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]"
+        className="shrink-0 relative px-8 py-2 rounded-full  bg-white/60  font-medium  hover:scale-105 transition-all "
         onClick={() => {
           setCopied(true);
           copyToClipboard(shareUrl);

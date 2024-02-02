@@ -27,12 +27,12 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
   return (
     <div className="relative bg-opacity-90 py-20 md:pt-20 pt-8  pb-20 min-h-screen">
       <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 text-center ">
-        <DateConf />
+        {/* <DateConf /> */}
 
         <h2 className=" relative md:text-5xl text-4xl font-bold my-4 capitalize max-w-[700px]">
           {page === "home" && "Make your own ticket"}
           {(page === "user" || page === "me") &&
-            `${name}'s BlaBlaConf 2022 Ticket`}
+            `${name}'s BlaBlaConf 2024 Ticket`}
         </h2>
         <p className="text-base font-medium text-gray-600 capitalize max-w-[500px] pt-8">
           {page === "home" &&
@@ -52,7 +52,7 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
         {page === "user" && (
           <Link
             href="/"
-            className="mt-4 shrink-0 m-2 rounded-full bg-[#006233] px-8 py-3 font-medium text-white focus:bg-[#006233] focus:outline-none hover:bg-[#006233]"
+            className="mt-4 relative px-8 py-3 rounded-full border-2  bg-white/60 flex items-center justify-center font-medium  hover:scale-105 transition-all "
           >
             Back to Home
           </Link>
@@ -64,15 +64,17 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
             <img
               src={image}
               alt="BlablaConf Ticket"
-              className="mx-auto  border-2 border-gray-200 rounded-md max-w-2xl w-full"
+              width={1200}
+              height={630}
+              className="mx-auto  border-2 border-[#8e664d] rounded-md max-w-2xl w-full aspect-[1200/630]"
             />
           ) : (
             <Image
               src="/images/ticket-placeholder.jpg"
               alt="BlablaConf Ticket"
-              width={700}
-              height={300}
-              className="mx-auto  border-2 border-gray-200 rounded-md"
+              width={1200}
+              height={630}
+              className="mx-auto  border-2 border-[#8e664d] rounded-md"
             />
           )}
         </div>

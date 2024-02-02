@@ -10,7 +10,7 @@ html {
 }
 
 .letter {
-  background: #fff;
+  background: #8e664d;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
 }
@@ -23,14 +23,14 @@ html {
   z-index: -1;
 }
 .letter:before {
-  background: #fafafa;
+  background: #8e664d;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   left: -5px;
   top: 4px;
   transform: rotate(-2.5deg);
 }
 .letter:after {
-  background: #f6f6f6;
+  background: #8e664d;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   right: -3px;
   top: 1px;

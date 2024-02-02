@@ -1,9 +1,9 @@
-import { NextSeoProps } from "next-seo";
 import { getTicketsInfo, User } from "./db";
+import { Metadata } from "next";
 
-export const generateTicketsSeoConfig = (user: User): NextSeoProps => {
+export const generateTicketsMetadata = (user: User): Metadata => {
   const name = user.name === null ? user.login : user.name;
-  const seoConfig = {
+  const metadata: Metadata = {
     title: name + "'s BlaBlaConf Ticket",
     description:
       "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 19th to 24th December",
@@ -17,22 +17,21 @@ export const generateTicketsSeoConfig = (user: User): NextSeoProps => {
       images: [
         {
           url: getTicketImg(user),
+          width: 1200,
+          height: 630,
         },
       ],
-      site_name: "blablaconf.com",
-      imageWidth: 1200,
-      imageHeight: 630,
     },
   };
 
-  return seoConfig;
+  return metadata;
 };
 
 const getTicketImg = (user: User) => {
   const name = user.name === null ? user.login : user.name;
   const ticketImg = `${
     process.env.NEXT_PUBLIC_HOST
-  }/api/og?name=${encodeURIComponent(name)}&login=${encodeURIComponent(
+  }/ticket/image?name=${encodeURIComponent(name)}&login=${encodeURIComponent(
     user.login
   )}&avatar=${encodeURIComponent(
     user.avatar
@@ -41,7 +40,7 @@ const getTicketImg = (user: User) => {
 };
 
 export const getUserInfo = async (username: string) => {
-  let seoConfig = null;
+  let metadata: Metadata | null = null;
   let user = null;
 
   if (username && username !== "") {
@@ -49,7 +48,7 @@ export const getUserInfo = async (username: string) => {
     if (userDoc.exists) {
       // TODO: only pass required data
       const u = userDoc.data() as User;
-      seoConfig = generateTicketsSeoConfig(u);
+      metadata = generateTicketsMetadata(u);
       user = {
         name: u.name === null ? u.login : u.name,
         image: getTicketImg(u),
@@ -57,5 +56,5 @@ export const getUserInfo = async (username: string) => {
       };
     }
   }
-  return { seoConfig, user };
+  return { metadata, user };
 };

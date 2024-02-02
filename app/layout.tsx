@@ -8,7 +8,15 @@ import { SalLoader } from "@/components/sal-loader";
 
 // import localFont from "@next/font/local";
 
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#78543E",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 // either Static metadata
 export const metadata: Metadata = {
@@ -17,10 +25,11 @@ export const metadata: Metadata = {
     default: "سوق التيك المغربي | BlaBlaConf 2024",
   },
   description:
-    "BlaBlaConf 22 | 5+1 Days and 5+1 Tracks covering hottest Technology Trends in Darija",
+    "5+1 Days and 5+1 Tracks covering hottest Technology Trends in Darija",
   alternates: {
     canonical: "/",
   },
+
   openGraph: {
     title: "سوق التيك المغربي | BlaBlaConf 2024",
     description:
