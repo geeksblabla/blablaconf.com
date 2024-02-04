@@ -65,7 +65,7 @@ export async function GET(request: Request) {
         <img
           width="1200"
           height="630"
-          src={`https://res.cloudinary.com/duko2tssr/image/upload/v1706825045/ticket-back_b6qvdk.jpg`}
+          src={`https://res.cloudinary.com/duko2tssr/image/upload/v1707080203/Geeksblabla_Ticket_1_mhwfo1.jpg`}
         />
         <div
           style={{
@@ -123,7 +123,7 @@ export async function GET(request: Request) {
             display: "flex",
             position: "absolute",
             top: 250,
-            right: 150,
+            right: 100,
             height: 150,
             width: 300,
             // flexDirection: "row-reverse",
@@ -133,7 +133,7 @@ export async function GET(request: Request) {
           <span
             style={{
               color: "white",
-              opacity: 0.5,
+              opacity: 0.4,
               textAlign: "right",
               fontWeight: "900",
               fontSize: 54,
