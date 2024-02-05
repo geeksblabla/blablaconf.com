@@ -3,6 +3,7 @@ import { TechSouk } from "./tech-souk";
 import { SoukDoor } from "./souk-door";
 import Sfanj from "../images/sfanj.png";
 import { VideoAnimation } from "./video-animation";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -74,7 +75,7 @@ export const Hero = () => {
 
 const TicketButton = ({ className = "" }: { className?: string }) => {
   return (
-    <div className={`relative ${className}`}>
+    <Link href="/ticket" className={`relative ${className}`}>
       <div className="tooltip">
         <div className="tooltip-spacing">
           <div className="tooltip-text">
@@ -103,7 +104,7 @@ const TicketButton = ({ className = "" }: { className?: string }) => {
           </div>
         </div>
       </div>
-      <svg
+      {/* <svg
         className="popup-bg"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 300 130"
@@ -115,8 +116,8 @@ const TicketButton = ({ className = "" }: { className?: string }) => {
           fill="#7B5741"
           stroke="#000"
         />
-      </svg>
-      <svg
+      </svg> */}
+      {/* <svg
         className="popup-outline"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 300 130"
@@ -137,8 +138,8 @@ const TicketButton = ({ className = "" }: { className?: string }) => {
             stroke="#7B5741"
           />
         </g>
-      </svg>
-      <div className="popup-text text-right overflow-hidden relative min-h-[90px] ">
+      </svg> */}
+      {/* <div className="popup-text text-right overflow-hidden relative min-h-[90px] ">
         <Image
           src={Sfanj}
           alt="Sfanj"
@@ -150,8 +151,8 @@ const TicketButton = ({ className = "" }: { className?: string }) => {
           فين اوا غادي. راه ماكيسبق السوق غير السفناج ضرب ضورة في السيت ورجع
           نهار 5 فبراير تاخد التيكي
         </p>
-      </div>
-    </div>
+      </div> */}
+    </Link>
   );
 };
 
