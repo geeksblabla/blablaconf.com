@@ -124,23 +124,36 @@ export async function GET(request: Request) {
             position: "absolute",
             top: 250,
             right: 100,
-            height: 150,
-            width: 300,
-            // flexDirection: "row-reverse",
-            transform: "rotate(-40deg)",
+            height: "auto",
+            width: 310,
+            textAlign: "center",
+            padding: 10,
+            transform: "rotate(-40deg) scale(0.9)",
+            borderRadius: 20,
+            border: "3px solid rgba(255, 255, 255, 0.5)",
           }}
         >
-          <span
+          <div
             style={{
-              color: "white",
-              opacity: 0.4,
-              textAlign: "right",
-              fontWeight: "900",
-              fontSize: 54,
+              display: "flex",
+              width: "100%",
+              borderRadius: 16,
+              padding: 10,
+              border: "3px solid rgba(255, 255, 255, 0.5)",
             }}
           >
-            N {number}{" "}
-          </span>
+            <span
+              style={{
+                color: "white",
+                opacity: 0.6,
+                textAlign: "right",
+                fontWeight: "900",
+                fontSize: 50,
+              }}
+            >
+              N {number}{" "}
+            </span>
+          </div>
         </div>
       </div>
     ),
