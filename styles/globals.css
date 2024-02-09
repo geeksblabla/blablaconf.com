@@ -133,3 +133,8 @@ html {
     transform: none !important;
   }
 }
+@media (min-width: 768px) {
+  .md\:pt-6 {
+    padding-left: 2.1rem;
+  }
+}
