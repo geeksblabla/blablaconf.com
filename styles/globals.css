@@ -133,8 +133,4 @@ html {
     transform: none !important;
   }
 }
-@media (min-width: 768px) {
- .daysulpadding {
-  padding-left: 2.1rem; 
-}
-}
+
