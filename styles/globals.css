@@ -134,7 +134,7 @@ html {
   }
 }
 @media (min-width: 768px) {
-  .md\:pt-6 {
-    padding-left: 2.1rem;
-  }
+ .daysulpadding {
+  padding-left: 2.1rem; 
+}
 }
