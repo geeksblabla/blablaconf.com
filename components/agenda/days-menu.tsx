@@ -107,7 +107,7 @@ export const DaysMenu = ({
       className="sticky md:top-2 top-0  md:h-full h-fit overflow-scroll md:overflow-visible scroll-smooth md:bg-transparent  bg-white/60 z-40 hidden md:block xl:ml-0 lg:ml-5"
     >
       <div className="md:mt-8 mt-1">
-        <ul className="md:pt-6 pt-3 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-white/80 pr-12 h-fit  w-fit flex flex-row md:flex-col  ">
+        <ul className="md:pt-6 pt-3 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-white/80 pr-12 h-fit  w-fit flex flex-row md:flex-col daysulpadding ">
           {days.map((day, index) => {
             return (
               <Day
