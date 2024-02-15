@@ -18,12 +18,12 @@ export default async function Home() {
     <div>
       <Hero />
       <Community />
+      <Sponsors />
       <Tracks />
       <Speakers speakers={speakers} />
       <Agenda days={days} />
       <PreviousSessions />
       <CommunityProjects />
-      {/* <Sponsors /> */}
       <Reviews />
       <FAQ />
     </div>
