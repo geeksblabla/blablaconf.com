@@ -1,4 +1,6 @@
 import Image from "next/image";
+import I1337Src from "../images/sponsors/1337.png";
+import intelciaSrc from "../images/sponsors/intelcia.png";
 
 export const Sponsors = () => {
   return (
@@ -42,7 +44,7 @@ export const Sponsors = () => {
               <Image
                 height={200}
                 width={551}
-                src="/images/sponsors/1337.png"
+                src={I1337Src}
                 alt=""
                 className=" "
               />
@@ -56,7 +58,7 @@ export const Sponsors = () => {
               <Image
                 height={144}
                 width={549}
-                src="/images/sponsors/intelcia.png"
+                src={intelciaSrc}
                 alt=""
                 className=""
               />
