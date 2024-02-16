@@ -5,12 +5,12 @@ const links = [
   // { label: "About", href: "/#about" },
   { label: "Tracks", href: "/#tracks" },
   { label: "Speakers", href: "/#speakers" },
-  { label: "About", href: "/#about" },
+  { label: "Sponsors", href: "/#partners" },
+  // { label: "About", href: "/#about" },
   { label: "Agenda", href: "/#agenda" },
-  // { label: "In Person Days", href: "/#day-5" },
-  { label: "Projects", href: "/#community-initiatives" },
+  { label: "In Person Days", href: "/#in-person-days" },
+  // { label: "Projects", href: "/#community-initiatives" },
   { label: "FAQ", href: "/#faq" },
-  // { label: "Sponsors", href: "/#sponsors" },
 ];
 
 export const Header = () => {

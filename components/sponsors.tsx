@@ -6,7 +6,7 @@ export const Sponsors = () => {
   return (
     <>
       <section
-        id="tracks"
+        id="partners"
         className="relative py-16 px-4 bg-gradient-to-r from-[#9E735A] to-[#A77A60] text-white"
       >
         <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
