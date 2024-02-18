@@ -34,7 +34,7 @@ export const PreviousSessions = () => {
           <br />
           <p className="w-full text-lg text-[#282828] max-w-[500px] mx-auto">
             Rewatch last year’s sessions, and get a sneak peek of what
-            BlaBLaConf 2022 would be like.
+            BlaBLaConf 2024 would be like.
             <br />
           </p>
         </div>
