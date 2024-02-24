@@ -5,28 +5,39 @@ type CityType = {
   name: string;
   date: string;
   place: string;
+  link: string;
 };
 
 const cities: CityType[] = [
   {
     name: "Marrakech",
-    date: "February 24, 1pm",
+    date: "February 24, 2pm",
     place: "Cité d’Innovation de Marrakech",
+    link: "https://maps.app.goo.gl/vwks9iamGTGQkeX26",
   },
   {
     name: "Casablanca",
-    date: "February 25, 1pm",
+    date: "February 25, 2pm",
     place: "TechnoPark Casablanca",
+    link: "https://maps.app.goo.gl/3txCUwG5DbECDRdH6",
   },
   {
     name: "Rabat",
-    date: "March 2, 1pm",
-    place: "TBD",
+    date: "March 2, 2pm",
+    place: "Ecole Supérieure Vinci",
+    link: "https://maps.app.goo.gl/6SZNhTBvUMtQjEMAA",
   },
   {
     name: "khouribga",
-    date: "March 3, 1pm",
-    place: "1337 School",
+    date: "March 3, 2pm",
+    place: "1337 School Khouribga",
+    link: "https://maps.app.goo.gl/XZRrkPHZrwQDRLaf6",
+  },
+  {
+    name: "Tetouane",
+    date: "March 9, 2pm",
+    place: "TBD",
+    link: "",
   },
 ] as const;
 
@@ -59,7 +70,7 @@ export const InPersonDays = () => {
         </div>
         <div className="my-4">
           <p className="text-lg">
-            <strong className="">Location</strong> : {selectedCity.place}
+            <strong className="">Location</strong> : <a href="{selectedCity.link}" target="_blank">{selectedCity.place}</a>
           </p>
           <p className="text-lg">
             <strong className="">Time</strong> : {selectedCity.date}
