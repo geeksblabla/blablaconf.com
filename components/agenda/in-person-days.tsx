@@ -70,7 +70,7 @@ export const InPersonDays = () => {
         </div>
         <div className="my-4">
           <p className="text-lg">
-            <strong className="">Location</strong> : <a href="{selectedCity.link}" target="_blank">{selectedCity.place}</a>
+            <strong className="">Location</strong> : <a href={selectedCity.link} target="_blank">{selectedCity.place}</a>
           </p>
           <p className="text-lg">
             <strong className="">Time</strong> : {selectedCity.date}
