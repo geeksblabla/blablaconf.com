@@ -10,7 +10,7 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
     <section
       id="speakers"
-      className="bg-[#7D5842]  mx-auto py-16 text-white bg-gradient-to-r from-[#7C5741] to-[#B28367] overflow-hidden"
+      className="bg-[#53925E]  mx-auto py-16 text-white   overflow-hidden"
     >
       <svg aria-hidden="true" width="0" height="0">
         <defs>
@@ -52,6 +52,14 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   );
 };
 
+const tapePositions = [
+  "-right-4 -top-6 rotate-90",
+  "left-[44%] -top-[42px] rotate-[30deg]",
+  "-left-2 -top-8",
+];
+
+const tapeColors = ["text-white", "text-[#D35747]", "text-[#E7B041]"];
+
 const Speaker = ({
   profilePicture,
   fullName,
@@ -65,25 +73,40 @@ const Speaker = ({
       data-sal="slide-right"
       data-sal-delay={`${(index % 4) * 50}`}
       data-sal-duration="500"
-      className="mx-auto"
+      className="mx-auto group"
     >
       <Link href={`/#speaker-session-${id}`}>
-        <div className="mx-auto rounded-4xl group relative h-[19.5rem] w-[16rem] transform overflow-hidden rounded-md ">
-          <div className="rounded-4xl absolute top-0 left-0 right-4  rounded-md bottom-6  transition duration-300 group-hover:scale-95 xl:right-6"></div>
+        {/* Updated image container */}
+        <div
+          className="mx-auto relative h-[19.5rem] w-[16rem] transform"
+          style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
+        >
+          {/* Image container with updated styling */}
+          <div className="relative h-full w-full rounded-3xl bg-white p-3 shadow-lg">
+            <div className="relative h-full w-full overflow-hidden rounded-xl">
+              <Image
+                alt={`${fullName} profile picture`}
+                width="400"
+                height="400"
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                src={profilePicture}
+              />
+            </div>
+          </div>
+
           <div
-            className="absolute inset-0 bg-indigo-50"
-            style={{ clipPath: "url(#pattern3)" }}
+            className={`absolute ${
+              tapePositions[Math.floor(Math.random() * tapePositions.length)]
+            } w-8 h-2  ${
+              tapeColors[Math.floor(Math.random() * tapeColors.length)]
+            }`}
           >
-            <Image
-              alt={`${fullName} profile picture`}
-              width="400"
-              height="400"
-              className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-              src={profilePicture}
-            />
+            <Tape />
           </div>
         </div>
-        <div className=" text-center">
+
+        {/* Rest of the component remains unchanged */}
+        <div className="text-center">
           <h3 className="font-display mt-4 text-2xl font-bold tracking-tight text-white">
             {fullName}
           </h3>
@@ -151,3 +174,20 @@ const SocialLink = ({
     )}
   </a>
 );
+
+const Tape = () => {
+  return (
+    <svg
+      width="70"
+      height="67"
+      viewBox="0 0 70 67"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M47.2929 65.7929L1.67827 20.1783C1.56126 20.0613 1.47511 19.917 1.42755 19.7585L0.471852 16.5728C0.256587 15.8553 0.877657 15.1646 1.61397 15.3026L6.81571 16.2779C7.43113 16.3933 8 15.9212 8 15.2951V12.5C8 11.9477 8.44771 11.5 9 11.5H14C14.5523 11.5 15 11.0523 15 10.5V8.2198C15 7.58876 15.5773 7.11547 16.1961 7.23922L21.3039 8.26078C21.9227 8.38453 22.5 7.91124 22.5 7.2802V1.41421C22.5 0.523309 23.5771 0.0771418 24.2071 0.707107L68.7929 45.2929C69.4229 45.9229 68.9767 47 68.0858 47H63.284C62.4122 47 61.9579 48.0377 62.5492 48.6783L65.0931 51.4342C65.7313 52.1256 65.1483 53.2355 64.2169 53.1024L55.3304 51.8329C54.457 51.7081 53.8617 52.6931 54.3783 53.4083L58.1217 58.5917C58.6383 59.3069 58.043 60.2919 57.1696 60.1671L50.1414 59.1631C49.539 59.077 49 59.5445 49 60.153V65.0858C49 65.9767 47.9229 66.4229 47.2929 65.7929Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
