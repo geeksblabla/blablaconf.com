@@ -43,7 +43,7 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
           </p>
         </div>
       </div>
-      <div className="mx-auto grid  gap-x-8 gap-y-12 px-4  pt-8 max-w-lg md:max-w-screen-xl md:grid-cols-3 md:px-8 lg:grid-cols-4 mt-8">
+      <div className="mx-auto grid grid-cols-2 gap-x-4 gap-y-12 px-4 pt-8 max-w-lg md:max-w-screen-xl md:grid-cols-3 md:gap-x-8 md:px-8 lg:grid-cols-4 mt-8">
         {speakers.map((speaker: SpeakerType, index: number) => (
           <Speaker {...speaker} key={speaker.fullName} index={index} />
         ))}
@@ -53,12 +53,22 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
 };
 
 const tapePositions = [
-  "-right-4 -top-6 rotate-90",
-  "left-[44%] -top-[42px] rotate-[30deg]",
-  "-left-2 -top-8",
+  "-right-4 md:-top-6 rotate-90 -top-4",
+  "left-[44%] md:-top-[42px] -top-[30px] rotate-[30deg]",
+  "-left-2 md:-top-8 -top-4",
 ];
 
 const tapeColors = ["text-white", "text-[#D35747]", "text-[#E7B041]"];
+
+const cardRotation = [
+  "rotate-[-3deg]",
+  "rotate-[-2deg]",
+  "rotate-[-1deg]",
+  "rotate-0",
+  "rotate-[1deg]",
+  "rotate-[2deg]",
+  "rotate-[3deg]",
+];
 
 const Speaker = ({
   profilePicture,
@@ -70,7 +80,7 @@ const Speaker = ({
 }: SpeakerType & { index: number }) => {
   return (
     <div
-      data-sal="slide-right"
+      data-sal="slide-up"
       data-sal-delay={`${(index % 4) * 50}`}
       data-sal-duration="500"
       className="mx-auto group"
@@ -78,11 +88,12 @@ const Speaker = ({
       <Link href={`/#speaker-session-${id}`}>
         {/* Updated image container */}
         <div
-          className="mx-auto relative h-[19.5rem] w-[16rem] transform"
-          style={{ transform: `rotate(${Math.random() * 6 - 3}deg)` }}
+          className={`mx-auto relative h-[14rem] w-[11rem] md:h-[19.5rem] md:w-[16rem] transform transition duration-300 ${
+            cardRotation[index % cardRotation.length]
+          } group-hover:rotate-0`}
         >
           {/* Image container with updated styling */}
-          <div className="relative h-full w-full rounded-3xl bg-white p-3 shadow-lg">
+          <div className="relative h-full w-full rounded-3xl bg-white p-2 md:p-3 shadow-lg">
             <div className="relative h-full w-full overflow-hidden rounded-xl">
               <Image
                 alt={`${fullName} profile picture`}
@@ -97,7 +108,7 @@ const Speaker = ({
           <div
             className={`absolute ${
               tapePositions[Math.floor(Math.random() * tapePositions.length)]
-            } w-8 h-2  ${
+            } w-4 h-1.5 md:w-8 md:h-2  ${
               tapeColors[Math.floor(Math.random() * tapeColors.length)]
             }`}
           >
@@ -107,10 +118,12 @@ const Speaker = ({
 
         {/* Rest of the component remains unchanged */}
         <div className="text-center">
-          <h3 className="font-display mt-4 text-2xl font-bold tracking-tight text-white">
+          <h3 className="font-display mt-4 text-xl md:text-2xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
             {fullName}
           </h3>
-          <p className="mt-1 text-base text-gray-50">{tagLine}</p>
+          <p className="mt-1 text-sm md:text-base text-gray-50 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
+            {tagLine}
+          </p>
         </div>
       </Link>
       <Links links={links} />
@@ -139,14 +152,14 @@ const SocialLink = ({
 }) => (
   <a
     href={href}
-    className="pr-2 cursor-pointer"
+    className="pr-2 cursor-pointer drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]"
     target="_blank"
     rel="noreferrer"
   >
     {type === "Twitter" ? (
       <svg
         viewBox="0 0 22 22"
-        className="w-[24px] h-[24px] p-1 hover:text-[#3a322b]"
+        className="w-[24px] h-[24px] p-1 hover:scale-125 transition-all duration-300"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -160,7 +173,7 @@ const SocialLink = ({
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className="w-[25px] h-[25px] p-1 hover:text-[#3a322b]"
+        className="w-[25px] h-[25px] p-1 hover:scale-125 transition-all duration-300"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -178,10 +191,9 @@ const SocialLink = ({
 const Tape = () => {
   return (
     <svg
-      width="70"
-      height="67"
       viewBox="0 0 70 67"
       fill="none"
+      className="md:w-[70px] md:h-[67px] w-[50px] h-[49px]"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
