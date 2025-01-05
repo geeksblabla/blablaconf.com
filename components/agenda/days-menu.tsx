@@ -57,33 +57,17 @@ export const DaysMenu = ({
       (entries) => {
         entries.forEach((entry) => {
           const id = entry.target.getAttribute("id");
-
           const selector = `a[href='#${id}']`;
-
           if (!document.querySelector(selector)) return;
-          const iconSelector = `icon-${id?.split("-")[1]}`;
+
+          const el = document.querySelector(selector);
           if (entry.intersectionRatio > 0.1) {
-            const el = document.querySelector(selector);
-            const icon = document.getElementById(iconSelector);
             if (!isClick.current) {
               scrollToPosition(id);
             }
-            el?.classList.add("text-gray-900");
-            icon?.classList.remove("bg-white/80");
-            icon?.classList.remove("text-[#7D5841]");
-            icon?.classList.add("text-white");
-            icon?.classList.add("bg-[#7D5841]");
-            icon?.classList.add("animate-swing");
+            el?.setAttribute("data-active", "true");
           } else {
-            const el = document.querySelector(selector);
-            el?.classList.remove("text-gray-900");
-
-            const icon = document.getElementById(iconSelector);
-            icon?.classList.remove("animate-swing");
-            icon?.classList.remove("text-white");
-            icon?.classList.remove("bg-[#7D5841]");
-            icon?.classList.add("bg-white/80");
-            icon?.classList.add("text-[#7D5841]");
+            el?.setAttribute("data-active", "false");
           }
         });
       },
@@ -107,7 +91,7 @@ export const DaysMenu = ({
       className="sticky md:top-2 top-0  md:h-full h-fit overflow-scroll md:overflow-visible scroll-smooth md:bg-transparent  bg-white/60 z-40 hidden md:block xl:ml-0 lg:ml-5"
     >
       <div className="md:mt-8 mt-1">
-        <ul className="md:pt-6 pt-3 relative md:border-l-[1px] md:border-t-[0px] border-t-[1px] border-l-[0px] border-white/80 pr-12 h-fit w-fit flex flex-row md:flex-col lg:pl-0 md:pl-8">
+        <ul className="md:pt-6 pt-3 relative  pr-12 h-fit w-fit flex flex-row md:flex-col lg:pl-0 md:pl-8">
           {days.map((day, index) => {
             return (
               <Day
@@ -137,43 +121,32 @@ const Day = ({
   onClick: () => void;
 }) => {
   return (
-    <li className="relative mb-16 h-16 py-auto  ml-4  md:w-[350px] w-[300px] text-[#5E330E]">
+    <li>
       <a
+        data-active={index === 0}
         onClick={() => onClick()}
         href={`#day-${index}`}
-        className="transition-all duration-75"
+        className="block group relative mb-8
+        min-w-[350px]
+        my-.5 px-8 pt-1 pb-2 pr-16  ml-4 bg-[#F5EFE5] data-[active=true]:bg-[#E7B041] hover:bg-[#E7B041] rounded-xl shadow-[0px_0px_0px_0px_black] hover:shadow-[3px_3px_0px_0px_black] hover:translate-x-[2px] hover:translate-y-[2px] data-[active=true]:shadow-[5px_5px_0px_0px_black] data-[active=true]:hover:translate-x-[2px] data-[active=true]:hover:translate-y-[2px] data-[active=true]:hover:shadow-[3px_3px_0px_0px_black] transition-all duration-300"
         data-sal="fade"
         data-sal-delay={`${index * 100}`}
         data-sal-duration="400"
       >
-        <div
-          id={`icon-${index}`}
-          className="flex absolute md:-left-[49px] left-0  justify-center items-center md:w-16 md:h-16 w-12 h-12 rounded-full bg-white/80 text-[#7D5841]"
-        >
-          <p className="absolute text-xs mt-[6px]"> {19 + index}</p>
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="md:w-6 md:h-6 h-4 w-4"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M7.38462 0C8.06435 0 8.61539 0.551034 8.61539 1.23077V3.69231H23.3846V1.23077C23.3846 0.551034 23.9357 0 24.6154 0C25.2951 0 25.8462 0.551034 25.8462 1.23077V3.69231H27.0769C29.7959 3.69231 32 5.89644 32 8.61539V27.0769C32 29.7959 29.7959 32 27.0769 32H4.92308C2.20414 32 0 29.7959 0 27.0769V8.61539C0 5.89644 2.20414 3.69231 4.92308 3.69231H6.15385V1.23077C6.15385 0.551034 6.70488 0 7.38462 0ZM29.5385 14.7692C29.5385 13.4098 28.4364 12.3077 27.0769 12.3077H4.92308C3.56361 12.3077 2.46154 13.4098 2.46154 14.7692V27.0769C2.46154 28.4364 3.56361 29.5385 4.92308 29.5385H27.0769C28.4364 29.5385 29.5385 28.4364 29.5385 27.0769V14.7692Z"
-              fill="currentColor"
-            />
-          </svg>
-        </div>
-        <div className="ml-8 pt-2">
-          <time className="block text-xs md:text-sm font-normal leading-none text-gradient">
-            {day}
-          </time>
-          <h3 className="flex items-center  text-xl md:text-lg font-bold text-gradient">
-            {title}
-          </h3>
+        <div className="flex flex-col">
+          <div className="flex items-center gap-2 text-[#E7B041]">
+            <span className="text-[40px] font-extrabold font-sans text-[#E7B041]  group-hover:text-[#53925E]   group-data-[active=true]:text-[#53925E] uppercase tracking-wide fill-current [-webkit-text-stroke:_1.5px_black] [text-shadow:_2px_2px_0_black,_3px_3px_0_black] ">
+              {day}
+            </span>
+            <span
+              className="text-[40px] font-extrabold text-[#E7B041] group-hover:text-[#D35747] group-data-[active=true]:text-[#D35747] font-muraba uppercase tracking-wide fill-current [-webkit-text-stroke:_.5px_black] [text-shadow:_2px_2px_0_black,_3px_3px_0_black]
+              pt-2
+            "
+            >
+              February
+            </span>
+          </div>
+          <span className="text-base text-right text-black -mt-3">{title}</span>
         </div>
       </a>
     </li>

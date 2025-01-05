@@ -11,23 +11,23 @@ import { InPersonDays } from "./in-person-days";
 const days_titles = [
   {
     title: "UX, Web & Mobile",
-    date: "February 19",
+    date: "03",
   },
   {
     title: "Big Data & Machine Learning",
-    date: "February 20",
+    date: "04",
   },
   {
     title: "Backend & Programming Languages",
-    date: "February 21",
+    date: "05",
   },
   {
     title: "Cloud, Containers & Infrastructure",
-    date: "February 22",
+    date: "06",
   },
   {
     title: "Security & Architecture ",
-    date: "February 23",
+    date: "07",
   },
   // {
   //   title: "In Person Day",
@@ -60,14 +60,18 @@ const cities = [
 
 export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
   return (
-    <section id="agenda" className="mx-auto py-16 text-[#835E47]">
+    <section id="agenda" className="mx-auto py-16 text-[#EEE1C5] bg-[#EEE1C5]">
       <div className="overflow-hidden">
-        <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
-          <div className="absolute bg-[url('/images/min-pattern.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
-          <div className="flex md:flex-row flex-col md:items-center  md:px-8 px-4 py-4">
-            <div className="flex  ">
-              <h1 className="text-4xl sm:text-6xl text-[#835E47] font-bold  capitalize mb-3 mr-6  z-10">
-                Agenda
+        <div className="relative bg-[#EEE1C5] mx-auto max-w-lg md:max-w-screen-xl my-5">
+          <div className="flex flex-col items-center md:px-8 px-4 py-4 text-center pt-10 ">
+            <div className="flex">
+              <h1 className="relative text-6xl sm:text-7xl font-bold capitalize mb-3 mr-6 z-10">
+                <span className="block text-[#4A7B5A] font-muraba font-bold fill-current [-webkit-text-stroke:_.5px_black] [text-shadow:_2px_2px_0_black,_3px_3px_0_black]">
+                  برنامـج
+                </span>
+                <span className="block text-[#E8B448] font-muraba font-bold fill-current -mt-2 [-webkit-text-stroke:_.5px_black] [text-shadow:_2px_2px_0_black,_3px_3px_0_black]">
+                  Agenda
+                </span>
               </h1>
             </div>
 

@@ -5,6 +5,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "../styles/globals.css";
 import "sal.js/dist/sal.css";
 import { SalLoader } from "@/components/sal-loader";
+import localFont from "next/font/local";
 
 // import localFont from "@next/font/local";
 
@@ -44,7 +45,12 @@ export const metadata: Metadata = {
 const cairo = Cairo({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-cairo",
+});
+
+const muraba = localFont({
+  src: "../styles/Muraba.otf",
+  variable: "--font-muraba",
 });
 
 export default function RootLayout({
@@ -53,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cairo.variable} `}>
+    <html lang="en" className={`${cairo.variable} ${muraba.variable}`}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
