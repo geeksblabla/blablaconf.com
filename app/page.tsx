@@ -18,8 +18,8 @@ export default async function Home() {
     <div>
       <Hero />
       <Tracks />
-      <Community />
       <Sponsors />
+      <Community />
 
       <Speakers speakers={speakers} />
       <Agenda days={days} />

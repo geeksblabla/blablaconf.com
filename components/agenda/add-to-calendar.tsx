@@ -36,7 +36,7 @@ export const AddToCalendar = ({
     return (
       <button
         onClick={onClick}
-        className="relative mt-4 ml-1 rounded-full   bg-white/60 w-10 h-10 flex items-center justify-center font-medium  hover:scale-105 transition-all min-w-[40px]"
+        className="relative mt-4 ml-1 rounded-full   bg-transparent w-10 h-10 flex items-center justify-center font-medium  hover:scale-105 transition-all min-w-[40px]"
       >
         <svg
           width="32"
@@ -50,7 +50,7 @@ export const AddToCalendar = ({
             fillRule="evenodd"
             clipRule="evenodd"
             d="M7.38462 0C8.06435 0 8.61539 0.551034 8.61539 1.23077V3.69231H23.3846V1.23077C23.3846 0.551034 23.9357 0 24.6154 0C25.2951 0 25.8462 0.551034 25.8462 1.23077V3.69231H27.0769C29.7959 3.69231 32 5.89644 32 8.61539V27.0769C32 29.7959 29.7959 32 27.0769 32H4.92308C2.20414 32 0 29.7959 0 27.0769V8.61539C0 5.89644 2.20414 3.69231 4.92308 3.69231H6.15385V1.23077C6.15385 0.551034 6.70488 0 7.38462 0ZM29.5385 14.7692C29.5385 13.4098 28.4364 12.3077 27.0769 12.3077H4.92308C3.56361 12.3077 2.46154 13.4098 2.46154 14.7692V27.0769C2.46154 28.4364 3.56361 29.5385 4.92308 29.5385H27.0769C28.4364 29.5385 29.5385 28.4364 29.5385 27.0769V14.7692Z"
-            fill="#7D5841"
+            fill="#000000"
           />
         </svg>
       </button>
@@ -59,7 +59,7 @@ export const AddToCalendar = ({
     return (
       <button
         onClick={onClick}
-        className="relative px-5 py-2 rounded-full border-2  bg-white/60 flex items-center justify-center font-medium  hover:scale-105 transition-all "
+        className="relative px-5 py-2 rounded-full border-2  bg-transparent flex items-center justify-center font-medium  hover:scale-105 transition-all "
       >
         <svg
           width="32"
@@ -73,10 +73,10 @@ export const AddToCalendar = ({
             fillRule="evenodd"
             clipRule="evenodd"
             d="M7.38462 0C8.06435 0 8.61539 0.551034 8.61539 1.23077V3.69231H23.3846V1.23077C23.3846 0.551034 23.9357 0 24.6154 0C25.2951 0 25.8462 0.551034 25.8462 1.23077V3.69231H27.0769C29.7959 3.69231 32 5.89644 32 8.61539V27.0769C32 29.7959 29.7959 32 27.0769 32H4.92308C2.20414 32 0 29.7959 0 27.0769V8.61539C0 5.89644 2.20414 3.69231 4.92308 3.69231H6.15385V1.23077C6.15385 0.551034 6.70488 0 7.38462 0ZM29.5385 14.7692C29.5385 13.4098 28.4364 12.3077 27.0769 12.3077H4.92308C3.56361 12.3077 2.46154 13.4098 2.46154 14.7692V27.0769C2.46154 28.4364 3.56361 29.5385 4.92308 29.5385H27.0769C28.4364 29.5385 29.5385 28.4364 29.5385 27.0769V14.7692Z"
-            fill="#7D5841"
+            fill="#00000"
           />
         </svg>
-        <span className="text-gradient">Add to calendar </span>
+        <span className="text-black/80">Add to calendar </span>
       </button>
     );
   }
