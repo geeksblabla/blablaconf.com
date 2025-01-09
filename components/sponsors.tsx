@@ -1,7 +1,7 @@
 import Image from "next/image";
 import I1337Src from "../images/sponsors/1337.png";
 import intelciaSrc from "../images/sponsors/intelcia.png";
-import sponsorsTitle from "../images/partners-title.png";
+import sponsorsTitle from "../images/titles/partners.png";
 export const Sponsors = () => {
   return (
     <>

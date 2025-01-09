@@ -1,14 +1,14 @@
 import Image, { StaticImageData } from "next/image";
 
-import nourSrc from "../images/tweets_avatars/nour.jpg";
-import amineSrc from "../images/tweets_avatars/amin.jpg";
-import sanaaSrc from "../images/tweets_avatars/sanaa.jpg";
-import brahimSrc from "../images/tweets_avatars/brahim.jpg";
-import afafSrc from "../images/tweets_avatars/afaf.jpg";
-import mohamedSrc from "../images/tweets_avatars/mohamed.png";
-import t1337Src from "../images/tweets_avatars/1337.jpg";
-import wafSrc from "../images/tweets_avatars/waf.jpg";
-
+import nourSrc from "@/images/tweets_avatars/nour.jpg";
+import amineSrc from "@/images/tweets_avatars/amin.jpg";
+import sanaaSrc from "@/images/tweets_avatars/sanaa.jpg";
+import brahimSrc from "@/images/tweets_avatars/brahim.jpg";
+import afafSrc from "@/images/tweets_avatars/afaf.jpg";
+import mohamedSrc from "@/images/tweets_avatars/mohamed.png";
+import t1337Src from "@/images/tweets_avatars/1337.jpg";
+import wafSrc from "@/images/tweets_avatars/waf.jpg";
+import reviewsTitle from "@/images/titles/reviews.png";
 const tweets: TweetType[][] = [
   [
     {
@@ -77,15 +77,19 @@ const tweets: TweetType[][] = [
 
 export const Reviews = () => {
   return (
-    <section
-      id="reviews"
-      className="py-16 px-4 bg-gradient-to-r from-[#9E735A] to-[#A77A60] text-white"
-    >
-      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 justify-center text-center">
-        <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-5xl md:leading-tight capitalize  ">
-          What community members <br /> say about the conference
-        </h2>
-        <p className="mb-12 text-lg font-medium leading-normal ">
+    <section id="reviews" className="py-16 px-4 bg-[#E9D1AD]/50 text-black/70">
+      <div className="mx-auto ">
+        <Image
+          src={reviewsTitle}
+          alt="reviews title"
+          className="mx-auto md:max-h-[160px] max-h-[120px] object-contain"
+        />
+        <p
+          className="mb-12 text-lg text-center font-medium leading-normal "
+          ata-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="500"
+        >
           We love our community and our community loves us back ❤️ 💚
         </p>
       </div>
@@ -123,7 +127,7 @@ const Tweet = ({
   <div
     className={`${
       !featured ? "hidden md:block" : ""
-    }relative md:block rounded-xl overflow-hidden p-5  hover:scale-[1.03] hover:shadow-lg transition-all bg-[#906850]`}
+    }relative md:block rounded-xl overflow-hidden p-5  hover:scale-[1.03] hover:shadow-lg transition-all bg-[#EFE1C5]`}
     data-sal="slide-down"
     data-sal-delay={`${index * 130}`}
     data-sal-duration="500"
@@ -134,14 +138,14 @@ const Tweet = ({
         src={avatar}
         width={50}
         height={50}
-        className="w-12 h-12 object-cover rounded-full"
+        className="w-12 h-12 object-cover rounded-lg border-2 border-white"
       />
       <div className="flex flex-col ml-3">
-        <h3 className="text-white font-bold">{name}</h3>
-        <p className="text-white/60 text-sm">{handle}</p>
+        <h3 className="text-black font-bold">{name}</h3>
+        <p className="text-black/60 text-sm">{handle}</p>
       </div>
     </div>
-    <p className="text-white/90 text-md mt-5">
+    <p className="text-black/90 text-md mt-5">
       {text.split("\n").map((t, i) => (
         <span key={`tweet${i}`}>
           {t}

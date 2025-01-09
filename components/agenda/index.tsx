@@ -4,10 +4,9 @@ import Link from "next/link";
 import { SessionTime } from "../session-time";
 import { AddToCalendar } from "./add-to-calendar";
 import { DaysMenu } from "./days-menu";
-import { SVGProps } from "react";
 import Image from "next/image";
 import { InPersonDays } from "./in-person-days";
-import agendaTitle from "../../images/agenda-title.png";
+import agendaTitle from "@/images/titles/agenda.png";
 
 const days_titles = [
   {

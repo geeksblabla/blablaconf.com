@@ -5,7 +5,7 @@ import secArchImage from "../images/tracks/sec-arch.png";
 import bigDataImage from "../images/tracks/big-data.png";
 import cloudImage from "../images/tracks/cloud.png";
 import softSkillsImage from "../images/tracks/soft-skills.png";
-import tracksTitle from "../images/tracks-title.png";
+import tracksTitle from "../images/titles/tracks.png";
 const tracks = [
   {
     title: "Web, \n mobile & UX",

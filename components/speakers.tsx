@@ -4,7 +4,7 @@ import type {
   Speaker as SpeakerType,
   SpeakerLink as SpeakerLinkType,
 } from "@/utils/sessionize";
-import speakersTitle from "../images/speakers-title.png";
+import speakersTitle from "../images/titles/speakers.png";
 import Link from "next/link";
 
 export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
