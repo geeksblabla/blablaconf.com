@@ -5,6 +5,7 @@ import secArchImage from "../images/tracks/sec-arch.png";
 import bigDataImage from "../images/tracks/big-data.png";
 import cloudImage from "../images/tracks/cloud.png";
 import softSkillsImage from "../images/tracks/soft-skills.png";
+import tracksTitle from "../images/tracks-title.png";
 const tracks = [
   {
     title: "Web, \n mobile & UX",
@@ -54,23 +55,30 @@ export const Tracks = () => {
   return (
     <section id="tracks" className="py-16">
       <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
-        <h2
+        <div className="mx-auto ">
+          <Image
+            src={tracksTitle}
+            alt="tracks title"
+            className="mx-auto md:max-h-[140px] max-h-[120px] object-contain"
+          />
+          <p
+            className="my-6 text-base text-center  font-[400] text-[#282828]/60 leading-normal max-w-[450px] mx-auto "
+            ata-sal="fade"
+            data-sal-delay="100"
+            data-sal-duration="500"
+          >
+            5 tracks covering everything you need to sharpen your IT skills.
+            <br /> 1 additional track because excellence is not only about code!
+          </p>
+        </div>
+        {/* <h2
           className="mb-4 text-6xl font-bold md:mb-6 md:text-7xl capitalize text-center text-gradient"
           ata-sal="fade"
           data-sal-delay="100"
           data-sal-duration="500"
         >
           5 + 1 Tracks
-        </h2>
-        <p
-          className="mb-12 text-xl text-center font-[400] text-[#282828] leading-normal max-w-[650px] mx-auto "
-          ata-sal="fade"
-          data-sal-delay="100"
-          data-sal-duration="500"
-        >
-          5 tracks covering everything you need to sharpen your IT skills. 1
-          additional track because excellence is not only about code!
-        </p>
+        </h2> */}
       </div>
       <div className="mx-auto  grid max-w-screen-xl grid-cols-1 gap-6 py-6  sm:px-6 md:grid-cols-2 lg:grid-cols-3 md:px-8 px-4">
         {tracks.map((track, index) => (

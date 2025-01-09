@@ -99,6 +99,7 @@ module.exports = {
         sans: ["var(--font-cairo)", ...fontFamily.sans],
         almaghribi: ["var(--font-almaghribi)"],
         muraba: ["var(--font-muraba)"],
+        murabaOutline: ["var(--font-muraba-outline)"],
       },
       colors: {
         primary: {

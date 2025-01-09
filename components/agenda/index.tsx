@@ -7,6 +7,7 @@ import { DaysMenu } from "./days-menu";
 import { SVGProps } from "react";
 import Image from "next/image";
 import { InPersonDays } from "./in-person-days";
+import agendaTitle from "../../images/agenda-title.png";
 
 const days_titles = [
   {
@@ -63,23 +64,24 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
     <section id="agenda" className="mx-auto py-16 text-[#EEE1C5] bg-[#EEE1C5]">
       <div className="overflow-hidden">
         <div className="relative bg-[#EEE1C5] mx-auto max-w-lg md:max-w-screen-xl my-5">
-          <div className="flex flex-col items-center md:px-8 px-4 py-4 text-center pt-10 ">
-            <div className="flex">
-              <h1 className="relative text-6xl sm:text-7xl font-bold capitalize mb-3 mr-6 z-10">
-                <span className="block text-[#4A7B5A] font-muraba font-bold fill-current [-webkit-text-stroke:_.5px_black] [text-shadow:_2px_2px_0_black,_3px_3px_0_black]">
-                  برنامـج
-                </span>
-                <span className="block text-[#E8B448] font-muraba font-bold fill-current -mt-2 [-webkit-text-stroke:_.5px_black] [text-shadow:_2px_2px_0_black,_3px_3px_0_black]">
-                  Agenda
-                </span>
-              </h1>
+          <div className="flex flex-col items-center md:px-8 px-4 py-4 text-center ">
+            <div className="mx-auto ">
+              <Image
+                src={agendaTitle}
+                alt="agenda title"
+                className="mx-auto md:max-h-[160px] max-h-[120px] object-contain"
+              />
+              <p
+                className="my-6 text-base text-center  font-[400] text-[#282828]/60 leading-normal max-w-[450px] mx-auto "
+                ata-sal="fade"
+                data-sal-delay="100"
+                data-sal-duration="500"
+              >
+                Make sure to not miss any talks by adding them to your calendar.
+                <br />
+                PS:The schedule below is Moroccan Timezone (GMT+1)
+              </p>
             </div>
-
-            <p className="text-lg font-medium leading-6  text-[#835E47] max-w-[650px]  z-10 ">
-              Make sure to not miss any talks by adding them to your calendar.
-              <br />
-              PS:The schedule below is Moroccan Timezone (GMT+1)
-            </p>
           </div>
         </div>
       </div>

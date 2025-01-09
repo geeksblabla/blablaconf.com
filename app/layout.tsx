@@ -3,8 +3,8 @@ import { Header } from "@/components/header";
 import { Cairo } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../styles/globals.css";
-import "sal.js/dist/sal.css";
-import { SalLoader } from "@/components/sal-loader";
+// import "sal.js/dist/sal.css";
+// import { SalLoader } from "@/components/sal-loader";
 import localFont from "next/font/local";
 
 // import localFont from "@next/font/local";
@@ -53,20 +53,28 @@ const muraba = localFont({
   variable: "--font-muraba",
 });
 
+const murabaOutline = localFont({
+  src: "../styles/Muraba-outline.otf",
+  variable: "--font-muraba-outline",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${cairo.variable} ${muraba.variable}`}>
+    <html
+      lang="en"
+      className={`${cairo.variable} ${muraba.variable} ${murabaOutline.variable}`}
+    >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <SalLoader />
-      <body className="bg-gradient-to-b from-[#EFEAE4] via-[#E8DBD0] to-[#EFEAE4]">
+      {/* <SalLoader /> */}
+      <body className="bg-[#EFE1C5]">
         <Header />
         {children}
         <Footer />
