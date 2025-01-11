@@ -103,23 +103,6 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
                   </h1>
                 </div>
                 <div className="px-4 md:px-0">
-                  {index === 5 && (
-                    <p className="text-md font-medium text-gray-600 leading-normal max-w-[650px]">
-                      Location :{" "}
-                      <span className="text-lg font-medium text-gray-800">
-                        EMSI Moulay Youssef, Casablanca
-                      </span>
-                      <a
-                        href="https://goo.gl/maps/3ZFXp2iVJkgQpXEf7"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-md underline underline-offset-1 pl-2"
-                      >
-                        View on Google Maps
-                      </a>
-                    </p>
-                  )}
-
                   {day.sessions.map((session, index) => {
                     return (
                       <Session
