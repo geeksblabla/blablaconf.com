@@ -3,7 +3,7 @@ import { LogoWhite } from "./logo";
 
 export const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-[#7D5841] to-[#A77A60] text-white text-center font-[400]">
+    <div className=" bg-[#53925E] text-white text-center font-[400]">
       <div className="mx-auto max-w-screen-xl px-4 py-10 sm:px-20 xl:px-10 pt-16">
         <div className=" py-4">
           <div className="mb-6 flex h-10 items-center justify-center space-x-2 mx-auto ">
@@ -218,8 +218,8 @@ export const Footer = () => {
           </div>
         </nav>
       </div>
-      <div className="bg-[#7E5942]">
-        <div className="mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-white sm:px-20 lg:flex-row lg:justify-center lg:text-left xl:px-10">
+      <div className="bg-[#53925E] py-4">
+        <div className=" rounded-md mx-auto flex max-w-screen-xl flex-col gap-y-4 px-4 py-3 text-center text-white sm:px-20 lg:flex-row lg:justify-center lg:text-left xl:px-10 bg-[#E7B041] w-fit shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black ">
           <p className="mr-2">Made with ❤️ by Geeksblabla Team </p>{" "}
           <p className="">
             {" "}
