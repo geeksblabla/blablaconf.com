@@ -40,29 +40,13 @@ export const Sponsors = () => {
             <a
               href="https://1337.ma"
               target="_blank"
-              className="py-8 md:w-80 w-[60%] md:mx-16 mx-0   hover:scale-105 cursor-pointer transition-all"
+              className="block w-fit bg-white/30  rounded-full px-8 py-5 hover:scale-105 cursor-pointer transition-all"
               rel="noreferrer"
             >
               <Image
-                height={200}
-                width={551}
                 src={I1337Src}
                 alt=""
-                className=" "
-              />
-            </a>
-            <a
-              href="https://www.intelcia.com/"
-              target="_blank"
-              className="py-8 md:w-80 w-[60%] md:mx-16 mx-0  hover:scale-105 cursor-pointer transition-all"
-              rel="noreferrer"
-            >
-              <Image
-                height={144}
-                width={549}
-                src={intelciaSrc}
-                alt=""
-                className=""
+                className="h-[50px] w-auto  mx-auto"
               />
             </a>
           </div>

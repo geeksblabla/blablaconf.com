@@ -136,7 +136,7 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
           <div className="md:pt-16 pt-3" />
         </div>
       </div>
-      <InPersonDays />
+      {/* <InPersonDays /> */}
     </section>
   );
 };
