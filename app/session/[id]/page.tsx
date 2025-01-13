@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                   <p className="pl-4 text-2xl font-bold ">
                     {speaker.fullName}
                     <br />
-                    <span className="font-normal leading-tight text-base ">
+                    <span className="font-normal leading-[0.5rem] text-base ">
                       {speaker.tagLine}{" "}
                     </span>
                   </p>
