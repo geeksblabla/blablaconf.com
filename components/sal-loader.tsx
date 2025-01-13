@@ -5,7 +5,7 @@ import sal from "sal.js";
 
 export const SalLoader = () => {
   const pathname = usePathname();
-  const salRef = useRef<sal.API>();
+  const salRef = useRef<sal.API>(undefined);
 
   useEffect(() => {
     if (salRef.current) {

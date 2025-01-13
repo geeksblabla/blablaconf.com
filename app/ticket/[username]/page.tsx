@@ -3,11 +3,12 @@ import { getUserInfo } from "@/utils/ticket-service";
 import type { Metadata } from "next";
 
 type Props = {
-  params: { username: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ username: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   // read route params
   const { metadata } = await getUserInfo(params.username);
 
@@ -19,7 +20,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {};
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page(props: Props) {
+  const params = await props.params;
   const { user } = await getUserInfo(params.username);
   return <TicketHero {...user} url={undefined} />;
 }

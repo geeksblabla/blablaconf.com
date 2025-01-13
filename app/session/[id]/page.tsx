@@ -12,7 +12,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const session = await getSession(params.id);
   if (session === undefined) {
     return (
