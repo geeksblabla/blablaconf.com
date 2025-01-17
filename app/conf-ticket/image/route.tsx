@@ -108,16 +108,15 @@ export async function GET(request: Request) {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                justifyContent: "center",
                 marginRight: 30,
               }}
             >
               <span
                 style={{
                   color: "black",
-                  textAlign: "right",
                   fontWeight: "bold",
                   fontSize: 30,
+                  maxWidth: 290,
                 }}
               >
                 {name}
