@@ -56,7 +56,7 @@ export const Header = () => {
                   data-sal-duration="1000"
                 >
                   <a
-                    className="text-[#3F2617]/70 font-medium text-xl hover:text-[#3F2617]"
+                    className="text-[#061431]/70 font-medium text-xl hover:text-[#061431]"
                     href={link.href}
                   >
                     {link.label}

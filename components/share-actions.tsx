@@ -32,7 +32,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
   return (
     <div className="flex md:flex-row flex-col items-center mt-4">
       <button
-        className="shrink-0 relative px-8 py-2 rounded-full  bg-white/60  font-medium  hover:scale-105 transition-all "
+        className="text-white px-6 py-2 rounded-md bg-[#53925E] text-base min-w-[110px] text-center self-end shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
         onClick={() => {
           setCopied(true);
           copyToClipboard(shareUrl);
@@ -42,24 +42,27 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
       </button>
       <div className="flex md:flex-row flex-col justify-center items-center">
         <p className="mx-2 md:my-0 my-2">Or share on </p>
-        <div>
-          <FacebookShareButton url={shareUrl} className="mx-2 hover:scale-105">
-            <Facebook className="bg-slate-100 rounded-full  text-gray-500 border-solid" />
+        <div className="flex gap-2">
+          <FacebookShareButton
+            url={shareUrl}
+            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-[#53925E] text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
+          >
+            <Facebook className="text-white" />
           </FacebookShareButton>
           <TwitterShareButton
             url={shareUrl}
             title={share_message}
-            className="mx-2 hover:scale-105"
+            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-[#53925E] text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
           >
-            <Twitter className="bg-slate-100 rounded-full text-gray-500" />
+            <Twitter className="text-white" />
           </TwitterShareButton>
           <LinkedinShareButton
             url={shareUrl}
-            className="mx-2 hover:scale-105"
+            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-[#53925E] text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
             windowWidth={750}
             windowHeight={600}
           >
-            <Linkedin className="bg-slate-100 rounded-full text-gray-500 " />
+            <Linkedin className="text-white" />
           </LinkedinShareButton>
         </div>
       </div>

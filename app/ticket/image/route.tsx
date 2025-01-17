@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
+import { env } from "process";
 // App router includes @vercel/og.
 // No need to install it.
 
@@ -6,6 +8,8 @@ export const runtime = "edge";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
+  const templateImage =
+    process.env.NEXT_PUBLIC_HOST + "/images/ticket-template.png";
 
   // ?title=<title>
   const hasName = searchParams.has("name");
@@ -54,7 +58,7 @@ export async function GET(request: Request) {
           display: "flex",
           fontSize: 60,
           color: "black",
-          background: "#f6f6f6",
+          background: "#EFE1C5",
           width: "100%",
           height: "100%",
           flexDirection: "column",
@@ -62,97 +66,109 @@ export async function GET(request: Request) {
           alignItems: "center",
         }}
       >
-        <img
-          width="1200"
-          height="630"
-          src={`https://res.cloudinary.com/duko2tssr/image/upload/v1707080203/Geeksblabla_Ticket_1_mhwfo1.jpg`}
-        />
         <div
           style={{
+            position: "relative",
             display: "flex",
-            position: "absolute",
-            top: 70,
-            left: 0,
-            right: 82,
-            height: 150,
-            flexDirection: "row-reverse",
+            width: "100%",
+            height: "520px",
           }}
         >
           <img
-            width="150"
-            height="150"
             style={{
-              borderRadius: 100,
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
             }}
-            src={avatarUrl}
+            alt="ticket-template"
+            src={templateImage}
           />
           <div
             style={{
               display: "flex",
+              position: "absolute",
+              top: 136,
+              left: 120,
+              height: 150,
               flexDirection: "column",
-              alignItems: "flex-end",
-              justifyContent: "center",
-              marginRight: 30,
             }}
           >
-            <span
+            <img
+              width="166"
+              height="166"
               style={{
-                color: "white",
-                textAlign: "right",
-                fontWeight: "900",
-                fontSize: 37,
+                borderRadius: 10,
+                border: "10px solid #05935B",
+              }}
+              alt="avatar"
+              src={avatarUrl}
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "center",
+                marginRight: 30,
               }}
             >
-              {name}
-            </span>
-            <span
+              <span
+                style={{
+                  color: "black",
+                  textAlign: "right",
+                  fontWeight: "bold",
+                  fontSize: 30,
+                }}
+              >
+                {name}
+              </span>
+              <span
+                style={{
+                  color: "black",
+                  textAlign: "right",
+                  fontSize: 24,
+                  marginTop: 0,
+                }}
+              >
+                @{login}
+              </span>
+            </div>
+            <div
               style={{
-                color: "white",
-                textAlign: "right",
-                fontSize: 30,
-                marginTop: 0,
+                display: "flex",
+                position: "absolute",
+                top: 10,
+                left: 140,
+                textAlign: "center",
+                padding: 10,
+                transform: "rotate(-40deg) scale(0.9)",
+                borderRadius: 20,
+                border: "3px solid #F25644",
               }}
             >
-              @{login}
-            </span>
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            position: "absolute",
-            top: 250,
-            right: 100,
-            height: "auto",
-            width: 310,
-            textAlign: "center",
-            padding: 10,
-            transform: "rotate(-40deg) scale(0.9)",
-            borderRadius: 20,
-            border: "3px solid rgba(255, 255, 255, 0.5)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              width: "100%",
-              borderRadius: 16,
-              padding: 10,
-              border: "3px solid rgba(255, 255, 255, 0.5)",
-            }}
-          >
-            <span
-              style={{
-                color: "white",
-                opacity: 0.6,
-                textAlign: "right",
-                fontWeight: "900",
-                fontSize: 50,
-              }}
-            >
-              N {number}{" "}
-            </span>
+              <div
+                style={{
+                  display: "flex",
+                  borderRadius: 16,
+                  padding: 8,
+                  paddingLeft: 16,
+                  paddingRight: 16,
+                  border: "3px solid #F25644",
+                }}
+              >
+                <span
+                  style={{
+                    color: "#F25644",
+                    // opacity: 0.6,
+                    textAlign: "right",
+                    fontWeight: "900",
+                    fontSize: 40,
+                  }}
+                >
+                  N {number}{" "}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

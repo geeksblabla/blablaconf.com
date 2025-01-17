@@ -10,34 +10,16 @@ type CityType = {
 
 const cities: CityType[] = [
   {
-    name: "Marrakech",
-    date: "February 24, 2pm",
-    place: "Cité d’Innovation de Marrakech",
-    link: "https://maps.app.goo.gl/vwks9iamGTGQkeX26",
-  },
-  {
     name: "Casablanca",
-    date: "February 25, 2pm",
-    place: "TechnoPark Casablanca",
-    link: "https://maps.app.goo.gl/3txCUwG5DbECDRdH6",
-  },
-  {
-    name: "Rabat",
-    date: "March 2, 2pm",
-    place: "Ecole Supérieure Vinci",
-    link: "https://maps.app.goo.gl/6SZNhTBvUMtQjEMAA",
-  },
-  {
-    name: "khouribga",
-    date: "March 3, 2pm",
-    place: "1337 School Khouribga",
-    link: "https://maps.app.goo.gl/XZRrkPHZrwQDRLaf6",
-  },
-  {
-    name: "Tetouane",
-    date: "March 9, 2pm",
+    date: "Coming Soon",
     place: "TBD",
-    link: "",
+    link: "#",
+  },
+  {
+    name: "Marrakech",
+    date: "Coming Soon",
+    place: "TBD",
+    link: "#",
   },
 ] as const;
 
@@ -46,23 +28,23 @@ export const InPersonDays = () => {
   return (
     <div
       id="in-person-days"
-      className="relative md:mx-auto mx-3 sm:max-w-xl md:max-w-screen-lg flex md:flex-row flex-col-reverse items-center my-16 min-h-[490px] "
+      className="relative text-[#061431] md:mx-auto mx-3 sm:max-w-xl md:max-w-screen-lg flex md:flex-row flex-col-reverse items-center my-16 min-h-[490px] "
     >
-      <div className=" bg-[#E5D1C3] w-full py-8 px-8 rounded-3xl">
-        <h1 className="md:text-4xl text-2xl font-bold text-gradient  capitalize ">
-          in 4 different locations in Morocco
+      <div className=" bg-[#E9D1AD] w-full py-8 px-8 rounded-3xl">
+        <h1 className="md:text-4xl text-2xl font-bold text-[#061431]  capitalize ">
+          BlablablaConf is also offline
         </h1>
 
-        <div className="mt-8">
+        <div className="mt-8 space-x-4">
           {cities.map((city, index) => (
             <button
               key={`city${index}`}
               onClick={() => setSelectedCity(city)}
               className={`${
                 city.name === selectedCity.name
-                  ? `bg-white border-white`
-                  : `bg-transparent border-[#835E47] border`
-              } py-1 px-6 mr-3 rounded-full my-1`}
+                  ? `text-white px-6 py-2 rounded-md bg-[#D35747] text-base min-w-[110px] text-center self-end shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black`
+                  : `text-[#061431] px-6 py-2 rounded-md bg-transparent min-w-[110px] text-center self-end   border-2 border-black`
+              }`}
             >
               {city.name}
             </button>
@@ -70,16 +52,17 @@ export const InPersonDays = () => {
         </div>
         <div className="my-4">
           <p className="text-lg">
-            <strong className="">Location</strong> : <a href={selectedCity.link} target="_blank">{selectedCity.place}</a>
+            <strong className="">Location</strong> :{" "}
+            <a href={selectedCity.link} target="_blank">
+              {selectedCity.place}
+            </a>
           </p>
           <p className="text-lg">
             <strong className="">Time</strong> : {selectedCity.date}
           </p>
         </div>
       </div>
-      <div className="md:absolute md:right-6 ">
-        <Map />
-      </div>
+      <div className="md:absolute md:right-6 ">{/* <Map /> */}</div>
     </div>
   );
 };
