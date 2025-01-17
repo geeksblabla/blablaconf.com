@@ -6,13 +6,15 @@ import bigDataImage from "../images/tracks/big-data.png";
 import cloudImage from "../images/tracks/cloud.png";
 import softSkillsImage from "../images/tracks/soft-skills.png";
 import tracksTitle from "../images/titles/tracks.png";
+import trackTitle from "../images/titles/track.png";
 const tracks = [
   {
-    title: "Web, \n mobile & UX",
+    title: "Web,\n mobile & UX",
     description:
       "Design and prototype faster, with an entire library of ready components.",
     image: webImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
+    textSize: "text-2xl",
   },
   {
     title: "Backend Technologies & \n Programming languages",
@@ -20,6 +22,7 @@ const tracks = [
       "All about programming languages, functional, reactive, emerging languages, tools, libraries, etc",
     image: backendImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
+    textSize: "text-xl",
   },
   {
     title: "Security & \n Architecture",
@@ -27,6 +30,7 @@ const tracks = [
       "How-Tos, strategies, tools, and best practices for getting architecture and security right.",
     image: secArchImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
+    textSize: "text-2xl",
   },
   {
     title: "Big Data &\n Machine Learning",
@@ -34,6 +38,7 @@ const tracks = [
       "Big Data, Fast Data, NoSQL, Machine learning, Deep Learning, Neural Networks, TensorFlow, etc",
     image: bigDataImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
+    textSize: "text-2xl",
   },
   {
     title: "Cloud, Containers &\n Infrastructure",
@@ -41,13 +46,15 @@ const tracks = [
       "Serverless, Docker, Kubernetes, Service Mesh, Cloud, PaaS, and anything in-between.",
     image: cloudImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
+    textSize: "text-2xl",
   },
   {
-    title: "Soft\n Skills",
+    title: "Soft \n Skills",
     description:
       "Emotional Intelligence, Critical Thinking, Evaluation, Mindfulness, Leadership...",
     image: softSkillsImage,
     tooltip: " بذوق فريد من اعماق تقافتنا",
+    textSize: "text-3xl",
   },
 ];
 
@@ -87,9 +94,17 @@ type TrackType = {
   image: StaticImageData;
   index: number;
   tooltip: string;
+  textSize: string;
 };
 
-const Track = ({ title, description, image, index, tooltip }: TrackType) => {
+const Track = ({
+  title,
+  description,
+  image,
+  index,
+  tooltip,
+  textSize,
+}: TrackType) => {
   const titleStr = title.split("\n").map((str, index) => (
     <span key={index} className="block">
       {str}
@@ -100,32 +115,37 @@ const Track = ({ title, description, image, index, tooltip }: TrackType) => {
       href={`/#day-${index}`}
       className="rounded-xl  p-3  cursor-pointer group flex flex-col items-center bg-[#E9D1AD]"
     >
-      <div className="w-fit flex flex-row relative items-center justify-center overflow-visible rounded-xl bg-contain  bg-no-repeat bg-center">
+      <div className="w-fit h-[150px] flex flex-row relative items-center justify-center overflow-visible rounded-xl bg-contain  bg-no-repeat bg-center">
         {/* <div className="absolute  bottom-0 left-0 top-0 w-full h-full z-10  rounded-xl flex">
           <span className="track-tooltip absolute " data-tooltip={tooltip} />
         </div> */}
-        <div className="flex flex-row items-center justify-center w-1/2">
+        <div className="flex flex-row items-center justify-center w-1/3 ">
           <Image
-            height={200}
-            width={200}
             src={image}
             alt="track photo"
-            className=" transition duration-300 group-hover:animate-swing origin-bottom "
+            className="h-full  max-h-[150px]   origin-bottom "
             data-sal="fade"
             data-sal-delay={`${index * 100}`}
             data-sal-duration="400"
           />
         </div>
-        <div className="flex flex-col items-center justify-center w-1/2 ">
-          <h2 className="text-2xl font-bold capitalize text-center text-gradient leading-tight">
+        <div className="flex flex-col items-center justify-center w-2/3 ">
+          <Image
+            src={trackTitle}
+            alt="track photo"
+            className="max-w-[100px] origin-bottom "
+          />
+          <h2
+            className={` font-bold capitalize text-center text-[#D35747] leading-tight ${textSize}`}
+          >
             {titleStr}
           </h2>
         </div>
       </div>
-      <div className="w-full border-[#CA8030]  border-b-2 border-dashed " />
+      <div className="w-full border-[#CA8030] mt-2  border-b-2 border-dashed " />
 
       <div
-        className="mt-1 p-2 max-w-[330px] mx-auto"
+        className=" p-2 max-w-[330px] mx-auto"
         data-sal="fade"
         data-sal-delay={`${index * 100}`}
         data-sal-duration="500"
