@@ -33,13 +33,18 @@ export const Hero = () => {
             <br /> من جديد */}
             </p>
 
-            <div className="text-[#061431]  md:text-2xl text-xl md:max-w-[350px] max-w-[300px] text-center">
+            <div
+              data-sal="fade"
+              data-sal-delay="200"
+              data-sal-duration="500"
+              className="text-[#061431]  md:text-2xl text-xl md:max-w-[350px] max-w-[300px] text-center"
+            >
               <p className="  mb-1">
                 {" "}
-                من 19 حتى 23 فبراير وجدو راسكم لخمسيام ديال الإفادة والفراجة
+                من 03 حتى 07 فبراير وجدو راسكم لخمسيام ديال الإفادة والفراجة
               </p>
             </div>
-            <div>
+            <div data-sal="fade" data-sal-delay="300" data-sal-duration="500">
               {/* <YoutubeButton className="hidden md:block" /> */}
               <TicketButton className="hidden md:block" />
             </div>
