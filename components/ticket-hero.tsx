@@ -52,7 +52,7 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
         {page === "user" && (
           <Link
             href="/"
-            className="mt-4 relative px-8 py-3 rounded-full border-2  bg-white/60 flex items-center justify-center font-medium  hover:scale-105 transition-all "
+            className="text-white self-center mt-4 px-6 py-2 rounded-md bg-[#53925E] text-base min-w-[110px] text-center  shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
           >
             Back to Home
           </Link>
