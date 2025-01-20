@@ -29,7 +29,11 @@ export const Sponsors = () => {
               ❤️ 💚
               <br />
               Want to support and sponsor BlablaConf,{" "}
-              <a className="underline" href="mailto:geeksblabla@gmail.com">
+              <a
+                className="underline"
+                href="https://linkedin.com/company/geeksblabla-community"
+                target="_blank"
+              >
                 Get In Touch
               </a>{" "}
             </p>
@@ -37,7 +41,7 @@ export const Sponsors = () => {
         </div>
         <div className="mx-auto max-w-screen-xl pt-10 mt-10  lg:flex-none lg:px-8 lg:py-0">
           <div className="mx-auto h-full flex md:flex-row flex-col justify-center items-center  flex-warp ">
-            <a
+            {/* <a
               href="https://1337.ma"
               target="_blank"
               className="block w-fit bg-white/30  rounded-full px-8 py-5 hover:scale-105 cursor-pointer transition-all"
@@ -48,7 +52,17 @@ export const Sponsors = () => {
                 alt=""
                 className="h-[50px] w-auto  mx-auto"
               />
-            </a>
+            </a> */}
+            <div className="text-center text-[#282828]/60 text-lg">
+              هد الساعة بقي مكاين والو 😂.الى مهتم تكون سبونسور{" "}
+              <a
+                href="https://linkedin.com/company/geeksblabla-community"
+                className="underline"
+                target="_blank"
+              >
+                تواصل معانا
+              </a>
+            </div>
           </div>
         </div>
       </section>
