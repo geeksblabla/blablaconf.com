@@ -119,7 +119,7 @@ const Speaker = ({
 
         {/* Rest of the component remains unchanged */}
         <div className="text-center">
-          <h3 className="font-display mt-4 text-xl md:text-2xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
+          <h3 className="font-cairo mt-4 text-xl md:text-2xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
             {fullName}
           </h3>
           <p className="mt-1 text-sm md:text-base text-gray-50 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">

@@ -12,7 +12,7 @@ import localFont from "next/font/local";
 import { Metadata, Viewport } from "next";
 
 export const viewport: Viewport = {
-  themeColor: "#78543E",
+  themeColor: "#EEE1C5",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
