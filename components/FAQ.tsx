@@ -42,7 +42,7 @@ const questions: QuestionType[] = [
     answer: () => (
       <p>
         Registration for BlablaConf are open until the start of the conference,
-        on February 19th, <a>Grab you ticket.</a>
+        on February 7th, <a>Grab you ticket.</a>
       </p>
     ),
   },
