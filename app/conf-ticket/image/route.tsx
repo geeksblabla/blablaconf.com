@@ -152,6 +152,7 @@ export async function GET(request: Request) {
                   padding: 8,
                   paddingLeft: 16,
                   paddingRight: 16,
+                  width: 240,
                   border: "3px solid #F25644",
                 }}
               >
