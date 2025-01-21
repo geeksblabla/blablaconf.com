@@ -66,7 +66,7 @@ export default function RootLayout({
       */}
       <head />
       <SalLoader />
-      <body className="bg-[#EFE1C5]">
+      <body className="bg-[#F1E5CB]">
         <Header />
         {children}
         <Footer />

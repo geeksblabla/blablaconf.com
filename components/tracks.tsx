@@ -60,7 +60,7 @@ const tracks = [
 
 export const Tracks = () => {
   return (
-    <section id="tracks" className="py-16">
+    <section id="tracks" className="py-16 pt-0 md:pt-8 lg:pt-24 xl:pt-96">
       <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
         <div className="mx-auto ">
           <Image
