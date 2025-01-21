@@ -288,18 +288,18 @@ const Background = () => {
         muted
         loop
         playsInline
-        className="hidden md:block object-contain w-full max-w-[1800px] mx-auto "
+        className="object-contain w-full max-w-[1800px] mx-auto -mt-16 md:-mt-0"
       >
-        <source src="/videos/desktop-back.webm" type="video/webm" />
-      </video>
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="block md:hidden object-cover -mt-16 w-full h-full"
-      >
-        <source src="/videos/mobile-back.webm" type="video/webm" />
+        <source
+          src="/videos/desktop-back.webm"
+          type="video/webm"
+          media="(min-width: 768px)"
+        />
+        <source
+          src="/videos/mobile-back.webm"
+          type="video/webm"
+          media="(max-width: 767px)"
+        />
       </video>
     </div>
   );
