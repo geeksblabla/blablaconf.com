@@ -34,7 +34,7 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
           {(page === "user" || page === "me") &&
             `${name}'s BlaBlaConf 2024 Ticket`}
         </h2>
-        <p className="text-base font-medium text-gray-600 capitalize max-w-[500px] pt-8">
+        <p className="text-base font-medium text-[#061431]  capitalize max-w-[500px] pt-8">
           {page === "home" &&
             "Generate a unique ticket with your Github profile"}
           {page === "me" &&
@@ -52,13 +52,13 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
         {page === "user" && (
           <Link
             href="/"
-            className="mt-4 relative px-8 py-3 rounded-full border-2  bg-white/60 flex items-center justify-center font-medium  hover:scale-105 transition-all "
+            className="text-white self-center mt-4 px-6 py-2 rounded-md bg-[#53925E] text-base min-w-[110px] text-center  shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
           >
             Back to Home
           </Link>
         )}
 
-        <div className="letter mt-16 -rotate-3 px-2">
+        <div className=" mt-16 -rotate-3 px-2">
           {page === "user" || page === "me" ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -66,15 +66,15 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
               alt="BlablaConf Ticket"
               width={1200}
               height={630}
-              className="mx-auto  border-2 border-[#8e664d] rounded-md max-w-2xl w-full aspect-[1200/630]"
+              className="mx-auto  rounded-md max-w-2xl w-full aspect-[1200/630]"
             />
           ) : (
             <Image
-              src="/images/ticket-placeholder.jpg"
+              src="/images/ticket-template.png"
               alt="BlablaConf Ticket"
               width={1200}
               height={630}
-              className="mx-auto border-2 border-[#8e664d] rounded-md max-w-2xl w-full aspect-[1200/630]"
+              className="mx-auto  rounded-md max-w-2xl w-full aspect-[1200/630]"
             />
           )}
         </div>

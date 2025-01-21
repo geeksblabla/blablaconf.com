@@ -4,46 +4,27 @@ import type {
   Speaker as SpeakerType,
   SpeakerLink as SpeakerLinkType,
 } from "@/utils/sessionize";
+import speakersTitle from "../images/titles/speakers.png";
 import Link from "next/link";
 
 export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
     <section
       id="speakers"
-      className="bg-[#7D5842]  mx-auto py-16 text-white bg-gradient-to-r from-[#7C5741] to-[#B28367] overflow-hidden"
+      className="bg-[#53925E]  mx-auto py-16 text-white   overflow-hidden"
     >
-      <svg aria-hidden="true" width="0" height="0">
-        <defs>
-          <clipPath id=":R9m:-0" clipPathUnits="objectBoundingBox">
-            <path d="M 0 0 h 0.729 v 0.129 h 0.121 l -0.016 0.032 C 0.815 0.198 0.843 0.243 0.885 0.243 H 1 v 0.757 H 0.271 v -0 l -0.271 0 v -0.057 H 0 V 0"></path>
-          </clipPath>
-          <clipPath id=":R9m:-1" clipPathUnits="objectBoundingBox">
-            <path d="M1,1 H0.271 v-0.129 H0.15 l0.016,-0.032 C0.185,0.802,0.157,0.757,0.115,0.757 H0 V0 h0.729 v0.086 l0.121,-0.057 v0.214 c0,0.032,0.026,0.057,0.057,0.057 h0.093 v0.7"></path>
-          </clipPath>
-          <clipPath id=":R9m:-2" clipPathUnits="objectBoundingBox">
-            <path d="M1,0 H0.271 v0.129 H0.15 l0.016,0.032 C0.185,0.198,0.157,0.243,0.115,0.243 H0 v0.757 h0.729 v-0.086 l0.121,0.057 v-0.214 c0,-0.032,0.026,-0.057,0.057,-0.057 h0.093 V0"></path>
-          </clipPath>
-          <clipPath id="pattern3" clipPathUnits="objectBoundingBox">
-            <path d="M1,0.485 C1,0.485,0.992,0.487,0.991,0.479 C0.986,0.478,0.984,0.477,0.983,0.474 C0.983,0.472,0.983,0.465,0.965,0.46 C0.962,0.459,0.965,0.458,0.96,0.457 C0.956,0.455,0.933,0.448,0.929,0.443 C0.928,0.436,0.978,0.388,0.978,0.341 C0.978,0.293,0.933,0.274,0.933,0.274 C0.933,0.274,0.967,0.243,0.945,0.205 C0.922,0.168,0.845,0.173,0.845,0.173 C0.845,0.173,0.892,0.113,0.788,0.083 C0.743,0.07,0.696,0.08,0.658,0.095 C0.614,0.035,0.513,0.028,0.5,0 C0.487,0.028,0.386,0.035,0.342,0.095 C0.304,0.08,0.257,0.07,0.212,0.083 C0.108,0.113,0.155,0.173,0.155,0.173 C0.155,0.173,0.078,0.168,0.055,0.205 C0.033,0.243,0.067,0.274,0.067,0.274 C0.067,0.274,0.022,0.293,0.022,0.341 C0.022,0.388,0.072,0.436,0.071,0.443 C0.067,0.448,0.044,0.455,0.04,0.457 C0.035,0.458,0.038,0.459,0.035,0.46 C0.017,0.465,0.017,0.472,0.017,0.474 C0.016,0.477,0.014,0.478,0.009,0.479 C0.008,0.487,0,0.485,0,0.485 L0,0.939 C0,0.973,0.046,1,0.103,1 H0.5 H0.897 C0.954,1,1,0.973,1,0.939 L1,0.485" />
-          </clipPath>
-        </defs>
-      </svg>
-      <div className="relative bg-[#825C45]/6 mx-auto max-w-lg md:max-w-screen-xl my-5">
-        <div className="absolute bg-[url('/images/min-pattern-black.svg')] bg-contain bg-repeat top-0 bottom-0 w-[200vh]" />
-        <div className="flex md:flex-row flex-col md:items-center md:px-8 px-4 py-4">
-          <div className="flex flex-row ">
-            <h1 className="text-4xl sm:text-6xl font-bold capitalize mb-3 mr-6 z-10">
-              {speakers.length} Speakers
-            </h1>
-          </div>
-
-          <p className="text-lg font-medium leading-6  max-w-[650px]  z-10 pr-2 ">
-            CEOs, rock star developers, beginners and students, everyone has a
-            place to share content in BlaBlaConf
-          </p>
-        </div>
+      <div className="mx-auto ">
+        <Image
+          src={speakersTitle}
+          alt="speakers title"
+          className="mx-auto md:max-h-[160px] max-h-[120px] object-contain"
+        />
+        <p className="text-base text-center font-medium leading-6  max-w-[450px]  z-10 pr-2 mx-auto px-6 ">
+          CEOs, rock star developers, beginners and students, everyone has a
+          place to share content in BlaBlaConf
+        </p>
       </div>
-      <div className="mx-auto grid  gap-x-8 gap-y-12 px-4  pt-8 max-w-lg md:max-w-screen-xl md:grid-cols-3 md:px-8 lg:grid-cols-4 mt-8">
+      <div className="mx-auto grid grid-cols-2 gap-x-4 gap-y-12 px-4 pt-8 max-w-lg md:max-w-screen-xl md:grid-cols-3 md:gap-x-8 md:px-8 lg:grid-cols-4 mt-8">
         {speakers.map((speaker: SpeakerType, index: number) => (
           <Speaker {...speaker} key={speaker.fullName} index={index} />
         ))}
@@ -51,6 +32,30 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
     </section>
   );
 };
+
+const tapePositions = [
+  "-right-4 md:-top-6 rotate-90 -top-4",
+  "left-[44%] md:-top-[42px] -top-[30px] rotate-[30deg]",
+  "-left-2 md:-top-8 -top-4",
+];
+
+const stickPositions = [
+  "right-2 md:-top-4 -top-1",
+  "left-[44%] md:-top-[32px] -top-[20px]",
+  "-left-3 md:-top-4 -top-1 -rotate-[50deg]",
+];
+
+const tapeColors = ["text-white", "text-[#D35747]", "text-[#E7B041]"];
+
+const cardRotation = [
+  "rotate-[-3deg]",
+  "rotate-[-2deg]",
+  "rotate-[-1deg]",
+  "rotate-0",
+  "rotate-[1deg]",
+  "rotate-[2deg]",
+  "rotate-[3deg]",
+];
 
 const Speaker = ({
   profilePicture,
@@ -62,32 +67,64 @@ const Speaker = ({
 }: SpeakerType & { index: number }) => {
   return (
     <div
-      data-sal="slide-right"
+      data-sal="slide-up"
       data-sal-delay={`${(index % 4) * 50}`}
       data-sal-duration="500"
-      className="mx-auto"
+      className="mx-auto group"
     >
       <Link href={`/#speaker-session-${id}`}>
-        <div className="mx-auto rounded-4xl group relative h-[19.5rem] w-[16rem] transform overflow-hidden rounded-md ">
-          <div className="rounded-4xl absolute top-0 left-0 right-4  rounded-md bottom-6  transition duration-300 group-hover:scale-95 xl:right-6"></div>
-          <div
-            className="absolute inset-0 bg-indigo-50"
-            style={{ clipPath: "url(#pattern3)" }}
-          >
-            <Image
-              alt={`${fullName} profile picture`}
-              width="400"
-              height="400"
-              className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-              src={profilePicture}
-            />
+        {/* Updated image container */}
+        <div
+          className={`mx-auto relative h-[14rem] w-[11rem] md:h-[19.5rem] md:w-[16rem] transform transition duration-300 ${
+            cardRotation[index % cardRotation.length]
+          } group-hover:rotate-0`}
+        >
+          {/* Image container with updated styling */}
+          <div className="relative h-full w-full rounded-3xl bg-white p-2 md:p-3 shadow-lg">
+            <div className="relative h-full w-full overflow-hidden rounded-xl">
+              <Image
+                alt={`${fullName} profile picture`}
+                width="400"
+                height="400"
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                src={profilePicture}
+              />
+            </div>
           </div>
+
+          {Math.random() < 0.5 ? (
+            <div
+              className={`absolute ${
+                tapePositions[Math.floor(Math.random() * tapePositions.length)]
+              } w-4 h-1.5 md:w-8 md:h-2  ${
+                tapeColors[Math.floor(Math.random() * tapeColors.length)]
+              }`}
+            >
+              <Tape />
+            </div>
+          ) : (
+            <div
+              className={`absolute ${
+                stickPositions[
+                  Math.floor(Math.random() * stickPositions.length)
+                ]
+              } w-4 h-1.5 md:w-8 md:h-2  ${
+                tapeColors[Math.floor(Math.random() * tapeColors.length)]
+              }`}
+            >
+              <Stick />
+            </div>
+          )}
         </div>
-        <div className=" text-center">
-          <h3 className="font-display mt-4 text-2xl font-bold tracking-tight text-white">
+
+        {/* Rest of the component remains unchanged */}
+        <div className="text-center">
+          <h3 className="font-cairo mt-4 text-xl md:text-2xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
             {fullName}
           </h3>
-          <p className="mt-1 text-base text-gray-50">{tagLine}</p>
+          <p className="mt-1 text-sm md:text-base text-gray-50 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]">
+            {tagLine}
+          </p>
         </div>
       </Link>
       <Links links={links} />
@@ -116,14 +153,14 @@ const SocialLink = ({
 }) => (
   <a
     href={href}
-    className="pr-2 cursor-pointer"
+    className="pr-2 cursor-pointer drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]"
     target="_blank"
     rel="noreferrer"
   >
     {type === "Twitter" ? (
       <svg
         viewBox="0 0 22 22"
-        className="w-[24px] h-[24px] p-1 hover:text-[#3a322b]"
+        className="w-[24px] h-[24px] p-1 hover:scale-125 transition-all duration-300"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -137,7 +174,7 @@ const SocialLink = ({
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        className="w-[25px] h-[25px] p-1 hover:text-[#3a322b]"
+        className="w-[25px] h-[25px] p-1 hover:scale-125 transition-all duration-300"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -151,3 +188,64 @@ const SocialLink = ({
     )}
   </a>
 );
+
+const Tape = () => {
+  return (
+    <svg
+      viewBox="0 0 70 67"
+      fill="none"
+      className="md:w-[70px] md:h-[67px] w-[50px] h-[49px]"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M47.2929 65.7929L1.67827 20.1783C1.56126 20.0613 1.47511 19.917 1.42755 19.7585L0.471852 16.5728C0.256587 15.8553 0.877657 15.1646 1.61397 15.3026L6.81571 16.2779C7.43113 16.3933 8 15.9212 8 15.2951V12.5C8 11.9477 8.44771 11.5 9 11.5H14C14.5523 11.5 15 11.0523 15 10.5V8.2198C15 7.58876 15.5773 7.11547 16.1961 7.23922L21.3039 8.26078C21.9227 8.38453 22.5 7.91124 22.5 7.2802V1.41421C22.5 0.523309 23.5771 0.0771418 24.2071 0.707107L68.7929 45.2929C69.4229 45.9229 68.9767 47 68.0858 47H63.284C62.4122 47 61.9579 48.0377 62.5492 48.6783L65.0931 51.4342C65.7313 52.1256 65.1483 53.2355 64.2169 53.1024L55.3304 51.8329C54.457 51.7081 53.8617 52.6931 54.3783 53.4083L58.1217 58.5917C58.6383 59.3069 58.043 60.2919 57.1696 60.1671L50.1414 59.1631C49.539 59.077 49 59.5445 49 60.153V65.0858C49 65.9767 47.9229 66.4229 47.2929 65.7929Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
+const Stick = () => {
+  return (
+    <svg
+      width="56"
+      height="63"
+      viewBox="0 0 56 63"
+      className="md:w-[56px] md:h-[63px] w-[40px] h-[49px]"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M36.1343 51.9722C34.4748 54.51 31.4344 55.9279 27.6936 56.0322C23.9574 56.1364 19.6233 54.916 15.6125 52.2933C11.6016 49.6706 8.74583 46.1895 7.34315 42.725C5.93879 39.2563 6.01855 35.9025 7.67806 33.3646C9.33757 30.8267 12.378 29.4089 16.1188 29.3046C19.855 29.2004 24.1891 30.4208 28.1999 33.0435C32.2108 35.6662 35.0665 39.1473 36.4692 42.6118C37.8736 46.0805 37.7938 49.4343 36.1343 51.9722Z"
+        fill="#061431"
+        stroke="#061431"
+        strokeWidth="2"
+      />
+      <path d="M17.5005 51L12.5005 59" stroke="#061431" strokeWidth="4" />
+      <path
+        d="M39.1449 47.3692C37.4001 50.0374 34.2754 51.5502 30.4922 51.7258C26.7106 51.9013 22.3531 50.7268 18.3494 48.1088C14.3456 45.4907 11.5225 41.9697 10.167 38.4351C8.81088 34.899 8.94386 31.4298 10.6886 28.7616C12.4333 26.0934 15.5581 24.5806 19.3413 24.405C23.1228 24.2295 27.4804 25.404 31.4841 28.022C35.4878 30.64 38.311 34.161 39.6665 37.6956C41.0226 41.2318 40.8896 44.701 39.1449 47.3692Z"
+        fill="currentColor"
+        stroke="#061431"
+        strokeWidth="2"
+      />
+      <path
+        d="M22.8929 31.3635L29.6847 20.977L38.3053 26.614L31.5135 37.0005C29.9569 39.381 26.7652 40.0489 24.3847 38.4923C22.0042 36.9357 21.3363 33.744 22.8929 31.3635Z"
+        fill="currentColor"
+        stroke="#061431"
+        strokeWidth="2"
+      />
+      <path
+        d="M47.9849 24.3304C46.8367 26.0863 44.7358 27.1002 42.1113 27.1933C39.49 27.2863 36.4391 26.4467 33.6144 24.5996C30.7898 22.7526 28.7973 20.2943 27.8314 17.8557C26.8644 15.414 26.9508 13.0829 28.099 11.327C29.2472 9.57114 31.348 8.55724 33.9725 8.46414C36.5938 8.37115 39.6448 9.21076 42.4694 11.0578C45.2941 12.9049 47.2866 15.3631 48.2524 17.8018C49.2195 20.2434 49.1331 22.5745 47.9849 24.3304Z"
+        fill="#061431"
+        stroke="#061431"
+        strokeWidth="2"
+      />
+      <path
+        d="M50.0591 21.1586C48.9109 22.9144 46.81 23.9283 44.1855 24.0214C41.5642 24.1144 38.5133 23.2748 35.6886 21.4278C32.864 19.5807 30.8715 17.1224 29.9056 14.6838C28.9386 12.2422 29.025 9.91103 30.1732 8.15515C31.3214 6.39926 33.4223 5.38536 36.0468 5.29226C38.6681 5.19928 41.719 6.03889 44.5437 7.88593C47.3683 9.73298 49.3608 12.1913 50.3267 14.6299C51.2937 17.0715 51.2073 19.4027 50.0591 21.1586Z"
+        fill="currentColor"
+        stroke="#061431"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+};

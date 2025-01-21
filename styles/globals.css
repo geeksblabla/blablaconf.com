@@ -6,7 +6,7 @@ html {
 }
 
 .text-gradient {
-  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#7C5741] to-[#B18367]
+  @apply text-transparent bg-clip-text bg-gradient-to-r from-[#7C5741] to-[#B18367];
 }
 
 .letter {
@@ -64,13 +64,12 @@ html {
     drop-shadow(0 3px 6px rgba(208, 191, 191, 0.23));
   position: absolute;
   top: -126px;
-  transform: scale(-1,1)
-
+  transform: scale(-1, 1);
 }
 .popup-outline {
   position: absolute;
   top: -126px;
-  transform: scale(-1,1)
+  transform: scale(-1, 1);
 }
 .popup-text {
   box-sizing: border-box;
@@ -96,7 +95,6 @@ html {
   stroke-dasharray: 0 426px;
   stroke-dashoffset: 1px;
   transition: stroke-dasharray 300ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 .popup-outline-right {
   stroke-dasharray: 352px 352px;
@@ -119,18 +117,16 @@ html {
   transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 /* media queries for mobile */
 /* disable sal.js on mobile */
 
 @media (max-width: 640px) {
-  [data-sal='slide-left'] {
+  [data-sal="slide-left"] {
     opacity: 1 !important;
     transform: none !important;
   }
-  [data-sal='slide-right'] {
+  [data-sal="slide-right"] {
     opacity: 1 !important;
     transform: none !important;
   }
 }
-

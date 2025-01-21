@@ -16,15 +16,12 @@ const links = [
 export const Header = () => {
   return (
     <>
-      {/* <Banner /> */}
-      <header className="px-4 ">
+      <header className="px-4">
         <div className="relative mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
-          <Link
-            className="flex items-center text-2xl font-black sm:hidden"
-            href="/"
-          >
+          <Link className="flex items-center text-2xl font-black" href="/">
             <Logo />
           </Link>
+
           <input className="peer hidden" type="checkbox" id="navbar-open" />
           <label
             className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden"
@@ -44,48 +41,28 @@ export const Header = () => {
               />
             </svg>
           </label>
+
           <nav
             aria-label="Header Navigation"
-            className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0 mx-auto"
+            className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0"
           >
             <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-10">
               {links.map((link, i) => (
-                <>
-                  <li
-                    key={link.label}
-                    className="my-auto "
-                    // data-sal={i > 3 ? "slide-right" : "slide-left"}
-                    data-sal="fade"
-                    data-sal-delay={`${Math.abs(i - 3) * 100}`}
-                    data-sal-duration="1000"
+                <li
+                  key={link.label}
+                  className="my-auto"
+                  data-sal="fade"
+                  data-sal-delay={`${Math.abs(i - 3) * 100}`}
+                  data-sal-duration="1000"
+                >
+                  <a
+                    className="text-[#061431]/70 font-medium text-xl hover:text-[#061431]"
+                    href={link.href}
                   >
-                    <a
-                      className="text-[#3F2617]/70 font-medium text-xl hover:text-[#3F2617] "
-                      href={link.href}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                  {i === 2 && (
-                    <li className="sm:flex hidden">
-                      <Link
-                        className=" items-center text-2xl font-black mx-8"
-                        href="/"
-                      >
-                        <Logo />
-                      </Link>
-                    </li>
-                  )}
-                </>
+                    {link.label}
+                  </a>
+                </li>
               ))}
-              {/* <li className="mt-2 sm:mt-0">
-              <a
-                className="rounded-2xl border-2 border-gray-400 px-6 py-2 font-medium text-gray-600 "
-                href="#"
-              >
-                Watch Sessions on youtube
-              </a>
-            </li> */}
             </ul>
           </nav>
         </div>

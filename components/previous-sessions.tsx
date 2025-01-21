@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import session1Src from "../images/sessions/session-1.png";
 import session2Src from "../images/sessions/session-2.png";
 import session3Src from "../images/sessions/session-3.png";
+import lastEditionTitle from "../images/titles/last-edition.png";
 
 // TODO
 const sessions = [
@@ -20,34 +21,56 @@ const sessions = [
   },
 ];
 
+const lastEditionSessions = [
+  {
+    title: "2024 So9 tech",
+    url: "https://www.youtube.com/watch?v=a2o74IO59gE&list=PLUa7iphNQNrzhWEJlEooj79kPkm3LUUYy",
+  },
+  {
+    title: "2022 Moussem tech",
+    url: "https://www.youtube.com/watch?v=XFb24kcdSKk&list=PLUa7iphNQNrwuQVs4qk_TCo5X-2cFQkGF",
+  },
+  {
+    title: "2021 BlaBlaConf 2.0",
+    url: "https://www.youtube.com/watch?v=FpfjDt-Tn3M&list=PLUa7iphNQNrym6RNNslh3IzQRxuoTqzJM",
+  },
+  {
+    title: "2020 BlaBlaConf 1.0",
+    url: "https://www.youtube.com/watch?v=plsrbwBxR74&list=PLUa7iphNQNrxNuo9GN367QbhyD7crSDGp",
+  },
+];
+
 export const PreviousSessions = () => {
   return (
-    <section
-      id="last-sessions"
-      className="py-16 bg-gradient-to-r from-[#FFF] to-[#F4EAE4]"
-    >
+    <section id="last-sessions" className="py-16 bg-[#53925E] text-white">
       <div className="mx-auto max-w-lg px-4 md:max-w-screen-xl text-center">
-        <div>
-          <h2 className=" text-3xl font-bold md:text-5xl capitalize text-center text-gradient">
-            BlablaConf 3.0
-          </h2>
-          <br />
-          <p className="w-full text-lg text-[#282828] max-w-[500px] mx-auto">
-            Rewatch last year’s sessions, and get a sneak peek of what
-            BlaBLaConf 2024 would be like.
-            <br />
+        <div className="mx-auto ">
+          <Image
+            src={lastEditionTitle}
+            alt="last edition title"
+            className="mx-auto md:max-h-[140px] max-h-[120px] object-contain"
+          />
+          <p
+            className="my-6 text-base text-center  font-[400]  leading-normal max-w-[450px] mx-auto "
+            ata-sal="fade"
+            data-sal-delay="100"
+            data-sal-duration="500"
+          >
+            This is the 5th edition of BlaBlaConf, Make sure to watch the last
+            years sessions, and get a sneak peek of what BlaBLaConf Conference
+            would be like.
           </p>
         </div>
-        <div className="mt-16 mx-auto grid max-w-lg gap-x-8 gap-y-12 px-4  md:max-w-screen-xl md:grid-cols-1 md:px-8 lg:grid-cols-3">
-          {sessions.map((session, index) => (
-            <Session
-              src={session.image}
-              url={session.url}
-              key={`session-${index}`}
-              index={index}
-            />
+
+        <ul className="mt-16 mx-auto font-extrabold w-full text-center text-xl  grid  gap-x-8 gap-y-12 px-4  md:max-w-screen-lg md:grid-cols-1 md:px-8 lg:grid-cols-4">
+          {lastEditionSessions.map((session, index) => (
+            <li key={`session-${index}`}>
+              <a href={session.url} target="_blank" rel="noreferrer">
+                {session.title}
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

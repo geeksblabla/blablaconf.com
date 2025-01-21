@@ -12,7 +12,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const session = await getSession(params.id);
   if (session === undefined) {
     return (
@@ -20,11 +21,11 @@ export default async function Page({ params }: { params: { id: string } }) {
     );
   }
   return (
-    <section className="py-16">
-      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
-        <div className="mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 min-h-[200px] md:min-h-[400px] text-gradient">
+    <section className="py-16 text-[#061431] min-h-[calc(100vh-150px)]">
+      <div className="mx-auto md:flex-row flex flex-col max-w-screen-lg md:max-w-screen-xl md:px-8 px-4">
+        <div className=" flex-1 mx-auto pt-10 max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 min-h-[200px] md:min-h-[400px] text-gradient">
           <SessionTime session={session} showDay />
-          <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize ">
+          <h2 className="mb-4 text-3xl font-bold md:mb-6 md:text-4xl capitalize text-gray-700 ">
             {session.title}{" "}
           </h2>
           <p className="mb-12 text-lg font-medium text-gray-600 leading-normal">
@@ -32,7 +33,7 @@ export default async function Page({ params }: { params: { id: string } }) {
           </p>
           <AddToCalendar session={session} type="text" />
         </div>
-        <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 py-6 my-8 border-b-gray-200 border-solid border-b-[1px]">
+        <div className=" md:w-1/3 w-full mx-auto rounded-xl max-w-screen-lg md:max-w-screen-xl md:px-8 px-4 py-6 my-8 bg-[#E9D1AD] border-b-gray-200 border-solid border-b-[1px]">
           <p className="text-black font-semibold pb-3"> Speaker(s) </p>
 
           {session?.speakers &&
@@ -41,15 +42,15 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <div className="flex flex-row items-center ">
                   <Image
                     src={speaker.profilePicture}
-                    className="w-16 h-16 rounded-full"
+                    className="w-24 h-24 border-2 border-white rounded-md"
                     width="64"
                     height="64"
                     alt={speaker.fullName}
                   />
-                  <p className="pl-4 font-bold text-gradient">
+                  <p className="pl-4 text-2xl font-bold ">
                     {speaker.fullName}
                     <br />
-                    <span className="font-normal text-sm ">
+                    <span className="font-normal leading-[0.5rem] text-base ">
                       {speaker.tagLine}{" "}
                     </span>
                   </p>
@@ -58,7 +59,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <p className="py-3">
                   <Text text={speaker.bio} />{" "}
                 </p>
-                <div className="flex w-fit text-black">
+                <div className="flex w-fit text-[#061431]">
                   <Links links={speaker.links || []} />
                 </div>
               </div>

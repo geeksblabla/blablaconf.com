@@ -17,9 +17,10 @@ export default async function Home() {
   return (
     <div>
       <Hero />
-      <Community />
-      <Sponsors />
       <Tracks />
+      <Sponsors />
+      <Community />
+
       <Speakers speakers={speakers} />
       <Agenda days={days} />
       <PreviousSessions />

@@ -3,6 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import gSrc from "../images/projects/geeksblabla.png";
 import stateSrc from "../images/projects/stateofdev.png";
 import awesomeSrc from "../images/projects/awesome-morocco.png";
+import moreTitle from "../images/titles/more.png";
 
 type ProjectType = {
   name: string;
@@ -38,7 +39,24 @@ export const CommunityProjects = () => {
   return (
     <section className="py-6 sm:py-8 lg:py-12" id="community-initiatives">
       <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-        <div className="relative mb-10 pt-8 md:mb-16">
+        <div className="mx-auto ">
+          <Image
+            src={moreTitle}
+            alt="tracks title"
+            className="mx-auto md:max-h-[140px] max-h-[120px] object-contain"
+          />
+          <p
+            className="my-6 text-base text-center  font-[400] text-[#282828]/60 leading-normal max-w-[450px] mx-auto "
+            ata-sal="fade"
+            data-sal-delay="100"
+            data-sal-duration="500"
+          >
+            BlaBlaConf is our yearly show, where we get together and celebrate
+            the achievement of the Moroccan community. Of the same DNA, find
+            here more community initiatives.
+          </p>
+        </div>
+        {/* <div className="relative mb-10 pt-8 md:mb-16">
           <h2 className="text-3xl font-bold md:text-5xl capitalize text-center text-gradient">
             Community Initiatives
           </h2>
@@ -47,7 +65,7 @@ export const CommunityProjects = () => {
             the achievement of the Moroccan community. Of the same DNA, find
             here more community initiatives.
           </p>
-        </div>
+        </div> */}
 
         <div className="">
           {projects.map((project, index) => (
@@ -80,7 +98,7 @@ const Project = ({ name, image, url, description, index }: ProjectType) => {
       </div>
 
       <div className="flex flex-1 flex-col p-2 md:text-left text-center">
-        <h2 className="text-2xl font-bold text-gradient">{name}</h2>
+        <h2 className="text-2xl font-bold text-black/75">{name}</h2>
 
         <p className="text-[#282828] text-lg mt-2">{description}</p>
       </div>

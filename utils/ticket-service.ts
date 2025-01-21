@@ -4,11 +4,11 @@ import { Metadata } from "next";
 export const generateTicketsMetadata = (user: User): Metadata => {
   const name = user.name === null ? user.login : user.name;
   const metadata: Metadata = {
-    title: name + "'s BlaBlaConf Ticket",
+    title: name + "'s BlaBlaConf Ticket - تكنوفنا",
     description:
       "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 19th to 24th December",
     twitter: {
-      title: name + "'s BlaBlaConf Ticket",
+      title: name + "'s BlaBlaConf Ticket - تكنوفنا",
       images: [
         {
           url: getTicketImg(user),
@@ -19,8 +19,8 @@ export const generateTicketsMetadata = (user: User): Metadata => {
     },
     openGraph: {
       locale: "en_IE",
-      url: process.env.NEXT_PUBLIC_HOST + "/ticket/" + user.login,
-      title: name + "'s BlaBlaConf Ticket",
+      url: process.env.NEXT_PUBLIC_HOST + "/conf-ticket/" + user.login,
+      title: name + "'s BlaBlaConf Ticket - تكنوفنا",
       description:
         "By the Moroccan developer community, for the Moroccan developer community, BlaBla Conf is your one stop shop for latest and hottest technology trends, in Darija, and completely free! Join us from 19th to 24th December",
 
@@ -41,9 +41,9 @@ const getTicketImg = (user: User) => {
   const name = user.name === null ? user.login : user.name;
   const ticketImg = `${
     process.env.NEXT_PUBLIC_HOST
-  }/ticket/image?name=${encodeURIComponent(name)}&login=${encodeURIComponent(
-    user.login
-  )}&avatar=${encodeURIComponent(
+  }/conf-ticket/image?name=${encodeURIComponent(
+    name
+  )}&login=${encodeURIComponent(user.login)}&avatar=${encodeURIComponent(
     user.avatar
   )}&ticketNumber=${encodeURIComponent(user.ticketNumber)}`;
   return ticketImg;

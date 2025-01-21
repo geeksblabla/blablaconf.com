@@ -96,8 +96,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-jakarta)", ...fontFamily.sans],
-        almaghribi: ["var(--font-almaghribi)"],
+        sans: ["var(--font-cairo)", ...fontFamily.sans],
+        muraba: ["var(--font-muraba)"],
+        murabaOutline: ["var(--font-muraba-outline)"],
       },
       colors: {
         primary: {

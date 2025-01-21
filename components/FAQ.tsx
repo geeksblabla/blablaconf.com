@@ -42,7 +42,7 @@ const questions: QuestionType[] = [
     answer: () => (
       <p>
         Registration for BlablaConf are open until the start of the conference,
-        on February 19th, <a>Grab you ticket.</a>
+        on February 7th, <a>Grab you ticket.</a>
       </p>
     ),
   },
@@ -121,7 +121,7 @@ const Question = ({
 }: QuestionType & { index: number }) => {
   return (
     <li
-      className="text-left bg-white rounded-2xl"
+      className="text-left bg-[#F6EEDD] rounded-2xl"
       data-sal="slide-up"
       data-sal-delay={`${index * 100}`}
       data-sal-duration="500"
@@ -139,11 +139,9 @@ const Question = ({
         <Arrow />
 
         <div className="relative ml-4 cursor-pointer select-none items-center py-4 pr-12">
-          <h3 className="text-base text-[#7D5841] font-bold lg:text-lg">
-            {question}
-          </h3>
+          <h3 className="text-base text-[#061431]  lg:text-lg">{question}</h3>
         </div>
-        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 text-black">
+        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 text-[#061431]/70">
           <div className="p-5">
             {typeof answer === "string" ? (
               <p className="text-md">{answer}</p>
@@ -169,7 +167,7 @@ const Link = ({
       {...props}
       rel="noreferrer"
       target="_blank"
-      className="text-[#7D5841] font-bold hover:underline"
+      className="text-[#53925E] font-bold hover:underline"
     >
       {children}
     </a>
