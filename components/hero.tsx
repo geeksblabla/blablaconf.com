@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <>
-      <div className="relative flex flex-col justify-end pt-8 mb-0 min-h-[calc(100svh-90px)]">
+      <div className="relative flex flex-col justify-end pt-8 mb-0 md:min-h-[calc(100svh-190px)] min-h-[calc(100svh-90px)]">
         <Background />
         <div className="relative z-10 flex-1 mx-auto max-w-screen-lg md:max-w-screen-xl py-8 flex flex-col justify-center items-center md:px-8 px-4">
           <div className="mx-auto flex flex-1 flex-col  items-center w-full max-w-[750px] ">
