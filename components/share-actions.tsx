@@ -8,7 +8,7 @@ import {
 import { useState, useEffect, SVGProps } from "react";
 
 const share_message = `ياله خديت التيكي ديالي باش نحضر بلابلاكونف اللي منضمة من طرف الكومينوتي غيغس بلابلا. اش مازال كتسنى، بالي قبل ما يسالي و قطع ورقتك حتى نتا
-@geeksblabla #blablaconf`;
+ @geeksblabla  #blablaconf `;
 
 const copyToClipboard = (str: string) => {
   const el = document.createElement("textarea");
