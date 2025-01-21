@@ -62,7 +62,7 @@ export const getUserInfo = async (username: string) => {
       user = {
         name: u.name === null ? u.login : u.name,
         image: getTicketImg(u),
-        url: process.env.NEXT_PUBLIC_HOST + "/ticket/" + u.login,
+        url: process.env.NEXT_PUBLIC_HOST + "/conf-ticket/" + u.login,
       };
     }
   }

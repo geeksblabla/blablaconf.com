@@ -30,11 +30,11 @@ export const Footer = () => {
               <li>
                 <a
                   className=" hover:underline"
-                  href="https://blablaconf.com"
+                  href="https://stateofdev.ma"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  blablaconf.com
+                  stateofdev.ma
                 </a>
               </li>
               <li>
