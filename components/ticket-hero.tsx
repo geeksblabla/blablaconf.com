@@ -32,7 +32,7 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
         <h2 className=" relative md:text-5xl text-4xl font-bold my-4 capitalize max-w-[700px]">
           {page === "home" && "Make your own ticket"}
           {(page === "user" || page === "me") &&
-            `${name}'s BlaBlaConf 2024 Ticket`}
+            `${name}'s BlaBlaConf 5.0 Ticket`}
         </h2>
         <p className="text-base font-medium text-[#061431]  capitalize max-w-[500px] pt-8">
           {page === "home" &&

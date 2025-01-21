@@ -13,7 +13,7 @@ export const AddToCalendar = ({
   const onClick = () => {
     atcb_action({
       name: session.title,
-      description: `Join ${session.speakers[0].fullName} for ${session.title} at BlaBlaConf 2024`,
+      description: `Join ${session.speakers[0].fullName} for ${session.title} at BlaBlaConf 5.0`,
       location: "https://www.youtube.com/@GeeksBlaBla01",
       startDate: session.startDate,
       endDate: session.endDate,
