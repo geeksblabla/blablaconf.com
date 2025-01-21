@@ -3,14 +3,14 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <>
-      <div className="relative flex flex-col justify-end pt-8 mb-0 md:min-h-[calc(100svh-190px)] min-h-[calc(100svh-90px)]">
+      <div className="relative flex flex-col justify-end pt-8 mb-0 md:aspect-[16/12] aspect-[9/16] ">
         <Background />
         <div className="relative z-10 flex-1 mx-auto max-w-screen-lg md:max-w-screen-xl py-8 flex flex-col justify-center items-center md:px-8 px-4">
           <div className="mx-auto flex flex-1 flex-col  items-center w-full max-w-[750px] ">
             <div
               data-sal="fade"
               data-sal-delay="0"
-              data-sal-duration="200"
+              data-sal-duration="100"
               className="my-2"
             >
               <TechnoFna />
@@ -20,7 +20,7 @@ export const Hero = () => {
               className="md:text-[44px] text-[#D35747]  text-3xl font-bold leading-normal md:leading-normal text-center  drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,1)] text-shadow"
               data-sal="fade"
               data-sal-delay="100"
-              data-sal-duration="500"
+              data-sal-duration="200"
             >
               حلاقي التكنولوجيا في جامع الفنا
               {/* بلابلا كونف تعود
@@ -288,7 +288,7 @@ const Background = () => {
         muted
         loop
         playsInline
-        className="hidden md:block object-contain w-full aspect-square max-w-[1800px] mx-auto -mt-36"
+        className="hidden md:block object-contain w-full max-w-[1800px] mx-auto "
       >
         <source src="/videos/desktop-back.webm" type="video/webm" />
       </video>
@@ -297,7 +297,7 @@ const Background = () => {
         muted
         loop
         playsInline
-        className="block md:hidden object-cover w-full h-full"
+        className="block md:hidden object-cover -mt-20 w-full h-full"
       >
         <source src="/videos/mobile-back.webm" type="video/webm" />
       </video>

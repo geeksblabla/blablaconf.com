@@ -48,13 +48,7 @@ export const Header = () => {
           >
             <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-10">
               {links.map((link, i) => (
-                <li
-                  key={link.label}
-                  className="my-auto"
-                  data-sal="fade"
-                  data-sal-delay={`${Math.abs(i - 3) * 100}`}
-                  data-sal-duration="1000"
-                >
+                <li key={link.label} className="my-auto">
                   <a
                     className="text-[#061431]/70 font-medium text-xl hover:text-[#061431]"
                     href={link.href}
