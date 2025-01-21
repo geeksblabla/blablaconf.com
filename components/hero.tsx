@@ -52,7 +52,7 @@ export const Hero = () => {
 const TicketButton = ({ className = "" }: { className?: string }) => {
   return (
     <Link
-      href="/ticket"
+      href="/conf-ticket"
       className="block text-white px-6 py-2 my-8 rounded-md bg-[#53925E] text-lg text-extrabold min-w-[110px] text-center self-end shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
     >
       Get Your Ticket

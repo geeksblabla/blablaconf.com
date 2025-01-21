@@ -104,5 +104,5 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  redirect(`/ticket/${user.login}/me`);
+  redirect(`/conf-ticket/${user.login}/me`);
 }
