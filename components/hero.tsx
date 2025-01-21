@@ -3,9 +3,9 @@ import Link from "next/link";
 export const Hero = () => {
   return (
     <>
-      <div className="relative flex flex-col justify-end pt-8 mb-0 md:aspect-[16/12] aspect-[9/16] ">
+      <div className="relative flex flex-col justify-end md:pt-8 pt-2 mb-0 md:aspect-[16/12] aspect-[9/16] ">
         <Background />
-        <div className="relative z-10 flex-1 mx-auto max-w-screen-lg md:max-w-screen-xl py-8 flex flex-col justify-center items-center md:px-8 px-4">
+        <div className="relative z-10 flex-1 mx-auto max-w-screen-lg md:max-w-screen-xl md:py-8 py-4 flex flex-col justify-center items-center md:px-8 px-4">
           <div className="mx-auto flex flex-1 flex-col  items-center w-full max-w-[750px] ">
             <div
               data-sal="fade"
@@ -297,7 +297,7 @@ const Background = () => {
         muted
         loop
         playsInline
-        className="block md:hidden object-cover -mt-20 w-full h-full"
+        className="block md:hidden object-cover -mt-16 w-full h-full"
       >
         <source src="/videos/mobile-back.webm" type="video/webm" />
       </video>
