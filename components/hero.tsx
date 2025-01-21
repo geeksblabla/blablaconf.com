@@ -33,11 +33,19 @@ export const Hero = () => {
               data-sal="fade"
               data-sal-delay="200"
               data-sal-duration="500"
-              className="text-[#061431]  md:text-2xl text-xl md:max-w-[350px] max-w-[300px] text-center"
+              className="text-[#061431]  md:text-2xl text-xl md:max-w-[450px] max-w-[450px] text-center"
             >
               <p className="  mb-1">
                 {" "}
                 من 03 حتى 07 فبراير وجدو راسكم لخمسيام ديال الإفادة والفراجة
+                مباشرة على{" "}
+                <a
+                  href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
+                  target="_blank"
+                  className="underline hover:text-[#D35747]"
+                >
+                  يوتيوب
+                </a>
               </p>
             </div>
             <div data-sal="fade" data-sal-delay="300" data-sal-duration="500">
