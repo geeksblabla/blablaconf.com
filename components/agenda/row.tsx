@@ -69,7 +69,7 @@ const Session = ({ session }: { session: Session }) => {
           ? speaker.bio.replace(/\n\s*\n/g, "\n")
           : "";
 
-        return `👥  Speaker\n-----\n\n${speaker.fullName}\n${cleanedBio}\n${speakerLinks}`;
+        return `👥  Speaker\n---------------------\n${speaker.fullName}\n${cleanedBio}\n${speakerLinks}`;
       })
       .join("\n\n") || "";
 
