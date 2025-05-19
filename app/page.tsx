@@ -26,7 +26,6 @@ export default async function Home() {
 
       <Speakers speakers={speakers} />
       <Agenda days={days} />
-      <AgendaRow days={days} />
       <PreviousSessions />
       <CommunityProjects />
       <Reviews />
