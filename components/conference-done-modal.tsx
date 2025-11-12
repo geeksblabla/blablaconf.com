@@ -67,8 +67,8 @@ export const ConferenceDoneModal = () => {
           </h2>
           <p className="mb-6 text-gray-700">
             Thanks for stopping by! BlaBlaConf 2025 was amazing, and you can relive
-            all the incredible talks on our YouTube channel. Even better news - we're
-            already planning BlaBlaConf 2026 and we'd love to hear from you! The Call
+            all the incredible talks on our YouTube channel. Even better news - we&apos;re
+            already planning BlaBlaConf 2026 and we&apos;d love to hear from you! The Call
             for Papers is now open.
           </p>
 
