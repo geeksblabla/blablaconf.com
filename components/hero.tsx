@@ -50,7 +50,7 @@ export const Hero = () => {
             </div>
             <div data-sal="fade" data-sal-delay="300" data-sal-duration="500">
               {/* <YoutubeButton className="hidden md:block" /> */}
-              <TicketButton className="hidden md:block" />
+              {/* <TicketButton className="hidden md:block" /> */}
             </div>
           </div>
         </div>

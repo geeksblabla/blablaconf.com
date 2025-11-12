@@ -63,20 +63,30 @@ export const ConferenceDoneModal = () => {
 
         <div className="text-center">
           <h2 className="mb-4 text-2xl font-bold text-gray-900">
-            BlaBlaConf is Complete!
+            Join Us at BlaBlaConf 2026!
           </h2>
           <p className="mb-6 text-gray-700">
-            Thank you for your interest in BlaBlaConf! The conference has
-            already taken place, but you can watch all the recorded sessions on
-            our YouTube channel.
+            Thanks for stopping by! BlaBlaConf 2025 was amazing, and you can relive
+            all the incredible talks on our YouTube channel. Even better news - we're
+            already planning BlaBlaConf 2026 and we'd love to hear from you! The Call
+            for Papers is now open.
           </p>
 
           <div className="flex flex-col space-y-3">
             <a
-              href="https://www.youtube.com/watch?v=cPOUBC4p1TQ&list=PLUa7iphNQNrxKx8FxrJTiF-FtdajPpMbz&index=1"
+              href="https://cfp.blablaconf.com"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 font-medium text-white bg-red-600 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+            >
+              Submit Your Talk
+            </a>
+
+            <a
+              href="https://www.youtube.com/watch?v=cPOUBC4p1TQ&list=PLUa7iphNQNrxKx8FxrJTiF-FtdajPpMbz&index=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
             >
               Watch Sessions on YouTube
             </a>
