@@ -86,7 +86,7 @@ export const Reviews = () => {
         />
         <p
           className="mb-12 text-lg text-center font-medium leading-normal "
-          ata-sal="fade"
+          data-sal="fade"
           data-sal-delay="100"
           data-sal-duration="500"
         >
