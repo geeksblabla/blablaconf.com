@@ -156,6 +156,7 @@ const SocialLink = ({
     className="pr-2 cursor-pointer drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)]"
     target="_blank"
     rel="noreferrer"
+    aria-label={`Visit ${type} profile`}
   >
     {type === "Twitter" ? (
       <svg
