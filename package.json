@@ -20,7 +20,7 @@
     "eslint": "8.56.0",
     "eslint-config-next": "15.1.4",
     "firebase-admin": "^11.11.1",
-    "next": "15.1.4",
+    "next": "15.1.9",
     "next-seo": "^6.4.0",
     "qs": "^6.11.2",
     "react": "19.0.0",
