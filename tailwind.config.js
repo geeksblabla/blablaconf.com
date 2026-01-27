@@ -96,18 +96,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-cairo)", ...fontFamily.sans],
+        sans: ["var(--font-kufam)", ...fontFamily.sans],
         muraba: ["var(--font-muraba)"],
         murabaOutline: ["var(--font-muraba-outline)"],
       },
       colors: {
-        primary: {
-          100: "#F0E9E1",
-          200: "#CC9B80",
-          300: "#B18366",
-          400: "#7B5741", // 78543E #B18366 #B18367 #CC9B80
-          500: "#78543E",
-        },
+        primary: "#ffe83c",
+        secondary: "#d02b2b",
+        accent: "#377c45",
       },
       animation: {
         swing: "swing 1s ease-in-out",

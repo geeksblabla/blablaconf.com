@@ -16,8 +16,8 @@ const links = [
 export const Header = () => {
   return (
     <>
-      <header className="px-4">
-        <div className="relative mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+      <header className="px-4 relative z-[100]">
+        <div className="relative z-[100] mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-12 sm:flex-row sm:items-center sm:justify-between">
           <Link className="flex items-center text-2xl font-black" href="/">
             <Logo />
           </Link>
@@ -50,7 +50,7 @@ export const Header = () => {
               {links.map((link, i) => (
                 <li key={link.label} className="my-auto">
                   <a
-                    className="text-[#061431]/70 font-medium text-xl hover:text-[#061431]"
+                    className="inline-block font-medium text-lg bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:-translate-x-[6px] hover:translate-y-[6px] transition-all"
                     href={link.href}
                   >
                     {link.label}

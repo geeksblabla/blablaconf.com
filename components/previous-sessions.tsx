@@ -42,7 +42,7 @@ const lastEditionSessions = [
 
 export const PreviousSessions = () => {
   return (
-    <section id="last-sessions" className="py-16 bg-[#53925E] text-white">
+    <section id="last-sessions" className="py-16 text-white">
       <div className="mx-auto max-w-lg px-4 md:max-w-screen-xl text-center">
         <div className="mx-auto ">
           <Image

@@ -1,5 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
-import { AnchorHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
+
+"use client";
+import Image from "next/image";
+import { ReactNode, useState } from "react";
+import FaqTitle from "@/images/faq.svg";
 
 type QuestionType = {
   question: string;
@@ -27,10 +31,14 @@ const questions: QuestionType[] = [
         and community. Sharing is caring! <br />
         If you find any issue or typo in the website, make sure to open an issue
         or submit a new PR on our{" "}
-        <Link href="https://github.com/geeksblabla/blablaconf.com">
-          {" "}
-          GitHub repo{" "}
-        </Link>{" "}
+        <a
+          href="https://github.com/geeksblabla/blablaconf.com"
+          target="_blank"
+          rel="noreferrer"
+          className="text-secondary font-bold hover:underline"
+        >
+          GitHub repo
+        </a>{" "}
         . You can also support us by sponsoring the event. If you are interested
         in sponsoring BlablaConf, please get in touch with us in our social
         media channels.
@@ -42,7 +50,13 @@ const questions: QuestionType[] = [
     answer: () => (
       <p>
         Registration for BlablaConf are open until the start of the conference,
-        on February 7th, <a>Grab you ticket.</a>
+        on February 7th,{" "}
+        <a
+          href="#register"
+          className="text-secondary font-bold hover:underline"
+        >
+          Grab your ticket.
+        </a>
       </p>
     ),
   },
@@ -51,9 +65,14 @@ const questions: QuestionType[] = [
     answer: () => (
       <p>
         Via{" "}
-        <Link href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA">
+        <a
+          href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
+          target="_blank"
+          rel="noreferrer"
+          className="text-secondary font-bold hover:underline"
+        >
           Geeksblala's Youtube channel
-        </Link>
+        </a>
         , &nbsp;We will provide viewing details to all registrants prior to the
         event.
       </p>
@@ -69,15 +88,50 @@ const questions: QuestionType[] = [
     answer: () => (
       <p>
         Follow us on{" "}
-        <Link href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA">
+        <a
+          href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
+          target="_blank"
+          rel="noreferrer"
+          className="text-secondary font-bold hover:underline"
+        >
           Youtube
-        </Link>
-        , <Link href="https://twitter.com/geeksblabla">Twitter</Link> ,{" "}
-        <Link href="https://www.facebook.com/geeksblabla">Facebook</Link>,{" "}
-        <Link href="https://www.instagram.com/geeksblabla/">Instagram</Link> or{" "}
-        <Link href="https://www.linkedin.com/company/geeksblabla-community">
+        </a>
+        ,{" "}
+        <a
+          href="https://twitter.com/geeksblabla"
+          target="_blank"
+          rel="noreferrer"
+          className="text-secondary font-bold hover:underline"
+        >
+          Twitter
+        </a>{" "}
+        ,{" "}
+        <a
+          href="https://www.facebook.com/geeksblabla"
+          target="_blank"
+          rel="noreferrer"
+          className="text-secondary font-bold hover:underline"
+        >
+          Facebook
+        </a>
+        ,{" "}
+        <a
+          href="https://www.instagram.com/geeksblabla/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-secondary font-bold hover:underline"
+        >
+          Instagram
+        </a>{" "}
+        or{" "}
+        <a
+          href="https://www.linkedin.com/company/geeksblabla-community"
+          target="_blank"
+          rel="noreferrer"
+          className="text-secondary font-bold hover:underline"
+        >
           LinkedIn
-        </Link>{" "}
+        </a>{" "}
         to get the latest updates.
       </p>
     ),
@@ -85,16 +139,19 @@ const questions: QuestionType[] = [
 ];
 
 export const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
   return (
-    <section
-      id="faq"
-      className=" w-full py-16 px-5 font-sans text-[#5C4E45] sm:px-20 lg:py-24 "
-    >
+    <section id="faq" className="w-full py-16 px-5 sm:px-20 lg:py-24">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
-        <h2 className="mb-4 text-4xl font-bold md:mb-6 md:text-5xl text-center text-[#7D5A45]">
-          Frequently asked questions
-        </h2>
-        <p className="mb-12 md:text-xl text-lg font-medium text-gray-600 leading-normal max-w-[750px] mx-auto text-center">
+        <Image
+          src={FaqTitle}
+          alt="FAQ Header"
+          width={0}
+          height={200}
+          className="mx-auto mb-6"
+        />
+        <p className="text-center mx-auto max-w-2xl text-xl font-bold pr-10 [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6">
           We have written down answers to some of the frequently asked
           questions. But if you still have any inquiries, feel free to ping us
           on social networks.
@@ -106,6 +163,8 @@ export const FAQ = () => {
               question={question.question}
               answer={question.answer}
               index={index}
+              isOpen={openIndex === index}
+              onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
             />
           ))}
         </ul>
@@ -118,36 +177,37 @@ const Question = ({
   question,
   answer,
   index,
-}: QuestionType & { index: number }) => {
+  isOpen,
+  onToggle,
+}: QuestionType & { index: number; isOpen: boolean; onToggle: () => void }) => {
   return (
     <li
-      className="text-left bg-[#F6EEDD] rounded-2xl"
-      data-sal="slide-up"
-      data-sal-delay={`${index * 100}`}
-      data-sal-duration="500"
+      className={`text-left border-2 border-black shadow-[-8px_8px_0_0_black] transition-all duration-300 rounded-[2rem] ${
+        isOpen ? "bg-primary" : "bg-white hover:bg-primary"
+      }`}
     >
-      <label
-        htmlFor={`accordion-${index}`}
-        className="relative flex flex-col rounded-md border-b-[1px] border-gray-200"
-      >
+      <label htmlFor={`accordion-${index}`} className="relative flex flex-col">
         <input
           className="peer hidden"
           type="checkbox"
           id={`accordion-${index}`}
-          defaultChecked={index === 0}
+          checked={isOpen}
+          onChange={onToggle}
         />
-        <Arrow />
+        <Arrow isOpen={isOpen} />
 
-        <div className="relative ml-4 cursor-pointer select-none items-center py-4 pr-12">
-          <h3 className="text-base text-[#061431]  lg:text-lg">{question}</h3>
+        <div className="relative ml-6 cursor-pointer select-none items-center py-4">
+          <h3 className="font-bold lg:text-lg">{question}</h3>
         </div>
-        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-96 text-[#061431]/70">
-          <div className="p-5">
-            {typeof answer === "string" ? (
-              <p className="text-md">{answer}</p>
-            ) : (
-              <>{answer()}</>
-            )}
+        <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-in-out peer-checked:grid-rows-[1fr]">
+          <div className="overflow-hidden">
+            <div className="px-6 pb-4">
+              {typeof answer === "string" ? (
+                <p className="text-md">{answer}</p>
+              ) : (
+                <>{answer()}</>
+              )}
+            </div>
           </div>
         </div>
       </label>
@@ -155,60 +215,32 @@ const Question = ({
   );
 };
 
-const Link = ({
-  children,
-  ...props
-}: DetailedHTMLProps<
-  AnchorHTMLAttributes<HTMLAnchorElement>,
-  HTMLAnchorElement
->) => {
-  return (
-    <a
-      {...props}
-      rel="noreferrer"
-      target="_blank"
-      className="text-[#53925E] font-bold hover:underline"
-    >
-      {children}
-    </a>
-  );
-};
-
-const Arrow = () => (
-  <svg
-    width="25"
-    height="25"
-    viewBox="0 0 25 25"
-    className="absolute right-0 top-4 ml-auto mr-5 h-5 text-gray-400 transition-all duration-500 peer-checked:rotate-180 peer-checked:text-gray-800"
-    stroke="currentColor"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+const Arrow = ({ isOpen }: { isOpen: boolean }) => (
+  <div
+    className={`absolute right-0 top-4 mr-5 h-6 w-6 transition-transform duration-300 ${
+      isOpen ? "rotate-180" : "rotate-0"
+    }`}
   >
-    <g clipPath="url(#clip0_277_5712)">
-      <path
-        d="M12.5 6.15137L12.5 20.1514"
-        stroke="currentColor"
-        strokeWidth="1.625"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <line
+        x1="12"
+        y1="5"
+        x2="12"
+        y2="19"
+        className={`origin-center transition-opacity duration-300 ${
+          isOpen ? "opacity-0" : "opacity-100"
+        }`}
       />
-      <path
-        d="M19.251 13.6514L12.501 20.4014L5.75098 13.6514"
-        stroke="currentColor"
-        strokeWidth="1.625"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </g>
-    <defs>
-      <clipPath id="clip0_277_5712">
-        <rect
-          width="24"
-          height="24"
-          fill="white"
-          transform="translate(24.5 24.1514) rotate(-180)"
-        />
-      </clipPath>
-    </defs>
-  </svg>
+    </svg>
+  </div>
 );

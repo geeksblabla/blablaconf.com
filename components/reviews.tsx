@@ -77,7 +77,7 @@ const tweets: TweetType[][] = [
 
 export const Reviews = () => {
   return (
-    <section id="reviews" className="py-16 px-4 bg-[#E9D1AD]/50 text-black/70">
+    <section id="reviews" className="py-16 px-4 text-black/70">
       <div className="mx-auto ">
         <Image
           src={reviewsTitle}

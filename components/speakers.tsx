@@ -11,7 +11,7 @@ export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
     <section
       id="speakers"
-      className="bg-[#53925E]  mx-auto py-16 text-white   overflow-hidden"
+      className="mx-auto py-16 text-white   overflow-hidden"
     >
       <div className="mx-auto ">
         <Image
@@ -136,7 +136,7 @@ export const Links = ({ links }: { links: SpeakerLinkType[] }) => (
   <ul className="list-inside flex justify-center py-2 mx-auto">
     {links
       .filter(
-        (link) => link.linkType === "Twitter" || link.linkType === "LinkedIn"
+        (link) => link.linkType === "Twitter" || link.linkType === "LinkedIn",
       )
       .map((link, index) => (
         <SocialLink href={link.url} type={link.linkType} key={`link${index}`} />
