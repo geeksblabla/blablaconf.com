@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { LogoWhite } from "./logo";
 
 export const Footer = () => {
@@ -62,30 +63,30 @@ export const Footer = () => {
               <h4 className="font-bold text-primary text-2xl mb-2">
                 Conference
               </h4>
-              <a
+              <Link
                 href="/#tracks"
                 className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Tracks
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#speakers"
                 className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Speakers
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#agenda"
                 className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Agenda
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#faq"
                 className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 FAQ
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col gap-3">
               <h4 className="font-bold text-primary text-2xl mb-2">
@@ -97,12 +98,12 @@ export const Footer = () => {
               >
                 Join the team
               </a>
-              <a
+              <Link
                 href="/#partners"
                 className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Become a sponsor
-              </a>
+              </Link>
             </div>
           </div>
         </div>

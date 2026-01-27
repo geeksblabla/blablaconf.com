@@ -43,7 +43,7 @@ export const PreviousSessions = () => {
           className="mx-auto object-contain"
         />
         <p className="mx-auto text-center text-black max-w-2xl text-xl md:text-2xl font-bold pt-6 [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
-          This is the 5th edition of BlaBlaConf, Make sure to watch the last
+          This is the 5th edition of BlaBLaConf, Make sure to watch the last
           years sessions, and get a sneak peek of what BlaBLaConf Conference
           would be like.
         </p>
@@ -85,10 +85,12 @@ const EditionVideo = ({
     >
       {/* Thumbnail */}
       <div className="relative aspect-video overflow-hidden">
-        <img
+        <Image
           src={thumbnail}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          unoptimized
         />
         {/* Play Button Overlay */}
         <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors duration-300">

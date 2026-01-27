@@ -142,7 +142,7 @@ const Tweet = ({
     <div
       className={`${
         !featured ? "hidden md:block" : ""
-      } relative rounded-[2rem] overflow-hidden p-6 bg-white hover:bg-primary border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:translate-x-[-8px] hover:translate-y-[8px] transition-all duration-300`}
+      } relative rounded-[2rem] overflow-hidden p-6 bg-white hover:bg-primary border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:-translate-x-[8px] hover:translate-y-[8px] transition-all duration-300`}
     >
       {/* Twitter/X Icon */}
       <div className="absolute top-4 right-4 text-gray-500">
@@ -180,7 +180,7 @@ const Tweet = ({
 
       {/* Decorative Quote */}
       <div className="absolute -bottom-4 -right-2 text-primary/10 text-8xl font-serif pointer-events-none">
-        "
+        &ldquo;
       </div>
     </div>
   );
