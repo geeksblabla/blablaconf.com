@@ -37,7 +37,7 @@ export const Footer = () => {
                 href="https://geeksblabla.io"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 geeksblabla.io
               </a>
@@ -45,7 +45,7 @@ export const Footer = () => {
                 href="https://stateofdev.ma"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 stateofdev.ma
               </a>
@@ -53,7 +53,7 @@ export const Footer = () => {
                 href="https://awesome-morocco.dev"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 awesome-morocco.dev
               </a>
@@ -64,25 +64,25 @@ export const Footer = () => {
               </h4>
               <a
                 href="/#tracks"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Tracks
               </a>
               <a
                 href="/#speakers"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Speakers
               </a>
               <a
                 href="/#agenda"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Agenda
               </a>
               <a
                 href="/#faq"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 FAQ
               </a>
@@ -93,13 +93,13 @@ export const Footer = () => {
               </h4>
               <a
                 href="#"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Join the team
               </a>
               <a
                 href="/#partners"
-                className="text-gray-300 text-lg hover:text-secondary transition-colors"
+                className="text-gray-300 text-lg hover:text-primary transition-colors"
               >
                 Become a sponsor
               </a>

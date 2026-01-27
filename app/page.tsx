@@ -22,14 +22,14 @@ export default async function Home() {
       {/* <ConferenceDoneModal /> */}
       <Hero />
       <Timer/>
-      {/* <Tracks /> */}
-      {/* <Sponsors /> */}
-      {/* <Community /> */}
-      {/* <Speakers speakers={speakers} /> */}
-      {/* <Agenda days={days} /> */}
-      {/* <PreviousSessions /> */}
-      {/* <CommunityProjects /> */}
-      {/* <Reviews /> */}
+      <Tracks />
+      <Sponsors />
+      <Community />
+      <Speakers speakers={speakers} />
+      <Agenda days={days} />
+      <PreviousSessions />
+      <CommunityProjects />
+      <Reviews />
       <FAQ />
 
     </div>

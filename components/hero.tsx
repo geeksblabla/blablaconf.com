@@ -22,7 +22,7 @@ export const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="flex items-center gap-3 text-2xl md:text-4xl font-black px-6 py-4 bg-secondary hover:bg-black text-white hover:text-secondary border-4 border-black shadow-[-8px_8px_0_0_black] hover:-translate-x-[8px] hover:translate-y-[8px] hover:shadow-[0] transition-all">
+          <button className="flex items-center gap-3 text-2xl md:text-4xl font-black px-6 py-4 bg-secondary hover:bg-black text-white hover:text-secondary border-4 border-black shadow-[-8px_8px_0_0_black] hover:translate-x-[-8px] hover:translate-y-[8px] hover:shadow-[0] transition-all">
             تفرج فيوتوب
             <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
               <polygon points="5,3 19,12 5,21" />
@@ -30,7 +30,7 @@ export const Hero = () => {
           </button>
         </a>
         {/* Discovery Button */}
-        <button className="flex items-center gap-3 text-2xl md:text-4xl font-black px-6 py-4 bg-primary hover:bg-black text-black hover:text-primary border-4 border-black shadow-[-8px_8px_0_0_black] hover:-translate-x-[8px] hover:translate-y-[8px] hover:shadow-[0] transition-all">
+        <button className="flex items-center gap-3 text-2xl md:text-4xl font-black px-6 py-4 bg-primary hover:bg-black text-black hover:text-primary border-4 border-black shadow-[-8px_8px_0_0_black] hover:translate-x-[-8px] hover:translate-y-[8px] hover:shadow-[0] transition-all">
           اكتاشف
           <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z" />

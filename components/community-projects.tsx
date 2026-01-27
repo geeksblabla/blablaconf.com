@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import gSrc from "../images/projects/geeksblabla.png";
 import stateSrc from "../images/projects/stateofdev.png";
 import awesomeSrc from "../images/projects/awesome-morocco.png";
-import moreTitle from "../images/titles/more.png";
+import moreTitle from "../images/discover-more.svg";
 
 type ProjectType = {
   name: string;
@@ -12,6 +12,7 @@ type ProjectType = {
   image: StaticImageData;
   index: number;
 };
+
 const projects = [
   {
     name: "Geeksblabla",
@@ -28,46 +29,35 @@ const projects = [
       "The annual survey on Software Developers in Morocco to provide data on the tech community and their professional paths",
   },
   {
-    name: "Awesome Moroccan ",
+    name: "Awesome Moroccan",
     url: "https://awesome-morocco.dev",
     image: awesomeSrc,
     description:
       "List of awesome Moroccan things for developers. Communities, Events, Blogs, Podcasts, Youtube Channels, Open Source Projects, Books and more",
   },
 ];
+
 export const CommunityProjects = () => {
   return (
-    <section className="py-6 sm:py-8 lg:py-12" id="community-initiatives">
-      <div className="mx-auto max-w-screen-xl px-4 md:px-8">
-        <div className="mx-auto ">
-          <Image
-            src={moreTitle}
-            alt="tracks title"
-            className="mx-auto md:max-h-[140px] max-h-[120px] object-contain"
-          />
-          <p
-            className="my-6 text-base text-center  font-[400] text-[#282828]/60 leading-normal max-w-[450px] mx-auto "
-            ata-sal="fade"
-            data-sal-delay="100"
-            data-sal-duration="500"
-          >
-            BlaBlaConf is our yearly show, where we get together and celebrate
-            the achievement of the Moroccan community. Of the same DNA, find
-            here more community initiatives.
-          </p>
-        </div>
-        {/* <div className="relative mb-10 pt-8 md:mb-16">
-          <h2 className="text-3xl font-bold md:text-5xl capitalize text-center text-gradient">
-            Community Initiatives
-          </h2>
-          <p className="mt-4 mx-auto text-lg font-medium text-[#282828]  max-w-[600px] text-center">
-            BlaBlaConf is our yearly show, where we get together and celebrate
-            the achievement of the Moroccan community. Of the same DNA, find
-            here more community initiatives.
-          </p>
-        </div> */}
+    <section
+      className="py-16 px-5 sm:px-20 lg:py-24"
+      id="community-initiatives"
+    >
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
+        <Image
+          src={moreTitle}
+          alt="Discover More"
+          width={0}
+          height={170}
+          className="mx-auto object-contain"
+        />
+        <p className="mx-auto text-center text-black max-w-2xl text-xl md:text-2xl font-bold pt-6 [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
+          BlaBlaConf is our yearly show, where we get together and celebrate the
+          achievement of the Moroccan community. Of the same DNA, find here more
+          community initiatives.
+        </p>
 
-        <div className="">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
           {projects.map((project, index) => (
             <Project {...project} key={`project-${index}`} index={index} />
           ))}
@@ -78,29 +68,50 @@ export const CommunityProjects = () => {
 };
 
 const Project = ({ name, image, url, description, index }: ProjectType) => {
+  const bgColor = index % 2 === 0 ? "hover:bg-primary" : "hover:bg-secondary";
+
   return (
     <a
       href={url}
       target="_blank"
-      className="overflow-hidden flex flex-col items-center  md:flex-row lg:gap-6 relative bg-[#CC9B80]/20 my-4 cursor-pointer rounded-xl hover:-translate-y-1 transition-all max-w-[900px] mx-auto"
       rel="noreferrer"
-      data-sal="slide-down"
-      data-sal-delay={`${index * 100}`}
-      data-sal-duration="500"
+      className={`group flex flex-col rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:translate-x-[-8px] hover:translate-y-[8px] transition-all duration-300 bg-white ${bgColor}`}
     >
-      <div className="md:h-24 md:w-24 lg:h-40 w-full min-h-[150px] flex justify-center md:mx-4 mx-0 items-center lg:w-40 p-2">
+      {/* Image Container */}
+      <div className="bg-white p-6 flex items-center justify-center min-h-[180px] border-b-3 border-black">
         <Image
           src={image}
-          width={100}
-          alt=""
-          className="w-full max-w-[200px]  object-center "
+          alt={name}
+          width={180}
+          height={100}
+          className="object-contain max-h-[120px] group-hover:scale-110 transition-transform duration-300"
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-2 md:text-left text-center">
-        <h2 className="text-2xl font-bold text-black/75">{name}</h2>
+      {/* Content */}
+      <div className="flex flex-col p-6 flex-1">
+        <h2 className="text-2xl font-black text-black mb-3">{name}</h2>
+        <p className="text-black/80 text-base leading-relaxed flex-1">
+          {description}
+        </p>
 
-        <p className="text-[#282828] text-lg mt-2">{description}</p>
+        {/* Visit Link */}
+        <div className="flex items-center gap-2 mt-4 font-bold text-black group-hover:gap-4 transition-all">
+          <span>Visit</span>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </div>
       </div>
     </a>
   );

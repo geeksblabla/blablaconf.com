@@ -17,14 +17,14 @@ export const Header = () => {
   return (
     <>
       <header className="px-4 relative z-[100]">
-        <div className="relative z-[100] mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-12 sm:flex-row sm:items-center sm:justify-between">
+        <div className="relative z-[100] mx-auto flex max-w-screen-xl flex-col py-12 sm:flex-row sm:items-center sm:justify-between">
           <Link className="flex items-center text-2xl font-black" href="/">
             <Logo />
           </Link>
 
           <input className="peer hidden" type="checkbox" id="navbar-open" />
           <label
-            className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden"
+            className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all"
             htmlFor="navbar-open"
           >
             <span className="sr-only">Toggle Navigation</span>
@@ -46,11 +46,11 @@ export const Header = () => {
             aria-label="Header Navigation"
             className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0"
           >
-            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-10">
+            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 xl:gap-x-10">
               {links.map((link, i) => (
                 <li key={link.label} className="my-auto">
                   <a
-                    className="inline-block font-medium text-lg bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:-translate-x-[6px] hover:translate-y-[6px] transition-all"
+                    className="inline-block w-full text-center font-medium text-xs lg:text-lg bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all"
                     href={link.href}
                   >
                     {link.label}
