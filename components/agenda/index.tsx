@@ -11,23 +11,23 @@ import agendaTitle from "@/images/titles/agenda.png";
 const days_titles = [
   {
     title: "UX, Web & Mobile",
-    date: "03",
+    date: "02",
   },
   {
     title: "Big Data & Machine Learning",
-    date: "04",
+    date: "03",
   },
   {
     title: "Backend & Programming Languages",
-    date: "05",
+    date: "04",
   },
   {
     title: "Cloud, Containers & Infrastructure",
-    date: "06",
+    date: "05",
   },
   {
     title: "Security & Architecture ",
-    date: "07",
+    date: "06",
   },
   // {
   //   title: "In Person Day",

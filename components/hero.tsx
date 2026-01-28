@@ -37,7 +37,7 @@ export const Hero = () => {
             >
               <p className="  mb-1">
                 {" "}
-                من 03 حتى 07 فبراير وجدو راسكم لخمسيام ديال الإفادة والفراجة
+                من 02 حتى 06 فبراير وجدو راسكم لخمسيام ديال الإفادة والفراجة
                 مباشرة على{" "}
                 <a
                   href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
