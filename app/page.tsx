@@ -1,5 +1,4 @@
 import { Agenda } from "@/components/agenda";
-import { AgendaRow } from "@/components/agenda/row";
 import { Community } from "@/components/community";
 import { CommunityProjects } from "@/components/community-projects";
 import { FAQ } from "@/components/FAQ";
@@ -11,7 +10,6 @@ import { Sponsors } from "@/components/sponsors";
 import Timer from "@/components/timer";
 import { Tracks } from "@/components/tracks";
 import { getSessions, getSpeakers } from "@/utils/sessionize";
-// import { ConferenceDoneModal } from "@/components/conference-done-modal";
 
 export default async function Home() {
   const speakers = await getSpeakers();
@@ -19,7 +17,6 @@ export default async function Home() {
 
   return (
     <div>
-      {/* <ConferenceDoneModal /> */}
       <Hero />
       <Timer/>
       <Tracks />
