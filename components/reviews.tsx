@@ -80,7 +80,7 @@ export const Reviews = () => {
   return (
     <section
       id="reviews"
-      className="py-20 px-5 sm:px-20 lg:py-28 bg-gradient-to-b from-transparent to-primary/10"
+      className="py-20 px-5 sm:px-20 lg:py-28"
     >
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
         <Image
@@ -88,9 +88,14 @@ export const Reviews = () => {
           alt="reviews title"
           width={0}
           height={170}
-          className="mx-auto object-contain"
+          className="mx-auto"
         />
-        <p className="mx-auto text-center text-black max-w-2xl text-xl md:text-2xl font-bold pt-6 [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
+        <p
+          className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
+          ata-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="500"
+        >
           We love our community and our community loves us back!
         </p>
 

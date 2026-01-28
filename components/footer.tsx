@@ -2,9 +2,55 @@ import React from "react";
 import Link from "next/link";
 import { LogoWhite } from "./logo";
 
+type LinkItem = {
+  label: string;
+  href: string;
+  external?: boolean;
+};
+
+type LinkSection = {
+  category: string;
+  items: LinkItem[];
+};
+
+const links: LinkSection[] = [
+  {
+    category: "Community",
+    items: [
+      {
+        label: "geeksblabla.io",
+        href: "https://geeksblabla.io",
+        external: true,
+      },
+      { label: "stateofdev.ma", href: "https://stateofdev.ma", external: true },
+      {
+        label: "awesome-morocco.dev",
+        href: "https://awesome-morocco.dev",
+        external: true,
+      },
+    ],
+  },
+  {
+    category: "Conference",
+    items: [
+      { label: "Tracks", href: "/#tracks" },
+      { label: "Speakers", href: "/#speakers" },
+      { label: "Agenda", href: "/#agenda" },
+      { label: "FAQ", href: "/#faq" },
+    ],
+  },
+  {
+    category: "Get Involved",
+    items: [
+      { label: "Join the team", href: "#" },
+      { label: "Become a sponsor", href: "/#partners" },
+    ],
+  },
+];
+
 export const Footer = () => {
   return (
-    <footer className="w-full bg-black text-background py-16 border-t-8 border-primary">
+    <footer className="w-full bg-black py-16 border-t-8 border-primary">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 mb-12">
@@ -22,7 +68,7 @@ export const Footer = () => {
             </div>
             <a
               href="#register"
-              className="inline-block mt-2 bg-primary text-black text-lg font-bold px-6 py-3 rounded-full hover:bg-secondary hover:text-white transition-all"
+              className="inline-block mt-2 bg-primary text-black border-4 border-primary text-lg font-bold px-6 py-3 rounded-full hover:bg-black hover:border-primary hover:text-white transition-all"
             >
               Get Your Ticket
             </a>
@@ -30,81 +76,24 @@ export const Footer = () => {
 
           {/* Links */}
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-16">
-            <div className="flex flex-col gap-3">
-              <h4 className="font-bold text-primary text-2xl mb-2">
-                Community
-              </h4>
-              <a
-                href="https://geeksblabla.io"
-                target="_blank"
-                rel="noreferrer"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                geeksblabla.io
-              </a>
-              <a
-                href="https://stateofdev.ma"
-                target="_blank"
-                rel="noreferrer"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                stateofdev.ma
-              </a>
-              <a
-                href="https://awesome-morocco.dev"
-                target="_blank"
-                rel="noreferrer"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                awesome-morocco.dev
-              </a>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h4 className="font-bold text-primary text-2xl mb-2">
-                Conference
-              </h4>
-              <Link
-                href="/#tracks"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                Tracks
-              </Link>
-              <Link
-                href="/#speakers"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                Speakers
-              </Link>
-              <Link
-                href="/#agenda"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                Agenda
-              </Link>
-              <Link
-                href="/#faq"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                FAQ
-              </Link>
-            </div>
-            <div className="flex flex-col gap-3">
-              <h4 className="font-bold text-primary text-2xl mb-2">
-                Get Involved
-              </h4>
-              <a
-                href="#"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                Join the team
-              </a>
-              <Link
-                href="/#partners"
-                className="text-gray-300 text-lg hover:text-primary transition-colors"
-              >
-                Become a sponsor
-              </Link>
-            </div>
+            {links.map((section) => (
+              <div key={section.category} className="flex flex-col gap-3">
+                <h4 className="font-bold text-primary text-2xl mb-2">
+                  {section.category}
+                </h4>
+                {section.items.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noreferrer" : undefined}
+                    className="text-gray-300 text-lg hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 

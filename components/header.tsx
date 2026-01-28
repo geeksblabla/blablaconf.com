@@ -49,12 +49,12 @@ export const Header = () => {
             <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 xl:gap-x-10">
               {links.map((link, i) => (
                 <li key={link.label} className="my-auto">
-                  <a
+                  <Link
                     className="inline-block w-full text-center font-medium text-xs lg:text-lg bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all"
                     href={link.href}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -62,33 +62,5 @@ export const Header = () => {
         </div>
       </header>
     </>
-  );
-};
-
-const Banner = () => {
-  return (
-    <div className="bg-lime-600 text-white fixed w-full z-40">
-      <div className="mx-auto max-w-7xl px-2 py-3 sm:px-4 sm:py-2 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between">
-          <div className="flex w-0 flex-1 items-center  ">
-            <p className="ml-3 text-center font-medium leading-5 mx-auto ">
-              <span className="sm:text-lg text-base">
-                <span className="rounded-md bg-amber-500 px-2 mr-2 text-white">
-                  Ready !!!
-                </span>{" "}
-                BlaBlaConf 2024 CFP in now open!{" "}
-                <a
-                  className="underline font-bold"
-                  href="https://cfp.blablaconf.com"
-                >
-                  {" "}
-                  Submit your talk now!
-                </a>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };

@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { Session, SessionByDay } from "@/utils/sessionize";
+import type { Session as SessionType, SessionByDay } from "@/utils/sessionize";
 import Link from "next/link";
 import { SessionTime } from "../session-time";
 import { AddToCalendar } from "./add-to-calendar";
 import { DaysMenu } from "./days-menu";
 import Image from "next/image";
-import { InPersonDays } from "./in-person-days";
-import agendaTitle from "@/images/titles/agenda.png";
+import agendaTitle from "@/images/agenda.svg";
 
 const days_titles = [
   {
@@ -35,34 +34,12 @@ const days_titles = [
   // },
 ];
 
-const cities = [
-  {
-    name: "Marrakech",
-    date: "February 24, 2pm",
-    place: "TBD",
-  },
-  {
-    name: "Casablanca",
-    date: "February 24, 2pm",
-    place: "TBD",
-  },
-  {
-    name: "khouribga",
-    date: "February 24, 2pm",
-    place: "TBD",
-  },
-  {
-    name: "Rabat",
-    date: "February 24, 2pm",
-    place: "TBD",
-  },
-];
 
-export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
+export const Agenda = ({ days }: { days: SessionByDay<SessionType>[] }) => {
   return (
-    <section id="agenda" className="mx-auto py-16 text-[#EEE1C5] bg-[#EEE1C5]">
+    <section id="agenda" className="mx-auto py-16 bg-tertiary">
       <div className="overflow-hidden">
-        <div className="relative bg-[#EEE1C5] mx-auto max-w-lg md:max-w-screen-xl my-5">
+        <div className="relative mx-auto max-w-lg md:max-w-screen-xl my-5">
           <div className="flex flex-col items-center md:px-8 px-4 py-4 text-center ">
             <div className="mx-auto ">
               <Image
@@ -71,7 +48,7 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
                 className="mx-auto md:max-h-[160px] max-h-[120px] object-contain"
               />
               <p
-                className="my-6 text-base text-center  font-[400] text-[#282828]/60 leading-normal max-w-[450px] mx-auto "
+                className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
                 ata-sal="fade"
                 data-sal-delay="100"
                 data-sal-duration="500"
@@ -94,11 +71,14 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
                 key={`day-${index}`}
                 className="mb-16 relative"
               >
-                <div className="flex md:relative sticky top-0 px-5 flex-row md:rounded-2xl rounded-none z-10 items-center justify-between bg-gradient-to-r from-[#E7B041]/30 to-[#E7B041]">
-                  <span className="w-fit text-xl font-bold rounded-xl text-[#53925E] min-w-[120px] ">
-                    {days_titles[index].date} February
-                  </span>
-                  <h1 className="text-lg py-4  text-black text-right ">
+                <div className="flex md:relative sticky top-0 px-6 py-4 flex-row md:rounded-[2rem] rounded-none z-10 items-center justify-between bg-secondary border-[3px] border-black md:shadow-[-6px_6px_0_0_black]">
+                  <div className="flex items-center gap-3">
+                    <span className="text-xl font-bold text-white">
+                      {days_titles[index].date}{" "}
+                      February
+                    </span>
+                  </div>
+                  <h1 className="text-2xl font-bold text-white text-right">
                     {days_titles[index].title}
                   </h1>
                 </div>
@@ -119,68 +99,93 @@ export const Agenda = ({ days }: { days: SessionByDay<Session>[] }) => {
           <div className="md:pt-16 pt-3" />
         </div>
       </div>
-      <InPersonDays />
     </section>
   );
 };
 
-const Session = ({ session, index }: { session: Session; index: number }) => {
+const Session = ({
+  session,
+  index,
+}: {
+  session: SessionType;
+  index: number;
+}) => {
+  const hasSpeakers = session?.speakers && session.speakers.length > 0;
+
   return (
     <div
-      className={`p-5 my-4 bg-[#F7EEDD]  rounded-lg  ${
-        index === 0
-          ? "bg-[url('/images/min-pattern.svg')] bg-contain bg-repeat"
-          : ""
-      } `}
+      className={`p-5 my-4 rounded-[2rem] border-[3px] border-black shadow-[-6px_6px_0_0_black] ${hasSpeakers ? "bg-white" : "bg-primary"}`}
     >
-      <div className="flex flex-col justify-between ">
-        <div className="flex flex-row content-end justify-between ">
-          <div>
-            <SessionTime session={session} />
-            <h3 className="flex items-center mb-1 text-xl font-bold -mt-1 text-[#061431]">
+      <div className="flex flex-col justify-between">
+        {/* Title & Time Row */}
+        <div className="flex flex-row justify-between items-start gap-4">
+          <h3
+            className={`text-xl font-bold flex-1 ${!hasSpeakers ? "text-center w-fulll" : ""}`}
+          >
+            {hasSpeakers ? (
               <Link href={`/session/${session.id}`}>{session.title}</Link>
-            </h3>
-          </div>
-          {session?.speakers?.[0] && <AddToCalendar session={session} />}
+            ) : (
+              session.title
+            )}
+          </h3>
+          {hasSpeakers && <SessionTime session={session} />}
         </div>
-        <div className="flex md:flex-row flex-col justify-between md:items-end item-start">
-          <div>
-            {session?.speakers &&
-              session?.speakers.map((speaker) => (
+
+        {/* Speaker & Actions Row - Only show if has speakers */}
+        {hasSpeakers && (
+          <div className="flex flex-col md:flex-row justify-between md:items-end items-start gap-4 mt-3">
+            {/* Speakers Info */}
+            <div className="flex flex-wrap gap-4">
+              {session.speakers.map((speaker) => (
                 <div
-                  className="flex flex-row justify-between items-end  "
+                  className="flex flex-row items-center"
                   key={speaker?.id}
                   id={`speaker-session-${speaker?.id}`}
                 >
-                  <div className="flex flex-row items-center pr-2 pt-2">
-                    <Image
-                      alt={`${speaker?.fullName} profile picture`}
-                      src={speaker?.profilePicture}
-                      className="w-14 h-14 rounded-lg border-[3px] border-white"
-                      height="60"
-                      width="60"
-                    />
-                    <p className="pl-2 font-bold text-[#53925E]">
-                      {speaker?.fullName}
-                      <br />
-                      <span className="font-normal text-sm text-[#434343]">
-                        {speaker?.tagLine}{" "}
-                      </span>
-                    </p>
-                  </div>
+                  <Image
+                    alt={`${speaker?.fullName} profile picture`}
+                    src={speaker?.profilePicture}
+                    className="w-14 h-14 rounded-full border-2 border-black"
+                    height="56"
+                    width="56"
+                  />
+                  <p className="pl-3 font-bold text-black">
+                    {speaker?.fullName}
+                    <br />
+                    <span className="font-normal text-sm text-black/80">
+                      {speaker?.tagLine}
+                    </span>
+                  </p>
                 </div>
               ))}
-          </div>
+            </div>
 
-          {session?.speakers?.[0] && (
-            <Link
-              className=" text-white px-6 py-2 rounded-md bg-[#53925E] text-base min-w-[110px] text-center self-end shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
-              href={`/session/${session.id}`}
-            >
-              See More
-            </Link>
-          )}
-        </div>
+            {/* Action Buttons */}
+            <div className="flex gap-3 items-center shrink-0">
+              <AddToCalendar session={session} />
+              <Link
+                href={`/session/${session.id}`}
+                className="group flex items-center justify-center w-10 h-10 rounded-full bg-secondary border-2 border-black shadow-[-3px_3px_0_0_black] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[3px] transition-all duration-300"
+                aria-label="See more"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-white"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

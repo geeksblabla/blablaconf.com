@@ -1,5 +1,6 @@
 import Image from "next/image";
 import blablacan from "@/images/blablacan.svg";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -17,7 +18,7 @@ export const Hero = () => {
       {/* Action Buttons */}
       <div className="flex flex-wrap justify-center z-10 gap-8 items-center -mt-48">
         {/* YouTube Button */}
-        <a
+        <Link
           href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,7 +29,7 @@ export const Hero = () => {
               <polygon points="5,3 19,12 5,21" />
             </svg>
           </button>
-        </a>
+        </Link>
         {/* Discovery Button */}
         <button className="flex items-center gap-3 text-2xl md:text-4xl font-black px-6 py-4 bg-primary hover:bg-black text-black hover:text-primary border-4 border-black shadow-[-8px_8px_0_0_black] hover:translate-x-[-8px] hover:translate-y-[8px] hover:shadow-[0] transition-all">
           اكتاشف

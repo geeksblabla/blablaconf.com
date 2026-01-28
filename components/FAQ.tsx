@@ -149,9 +149,14 @@ export const FAQ = () => {
           alt="FAQ Header"
           width={0}
           height={200}
-          className="mx-auto mb-6"
+          className="mx-auto"
         />
-        <p className="text-center mx-auto max-w-2xl text-xl font-bold pr-10 [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6">
+        <p
+          className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
+          ata-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="500"
+        >
           We have written down answers to some of the frequently asked
           questions. But if you still have any inquiries, feel free to ping us
           on social networks.
@@ -201,12 +206,8 @@ const Question = ({
         </div>
         <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-in-out peer-checked:grid-rows-[1fr]">
           <div className="overflow-hidden">
-            <div className="px-6 pb-4">
-              {typeof answer === "string" ? (
-                <p className="text-md">{answer}</p>
-              ) : (
-                <>{answer()}</>
-              )}
+            <div className="px-6 pb-4 text-md">
+              {typeof answer === "string" ? answer : answer()}
             </div>
           </div>
         </div>

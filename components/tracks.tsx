@@ -5,84 +5,68 @@ import secArchImage from "../images/tracks/sec-arch.png";
 import bigDataImage from "../images/tracks/big-data.png";
 import cloudImage from "../images/tracks/cloud.png";
 import softSkillsImage from "../images/tracks/soft-skills.png";
-import tracksTitle from "../images/titles/tracks.png";
-import trackTitle from "../images/titles/track.png";
+import tracksTitle from "../images/tracks.svg";
+
 const tracks = [
   {
-    title: "Web,\n mobile & UX",
+    title: "Web, Mobile & UX",
     description:
       "Design and prototype faster, with an entire library of ready components.",
     image: webImage,
-    tooltip: " بذوق فريد من اعماق تقافتنا",
-    textSize: "text-2xl",
+    day: 1,
   },
   {
-    title: "Backend Technologies & \n Programming languages",
+    title: "Backend & Programming Languages",
     description:
       "All about programming languages, functional, reactive, emerging languages, tools, libraries, etc",
     image: backendImage,
-    tooltip: " بذوق فريد من اعماق تقافتنا",
-    textSize: "text-xl",
+    day: 2,
   },
   {
-    title: "Security & \n Architecture",
+    title: "Security & Architecture",
     description:
       "How-Tos, strategies, tools, and best practices for getting architecture and security right.",
     image: secArchImage,
-    tooltip: " بذوق فريد من اعماق تقافتنا",
-    textSize: "text-2xl",
+    day: 3,
   },
   {
-    title: "Big Data &\n Machine Learning",
+    title: "Big Data & Machine Learning",
     description:
       "Big Data, Fast Data, NoSQL, Machine learning, Deep Learning, Neural Networks, TensorFlow, etc",
     image: bigDataImage,
-    tooltip: " بذوق فريد من اعماق تقافتنا",
-    textSize: "text-2xl",
+    day: 4,
   },
   {
-    title: "Cloud, Containers &\n Infrastructure",
+    title: "Cloud, Containers & Infrastructure",
     description:
       "Serverless, Docker, Kubernetes, Service Mesh, Cloud, PaaS, and anything in-between.",
     image: cloudImage,
-    tooltip: " بذوق فريد من اعماق تقافتنا",
-    textSize: "text-2xl",
+    day: 5,
   },
   {
-    title: "Soft \n Skills",
+    title: "Soft Skills",
     description:
       "Emotional Intelligence, Critical Thinking, Evaluation, Mindfulness, Leadership...",
     image: softSkillsImage,
-    tooltip: " بذوق فريد من اعماق تقافتنا",
-    textSize: "text-3xl",
+    day: 6,
   },
 ];
 
 export const Tracks = () => {
   return (
-    <section id="tracks" className="py-2 pb-16">
-      <div className="mx-auto max-w-screen-xl mb-10 pt-8 md:mb-16 md:px-8 px-4">
-        <div className="mx-auto ">
-          <Image
-            src={tracksTitle}
-            alt="tracks title"
-            className="mx-auto md:max-h-[140px] max-h-[120px] object-contain"
-          />
-          <p
-            className="my-6 text-base text-center  font-[400] text-[#282828]/60 leading-normal max-w-[450px] mx-auto "
-            ata-sal="fade"
-            data-sal-delay="100"
-            data-sal-duration="500"
-          >
-            5 tracks covering everything you need to sharpen your IT skills.
-            <br /> 1 additional track because excellence is not only about code!
-          </p>
+    <section id="tracks" className="py-16 px-5 sm:px-20 lg:py-24">
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
+        <Image src={tracksTitle} alt="tracks title" className="mx-auto" />
+        <p className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
+          5 tracks covering everything you need to sharpen your IT skills.
+          <br /> 1 additional track because excellence is not only about code!
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {tracks.map((track, index) => (
+            <Track key={index} {...track} index={index} />
+          ))}
         </div>
-      </div>
-      <div className="mx-auto  grid max-w-screen-xl grid-cols-1 gap-6 py-6  sm:px-6 md:grid-cols-2 lg:grid-cols-3 md:px-8 px-4">
-        {tracks.map((track, index) => (
-          <Track key={index} {...track} index={index} />
-        ))}
       </div>
     </section>
   );
@@ -93,66 +77,64 @@ type TrackType = {
   description: string;
   image: StaticImageData;
   index: number;
-  tooltip: string;
-  textSize: string;
+  day: number;
 };
 
-const Track = ({
-  title,
-  description,
-  image,
-  index,
-  tooltip,
-  textSize,
-}: TrackType) => {
-  const titleStr = title.split("\n").map((str, index) => (
-    <span key={index} className="block">
-      {str}
-    </span>
-  ));
+const Track = ({ title, description, image, index, day }: TrackType) => {
+  const bgColors = [
+    "hover:bg-primary",
+    "hover:bg-secondary",
+    "hover:bg-primary",
+    "hover:bg-secondary",
+    "hover:bg-primary",
+    "hover:bg-secondary",
+  ];
+
   return (
     <a
-      href={`/#day-${index}`}
-      className="rounded-xl  p-3  cursor-pointer group flex flex-col items-center bg-[#E9D1AD]"
+      href={`/#day-${day - 1}`}
+      className={`group flex flex-col rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:translate-x-[-8px] hover:translate-y-[8px] transition-all duration-300 bg-white ${bgColors[index]}`}
     >
-      <div className="w-fit h-[150px] flex flex-row relative items-center justify-center overflow-visible rounded-xl bg-contain  bg-no-repeat bg-center">
-        {/* <div className="absolute  bottom-0 left-0 top-0 w-full h-full z-10  rounded-xl flex">
-          <span className="track-tooltip absolute " data-tooltip={tooltip} />
-        </div> */}
-        <div className="flex flex-row items-center justify-center w-1/3 ">
-          <Image
-            src={image}
-            alt="track photo"
-            className="h-full  max-h-[150px]   origin-bottom "
-            data-sal="fade"
-            data-sal-delay={`${index * 100}`}
-            data-sal-duration="400"
-          />
+      {/* Image Container */}
+      <div className="relative bg-tertiary p-6 flex items-center justify-center min-h-[180px] border-b-[3px] border-black overflow-hidden">
+        {/* Day Badge */}
+        <div className="absolute top-4 left-4 bg-black text-white text-sm font-bold px-3 py-1 rounded-full">
+          Day {day}
         </div>
-        <div className="flex flex-col items-center justify-center w-2/3 ">
-          <Image
-            src={trackTitle}
-            alt="track photo"
-            className="max-w-[100px] origin-bottom "
-          />
-          <h2
-            className={` font-bold capitalize text-center text-[#D35747] leading-tight ${textSize}`}
-          >
-            {titleStr}
-          </h2>
-        </div>
-      </div>
-      <div className="w-full border-[#CA8030] mt-2  border-b-2 border-dashed " />
 
-      <div
-        className=" p-2 max-w-[330px] mx-auto"
-        data-sal="fade"
-        data-sal-delay={`${index * 100}`}
-        data-sal-duration="500"
-      >
-        <p className="text-center w-full mt-1 text-sm font-medium leading-tight text-gray-600 capitalize pt-2 max-w-[300px] ">
+        <Image
+          src={image}
+          alt={title}
+          className="h-[140px] w-auto object-contain  transition-transform duration-300"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col p-6 flex-1">
+        <h2 className="text-xl font-black text-black mb-3 leading-tight">
+          {title}
+        </h2>
+        <p className="text-black/70 text-sm leading-relaxed flex-1">
           {description}
         </p>
+
+        {/* View Schedule Link */}
+        <div className="flex items-center gap-2 mt-4 font-bold text-black group-hover:gap-4 transition-all text-sm">
+          <span>View Schedule</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </div>
       </div>
     </a>
   );

@@ -4,6 +4,7 @@ import gSrc from "../images/projects/geeksblabla.png";
 import stateSrc from "../images/projects/stateofdev.png";
 import awesomeSrc from "../images/projects/awesome-morocco.png";
 import moreTitle from "../images/discover-more.svg";
+import Link from "next/link";
 
 type ProjectType = {
   name: string;
@@ -49,9 +50,14 @@ export const CommunityProjects = () => {
           alt="Discover More"
           width={0}
           height={170}
-          className="mx-auto object-contain"
+          className="mx-auto"
         />
-        <p className="mx-auto text-center text-black max-w-2xl text-xl md:text-2xl font-bold pt-6 [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
+        <p
+          className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
+          ata-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="500"
+        >
           BlaBlaConf is our yearly show, where we get together and celebrate the
           achievement of the Moroccan community. Of the same DNA, find here more
           community initiatives.
@@ -68,23 +74,21 @@ export const CommunityProjects = () => {
 };
 
 const Project = ({ name, image, url, description, index }: ProjectType) => {
-  const bgColor = index % 2 === 0 ? "hover:bg-primary" : "hover:bg-secondary";
-
   return (
-    <a
+    <Link
       href={url}
       target="_blank"
       rel="noreferrer"
-      className={`group flex flex-col rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:translate-x-[-8px] hover:translate-y-[8px] transition-all duration-300 bg-white ${bgColor}`}
+      className="group flex flex-col rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:translate-x-[-8px] hover:translate-y-[8px] transition-all duration-300 bg-white hover:bg-tertiary"
     >
       {/* Image Container */}
-      <div className="bg-white p-6 flex items-center justify-center min-h-[180px] border-b-3 border-black">
+      <div className="bg-tertiary p-6 flex items-center justify-center min-h-[180px] border-b-3 border-black">
         <Image
           src={image}
           alt={name}
           width={180}
           height={100}
-          className="object-contain max-h-[120px] group-hover:scale-110 transition-transform duration-300"
+          className="object-contain max-h-[120px]  transition-transform duration-300"
         />
       </div>
 
@@ -113,6 +117,6 @@ const Project = ({ name, image, url, description, index }: ProjectType) => {
           </svg>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };

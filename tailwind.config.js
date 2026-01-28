@@ -103,7 +103,10 @@ module.exports = {
       colors: {
         primary: "#ffe83c",
         secondary: "#d02b2b",
+        tertiary: "#E9D1AD",
         accent: "#377c45",
+        black: "#000000",
+        white: "#ffffff",
       },
       animation: {
         swing: "swing 1s ease-in-out",

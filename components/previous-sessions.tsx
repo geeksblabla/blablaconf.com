@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
 import lastEditionTitle from "../images/last-editions.svg";
+import Link from "next/link";
 
 const lastEditionSessions = [
   {
@@ -40,9 +41,14 @@ export const PreviousSessions = () => {
           alt="Last Editions"
           width={0}
           height={180}
-          className="mx-auto object-contain"
+          className="mx-auto"
         />
-        <p className="mx-auto text-center text-black max-w-2xl text-xl md:text-2xl font-bold pt-6 [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
+        <p
+          className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
+          ata-sal="fade"
+          data-sal-delay="100"
+          data-sal-duration="500"
+        >
           This is the 5th edition of BlaBLaConf, Make sure to watch the last
           years sessions, and get a sneak peek of what BlaBLaConf Conference
           would be like.
@@ -77,7 +83,7 @@ const EditionVideo = ({
   isNew?: boolean;
 }) => {
   return (
-    <a
+    <Link
       href={url}
       target="_blank"
       rel="noreferrer"
@@ -89,7 +95,7 @@ const EditionVideo = ({
           src={thumbnail}
           alt={title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          className="object-cover transition-transform duration-300"
           unoptimized
         />
         {/* Play Button Overlay */}
@@ -119,6 +125,6 @@ const EditionVideo = ({
           {title}
         </h3>
       </div>
-    </a>
+    </Link>
   );
 };

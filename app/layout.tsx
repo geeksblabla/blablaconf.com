@@ -6,8 +6,8 @@ import "../styles/globals.css";
 import "sal.js/dist/sal.css";
 import { SalLoader } from "@/components/sal-loader";
 import localFont from "next/font/local";
-import overlay from '@/images/overlay.png'
-import backgroundImage from '@/images/background.png'
+import overlay from "@/images/overlay.png";
+import backgroundImage from "@/images/background.png";
 
 // import localFont from "@next/font/local";
 
@@ -74,25 +74,24 @@ export default function RootLayout({
         {children}
         <Footer />
 
-      {/* background image */}
-      <Image
-        src={backgroundImage}
-        alt="Background"
-        className="absolute top-0 left-0 w-full h-auto block [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] -z-10"
-      />
+        {/* background image */}
+        <Image
+          src={backgroundImage}
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-auto block [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] -z-10"
+        />
 
         {/* overlay */}
         <div
-        className='absolute inset-0 z-[9999] pointer-events-none mix-blend-overlay opacity-80'
-        style={{
-          backgroundImage: `url(${overlay.src})`,
-          backgroundSize: '100% auto',
-          backgroundRepeat: 'repeat-y'
-        }}
-      />
+          className="absolute inset-0 z-[9999] pointer-events-none mix-blend-overlay opacity-80"
+          style={{
+            backgroundImage: `url(${overlay.src})`,
+            backgroundSize: "100% auto",
+            backgroundRepeat: "repeat-y",
+          }}
+        />
       </body>
       <GoogleAnalytics gaId="G-21VT2DZDYW" />
-            
     </html>
   );
 }

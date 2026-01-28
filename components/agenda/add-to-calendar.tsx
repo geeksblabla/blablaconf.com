@@ -3,6 +3,7 @@
 import React from "react";
 import { atcb_action } from "add-to-calendar-button";
 import { Session } from "@/utils/sessionize";
+
 export const AddToCalendar = ({
   session,
   type = "icon",
@@ -32,52 +33,89 @@ export const AddToCalendar = ({
       listStyle: "modal",
     });
   };
+
   if (type === "icon") {
     return (
       <button
         onClick={onClick}
-        className="relative mt-4 ml-1 rounded-full   bg-transparent w-10 h-10 flex items-center justify-center font-medium  hover:scale-105 transition-all min-w-[40px]"
+        className="group flex items-center justify-center w-10 h-10 rounded-full bg-primary border-2 border-black shadow-[-3px_3px_0_0_black] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[3px] transition-all duration-300"
+        aria-label="Add to calendar"
       >
         <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="text-black"
         >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M7.38462 0C8.06435 0 8.61539 0.551034 8.61539 1.23077V3.69231H23.3846V1.23077C23.3846 0.551034 23.9357 0 24.6154 0C25.2951 0 25.8462 0.551034 25.8462 1.23077V3.69231H27.0769C29.7959 3.69231 32 5.89644 32 8.61539V27.0769C32 29.7959 29.7959 32 27.0769 32H4.92308C2.20414 32 0 29.7959 0 27.0769V8.61539C0 5.89644 2.20414 3.69231 4.92308 3.69231H6.15385V1.23077C6.15385 0.551034 6.70488 0 7.38462 0ZM29.5385 14.7692C29.5385 13.4098 28.4364 12.3077 27.0769 12.3077H4.92308C3.56361 12.3077 2.46154 13.4098 2.46154 14.7692V27.0769C2.46154 28.4364 3.56361 29.5385 4.92308 29.5385H27.0769C28.4364 29.5385 29.5385 28.4364 29.5385 27.0769V14.7692Z"
-            fill="#000000"
-          />
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+          <line x1="12" y1="14" x2="12" y2="18" />
+          <line x1="10" y1="16" x2="14" y2="16" />
         </svg>
-      </button>
-    );
-  } else {
-    return (
-      <button
-        onClick={onClick}
-        className=" relative px-5 py-2 rounded-md  bg-[#53925E] flex items-center justify-center font-medium  hover:scale-105  text-lg text-extrabold min-w-[110px] text-center self-end shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black "
-      >
-        <svg
-          width="32"
-          height="32"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-4 h-4 mr-2"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M7.38462 0C8.06435 0 8.61539 0.551034 8.61539 1.23077V3.69231H23.3846V1.23077C23.3846 0.551034 23.9357 0 24.6154 0C25.2951 0 25.8462 0.551034 25.8462 1.23077V3.69231H27.0769C29.7959 3.69231 32 5.89644 32 8.61539V27.0769C32 29.7959 29.7959 32 27.0769 32H4.92308C2.20414 32 0 29.7959 0 27.0769V8.61539C0 5.89644 2.20414 3.69231 4.92308 3.69231H6.15385V1.23077C6.15385 0.551034 6.70488 0 7.38462 0ZM29.5385 14.7692C29.5385 13.4098 28.4364 12.3077 27.0769 12.3077H4.92308C3.56361 12.3077 2.46154 13.4098 2.46154 14.7692V27.0769C2.46154 28.4364 3.56361 29.5385 4.92308 29.5385H27.0769C28.4364 29.5385 29.5385 28.4364 29.5385 27.0769V14.7692Z"
-            fill="white"
-          />
-        </svg>
-        <span className="text-white">Add to calendar </span>
       </button>
     );
   }
+
+  return (
+    <button
+      onClick={onClick}
+      className="inline-flex items-center gap-2 px-5 py-3 bg-secondary text-white font-bold rounded-full border-2 border-black shadow-[-4px_4px_0_0_black] hover:shadow-none hover:translate-x-[-4px] hover:translate-y-[4px] transition-all duration-300"
+    >
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+        <line x1="12" y1="14" x2="12" y2="18" />
+        <line x1="10" y1="16" x2="14" y2="16" />
+      </svg>
+      <span>Add to Calendar</span>
+    </button>
+  );
+};
+
+export const SeeMoreButton = ({
+  onClick,
+  isExpanded,
+}: {
+  onClick: () => void;
+  isExpanded: boolean;
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      className="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-bold rounded-full border-2 border-black shadow-[-4px_4px_0_0_black] hover:shadow-none hover:translate-x-[-4px] hover:translate-y-[4px] hover:bg-primary transition-all duration-300"
+    >
+      <span>{isExpanded ? "Show Less" : "See More"}</span>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={`transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}
+      >
+        <polyline points="6 9 12 15 18 9" />
+      </svg>
+    </button>
+  );
 };
