@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export const ConferenceDoneModal = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
