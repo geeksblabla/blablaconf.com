@@ -16,15 +16,15 @@ const links = [
 export const Header = () => {
   return (
     <>
-      <header className="px-4 relative z-[100]">
-        <div className="relative z-[100] mx-auto flex max-w-screen-xl flex-col py-12 sm:flex-row sm:items-center sm:justify-between">
+      <header className="px-4 sm:px-8 md:px-12 lg:px-24 relative z-[100]">
+        <div className="relative z-[100] mx-auto flex max-w-screen-xl flex-col py-6 sm:py-8 lg:py-12 lg:flex-row lg:items-center lg:justify-between">
           <Link className="flex items-center text-2xl font-black" href="/">
             <Logo />
           </Link>
 
           <input className="peer hidden" type="checkbox" id="navbar-open" />
           <label
-            className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all"
+            className="absolute right-0 top-6 sm:top-8 cursor-pointer text-xl lg:hidden bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-4px_4px_0_0_black] hover:shadow-none hover:translate-x-[-4px] hover:translate-y-[4px] transition-all"
             htmlFor="navbar-open"
           >
             <span className="sr-only">Toggle Navigation</span>
@@ -44,13 +44,13 @@ export const Header = () => {
 
           <nav
             aria-label="Header Navigation"
-            className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0"
+            className="peer-checked:block hidden pl-2 py-6 lg:block lg:py-0"
           >
-            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 xl:gap-x-10">
+            <ul className="flex flex-col gap-y-3 lg:flex-row lg:gap-x-4 xl:gap-x-8">
               {links.map((link, i) => (
                 <li key={link.label} className="my-auto">
                   <Link
-                    className="inline-block w-full text-center font-medium text-xs lg:text-lg bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all"
+                    className="inline-block w-full text-center font-medium text-sm md:text-xs lg:text-sm xl:text-base bg-white hover:bg-primary rounded-full px-2 md:px-2 lg:px-3 py-1.5 lg:py-2 border-2 border-black shadow-[-4px_4px_0_0_black] lg:shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-4px] hover:translate-y-[4px] lg:hover:translate-x-[-6px] lg:hover:translate-y-[6px] transition-all whitespace-nowrap"
                     href={link.href}
                   >
                     {link.label}

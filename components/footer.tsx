@@ -51,7 +51,11 @@ const links: LinkSection[] = [
 export const Footer = () => {
   return (
     <footer className="w-full bg-black py-16 border-t-8 border-primary">
-      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
+      <div
+        className="mx-auto max-w-screen-lg md:max-w-screen-xl"
+        data-sal="slide-up"
+        data-sal-duration="800"
+      >
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-12 mb-12">
           {/* Logo & CTA */}

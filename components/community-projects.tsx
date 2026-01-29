@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import gSrc from "../images/projects/geeksblabla.png";
 import stateSrc from "../images/projects/stateofdev.png";
 import awesomeSrc from "../images/projects/awesome-morocco.png";
-import moreTitle from "../images/discover-more.svg";
+import moreTitle from "../images/titles/discover-more.svg";
 import Link from "next/link";
 
 type ProjectType = {
@@ -54,7 +54,7 @@ export const CommunityProjects = () => {
         />
         <p
           className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
-          ata-sal="fade"
+          data-sal="fade"
           data-sal-delay="100"
           data-sal-duration="500"
         >
@@ -79,6 +79,9 @@ const Project = ({ name, image, url, description, index }: ProjectType) => {
       href={url}
       target="_blank"
       rel="noreferrer"
+      data-sal="zoom-in"
+      data-sal-duration="800"
+      data-sal-delay={index * 100}
       className="group flex flex-col rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:translate-x-[-8px] hover:translate-y-[8px] transition-all duration-300 bg-white hover:bg-tertiary"
     >
       {/* Image Container */}

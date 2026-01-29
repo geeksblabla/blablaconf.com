@@ -1,6 +1,6 @@
 import Image from "next/image";
 import imageSrc from "@/images/community-gallery.png";
-import communityTitle from "@/images/community.svg";
+import communityTitle from "@/images/titles/community.svg";
 
 const stats = [
   { label: "Speakers", value: "60+" },
@@ -14,7 +14,11 @@ export const Community = () => {
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Content */}
-          <div className="flex-1 flex flex-col items-center lg:items-start">
+          <div
+            className="flex-1 flex flex-col items-center lg:items-start"
+            data-sal="slide-right"
+            data-sal-duration="800"
+          >
             <Image
               src={communityTitle}
               alt="community title"
@@ -58,7 +62,11 @@ export const Community = () => {
           </div>
 
           {/* Desktop Image */}
-          <div className="hidden lg:flex flex-1 justify-end">
+          <div
+            className="hidden lg:flex flex-1 justify-end"
+            data-sal="slide-left"
+            data-sal-duration="800"
+          >
             <Image
               src={imageSrc}
               alt="Geeksblabla community"

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 html {
-  scroll-behavior: smooth;
 }
 
 .text-gradient {
@@ -129,6 +128,11 @@ html {
     opacity: 1 !important;
     transform: none !important;
   }
+}
+
+/* Optimization for animations */
+[data-sal] {
+  will-change: transform, opacity;
 }
 
 /* Timer Animations */

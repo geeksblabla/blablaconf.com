@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 
-import lastEditionTitle from "../images/last-editions.svg";
+import lastEditionTitle from "../images/titles/last-editions.svg";
 import Link from "next/link";
 
 const lastEditionSessions = [
@@ -57,13 +57,19 @@ export const PreviousSessions = () => {
         {/* Edition Videos Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
           {lastEditionSessions.map((session, index) => (
-            <EditionVideo
+            <div
               key={`edition-${index}`}
-              title={session.title}
-              url={session.url}
-              thumbnail={session.thumbnail}
-              isNew={session.isNew}
-            />
+              data-sal="slide-up"
+              data-sal-duration="800"
+              data-sal-delay={index * 100}
+            >
+              <EditionVideo
+                title={session.title}
+                url={session.url}
+                thumbnail={session.thumbnail}
+                isNew={session.isNew}
+              />
+            </div>
           ))}
         </div>
       </div>

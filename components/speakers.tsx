@@ -6,17 +6,19 @@ import type {
   Speaker as SpeakerType,
   SpeakerLink as SpeakerLinkType,
 } from "@/utils/sessionize";
-import speakersTitle from "../images/speakers.svg";
+import speakersTitle from "../images/titles/speakers.svg";
 
 export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
     <section id="speakers" className="py-16 px-5 sm:px-20 lg:py-24">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
-        <Image src={speakersTitle} alt="speakers title" className="mx-auto" />
-        <p className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
-          CEOs, rock star developers, beginners and students, everyone has a
-          place to share content in BlaBlaConf
-        </p>
+        <div data-sal="fade" data-sal-duration="800">
+          <Image src={speakersTitle} alt="speakers title" className="mx-auto" />
+          <p className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
+            CEOs, rock star developers, beginners and students, everyone has a
+            place to share content in BlaBlaConf
+          </p>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {speakers.map((speaker: SpeakerType, index: number) => (
@@ -47,46 +49,52 @@ const Speaker = ({
 
   return (
     <div
-      className={`${rotation} hover:rotate-0 group flex flex-col bg-white hover:bg-primary rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all duration-300`}
+      data-sal="slide-up"
+      data-sal-duration="800"
+      data-sal-delay={index * 50}
     >
-      <a href={`/#speaker-session-${id}`}>
-        {/* Image Container - Clickable */}
-        <div className="relative aspect-square overflow-hidden border-b-[3px] border-black">
-          <Image
-            alt={`${fullName} profile picture`}
-            width={400}
-            height={400}
-            className="w-full h-full object-cover"
-            src={profilePicture}
-          />
-        </div>
-
-        {/* Content */}
-        <div className="p-4 flex flex-col flex-1">
-          <h3 className="font-black text-black text-base md:text-lg leading-tight">
-            {fullName}
-          </h3>
-          <p className="text-black/70 text-xs md:text-sm mt-1 line-clamp-2 flex-1">
-            {tagLine}
-          </p>
-
-          {/* Social Links */}
-          <div className="flex gap-2 mt-3">
-            {links
-              .filter(
-                (link) =>
-                  link.linkType === "Twitter" || link.linkType === "LinkedIn",
-              )
-              .map((link, idx) => (
-                <SocialLink
-                  href={link.url}
-                  type={link.linkType}
-                  key={`${id}-link-${idx}`}
-                />
-              ))}
+      <div
+        className={`${rotation} hover:rotate-0 group flex flex-col bg-white hover:bg-primary rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all duration-300`}
+      >
+        <a href={`/#speaker-session-${id}`}>
+          {/* Image Container - Clickable */}
+          <div className="relative aspect-square overflow-hidden border-b-[3px] border-black">
+            <Image
+              alt={`${fullName} profile picture`}
+              width={400}
+              height={400}
+              className="w-full h-full object-cover"
+              src={profilePicture}
+            />
           </div>
-        </div>
-      </a>
+
+          {/* Content */}
+          <div className="p-4 flex flex-col flex-1">
+            <h3 className="font-black text-black text-base md:text-lg leading-tight">
+              {fullName}
+            </h3>
+            <p className="text-black/70 text-xs md:text-sm mt-1 line-clamp-2 flex-1">
+              {tagLine}
+            </p>
+
+            {/* Social Links */}
+            <div className="flex gap-2 mt-3">
+              {links
+                .filter(
+                  (link) =>
+                    link.linkType === "Twitter" || link.linkType === "LinkedIn",
+                )
+                .map((link, idx) => (
+                  <SocialLink
+                    href={link.url}
+                    type={link.linkType}
+                    key={`${id}-link-${idx}`}
+                  />
+                ))}
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   );
 };

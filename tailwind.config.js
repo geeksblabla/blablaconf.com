@@ -99,6 +99,7 @@ module.exports = {
         sans: ["var(--font-kufam)", ...fontFamily.sans],
         muraba: ["var(--font-muraba)"],
         murabaOutline: ["var(--font-muraba-outline)"],
+        marhaban: ["var(--font-marhaban)"],
       },
       colors: {
         primary: "#ffe83c",
@@ -130,7 +131,23 @@ module.exports = {
           },
         },
       },
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color, rgba(0,0,0,0.5))",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color, rgba(0,0,0,0.5))",
+        lg: "0 8px 16px var(--tw-shadow-color, rgba(0,0,0,0.5))",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss/plugin")(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") }
+      );
+    }),
+  ],
 };

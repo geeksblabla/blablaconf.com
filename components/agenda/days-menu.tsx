@@ -66,10 +66,10 @@ export const DaysMenu = ({
   return (
     <div
       id="agenda-scroll"
-      className="sticky md:top-2 top-0  md:h-full h-fit overflow-scroll md:overflow-visible scroll-smooth md:bg-transparent  bg-white z-40 hidden md:block xl:ml-0 lg:ml-5"
+      className="sticky lg:top-2 h-full overflow-visible bg-transparent z-40 hidden md:block"
     >
       <div className="md:mt-8 mt-1">
-        <ul className="md:pt-6 pt-3 relative  pr-12 h-fit w-fit flex flex-row md:flex-col lg:pl-0 md:pl-8">
+        <ul className="md:pt-6 pt-3 relative pr-6 lg:pr-12 h-fit w-fit flex flex-row md:flex-col">
           {days.map((day, index) => {
             return (
               <Day
@@ -104,17 +104,17 @@ const Day = ({
         data-active={index === 0}
         onClick={() => onClick()}
         href={`#day-${index}`}
-        className="block group relative mb-6 min-w-[320px] px-5 py-3 ml-4 border-[3px] border-black bg-white data-[active=true]:bg-secondary hover:bg-secondary rounded-[2rem] shadow-[-6px_6px_0_0_black] hover:shadow-none hover:-translate-x-[6px] hover:translate-y-[6px] transition-all duration-300"
+        className="block group relative mb-6 md:min-w-[250px] lg:min-w-[320px] md:px-3 lg:px-5 py-3 ml-4 border-[3px] border-black bg-white data-[active=true]:bg-secondary hover:bg-secondary rounded-[2rem] shadow-[-6px_6px_0_0_black] hover:shadow-none hover:-translate-x-[6px] hover:translate-y-[6px] transition-all duration-300"
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center md:gap-2 lg:gap-4">
           {/* Day Number - Left */}
-          <span className="text-5xl font-black text-accent group-hover:text-white group-data-[active=true]:text-white leading-none">
+          <span className="md:text-4xl lg:text-5xl font-black text-accent group-hover:text-white group-data-[active=true]:text-white leading-none">
             {day}
           </span>
 
           {/* Month & Title - Right */}
           <div className="flex flex-col">
-            <span className="text-xl font-bold text-black group-hover:text-white group-data-[active=true]:text-white uppercase">
+            <span className="md:text-2xl lg:text-3xl font-marhaban group-hover:text-white group-data-[active=true]:text-white">
               February
             </span>
             <span className="text-md text-black/70 group-hover:text-white/80 group-data-[active=true]:text-white/80 font-medium">

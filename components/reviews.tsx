@@ -8,7 +8,7 @@ import afafSrc from "@/images/tweets_avatars/afaf.jpg";
 import mohamedSrc from "@/images/tweets_avatars/mohamed.png";
 import t1337Src from "@/images/tweets_avatars/1337.jpg";
 import wafSrc from "@/images/tweets_avatars/waf.jpg";
-import reviewsTitle from "@/images/reviews.svg";
+import reviewsTitle from "@/images/titles/reviews.svg";
 
 const tweets: TweetType[][] = [
   [
@@ -92,7 +92,7 @@ export const Reviews = () => {
         />
         <p
           className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
-          ata-sal="fade"
+          data-sal="fade"
           data-sal-delay="100"
           data-sal-duration="500"
         >
@@ -101,7 +101,13 @@ export const Reviews = () => {
 
         <div className="flex flex-col md:grid grid-cols-3 gap-6 pt-6">
           {tweets.map((chunk, i) => (
-            <div className="flex flex-col gap-6" key={`col${i}`}>
+            <div
+              className="flex flex-col gap-6"
+              key={`col${i}`}
+              data-sal="slide-up"
+              data-sal-duration="800"
+              data-sal-delay={i * 150}
+            >
               {chunk.map((tweet, index) => (
                 <Tweet {...tweet} key={`tweet${index}`} index={index} />
               ))}

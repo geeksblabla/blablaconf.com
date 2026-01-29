@@ -43,7 +43,7 @@ export type SessionByDay<T> = {
 
 export const getSpeakers: () => Promise<Speaker[]> = async () => {
   const res = await fetch(
-    "https://sessionize.com/api/v2/d4p6b517/view/Speakers"
+    "https://sessionize.com/api/v2/71tfc4rv/view/Speakers",
   );
   const data = await res.json();
   // shuffle speakers to avoid the same speaker being on top
@@ -52,11 +52,11 @@ export const getSpeakers: () => Promise<Speaker[]> = async () => {
 
 export const getSessions = async () => {
   const sessionsRes = await fetch(
-    "https://sessionize.com/api/v2/d4p6b517/view/Sessions"
+    "https://sessionize.com/api/v2/71tfc4rv/view/Sessions",
     // "https://sessionize.com/api/v2/bnh6bsfu/view/Sessions"
   );
   const speakersRes = await fetch(
-    "https://sessionize.com/api/v2/d4p6b517/view/Speakers"
+    "https://sessionize.com/api/v2/71tfc4rv/view/Speakers",
   );
   const sessions: SessionByDay<SessionizeSession>[] = await sessionsRes.json();
   const speakers: Speaker[] = await speakersRes.json();
@@ -65,7 +65,7 @@ export const getSessions = async () => {
 
 const normalizeSessionsByDay = (
   sessions: SessionByDay<SessionizeSession>[],
-  speakers: Speaker[]
+  speakers: Speaker[],
 ) => {
   return sessions.map((sessionByDay) => {
     const sessions = normalizeSessions(sessionByDay.sessions, speakers);
@@ -79,7 +79,7 @@ const normalizeSessionsByDay = (
 
 const normalizeSessions = (
   sessions: SessionizeSession[],
-  speakers: Speaker[]
+  speakers: Speaker[],
 ) => {
   return sessions.map((session) => {
     const _speakers = session.speakers

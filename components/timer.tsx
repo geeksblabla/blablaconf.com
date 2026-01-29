@@ -132,8 +132,15 @@ export default function Timer() {
         src={morocco}
         alt="Morocco Flag"
         className="w-32 md:w-48 h-auto mb-12"
+        data-sal="slide-down"
+        data-sal-duration="800"
       />
-      <div className="flex flex-wrap justify-center items-center gap-6 ">
+      <div
+        className="flex flex-wrap justify-center items-center gap-6"
+        data-sal="slide-up"
+        data-sal-duration="800"
+        data-sal-delay="200"
+      >
         <TimerGroup label="يـــــــــــــــــــوم" value={timeLeft.days} />
         <div className="text-white text-4xl font-bold hidden md:block mt-[-52px]">
           -

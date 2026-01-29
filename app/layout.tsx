@@ -8,6 +8,7 @@ import { SalLoader } from "@/components/sal-loader";
 import localFont from "next/font/local";
 import overlay from "@/images/overlay.png";
 import backgroundImage from "@/images/background.png";
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 // import localFont from "@next/font/local";
 
@@ -56,13 +57,18 @@ const muraba = localFont({
   variable: "--font-muraba",
 });
 
+const marhaban = localFont({
+  src: "../styles/Marhaban.otf",
+  variable: "--font-marhaban",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${kufam.variable} ${muraba.variable}`}>
+    <html lang="en" className={`${kufam.variable} ${muraba.variable} ${marhaban.variable}`}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -70,6 +76,7 @@ export default function RootLayout({
       <head />
       <SalLoader />
       <body className="bg-accent relative">
+        <ScrollToTop />
         <Header />
         {children}
         <Footer />

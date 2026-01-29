@@ -1,11 +1,11 @@
 import Image, { StaticImageData } from "next/image";
-import webImage from "../images/tracks/web-mobile.png";
-import backendImage from "../images/tracks/backend.png";
+import webImage from "../images/tracks/web-mobile.svg";
+import backendImage from "../images/tracks/backend.svg";
 import secArchImage from "../images/tracks/sec-arch.png";
-import bigDataImage from "../images/tracks/big-data.png";
+import bigDataImage from "../images/tracks/big-data.svg";
 import cloudImage from "../images/tracks/cloud.png";
 import softSkillsImage from "../images/tracks/soft-skills.png";
-import tracksTitle from "../images/tracks.svg";
+import tracksTitle from "../images/titles/tracks.svg";
 
 const tracks = [
   {
@@ -56,11 +56,13 @@ export const Tracks = () => {
   return (
     <section id="tracks" className="py-16 px-5 sm:px-20 lg:py-24">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
-        <Image src={tracksTitle} alt="tracks title" className="mx-auto" />
-        <p className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
-          5 tracks covering everything you need to sharpen your IT skills.
-          <br /> 1 additional track because excellence is not only about code!
-        </p>
+        <div data-sal="fade" data-sal-duration="800">
+          <Image src={tracksTitle} alt="tracks title" className="mx-auto" />
+          <p className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
+            5 tracks covering everything you need to sharpen your IT skills.
+            <br /> 1 additional track because excellence is not only about code!
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tracks.map((track, index) => (
@@ -93,6 +95,9 @@ const Track = ({ title, description, image, index, day }: TrackType) => {
   return (
     <a
       href={`/#day-${day - 1}`}
+      data-sal="slide-up"
+      data-sal-duration="800"
+      data-sal-delay={index * 100}
       className={`group flex flex-col rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-8px_8px_0_0_black] hover:shadow-none hover:translate-x-[-8px] hover:translate-y-[8px] transition-all duration-300 bg-white ${bgColors[index]}`}
     >
       {/* Image Container */}

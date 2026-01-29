@@ -3,7 +3,7 @@
 "use client";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
-import FaqTitle from "@/images/faq.svg";
+import FaqTitle from "@/images/titles/faq.svg";
 
 type QuestionType = {
   question: string;
@@ -163,14 +163,20 @@ export const FAQ = () => {
         </p>
         <ul className="space-y-4">
           {questions.map((question, index) => (
-            <Question
+            <div
               key={`q-${index}`}
-              question={question.question}
-              answer={question.answer}
-              index={index}
-              isOpen={openIndex === index}
-              onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
-            />
+              data-sal="slide-up"
+              data-sal-duration="500"
+              data-sal-delay={index * 50}
+            >
+              <Question
+                question={question.question}
+                answer={question.answer}
+                index={index}
+                isOpen={openIndex === index}
+                onToggle={() => setOpenIndex(openIndex === index ? -1 : index)}
+              />
+            </div>
           ))}
         </ul>
       </div>
@@ -201,7 +207,7 @@ const Question = ({
         />
         <Arrow isOpen={isOpen} />
 
-        <div className="relative ml-6 cursor-pointer select-none items-center py-4">
+        <div className="relative ml-6 pr-12 cursor-pointer select-none items-center py-4">
           <h3 className="font-bold lg:text-lg">{question}</h3>
         </div>
         <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-in-out peer-checked:grid-rows-[1fr]">

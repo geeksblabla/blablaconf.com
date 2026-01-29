@@ -5,7 +5,7 @@ import { SessionTime } from "../session-time";
 import { AddToCalendar } from "./add-to-calendar";
 import { DaysMenu } from "./days-menu";
 import Image from "next/image";
-import agendaTitle from "@/images/agenda.svg";
+import agendaTitle from "@/images/titles/agenda.svg";
 
 const days_titles = [
   {
@@ -61,7 +61,7 @@ export const Agenda = ({ days }: { days: SessionByDay<SessionType>[] }) => {
           </div>
         </div>
       </div>
-      <div className="relative  mx-auto flex flex-col sm:max-w-xl md:max-w-screen-xl md:flex-row md:justify-between  lg:px-4  xl:px-0">
+      <div className="relative  mx-auto flex flex-col md:max-w-screen-xl md:flex-row md:justify-between md:px-4 lg:px-4 xl:px-0">
         <DaysMenu days={days_titles} />
         <div className="flex flex-col h-full w-full">
           {days.slice(0, 5).map((day, index) => {
@@ -71,14 +71,14 @@ export const Agenda = ({ days }: { days: SessionByDay<SessionType>[] }) => {
                 key={`day-${index}`}
                 className="mb-16 relative"
               >
-                <div className="flex md:relative sticky top-0 px-6 py-4 flex-row md:rounded-[2rem] rounded-none z-10 items-center justify-between bg-secondary border-[3px] border-black md:shadow-[-6px_6px_0_0_black]">
+                <div className="flex md:relative sticky top-0 px-6 py-4 flex-row md:rounded-[2rem] rounded-none z-10 items-center justify-between md:bg-secondary bg-secondary/80 md:backdrop-none backdrop-blur-[10px] md:border-[3px] md:border-black border-none md:shadow-[-6px_6px_0_0_black]">
                   <div className="flex items-center gap-3">
-                    <span className="text-xl font-bold text-white">
+                    <span className="text-2xl font-black text-white">
                       {days_titles[index].date}{" "}
                       February
                     </span>
                   </div>
-                  <h1 className="text-2xl font-bold text-white text-right">
+                  <h1 className="text-4xl text-white text-right font-marhaban">
                     {days_titles[index].title}
                   </h1>
                 </div>
@@ -120,7 +120,7 @@ const Session = ({
         {/* Title & Time Row */}
         <div className="flex flex-row justify-between items-start gap-4">
           <h3
-            className={`text-xl font-bold flex-1 ${!hasSpeakers ? "text-center w-fulll" : ""}`}
+            className={`text-xl font-bold flex-1 ${!hasSpeakers ? "text-center w-full" : ""}`}
           >
             {hasSpeakers ? (
               <Link href={`/session/${session.id}`}>{session.title}</Link>
