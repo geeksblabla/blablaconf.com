@@ -98,7 +98,7 @@ const TimerGroup = ({ label, value }: { label: string; value: number }) => {
 };
 
 export default function Timer() {
-  const targetDate = new Date("2026-02-01T00:00:00").getTime();
+  const targetDate = new Date("2026-02-06T00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center -mt-36 pb-16 px-4 overflow-hidden min-h-[70vh]">
+    <section className="relative flex flex-col items-center justify-center lg:-mt-28 pb-16 px-4 overflow-hidden min-h-[70vh]">
       {/* Main Logo Container */}
       <div
         className="w-full max-w-[1000px]"
