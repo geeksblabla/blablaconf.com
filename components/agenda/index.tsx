@@ -73,12 +73,12 @@ export const Agenda = ({ days }: { days: SessionByDay<SessionType>[] }) => {
               >
                 <div className="flex md:relative sticky top-0 px-6 py-4 flex-row md:rounded-[2rem] rounded-none z-10 items-center justify-between md:bg-secondary bg-secondary/80 md:backdrop-none backdrop-blur-[10px] md:border-[3px] md:border-black border-none md:shadow-[-6px_6px_0_0_black]">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl font-black text-white">
+                    <span className="text-xl sm:text-2xl font-black text-white">
                       {days_titles[index].date}{" "}
                       February
                     </span>
                   </div>
-                  <h1 className="text-4xl text-white text-right font-marhaban">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl text-white text-right font-marhaban">
                     {days_titles[index].title}
                   </h1>
                 </div>

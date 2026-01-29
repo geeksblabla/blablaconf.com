@@ -66,7 +66,7 @@ export const DaysMenu = ({
   return (
     <div
       id="agenda-scroll"
-      className="sticky lg:top-2 h-full overflow-visible bg-transparent z-40 hidden md:block"
+      className="sticky top-2 h-full overflow-visible bg-transparent z-40 hidden md:block"
     >
       <div className="md:mt-8 mt-1">
         <ul className="md:pt-6 pt-3 relative pr-6 lg:pr-12 h-fit w-fit flex flex-row md:flex-col">
