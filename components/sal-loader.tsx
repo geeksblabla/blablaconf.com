@@ -11,7 +11,7 @@ export const SalLoader = () => {
     if (salRef.current) {
       salRef.current.update();
     } else {
-      salRef.current = sal();
+      salRef.current = sal({ threshold: 0.1, root: null });
     }
   }, [pathname]);
 

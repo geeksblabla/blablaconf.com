@@ -96,18 +96,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-cairo)", ...fontFamily.sans],
+        sans: ["var(--font-kufam)", ...fontFamily.sans],
         muraba: ["var(--font-muraba)"],
         murabaOutline: ["var(--font-muraba-outline)"],
+        marhaban: ["var(--font-marhaban)"],
+        digital: ["var(--font-digital)"],
       },
       colors: {
-        primary: {
-          100: "#F0E9E1",
-          200: "#CC9B80",
-          300: "#B18366",
-          400: "#7B5741", // 78543E #B18366 #B18367 #CC9B80
-          500: "#78543E",
-        },
+        primary: "#ffe83c",
+        secondary: "#d02b2b",
+        tertiary: "#E9D1AD",
+        accent: "#377c45",
+        black: "#000000",
+        white: "#ffffff",
       },
       animation: {
         swing: "swing 1s ease-in-out",
@@ -131,7 +132,23 @@ module.exports = {
           },
         },
       },
+      textShadow: {
+        sm: "0 1px 2px var(--tw-shadow-color, rgba(0,0,0,0.5))",
+        DEFAULT: "0 2px 4px var(--tw-shadow-color, rgba(0,0,0,0.5))",
+        lg: "0 8px 16px var(--tw-shadow-color, rgba(0,0,0,0.5))",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss/plugin")(function ({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          "text-shadow": (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme("textShadow") },
+      );
+    }),
+  ],
 };

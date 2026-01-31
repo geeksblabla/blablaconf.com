@@ -16,15 +16,15 @@ const links = [
 export const Header = () => {
   return (
     <>
-      <header className="px-4">
-        <div className="relative mx-auto flex max-w-screen-lg md:max-w-screen-xl flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+      <header className="px-4 sm:px-8 md:px-12 lg:px-24 relative z-[100]">
+        <div className="relative z-[100] mx-auto flex max-w-screen-xl flex-col py-6 sm:py-8 lg:py-12 lg:flex-row lg:items-center lg:justify-between">
           <Link className="flex items-center text-2xl font-black" href="/">
             <Logo />
           </Link>
 
           <input className="peer hidden" type="checkbox" id="navbar-open" />
           <label
-            className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden"
+            className="absolute right-0 top-6 sm:top-8 cursor-pointer text-xl lg:hidden bg-white hover:bg-primary rounded-full px-3 py-2 border-2 border-black shadow-[-4px_4px_0_0_black] hover:shadow-none hover:translate-x-[-4px] hover:translate-y-[4px] transition-all"
             htmlFor="navbar-open"
           >
             <span className="sr-only">Toggle Navigation</span>
@@ -44,17 +44,17 @@ export const Header = () => {
 
           <nav
             aria-label="Header Navigation"
-            className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0"
+            className="peer-checked:block hidden pl-2 py-6 lg:block lg:py-0"
           >
-            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-10">
+            <ul className="flex flex-col gap-y-3 lg:flex-row lg:gap-x-4 xl:gap-x-8">
               {links.map((link, i) => (
                 <li key={link.label} className="my-auto">
-                  <a
-                    className="text-[#061431]/70 font-medium text-xl hover:text-[#061431]"
+                  <Link
+                    className="inline-block w-full text-center font-medium text-sm md:text-xs lg:text-sm xl:text-base bg-white hover:bg-primary rounded-full px-2 md:px-2 lg:px-3 py-1.5 lg:py-2 border-2 border-black shadow-[-4px_4px_0_0_black] lg:shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-4px] hover:translate-y-[4px] lg:hover:translate-x-[-6px] lg:hover:translate-y-[6px] transition-all whitespace-nowrap"
                     href={link.href}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -62,33 +62,5 @@ export const Header = () => {
         </div>
       </header>
     </>
-  );
-};
-
-const Banner = () => {
-  return (
-    <div className="bg-lime-600 text-white fixed w-full z-40">
-      <div className="mx-auto max-w-7xl px-2 py-3 sm:px-4 sm:py-2 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between">
-          <div className="flex w-0 flex-1 items-center  ">
-            <p className="ml-3 text-center font-medium leading-5 mx-auto ">
-              <span className="sm:text-lg text-base">
-                <span className="rounded-md bg-amber-500 px-2 mr-2 text-white">
-                  Ready !!!
-                </span>{" "}
-                BlaBlaConf 2024 CFP in now open!{" "}
-                <a
-                  className="underline font-bold"
-                  href="https://cfp.blablaconf.com"
-                >
-                  {" "}
-                  Submit your talk now!
-                </a>
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
