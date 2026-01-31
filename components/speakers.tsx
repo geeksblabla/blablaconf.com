@@ -78,24 +78,24 @@ const Speaker = ({
             <p className="text-black/70 text-xs md:text-sm mt-1 line-clamp-2 flex-1">
               {tagLine}
             </p>
-
-            {/* Social Links */}
-            <div className="flex gap-2 mt-3">
-              {links
-                .filter(
-                  (link) =>
-                    link.linkType === "Twitter" || link.linkType === "LinkedIn",
-                )
-                .map((link, idx) => (
-                  <SocialLink
-                    href={link.url}
-                    type={link.linkType}
-                    key={`${id}-link-${idx}`}
-                  />
-                ))}
-            </div>
           </div>
         </a>
+
+        {/* Social Links - outside the anchor to avoid nested <a> tags */}
+        <div className="flex gap-2 px-4 pb-4">
+          {links
+            .filter(
+              (link) =>
+                link.linkType === "Twitter" || link.linkType === "LinkedIn",
+            )
+            .map((link, idx) => (
+              <SocialLink
+                href={link.url}
+                type={link.linkType}
+                key={`${id}-link-${idx}`}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );
