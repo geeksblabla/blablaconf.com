@@ -32,7 +32,7 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
   return (
     <div className="flex md:flex-row flex-col items-center mt-4">
       <button
-        className="text-white px-6 py-2 rounded-md bg-[#53925E] text-base min-w-[110px] text-center self-end shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
+        className="text-white px-6 py-2 rounded-md bg-tertiary text-base min-w-[110px] text-center self-end shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
         onClick={() => {
           setCopied(true);
           copyToClipboard(shareUrl);
@@ -45,20 +45,20 @@ export const ShareActions = ({ shareUrl }: { shareUrl: string }) => {
         <div className="flex gap-2">
           <FacebookShareButton
             url={shareUrl}
-            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-[#53925E] text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
+            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-tertiary text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
           >
             <Facebook className="text-white" />
           </FacebookShareButton>
           <TwitterShareButton
             url={shareUrl}
             title={share_message}
-            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-[#53925E] text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
+            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-tertiary text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
           >
             <Twitter className="text-white" />
           </TwitterShareButton>
           <LinkedinShareButton
             url={shareUrl}
-            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-[#53925E] text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
+            className="text-white border-2 border-black px-4 py-2 rounded-md !bg-tertiary text-base text-center shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300"
             windowWidth={750}
             windowHeight={600}
           >

@@ -20,10 +20,10 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
     name === undefined && image === undefined && url === undefined
       ? "home"
       : name !== undefined && image !== undefined && url === undefined
-      ? "user"
-      : name !== undefined && image !== undefined && url !== undefined
-      ? "me"
-      : "home";
+        ? "user"
+        : name !== undefined && image !== undefined && url !== undefined
+          ? "me"
+          : "home";
   return (
     <div className="relative bg-opacity-90 py-20 md:pt-20 pt-8  pb-20 min-h-screen">
       <div className=" mx-auto max-w-screen-lg md:max-w-screen-xl  flex flex-col justify-center items-center  md:px-8 px-4 text-center ">
@@ -52,7 +52,7 @@ export const TicketHero = ({ url, name, image }: HeroProps) => {
         {page === "user" && (
           <Link
             href="/"
-            className="text-white self-center mt-4 px-6 py-2 rounded-md bg-[#53925E] text-base min-w-[110px] text-center  shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
+            className="text-white self-center mt-4 px-6 py-2 rounded-md bg-tertiary text-base min-w-[110px] text-center  shadow-[3px_3px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0px_0px_#000000] transition-all duration-300 border-2 border-black"
           >
             Back to Home
           </Link>

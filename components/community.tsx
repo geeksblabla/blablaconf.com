@@ -1,81 +1,76 @@
 import Image from "next/image";
 import imageSrc from "@/images/community-gallery.png";
-import communityTitle from "@/images/titles/community.png";
+
+const stats = [
+  { label: "Speakers", value: "60+" },
+  { label: "Hours", value: "40+" },
+  { label: "Views", value: "100k+" },
+];
 
 export const Community = () => {
   return (
-    <section id="about" className=" py-16">
-      <div className=" relative  mx-auto flex flex-col-reverse sm:max-w-xl md:max-w-screen-xl md:flex-row justify-center  px-4 md:px-0  content-center items-center">
-        <div
-          className="flex-1 pr-4 pt-10 h-full flex-col flex max-w-xl lg:max-w-screen-xl"
-          data-sal="slide-right"
-          data-sal-delay="100"
-          data-sal-duration="400"
-        >
-          <div className="max-w-screen-md">
-            <Image
-              src={communityTitle}
-              alt="community title"
-              className="md:max-h-[140px] max-h-[110px] object-contain md:self-start self-center md:mx-0 mx-auto w-fit"
-            />
+    <section id="about" className="py-16 px-5 sm:px-20 lg:py-24">
+      <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Content */}
+          <div
+            className="flex-1 flex flex-col items-center lg:items-start"
+            data-sal="slide-right"
+            data-sal-duration="800"
+          >
+            <div className="title-style leading-[0.8] text-[70px] lg:text-8xl items-end">
+              <span className="text-primary">الجمهور</span>
+              <span className="text-secondary">Community</span>
+            </div>
 
-            <div
-              className=" flex-1 w-full mx-auto  md:justify-end justify-center md:hidden flex "
-              data-sal="slide-left"
-              data-sal-delay="100"
-              data-sal-duration="400"
-            >
+            {/* Mobile Image */}
+            <div className="lg:hidden mt-8">
               <Image
-                className="h-full object-cover "
                 src={imageSrc}
-                alt="Geeksblabla community "
+                alt="Geeksblabla community"
+                className="w-full h-auto"
               />
             </div>
-            <p className="text-lg mt-4 font-[400] text-[#282828]/60 capitalize md:text-left text-center max-w-[500px]">
+
+            <p className="text-center lg:text-left mx-auto lg:mx-0 max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6">
               By the Geeksblabla community, for the Moroccan developer
               community, BlaBlaConf is your one-stop shop for the latest and
               hottest technology trends, in Darija, and completely free! Join us
               from{" "}
-              <span className="font-bold text-[#D55848]">
-                {" "}
-                03th to 07th February{" "}
+              <span className="font-bold text-secondary">
+                02nd to 06th February
               </span>
               .
-              <br />
             </p>
-          </div>
-          <div className=" flex md:flex-row flex-row justify-around flex-wrap md:space-x-3  pb-10 md:justify-start md:items-start  items-center md:text-left text-center mt-6">
-            <div className="flex-col my-2  py-2 px-6 bg-[#53925E] rounded-md shadow-[3px_3px_0px_0px_#000000] border-2 border-black">
-              <p className="text-2xl font-[400] capitalize text-white">
-                speakers
-              </p>
-              <p className="text-4xl font-bold  text-white capitalize">60+</p>
-            </div>
-            <div className="flex-col my-2 py-2 px-6 bg-[#53925E] rounded-md shadow-[3px_3px_0px_0px_#000000] border-2 border-black">
-              <p className="text-2xl font-semibold capitalize text-white">
-                hours
-              </p>
-              <p className="text-4xl font-bold  text-white capitalize">40+</p>
-            </div>
-            <div className="flex-col my-2 py-2 px-6 bg-[#53925E] rounded-md shadow-[3px_3px_0px_0px_#000000] border-2 border-black">
-              <p className="text-2xl font-semibold capitalize text-white">
-                views
-              </p>
-              <p className="text-4xl font-bold  text-white capitalize">100k+</p>
+
+            {/* Stats */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-6">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center py-4 px-8 rounded-[2rem] bg-primary border-[3px] border-black shadow-[-6px_6px_0_0_black] "
+                >
+                  <p className="text-lg font-bold text-black uppercase">
+                    {stat.label}
+                  </p>
+                  <p className="text-4xl font-black text-black">{stat.value}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-        <div
-          className=" flex-1 h-full  md:justify-end justify-center hidden md:flex "
-          data-sal="slide-left"
-          data-sal-delay="100"
-          data-sal-duration="400"
-        >
-          <Image
-            className="h-full object-cover "
-            src={imageSrc}
-            alt="Geeksblabla community "
-          />
+
+          {/* Desktop Image */}
+          <div
+            className="hidden lg:flex flex-1 justify-end"
+            data-sal="slide-left"
+            data-sal-duration="800"
+          >
+            <Image
+              src={imageSrc}
+              alt="Geeksblabla community"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
       </div>
     </section>

@@ -45,9 +45,15 @@ export const getSpeakers: () => Promise<Speaker[]> = async () => {
   const res = await fetch(
     "https://sessionize.com/api/v2/71tfc4rv/view/Speakers",
   );
-  const data = await res.json();
-  // shuffle speakers to avoid the same speaker being on top
-  return data.sort(() => Math.random() - 0.5);
+  const data: Speaker[] = await res.json();
+  // Clean speaker names and shuffle to avoid the same speaker being on top
+  return data
+    .map((speaker) => ({
+      ...speaker,
+      fullName: cleanText(speaker.fullName),
+      tagLine: cleanText(speaker.tagLine),
+    }))
+    .sort(() => Math.random() - 0.5);
 };
 
 export const getSessions = async () => {
@@ -86,19 +92,26 @@ const normalizeSessions = (
       .map((speaker) => getSpeakerInfo(speaker.id, speakers))
       .filter((session) => session !== undefined) as Speaker[];
 
+    // Clean speaker names and tagLines
+    const cleanedSpeakers = _speakers.map((speaker) => ({
+      ...speaker,
+      fullName: cleanText(speaker.fullName),
+      tagLine: cleanText(speaker.tagLine),
+    }));
+
     const startDate = format(new Date(session.startsAt), "yyyy-MM-dd");
     const endDate = format(new Date(session.endsAt), "yyyy-MM-dd");
     const startTime = format(new Date(session.startsAt), "HH:mm");
     const endTime = format(new Date(session.endsAt), "HH:mm");
     const s: Session = {
       id: session.id,
-      title: session.title,
+      title: cleanText(session.title),
       description: session.description,
       startDate,
       endDate,
       startTime,
       endTime,
-      speakers: _speakers,
+      speakers: cleanedSpeakers,
     };
     return s;
   });
@@ -106,6 +119,18 @@ const normalizeSessions = (
 
 const getSpeakerInfo = (id: string, speakers: Speaker[]) => {
   return speakers.find((speaker) => speaker.id === id);
+};
+
+const cleanText = (text: string): string => {
+  if (!text) return text;
+  // Remove emojis and "N/A"
+  return text
+    .replace(
+      /[\uD800-\uDBFF][\uDC00-\uDFFF]|[\u2600-\u26FF]|[\u2700-\u27BF]/g,
+      "",
+    )
+    .replace(/\bN\/A\b/gi, "")
+    .trim();
 };
 
 export const getArrayOfSessions = async () => {
