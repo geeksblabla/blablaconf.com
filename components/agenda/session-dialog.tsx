@@ -1,8 +1,8 @@
 "use client";
 
 import type { Session as SessionType } from "@/utils/sessionize";
-import Image from "next/image";
 import { SessionTime } from "../session-time";
+import { SpeakerAvatar } from "../speaker-avatar";
 
 interface SessionDialogProps {
   session: SessionType;
@@ -30,7 +30,7 @@ export const SessionDialog = ({
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-secondary border-2 border-black shadow-[-3px_3px_0_0_black] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[3px] transition-all duration-300"
+          className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-secondary border-2 border-black shadow-[-3px_3px_0_0_black] hover:shadow-none hover:translate-x-[-3px] hover:translate-y-[3px] transition-all duration-100"
           aria-label="Close dialog"
         >
           <svg
@@ -49,42 +49,22 @@ export const SessionDialog = ({
           </svg>
         </button>
 
-        {/* Session Title */}
-        <h2 className="text-2xl md:text-3xl font-bold pr-12 mb-4">
-          {session.title}
-        </h2>
-
-        {/* Time */}
-        <div className="mb-4" dir="rtl">
-          <SessionTime session={session} />
-        </div>
-
-        {/* Description */}
-        {session.description && (
-          <p className="text-black/80 mb-6 whitespace-pre-wrap">
-            {session.description}
-          </p>
-        )}
-
-        {/* Speakers */}
+        {/* Speakers - at the top */}
         {session.speakers && session.speakers.length > 0 && (
-          <div className="border-t-2 border-black/20 pt-4">
-            <h3 className="font-bold text-lg mb-3">Speakers</h3>
+          <div className="mb-6">
             <div className="flex flex-col gap-4">
               {session.speakers.map((speaker) => (
                 <div className="flex flex-row items-center" key={speaker?.id}>
-                  <Image
-                    alt={`${speaker?.fullName} profile picture`}
-                    src={speaker?.profilePicture}
-                    className="w-16 h-16 min-w-16 min-h-16 rounded-full border-2 border-black object-cover aspect-square"
-                    height="64"
-                    width="64"
+                  <SpeakerAvatar
+                    fullName={speaker?.fullName}
+                    profilePicture={speaker?.profilePicture}
+                    size="lg"
                   />
                   <div className="pl-4">
-                    <p className="font-bold text-black text-lg">
+                    <p className="font-bold text-black text-xl">
                       {speaker?.fullName}
                     </p>
-                    <span className="text-sm text-black/80">
+                    <span className="text-sm text-black/70">
                       {speaker?.tagLine}
                     </span>
                   </div>
@@ -93,6 +73,23 @@ export const SessionDialog = ({
             </div>
           </div>
         )}
+
+        {/* Session Title */}
+        <h2 className="text-2xl md:text-3xl font-bold pr-12 mb-4">
+          {session.title}
+        </h2>
+
+        {/* Description */}
+        {session.description && (
+          <p className="text-black/80 mb-4 whitespace-pre-wrap">
+            {session.description}
+          </p>
+        )}
+
+        {/* Time - at the bottom */}
+        <div dir="rtl">
+          <SessionTime session={session} />
+        </div>
       </div>
     </div>
   );

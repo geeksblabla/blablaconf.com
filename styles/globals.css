@@ -4,10 +4,22 @@
 
 @layer components {
   .title-style {
-    @apply flex flex-col text-center text-[70px] md:text-[90px] lg:text-9xl font-marhaban leading-[0.8];
+    @apply flex flex-col text-center text-[70px] md:text-[90px] lg:text-9xl font-marhaban leading-[0.8] relative items-center;
     -webkit-text-stroke: 10px black;
     paint-order: stroke fill;
     text-shadow: -11px 11px 0 0 black;
+    isolation: isolate;
+  }
+
+  .title-style::before {
+    content: "";
+    @apply absolute bg-black rounded-lg;
+    width: 60%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
   }
 }
 

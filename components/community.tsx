@@ -38,7 +38,7 @@ export const Community = () => {
               hottest technology trends, in Darija, and completely free! Join us
               from{" "}
               <span className="font-bold text-secondary">
-                03th to 07th February
+                02nd to 06th February
               </span>
               .
             </p>

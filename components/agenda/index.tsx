@@ -7,29 +7,28 @@ import { SessionTime } from "../session-time";
 import { AddToCalendar } from "./add-to-calendar";
 import { DaysMenu } from "./days-menu";
 import { SessionDialog } from "./session-dialog";
-import Image from "next/image";
-import agendaTitle from "@/images/titles/agenda.svg";
+import { SpeakerAvatar } from "../speaker-avatar";
 
 const days_titles = [
   {
     title: "UX, Web & Mobile",
-    date: "03",
+    date: "02",
   },
   {
     title: "Big Data & Machine Learning",
-    date: "04",
+    date: "03",
   },
   {
     title: "Backend & Programming Languages",
-    date: "05",
+    date: "04",
   },
   {
     title: "Cloud, Containers & Infrastructure",
-    date: "06",
+    date: "05",
   },
   {
     title: "Security & Architecture ",
-    date: "07",
+    date: "06",
   },
   // {
   //   title: "In Person Day",
@@ -122,7 +121,7 @@ const Session = ({
           {/* Title & Time Row */}
           <div className="flex flex-row justify-between items-start gap-4">
             <h3
-              className={`text-xl font-bold flex-1 ${!hasSpeakers ? "text-center w-full" : ""}`}
+              className={`text-xl font-bold flex-1 ${!hasSpeakers ? "text-center w-full flex items-center justify-between gap-3" : ""}`}
             >
               {hasSpeakers ? (
                 <button
@@ -132,11 +131,16 @@ const Session = ({
                   {session.title}
                 </button>
               ) : (
-                session.title
+                <>
+                  <span>{session.title}</span>
+                  <div className="text-right">
+                    <SessionTime session={session} />
+                  </div>
+                </>
               )}
             </h3>
             {hasSpeakers && (
-              <div dir="rtl">
+              <div className="text-right">
                 <SessionTime session={session} />
               </div>
             )}
@@ -153,12 +157,10 @@ const Session = ({
                     key={speaker?.id}
                     id={`speaker-session-${speaker?.id}`}
                   >
-                    <Image
-                      alt={`${speaker?.fullName} profile picture`}
-                      src={speaker?.profilePicture}
-                      className="w-14 h-14 min-w-14 min-h-14 rounded-full border-2 border-black object-cover aspect-square"
-                      height="56"
-                      width="56"
+                    <SpeakerAvatar
+                      fullName={speaker?.fullName}
+                      profilePicture={speaker?.profilePicture}
+                      size="sm"
                     />
                     <p className="pl-3 font-bold text-black">
                       {speaker?.fullName}

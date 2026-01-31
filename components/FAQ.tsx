@@ -11,50 +11,70 @@ type QuestionType = {
 const questions: QuestionType[] = [
   {
     question: "What is BlablaConf?",
-    answer: `BlablaConf is a community driven online conference, made by developers for developers. BlablaConf contains 5 tracks in 5 days and one offline day to connect with the community in person. We discuss all IT related topics, from Web & UI/UX, Big Data & ML, Cloud, Security, Backend technologies, to Soft skills, with our speakers from different backgrounds and completely in our beloved dialect, Moroccan Darija.`,
+    answer: () => (
+      <p>
+        <strong>BlablaConf</strong> is a community-driven online conference,
+        made by developers for developers. It features{" "}
+        <strong>5 tracks over 5 days</strong> plus an offline day to connect
+        with the community in person. We discuss all IT-related topics—from{" "}
+        <strong>Web & UI/UX</strong>, <strong>Big Data & ML</strong>,{" "}
+        <strong>Cloud</strong>, <strong>Security</strong>, and{" "}
+        <strong>Backend technologies</strong>, to <strong>Soft Skills</strong>
+        —with speakers from diverse backgrounds, entirely in our beloved
+        dialect, <strong>Moroccan Darija</strong>.
+      </p>
+    ),
   },
   {
     question: "How much does BlablaConf cost?",
-    answer: `BlablaConf is 100% FREE. BlablaConf is bringing together a truly speakers lineup to help each other find out more about different topics.  The caliber of speakers in BlablaConf could be seen in events costing thousands of MAD in Morocco and abroad.  As sharing is caring, we want this content to be accessible for everyone, for FREE`,
+    answer: () => (
+      <p>
+        BlablaConf is <strong>100% FREE</strong>. We bring together an amazing
+        lineup of speakers to help everyone learn about different topics. The
+        caliber of speakers at BlablaConf could be seen at events costing
+        thousands of MAD in Morocco and abroad. Because{" "}
+        <strong>sharing is caring</strong>, we want this content to be
+        accessible to everyone, for <strong>free</strong>.
+      </p>
+    ),
   },
   {
     question: "Will the talks be recorded?",
-    answer: `A recording of the entire tracks and each session will be available after the end of the conference`,
+    answer: () => (
+      <p>
+        Yes! A <strong>recording</strong> of all tracks and individual sessions
+        will be available <strong>after the conference ends</strong>.
+      </p>
+    ),
   },
   {
     question: "How can I support BlablaConf?",
     answer: () => (
       <p>
-        You can support us by sharing the event with your friends, colleagues,
-        and community. Sharing is caring! <br />
-        If you find any issue or typo in the website, make sure to open an issue
-        or submit a new PR on our{" "}
+        You can support us by <strong>sharing the event</strong> with your
+        friends, colleagues, and community—sharing is caring! If you find any
+        issues or typos on the website, feel free to open an issue or submit a
+        PR on our{" "}
         <a
           href="https://github.com/geeksblabla/blablaconf.com"
           target="_blank"
           rel="noreferrer"
-          className="text-secondary font-bold hover:underline"
         >
           GitHub repo
-        </a>{" "}
-        . You can also support us by sponsoring the event. If you are interested
-        in sponsoring BlablaConf, please get in touch with us in our social
-        media channels.
+        </a>
+        . You can also support us by <strong>sponsoring the event</strong>. If
+        you're interested in sponsoring BlablaConf, please reach out to us
+        through our social media channels.
       </p>
     ),
   },
   {
-    question: "How can I register to BlablaConf?",
+    question: "How can I register for BlablaConf?",
     answer: () => (
       <p>
-        Registration for BlablaConf are open until the start of the conference,
-        on February 7th,{" "}
-        <a
-          href="#register"
-          className="text-secondary font-bold hover:underline"
-        >
-          Grab your ticket.
-        </a>
+        Registration is open until the start of the conference on{" "}
+        <strong>February 6th</strong>.{" "}
+        <a href="#register">Grab your ticket now!</a>
       </p>
     ),
   },
@@ -62,27 +82,30 @@ const questions: QuestionType[] = [
     question: "Where can I watch the sessions?",
     answer: () => (
       <p>
-        Via{" "}
+        All sessions will be streamed live on{" "}
         <a
           href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
           target="_blank"
           rel="noreferrer"
-          className="text-secondary font-bold hover:underline"
         >
-          Geeksblala's Youtube channel
+          Geeksblabla's YouTube channel
         </a>
-        , &nbsp;We will provide viewing details to all registrants prior to the
-        event.
+        . We'll send viewing details to all registrants before the event.
       </p>
     ),
   },
   {
     question: "Can I apply as a speaker?",
-    answer:
-      "Of course! But not for this edition. Make sure to follow us and watch for the next Call for Papers.",
+    answer: () => (
+      <p>
+        Of course! However, the <strong>Call for Papers</strong> for this
+        edition has closed. Make sure to follow us and watch for the next CFP
+        announcement!
+      </p>
+    ),
   },
   {
-    question: "Where can I get updates about upcoming events of Geeksblabla?",
+    question: "Where can I get updates about upcoming Geeksblabla events?",
     answer: () => (
       <p>
         Follow us on{" "}
@@ -90,25 +113,22 @@ const questions: QuestionType[] = [
           href="https://www.youtube.com/channel/UCW2WV7NKU0WPyuv4YoNSqBA"
           target="_blank"
           rel="noreferrer"
-          className="text-secondary font-bold hover:underline"
         >
-          Youtube
+          YouTube
         </a>
         ,{" "}
         <a
           href="https://twitter.com/geeksblabla"
           target="_blank"
           rel="noreferrer"
-          className="text-secondary font-bold hover:underline"
         >
           Twitter
-        </a>{" "}
+        </a>
         ,{" "}
         <a
           href="https://www.facebook.com/geeksblabla"
           target="_blank"
           rel="noreferrer"
-          className="text-secondary font-bold hover:underline"
         >
           Facebook
         </a>
@@ -117,16 +137,14 @@ const questions: QuestionType[] = [
           href="https://www.instagram.com/geeksblabla/"
           target="_blank"
           rel="noreferrer"
-          className="text-secondary font-bold hover:underline"
         >
           Instagram
-        </a>{" "}
-        or{" "}
+        </a>
+        , or{" "}
         <a
           href="https://www.linkedin.com/company/geeksblabla-community"
           target="_blank"
           rel="noreferrer"
-          className="text-secondary font-bold hover:underline"
         >
           LinkedIn
         </a>{" "}
@@ -207,8 +225,8 @@ const Question = ({
         </div>
         <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-100 ease-in-out peer-checked:grid-rows-[1fr]">
           <div className="overflow-hidden">
-            <div className="px-6 pb-4 text-md">
-              {typeof answer === "string" ? answer : answer()}
+            <div className="mx-6 pb-4 text-base leading-relaxed text-black/80 [&_a]:text-secondary [&_a]:font-semibold [&_a:hover]:underline">
+              {typeof answer === "string" ? <p>{answer}</p> : answer()}
             </div>
           </div>
         </div>

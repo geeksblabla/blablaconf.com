@@ -72,7 +72,7 @@ export const Footer = () => {
             </div>
             <a
               href="#register"
-              className="inline-block mt-2 bg-white text-black border-4 border-black shadow-[-6px_6px_0_0_#ffe83c] text-xl font-bold px-6 py-3 rounded-full hover:bg-primary hover:shadow-none hover:-translate-x-[6px] hover:translate-y-[6px] transition-all"
+              className="inline-block mt-2 bg-black text-white border-[3px] border-white shadow-[-6px_6px_0_0_#ffe83c] text-xl font-bold px-6 py-3 hover:text-black hover:bg-primary hover:shadow-none hover:border-primary hover:-translate-x-[6px] hover:translate-y-[6px] transition-all"
             >
               Get Your Ticket
             </a>
@@ -94,8 +94,24 @@ export const Footer = () => {
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noreferrer" : undefined}
-                    className="text-gray-300 text-lg hover:text-primary transition-colors"
+                    className="group relative text-gray-300 text-lg hover:text-primary hover:translate-x-4 transition-all duration-200"
                   >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="absolute -left-5 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                    >
+                      <path
+                        d="M9 18L15 12L9 6"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                     {item.label}
                   </a>
                 ))}
