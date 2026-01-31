@@ -36,13 +36,10 @@ export const PreviousSessions = () => {
   return (
     <section id="last-sessions" className="py-16 px-5 sm:px-20 lg:py-24">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
-        <Image
-          src={lastEditionTitle}
-          alt="Last Editions"
-          width={0}
-          height={180}
-          className="mx-auto"
-        />
+        <div className="title-style leading-[0.8]">
+          <span className="mx-auto text-primary">شنو كان؟</span>
+          <span className="mx-auto text-secondary">Previous Editions</span>
+        </div>
         <p
           className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
           ata-sal="fade"
@@ -55,10 +52,11 @@ export const PreviousSessions = () => {
         </p>
 
         {/* Edition Videos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="flex flex-wrap justify-center gap-6 mt-8">
           {lastEditionSessions.map((session, index) => (
             <div
               key={`edition-${index}`}
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               data-sal="slide-up"
               data-sal-duration="800"
               data-sal-delay={index * 100}
@@ -123,12 +121,12 @@ const EditionVideo = ({
       {/* Title Bar */}
       <div className="p-4 border-t-3 border-black">
         <h3 className="font-black text-black text-lg text-center gap-4 flex justify-center items-center">
+          {title}
           {isNew && (
             <span className="bg-primary text-sm font-bold px-3 py-1 rounded-full">
               Latest
             </span>
           )}
-          {title}
         </h3>
       </div>
     </Link>

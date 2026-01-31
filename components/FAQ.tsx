@@ -1,9 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 "use client";
-import Image from "next/image";
 import { ReactNode, useState } from "react";
-import FaqTitle from "@/images/titles/faq.svg";
 
 type QuestionType = {
   question: string;
@@ -144,13 +142,10 @@ export const FAQ = () => {
   return (
     <section id="faq" className="w-full py-16 px-5 sm:px-20 lg:py-24">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
-        <Image
-          src={FaqTitle}
-          alt="FAQ Header"
-          width={0}
-          height={200}
-          className="mx-auto"
-        />
+        <div className="title-style leading-[0.8]">
+          <span className="mx-auto text-primary">الأسئلة الشائعة</span>
+          <span className="mx-auto text-secondary">FAQ</span>
+        </div>
         <p
           className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
           ata-sal="fade"
@@ -210,7 +205,7 @@ const Question = ({
         <div className="relative ml-6 pr-12 cursor-pointer select-none items-center py-4">
           <h3 className="font-bold lg:text-lg">{question}</h3>
         </div>
-        <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-200 ease-in-out peer-checked:grid-rows-[1fr]">
+        <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-100 ease-in-out peer-checked:grid-rows-[1fr]">
           <div className="overflow-hidden">
             <div className="px-6 pb-4 text-md">
               {typeof answer === "string" ? answer : answer()}

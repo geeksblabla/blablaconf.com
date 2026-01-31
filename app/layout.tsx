@@ -62,13 +62,21 @@ const marhaban = localFont({
   variable: "--font-marhaban",
 });
 
+const digitalNumbers = localFont({
+  src: "../styles/DigitalNumbers-Regular.ttf",
+  variable: "--font-digital",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${kufam.variable} ${muraba.variable} ${marhaban.variable}`}>
+    <html
+      lang="en"
+      className={`${kufam.variable} ${muraba.variable} ${marhaban.variable} ${digitalNumbers.variable}`}
+    >
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import morocco from "@/images/morocco.svg";
+import morocco from "@/images/morocco.png";
 import Image from "next/image";
 
 interface TimeLeft {
@@ -38,14 +38,14 @@ const Digit = ({ value }: { value: string }) => {
     <div className="relative w-24 h-36 flex flex-col items-center justify-center perspective-1000">
       {/* Top Half - Static New Value */}
       <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-gray-800 to-black rounded-t-lg overflow-hidden">
-        <span className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent text-8xl font-mono font-black">
+        <span className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-gray-300 to-white bg-clip-text text-transparent text-8xl font-digital font-black">
           {value}
         </span>
       </div>
 
       {/* Bottom Half - Static Old Value */}
       <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-gray-800 to-black rounded-b-lg overflow-hidden">
-        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent text-8xl font-mono font-black">
+        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent text-8xl font-digital font-black">
           {bottomStaticValue}
         </span>
       </div>
@@ -55,7 +55,7 @@ const Digit = ({ value }: { value: string }) => {
         key={`top-${visualPrevValue}`}
         className={`absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-gray-800 to-black rounded-t-lg overflow-hidden z-20 backface-hidden ${isAnimating ? "flip-top" : "invisible"}`}
       >
-        <span className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-gray-400 to-white bg-clip-text text-transparent text-8xl font-mono font-black">
+        <span className="absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-gray-300 to-white bg-clip-text text-transparent text-8xl font-digital font-black">
           {visualPrevValue}
         </span>
       </div>
@@ -65,13 +65,13 @@ const Digit = ({ value }: { value: string }) => {
         key={`bottom-${value}`}
         className={`absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-b from-gray-800 to-black rounded-b-lg overflow-hidden z-20 backface-hidden ${isAnimating ? "flip-bottom" : "invisible"}`}
       >
-        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent text-8xl font-mono font-black">
+        <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent text-8xl font-digital font-black">
           {value}
         </span>
       </div>
 
       {/* Horizontal Shadow/Depth Line */}
-      <div className="absolute inset-x-0 top-1/2 h-[2px] bg-gradient-to-b from-gray-800 to-black/80 z-30" />
+      <div className="absolute inset-x-0 top-1/2 h-[6px] blur-[6px] bg-black/20 z-30" />
 
       {/* Glossy overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/20 pointer-events-none z-40 rounded-lg" />
@@ -89,7 +89,7 @@ const TimerGroup = ({ label, value }: { label: string; value: number }) => {
         ))}
       </div>
       <div className="bg-gray-900 w-full flex items-center justify-center rounded-lg py-2">
-        <span className="bg-gradient-to-l from-gray-500 via-white/80 to-gray-500 bg-clip-text text-transparent font-black text-3xl">
+        <span className="bg-gradient-to-l from-gray-300 via-white/90 to-gray-300 bg-clip-text text-transparent font-black text-3xl">
           {label}
         </span>
       </div>
@@ -127,33 +127,43 @@ export default function Timer() {
   }, [targetDate]);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-20 md:mt-32 lg:mt-[20rem] pb-20">
+    <div className="flex flex-col items-center justify-center mt-20 md:mt-32 lg:mt-[22rem] pb-20">
       <Image
         src={morocco}
         alt="Morocco Flag"
-        className="w-32 md:w-48 h-auto mb-12"
+        className="h-32 md:h-42 w-auto max-w-[80vw] object-contain"
         data-sal="slide-down"
         data-sal-duration="800"
       />
-      <div
-        className="flex flex-wrap justify-center items-center gap-6"
-        data-sal="slide-up"
-        data-sal-duration="800"
-        data-sal-delay="200"
-      >
-        <TimerGroup label="يـــــــــــــــــــوم" value={timeLeft.days} />
-        <div className="text-white text-4xl font-bold hidden md:block mt-[-52px]">
-          -
+      <div className="mt-32 bg-tertiary w-full py-20">
+        {" "}
+        <div className="title-style leading-[0.95] mb-16">
+          <span className="mx-auto text-primary">شحال باقي؟</span>
+          <span className="mx-auto text-secondary">Starting in...</span>
         </div>
-        <TimerGroup label="ساعــــــــــــــــة" value={timeLeft.hours} />
-        <div className="text-white text-4xl font-bold hidden md:block mt-[-52px]">
-          -
+        <div
+          className="flex flex-wrap justify-center items-center gap-6"
+          data-sal="slide-up"
+          data-sal-duration="800"
+          data-sal-delay="200"
+        >
+          <TimerGroup label="يـــــــــــــــــــوم" value={timeLeft.days} />
+          <div className="text-gray-800 text-4xl font-bold hidden md:block -mt-14">
+            -
+          </div>
+          <TimerGroup label="ساعــــــــــــــــة" value={timeLeft.hours} />
+          <div className="text-gray-800 text-4xl font-bold hidden md:block -mt-14">
+            -
+          </div>
+          <TimerGroup label="دقيــــــــــــــقة" value={timeLeft.minutes} />
+          <div className="text-gray-800 text-4xl font-bold hidden md:block -mt-14">
+            -
+          </div>
+          <TimerGroup
+            label="ثانيــــــــــــــــــة"
+            value={timeLeft.seconds}
+          />
         </div>
-        <TimerGroup label="دقيــــــــــــــقة" value={timeLeft.minutes} />
-        <div className="text-white text-4xl font-bold hidden md:block mt-[-52px]">
-          -
-        </div>
-        <TimerGroup label="ثانيــــــــــــــــــة" value={timeLeft.seconds} />
       </div>
     </div>
   );

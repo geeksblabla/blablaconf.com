@@ -6,14 +6,16 @@ import type {
   Speaker as SpeakerType,
   SpeakerLink as SpeakerLinkType,
 } from "@/utils/sessionize";
-import speakersTitle from "../images/titles/speakers.svg";
 
 export const Speakers = ({ speakers }: { speakers: SpeakerType[] }) => {
   return (
     <section id="speakers" className="py-16 px-5 sm:px-20 lg:py-24">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
         <div data-sal="fade" data-sal-duration="800">
-          <Image src={speakersTitle} alt="speakers title" className="mx-auto" />
+          <div className="title-style leading-[0.8]">
+            <span className="mx-auto text-primary">التشكيلة</span>
+            <span className="mx-auto text-secondary">Speakers</span>
+          </div>
           <p className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
             CEOs, rock star developers, beginners and students, everyone has a
             place to share content in BlaBlaConf
@@ -54,7 +56,7 @@ const Speaker = ({
       data-sal-delay={index * 50}
     >
       <div
-        className={`${rotation} hover:rotate-0 group flex flex-col bg-white hover:bg-primary rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all duration-300`}
+        className={`${rotation} hover:rotate-0 group flex flex-col bg-white hover:bg-primary rounded-[2rem] overflow-hidden border-[3px] border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:-translate-x-[6px] hover:translate-y-[6px] transition-all duration-300`}
       >
         <a href={`/#speaker-session-${id}`}>
           {/* Image Container - Clickable */}
@@ -63,7 +65,7 @@ const Speaker = ({
               alt={`${fullName} profile picture`}
               width={400}
               height={400}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover aspect-square"
               src={profilePicture}
             />
           </div>

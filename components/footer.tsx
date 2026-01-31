@@ -50,9 +50,9 @@ const links: LinkSection[] = [
 
 export const Footer = () => {
   return (
-    <footer className="w-full bg-black py-16 border-t-8 border-primary">
+    <footer className="w-full bg-black py-10 md:py-16 border-t-8 border-primary">
       <div
-        className="mx-auto max-w-screen-lg md:max-w-screen-xl"
+        className="mx-auto max-w-screen-lg md:max-w-screen-xl px-5 md:px-10"
         data-sal="slide-up"
         data-sal-duration="800"
       >
@@ -72,16 +72,19 @@ export const Footer = () => {
             </div>
             <a
               href="#register"
-              className="inline-block mt-2 bg-primary text-black border-4 border-primary text-lg font-bold px-6 py-3 rounded-full hover:bg-black hover:border-primary hover:text-white transition-all"
+              className="inline-block mt-2 bg-white text-black border-4 border-black shadow-[-6px_6px_0_0_#ffe83c] text-xl font-bold px-6 py-3 rounded-full hover:bg-primary hover:shadow-none hover:-translate-x-[6px] hover:translate-y-[6px] transition-all"
             >
               Get Your Ticket
             </a>
           </div>
 
           {/* Links */}
-          <div className="flex flex-col sm:flex-row gap-8 sm:gap-16">
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 w-full sm:w-auto items-center sm:items-start">
             {links.map((section) => (
-              <div key={section.category} className="flex flex-col gap-3">
+              <div
+                key={section.category}
+                className="flex flex-col gap-3 items-center sm:items-start text-center sm:text-left"
+              >
                 <h4 className="font-bold text-primary text-2xl mb-2">
                   {section.category}
                 </h4>
@@ -107,7 +110,7 @@ export const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Copyright */}
-          <div className="flex flex-col sm:flex-row items-center gap-2 text-base text-gray-500">
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-base text-gray-500 text-center sm:text-left">
             <span>© 2025 Geeksblabla. All Rights Reserved.</span>
             <span className="hidden sm:inline">•</span>
             <span>
@@ -117,7 +120,7 @@ export const Footer = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap justify-center">
             <SocialLink
               href="https://www.youtube.com/c/GeeksBlaBla01"
               label="YouTube"

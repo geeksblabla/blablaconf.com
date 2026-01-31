@@ -1,6 +1,5 @@
 import Image from "next/image";
 import imageSrc from "@/images/community-gallery.png";
-import communityTitle from "@/images/titles/community.svg";
 
 const stats = [
   { label: "Speakers", value: "60+" },
@@ -19,11 +18,10 @@ export const Community = () => {
             data-sal="slide-right"
             data-sal-duration="800"
           >
-            <Image
-              src={communityTitle}
-              alt="community title"
-              className="mx-auto lg:mx-0"
-            />
+            <div className="title-style leading-[0.8] text-[70px] lg:text-8xl items-end">
+              <span className="text-primary">الجمهور</span>
+              <span className="text-secondary">Community</span>
+            </div>
 
             {/* Mobile Image */}
             <div className="lg:hidden mt-8">

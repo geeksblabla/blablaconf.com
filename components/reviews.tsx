@@ -8,7 +8,6 @@ import afafSrc from "@/images/tweets_avatars/afaf.jpg";
 import mohamedSrc from "@/images/tweets_avatars/mohamed.png";
 import t1337Src from "@/images/tweets_avatars/1337.jpg";
 import wafSrc from "@/images/tweets_avatars/waf.jpg";
-import reviewsTitle from "@/images/titles/reviews.svg";
 
 const tweets: TweetType[][] = [
   [
@@ -78,18 +77,12 @@ const tweets: TweetType[][] = [
 
 export const Reviews = () => {
   return (
-    <section
-      id="reviews"
-      className="py-20 px-5 sm:px-20 lg:py-28"
-    >
+    <section id="reviews" className="py-20 px-5 sm:px-20 lg:py-28">
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
-        <Image
-          src={reviewsTitle}
-          alt="reviews title"
-          width={0}
-          height={170}
-          className="mx-auto"
-        />
+        <div className="title-style leading-[0.8]">
+          <span className="mx-auto text-primary">اشنو قالو علينا؟</span>
+          <span className="mx-auto text-secondary">Reviews</span>
+        </div>
         <p
           className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-6"
           data-sal="fade"
@@ -164,13 +157,13 @@ const Tweet = ({
 
       {/* Avatar & Info */}
       <div className="flex flex-row items-center">
-        <div className="rounded-full border-[3px] border-black">
+        <div className="rounded-full border-[3px] border-black overflow-hidden w-16 h-16 min-w-16 min-h-16">
           <Image
             alt={name}
             src={avatar}
             width={56}
             height={56}
-            className="w-16 h-16 object-cover rounded-full"
+            className="w-full h-full object-cover aspect-square"
           />
         </div>
         <div className="flex flex-col ml-4">

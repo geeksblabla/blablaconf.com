@@ -1,7 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html {
+
+@layer components {
+  .title-style {
+    @apply flex flex-col text-center text-[70px] md:text-[90px] lg:text-9xl font-marhaban leading-[0.8];
+    -webkit-text-stroke: 10px black;
+    paint-order: stroke fill;
+    text-shadow: -11px 11px 0 0 black;
+  }
 }
 
 .text-gradient {

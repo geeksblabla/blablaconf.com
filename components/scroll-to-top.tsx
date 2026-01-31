@@ -80,7 +80,7 @@ export const ScrollToTop = () => {
             strokeDasharray={circumference}
             strokeDashoffset={dashoffset}
             strokeLinecap="round"
-            className="text-black group-hover:text-black transition-all duration-100"
+            className="text-black group-hover:text-black transition-all duration-300"
           />
         </svg>
 

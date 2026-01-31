@@ -100,6 +100,7 @@ module.exports = {
         muraba: ["var(--font-muraba)"],
         murabaOutline: ["var(--font-muraba-outline)"],
         marhaban: ["var(--font-marhaban)"],
+        digital: ["var(--font-digital)"],
       },
       colors: {
         primary: "#ffe83c",
@@ -146,7 +147,7 @@ module.exports = {
             textShadow: value,
           }),
         },
-        { values: theme("textShadow") }
+        { values: theme("textShadow") },
       );
     }),
   ],

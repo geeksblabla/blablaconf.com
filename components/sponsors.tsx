@@ -22,7 +22,10 @@ export const Sponsors = () => {
       className="relative py-16 px-5 sm:px-20 lg:py-24 bg-tertiary"
     >
       <div className="mx-auto max-w-screen-lg md:max-w-screen-xl">
-        <Image src={sponsorsTitle} alt="sponsors title" className="mx-auto" />
+        <div className="title-style leading-[0.8]">
+          <span className="mx-auto text-primary">المساند الرسمي</span>
+          <span className="mx-auto text-secondary">Sponsors</span>
+        </div>
         <p className="text-center mx-auto max-w-2xl text-xl pt-6 font-bold [-webkit-text-stroke:8px_white] [paint-order:stroke_fill] pb-10">
           This event is made possible by the support of our amazing partners ❤️
           💚
