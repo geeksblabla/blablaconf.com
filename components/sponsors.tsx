@@ -68,7 +68,7 @@ export const Sponsors = () => {
               <h3 className="text-2xl md:text-3xl font-black text-black mb-4">
                 Become a Sponsor!
               </h3>
-              <p className="text-black/70 text-lg mb-6 [-webkit-text-stroke:0] font-normal">
+              <p className="text-black/70 text-lg mb-6 [-webkit-text-stroke:0] font-normal" dir="rtl">
                 هد الساعة بقي مكاين والو 😂
                 <br />
                 الى مهتم تكون سبونسور، تواصل معانا!

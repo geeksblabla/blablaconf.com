@@ -121,7 +121,7 @@ const Session = ({
           {/* Title & Time Row */}
           <div className="flex flex-row justify-between items-start gap-4">
             <h3
-              className={`text-xl font-bold flex-1 ${!hasSpeakers ? "text-center w-full flex items-center justify-between gap-3" : ""}`}
+              className={`text-xl font-bold flex-1 ${!hasSpeakers ? "flex items-center justify-between" : ""}`}
             >
               {hasSpeakers ? (
                 <button
@@ -133,9 +133,9 @@ const Session = ({
               ) : (
                 <>
                   <span>{session.title}</span>
-                  <div className="text-right">
+                  <span className="text-right shrink-0 ml-4">
                     <SessionTime session={session} />
-                  </div>
+                  </span>
                 </>
               )}
             </h3>
