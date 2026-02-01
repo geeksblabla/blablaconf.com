@@ -16,12 +16,12 @@ const questions: QuestionType[] = [
         <strong>BlablaConf</strong> is a community-driven online conference,
         made by developers for developers. It features{" "}
         <strong>5 tracks over 5 days</strong> plus an offline day to connect
-        with the community in person. We discuss all IT-related topics—from{" "}
+        with the community in person. We discuss all IT-related topics, from{" "}
         <strong>Web & UI/UX</strong>, <strong>Big Data & ML</strong>,{" "}
         <strong>Cloud</strong>, <strong>Security</strong>, and{" "}
-        <strong>Backend technologies</strong>, to <strong>Soft Skills</strong>
-        —with speakers from diverse backgrounds, entirely in our beloved
-        dialect, <strong>Moroccan Darija</strong>.
+        <strong>Backend technologies</strong>, to <strong>Soft Skills</strong>,
+        with speakers from diverse backgrounds, entirely in our beloved dialect,{" "}
+        <strong>Moroccan Darija</strong>.
       </p>
     ),
   },
@@ -52,7 +52,7 @@ const questions: QuestionType[] = [
     answer: () => (
       <p>
         You can support us by <strong>sharing the event</strong> with your
-        friends, colleagues, and community—sharing is caring! If you find any
+        friends, colleagues, and community. Sharing is caring! If you find any
         issues or typos on the website, feel free to open an issue or submit a
         PR on our{" "}
         <a
@@ -69,12 +69,12 @@ const questions: QuestionType[] = [
     ),
   },
   {
-    question: "How can I register for BlablaConf?",
+    question: "How can I join BlablaConf?",
     answer: () => (
       <p>
-        Registration is open until the start of the conference on{" "}
-        <strong>February 6th</strong>.{" "}
-        <a href="#register">Grab your ticket now!</a>
+        BlablaConf is a <strong>free online conference</strong>. All sessions
+        will be streamed live on our YouTube channel. Just tune in during the
+        event from <strong>February 2nd to 6th</strong>!
       </p>
     ),
   },
