@@ -1,6 +1,7 @@
 import Image from "next/image";
 import I1337Src from "../images/sponsors/1337.png";
 import intelciaSrc from "../images/sponsors/intelcia.png";
+import makenessLogoSrc from "../images/sponsors/makeness-logo.png";
 import sponsorsTitle from "../images/titles/sponsors.svg";
 import Link from "next/link";
 
@@ -11,6 +12,7 @@ type Sponsor = {
 };
 
 const sponsors: Sponsor[] = [
+  { name: "Makeness", logo: makenessLogoSrc, url: "https://makeness.dev" },
   // { name: "1337", logo: I1337Src, url: "https://1337.ma" },
   // { name: "Intelcia", logo: intelciaSrc, url: "https://intelcia.com" },
 ];
@@ -43,19 +45,19 @@ export const Sponsors = () => {
 
         {/* Sponsors Grid */}
         {sponsors.length > 0 ? (
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+          <div className="flex flex-wrap justify-center gap-6 mt-8">
             {sponsors.map((sponsor, index) => (
               <Link
                 key={index}
                 href={sponsor.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-center p-8 bg-white rounded-2xl border-[3px] border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all duration-300"
+                className="group flex items-center justify-center p-8 bg-white rounded-2xl border-[3px] border-black shadow-[-6px_6px_0_0_black] hover:shadow-none hover:translate-x-[-6px] hover:translate-y-[6px] transition-all duration-300 w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)]"
               >
                 <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="max-h-[60px] w-auto object-contain  transition-transform duration-300"
+                  className="max-h-[120px] w-auto object-contain transition-transform duration-300"
                 />
               </Link>
             ))}
