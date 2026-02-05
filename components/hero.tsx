@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center lg:-mt-28 pb-16 px-4 overflow-hidden min-h-[70vh]">
+    <section className="relative flex flex-col items-center justify-center px-4 overflow-hidden -mt-6 sm:-mt-20">
       {/* Main Logo Container */}
       <div
         className="w-full max-w-[1000px]"
@@ -21,7 +21,7 @@ export const Hero = () => {
 
       {/* Action Buttons */}
       <div
-        className="flex flex-wrap justify-center z-10 gap-8 items-center -mt-10 lg:-mt-32"
+        className="flex flex-wrap justify-center z-10 gap-8 items-center -mt-6 sm:-mt-16 md:-mt-28 lg:-mt-32"
         data-sal="slide-up"
         data-sal-duration="1000"
         data-sal-delay="200"
@@ -40,15 +40,14 @@ export const Hero = () => {
           </button>
         </Link>
         {/* Discovery Button */}
-          <Link href="#tracks">
-        <button className="flex items-center gap-3 text-2xl md:text-4xl font-black px-6 py-4 bg-primary hover:bg-black text-black hover:text-primary border-4 border-black shadow-[-8px_8px_0_0_black] hover:translate-x-[-8px] hover:translate-y-[8px] hover:shadow-[0] transition-all">
-          اكتاشف
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z" />
-          </svg>
-  
-    </button>
-  </Link>      
+        <Link href="#tracks">
+          <button className="flex items-center gap-3 text-2xl md:text-4xl font-black px-6 py-4 bg-primary hover:bg-black text-black hover:text-primary border-4 border-black shadow-[-8px_8px_0_0_black] hover:translate-x-[-8px] hover:translate-y-[8px] hover:shadow-[0] transition-all">
+            اكتاشف
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z" />
+            </svg>
+          </button>
+        </Link>
       </div>
     </section>
   );

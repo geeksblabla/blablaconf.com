@@ -66,15 +66,17 @@ export const Footer = () => {
                 Want to join?
               </h3>
               <p className="text-gray-400 text-lg text-center lg:text-left">
-                Make sure to get your ticket and join 5 days of learning,
-                networking and fun in Darija
+                Join us for 5 days of learning, networking and fun in Darija,
+                streaming live on YouTube!
               </p>
             </div>
             <a
-              href="#register"
+              href="https://www.youtube.com/c/GeeksBlaBla01"
+              target="_blank"
+              rel="noreferrer"
               className="inline-block mt-2 bg-black text-white border-[3px] border-white shadow-[-6px_6px_0_0_#ffe83c] text-xl font-bold px-6 py-3 hover:text-black hover:bg-primary hover:shadow-none hover:border-primary hover:-translate-x-[6px] hover:translate-y-[6px] transition-all"
             >
-              Get Your Ticket
+              Watch Live
             </a>
           </div>
 

@@ -127,7 +127,7 @@ export default function Timer() {
   }, [targetDate]);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-20 md:mt-32 lg:mt-[22rem] pb-20">
+    <div className="flex flex-col items-center justify-center pb-20 mt-6 sm:mt-12 md:mt-24 lg:mt-48 xl:mt-96">
       <Image
         src={morocco}
         alt="Morocco Flag"
@@ -135,7 +135,7 @@ export default function Timer() {
         data-sal="slide-down"
         data-sal-duration="800"
       />
-      <div className="mt-32 bg-tertiary w-full py-20">
+      <div className="mt-6 md:mt-24 lg:mt-32 bg-tertiary w-full py-20">
         {" "}
         <div className="title-style leading-[0.95] mb-16">
           <span className="mx-auto text-primary">شحال باقي؟</span>

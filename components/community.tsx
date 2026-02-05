@@ -2,7 +2,7 @@ import Image from "next/image";
 import imageSrc from "@/images/community-gallery.png";
 
 const stats = [
-  { label: "Speakers", value: "60+" },
+  { label: "Speakers", value: "70+" },
   { label: "Hours", value: "40+" },
   { label: "Views", value: "100k+" },
 ];
@@ -18,7 +18,7 @@ export const Community = () => {
             data-sal="slide-right"
             data-sal-duration="800"
           >
-            <div className="title-style leading-[0.8] text-[70px] lg:text-8xl items-end">
+            <div className="title-style leading-[0.8] text-[60px] lg:text-8xl items-end">
               <span className="text-primary">الجمهور</span>
               <span className="text-secondary">Community</span>
             </div>
